@@ -72,7 +72,11 @@ No meter lógica de negocio en `page.tsx`: las páginas componen secciones. Lóg
 ## Analítica y conversión
 
 - Enlaces con intención de conversión → `<TrackedLink href event="cta_clicked" props={{ location }}>`.
-  Eventos válidos en `lib/analytics/events.ts`. Desde cliente: `track(event, props)`.
+  Eventos válidos en `lib/analytics/events.ts`. Desde cliente: `track(event, props, { persist?: boolean })`.
+  `lead_created` y `diagnostic_completed` ya los persiste el servidor: desde cliente llamar
+  `track("diagnostic_completed", {...}, { persist: false })` para no duplicar en Neon.
+- Landings de campaña: `setDefaultAttribution({ utmSource: "linkedin", utmMedium: "social", utmCampaign })`
+  (en `lib/analytics/attribution.ts`) desde un componente cliente al montar.
 - Todo visitante debe poder convertir en ≤ 2 clics desde cualquier página.
 - No añadir scripts de terceros: ya los gestiona `AnalyticsProvider` según consentimiento.
 

@@ -79,3 +79,17 @@ export function getAttribution(): Attribution {
   if (typeof window === "undefined") return {};
   return read() ?? captureAttribution();
 }
+
+/**
+ * Para landings de campaña: si el visitante llega sin UTMs (p. ej. desde un
+ * post orgánico de LinkedIn), fija una atribución por defecto sin sobrescribir
+ * UTMs reales ya capturadas.
+ */
+export function setDefaultAttribution(defaults: Attribution): Attribution {
+  if (typeof window === "undefined") return {};
+  const current = captureAttribution();
+  if (current.utmSource) return current;
+  const next: Attribution = { ...current, ...defaults, landingPage: current.landingPage ?? defaults.landingPage };
+  write(next);
+  return next;
+}

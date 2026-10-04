@@ -33,13 +33,17 @@ function cleanProps(props: EventProps = {}): Record<string, string | number | bo
   return out;
 }
 
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 function sendToServer(event: EventType, props: Record<string, string | number | boolean>) {
   if (!PERSISTED_EVENTS.has(event)) return;
+  const leadId = typeof props.leadId === "string" && UUID_RE.test(props.leadId) ? props.leadId : undefined;
   const body = JSON.stringify({
     type: event,
     page: window.location.pathname,
     visitorId: getVisitorId(),
     sessionId: getSessionId(),
+    ...(leadId ? { leadId } : {}),
     metadata: props,
     consented: hasAnalyticsConsent(),
   });
@@ -59,11 +63,20 @@ function sendToServer(event: EventType, props: Record<string, string | number | 
   }
 }
 
+export interface TrackOptions {
+  /**
+   * Si es `false`, el evento no se guarda en Neon (solo GA4/Meta/LinkedIn/Vercel).
+   * Úsalo cuando el servidor ya persiste el evento (p. ej. `lead_created`,
+   * `diagnostic_completed` tras el envío del diagnóstico) para no duplicarlo.
+   */
+  persist?: boolean;
+}
+
 /**
  * Registra un evento del funnel en todos los destinos configurados.
  * Respeta el consentimiento: GA4 solo con analítica; Meta/LinkedIn solo con marketing.
  */
-export function track(event: EventType, props: EventProps = {}) {
+export function track(event: EventType, props: EventProps = {}, options: TrackOptions = {}) {
   if (typeof window === "undefined") return;
   const clean = cleanProps(props);
 
@@ -75,7 +88,7 @@ export function track(event: EventType, props: EventProps = {}) {
   }
 
   // Almacenamiento propio en Neon de eventos clave del funnel.
-  sendToServer(event, clean);
+  if (options.persist !== false) sendToServer(event, clean);
 
   if (hasAnalyticsConsent() && publicEnv.gaId && typeof window.gtag === "function") {
     window.gtag("event", event, clean);
