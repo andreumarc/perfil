@@ -1,0 +1,296 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------
+   Design tokens — paleta ejecutiva: blanco, negro azulado, grises fríos,
+   azul marino como color primario y un acento teal muy discreto.
+   ------------------------------------------------------------------ */
+:root {
+  --background: #ffffff;
+  --foreground: #0b1324;
+
+  --card: #ffffff;
+  --card-foreground: #0b1324;
+  --popover: #ffffff;
+  --popover-foreground: #0b1324;
+
+  --primary: #0a1a33;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f2f5fa;
+  --secondary-foreground: #0a1a33;
+
+  --muted: #f4f6f9;
+  --muted-foreground: #5b6575;
+
+  --accent: #eef2f7;
+  --accent-foreground: #0a1a33;
+
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+
+  --border: #e3e8ef;
+  --input: #cfd6e0;
+  --ring: #0a1a33;
+
+  --radius: 0.375rem;
+
+  /* Escala navy */
+  --navy-50: #f2f5fa;
+  --navy-100: #e3eaf4;
+  --navy-200: #c2d1e6;
+  --navy-300: #8aa5cf;
+  --navy-400: #4f78b5;
+  --navy-500: #2b589b;
+  --navy-600: #1f4580;
+  --navy-700: #163463;
+  --navy-800: #10264a;
+  --navy-900: #0a1a33;
+  --navy-950: #050b16;
+
+  /* Acento (teal) — usar con moderación: labels, highlights, barras */
+  --signal: #0f766e;
+  --signal-light: #d7f3ef;
+  --signal-dark: #115e59;
+
+  /* Grises fríos */
+  --gray-50: #f8fafc;
+  --gray-100: #f1f4f8;
+  --gray-200: #e4e8ee;
+  --gray-300: #cbd2dc;
+  --gray-400: #98a2b3;
+  --gray-500: #667085;
+  --gray-600: #475467;
+  --gray-700: #344054;
+  --gray-800: #1d2939;
+  --gray-900: #101828;
+
+  --success: #15803d;
+  --warning: #b45309;
+
+  /* Paleta de gráficos */
+  --chart-1: #0a1a33;
+  --chart-2: #0f766e;
+  --chart-3: #4f78b5;
+  --chart-4: #b98a2c;
+  --chart-5: #98a2b3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-navy-50: var(--navy-50);
+  --color-navy-100: var(--navy-100);
+  --color-navy-200: var(--navy-200);
+  --color-navy-300: var(--navy-300);
+  --color-navy-400: var(--navy-400);
+  --color-navy-500: var(--navy-500);
+  --color-navy-600: var(--navy-600);
+  --color-navy-700: var(--navy-700);
+  --color-navy-800: var(--navy-800);
+  --color-navy-900: var(--navy-900);
+  --color-navy-950: var(--navy-950);
+
+  --color-signal: var(--signal);
+  --color-signal-light: var(--signal-light);
+  --color-signal-dark: var(--signal-dark);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-serif), "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+
+  --container-8xl: 88rem;
+
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 0.5s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--navy-100);
+    color: var(--navy-900);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight text-balance;
+  }
+  p {
+    @apply text-pretty;
+  }
+  /* Objetivos táctiles cómodos en móvil */
+  button,
+  [role="button"],
+  a.btn {
+    touch-action: manipulation;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Utilidades propias registradas con @utility para poder usarlas con @apply */
+@utility font-display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 60;
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--signal);
+}
+
+@layer utilities {
+  /* Fondo navy con textura sutil (secciones oscuras) */
+  .bg-navy-grid {
+    background-color: var(--navy-900);
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .bg-navy-radial {
+    background-color: var(--navy-900);
+    background-image: radial-gradient(
+      ellipse 80% 60% at 70% 10%,
+      rgba(79, 120, 181, 0.28),
+      transparent 60%
+    );
+  }
+  .prose-executive {
+    @apply text-base leading-relaxed text-gray-700 md:text-lg;
+  }
+  .prose-executive h2 {
+    @apply font-display mt-12 mb-4 text-2xl text-navy-900 md:text-3xl;
+  }
+  .prose-executive h3 {
+    @apply mt-8 mb-3 text-xl font-semibold text-navy-900;
+  }
+  .prose-executive p {
+    @apply mb-5;
+  }
+  .prose-executive ul {
+    @apply mb-6 list-disc space-y-2 pl-6;
+  }
+  .prose-executive ol {
+    @apply mb-6 list-decimal space-y-2 pl-6;
+  }
+  .prose-executive strong {
+    @apply font-semibold text-navy-900;
+  }
+  .prose-executive blockquote {
+    @apply my-8 border-l-2 border-signal pl-5 text-navy-900 italic;
+  }
+  .prose-executive a {
+    @apply text-navy-700 underline decoration-navy-300 underline-offset-4 hover:decoration-navy-700;
+  }
+  .prose-executive table {
+    @apply my-6 w-full border-collapse text-sm;
+  }
+  .prose-executive th {
+    @apply border-b border-gray-300 py-2 text-left font-semibold text-navy-900;
+  }
+  .prose-executive td {
+    @apply border-b border-gray-200 py-2 align-top;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
