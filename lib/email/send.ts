@@ -58,5 +58,7 @@ export async function sendDiagnosticResultToLead(
   const bookingUrl = meetingHref.startsWith("http") ? meetingHref : `${site.url}${meetingHref}`;
   const resultUrl = `${site.url}/diagnostico/resultado/${input.resultToken}`;
   const full: DiagnosticResultEmailInput = { ...input, bookingUrl, resultUrl };
-  return send(to, diagnosticResultSubject(full), diagnosticResultEmail(full));
+  // Las respuestas del lead llegan directamente a la bandeja del administrador.
+  const replyTo = serverEnv().adminEmail;
+  return send(to, diagnosticResultSubject(full), diagnosticResultEmail(full), replyTo);
 }

@@ -10,6 +10,7 @@ import { clearDraft, readDraft, writeDraft } from "@/components/diagnostic/stora
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
+import { calculateDiagnostic } from "@/lib/diagnostic/calculate";
 import { QUESTIONS, TOTAL_QUESTIONS } from "@/lib/diagnostic/questions";
 import { cn } from "@/lib/utils";
 import type { LeadFormInput, LeadFormValues } from "@/lib/validation/lead";
@@ -38,10 +39,13 @@ interface DiagnosticWizardProps {
  * → formulario de lead → resultado. Persiste el borrador en sessionStorage.
  */
 export function DiagnosticWizard({ source = "diagnostic", compact = false, className }: DiagnosticWizardProps) {
-  const [phase, setPhase] = React.useState<Phase>("intro");
+  // En landings de campaña (compact) la primera pregunta aparece directamente:
+  // la landing ya ha hecho el pitch y un clic menos es conversión.
+  const [phase, setPhase] = React.useState<Phase>(compact ? "questions" : "intro");
   const [step, setStep] = React.useState(0);
   const [answers, setAnswers] = React.useState<Record<string, string>>({});
   const [startedAt, setStartedAt] = React.useState<number | null>(null);
+  const startedTracked = React.useRef(false);
   const [restored, setRestored] = React.useState(false);
   const [submitting, setSubmitting] = React.useState(false);
   const [success, setSuccess] = React.useState<DiagnosticSuccess | null>(null);
@@ -97,7 +101,10 @@ export function DiagnosticWizard({ source = "diagnostic", compact = false, class
     setStartedAt(Date.now());
     setStep(0);
     setPhase("questions");
-    track("diagnostic_started", { source });
+    if (!startedTracked.current) {
+      startedTracked.current = true;
+      track("diagnostic_started", { source });
+    }
     scrollToTop();
   };
 
@@ -113,6 +120,12 @@ export function DiagnosticWizard({ source = "diagnostic", compact = false, class
   const select = (value: string) => {
     const question = QUESTIONS[step];
     if (!question) return;
+    // Modo compact: el diagnóstico "empieza" con la primera respuesta.
+    if (startedAt === null) setStartedAt(Date.now());
+    if (!startedTracked.current) {
+      startedTracked.current = true;
+      track("diagnostic_started", { source });
+    }
     setRestored(false);
     setAnswers((prev) => ({ ...prev, [question.id]: value }));
     track("diagnostic_step_completed", { step: step + 1, questionId: question.id });
@@ -186,7 +199,6 @@ export function DiagnosticWizard({ source = "diagnostic", compact = false, class
       {isResult ? (
         <ResultView
           result={success.result}
-          score={success.score}
           firstName={lead?.firstName}
           company={lead?.company}
           email={success.emailQueued ? lead?.email : undefined}
@@ -259,7 +271,7 @@ export function DiagnosticWizard({ source = "diagnostic", compact = false, class
               onSelect={select}
               onBack={back}
               onNext={next}
-              notice={restored ? "Hemos recuperado tus respuestas" : undefined}
+              notice={restored ? "Respuestas recuperadas de tu sesión anterior" : undefined}
             />
           ) : null}
 
@@ -267,6 +279,7 @@ export function DiagnosticWizard({ source = "diagnostic", compact = false, class
             <LeadForm
               answers={answers}
               source={source}
+              previewScore={calculateDiagnostic(answers).totalScore}
               startedAt={startedAt}
               initialValues={leadDraft}
               onSuccess={handleSuccess}

@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
-import { meetingHref } from "@/lib/site";
+import { meetingCta, meetingHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /** Principios de trabajo. Cinco frases que un CEO puede comprobar en la primera reunión. */
@@ -61,7 +61,7 @@ export function Principles({ className }: { className?: string }) {
           props={{ location: "about_principles" }}
           className="mt-6 inline-flex min-h-11 items-center gap-2 text-base font-semibold text-white underline-offset-4 hover:underline"
         >
-          Reservar sesión de 30 min
+          {meetingCta.label}
           <ArrowRightIcon aria-hidden className="size-4" />
         </TrackedLink>
       </li>

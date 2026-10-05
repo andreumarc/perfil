@@ -7,14 +7,14 @@ import { sendNewLeadNotification } from "@/lib/email/send";
 import { scoreLead } from "@/lib/lead-scoring";
 import { FORM_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
 import { getRequestMeta } from "@/lib/request-meta";
-import { contactSubmissionSchema, fieldErrors } from "@/lib/validation/lead";
+import { contactSubmissionSchema, fieldErrors, isSuspiciousFillTime } from "@/lib/validation/lead";
 
 export type SubmitContactState =
   | { status: "idle" }
   | { status: "error"; message: string; fieldErrors?: Record<string, string> }
-  | { status: "success"; leadId: string | null; score: number; isHot: boolean };
+  /** `priority` es un indicador opaco para adaptar el copy; el score interno no se expone. */
+  | { status: "success"; leadId: string | null; priority: "high" | "standard" };
 
-const MIN_FILL_TIME_MS = 3000;
 const CONSENT_TEXT_VERSION = "2026-10-01";
 
 /** Server action del formulario de contacto (y de la calculadora EBITDA). */
@@ -29,12 +29,13 @@ export async function submitContact(payload: unknown): Promise<SubmitContactStat
   }
   const data = parsed.data;
 
-  if (data.antiSpam.startedAt && Date.now() - data.antiSpam.startedAt < MIN_FILL_TIME_MS) {
+  // Anti-spam: honeypot (ya validado por el schema) + ventana de cumplimentación plausible.
+  if (isSuspiciousFillTime(data.antiSpam.startedAt)) {
     return { status: "error", message: "No se ha podido procesar el envío. Inténtalo de nuevo." };
   }
 
   const meta = await getRequestMeta();
-  const limit = await rateLimit(`contact:${meta.ipHash ?? "anon"}`, FORM_RATE_LIMIT);
+  const limit = await rateLimit(`contact:${meta.rateKey}`, FORM_RATE_LIMIT);
   if (!limit.ok) {
     return {
       status: "error",
@@ -124,5 +125,5 @@ export async function submitContact(payload: unknown): Promise<SubmitContactStat
     });
   });
 
-  return { status: "success", leadId, score: score.score, isHot: score.isHot };
+  return { status: "success", leadId, priority: score.isHot ? "high" : "standard" };
 }

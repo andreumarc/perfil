@@ -63,7 +63,7 @@ export const SERVICES: readonly Service[] = [
     slug: "multisite-performance-audit",
     name: "Multisite Performance Audit",
     shortName: "Performance Audit",
-    headline: "Sabe exactamente dónde gana y dónde pierde dinero cada uno de tus centros.",
+    headline: "Saber exactamente dónde gana y dónde pierde dinero cada uno de tus centros.",
     subheadline:
       "Un diagnóstico ejecutivo de la situación operativa y económica de tu red: P&L por centro, ranking, desviaciones y un plan de acción priorizado. En 3-4 semanas.",
     summary:
@@ -80,8 +80,8 @@ export const SERVICES: readonly Service[] = [
     format: "3-4 semanas · análisis + sesión ejecutiva",
     priceFrom: 1950,
     priceLabel: "desde 1.950 €",
-    priceNote: "Precio orientativo según número de centros y disponibilidad de datos. Presupuesto cerrado antes de empezar.",
-    cta: "Solicitar diagnóstico",
+    priceNote: "Precio orientativo sin IVA, según número de centros y disponibilidad de datos. Presupuesto cerrado antes de empezar.",
+    cta: "Solicitar diagnóstico ejecutivo",
     forWhom: [
       "CEOs y Directores Generales de redes de 5 a 100 centros que no pueden comparar la rentabilidad de sus unidades en menos de cinco minutos.",
       "CFOs que tienen la contabilidad al día pero no un P&L operativo por centro con criterios homogéneos.",
@@ -110,7 +110,7 @@ export const SERVICES: readonly Service[] = [
       ],
     },
     deliverables: [
-      "Diagnóstico ejecutivo (documento de 20-30 páginas, pensado para comité de dirección o consejo)",
+      "Diagnóstico ejecutivo para comité de dirección o consejo: documento y sesión de presentación, sin relleno",
       "Ranking de centros por rentabilidad y por eficiencia",
       "Mapa de desviaciones: dónde, cuánto y por qué",
       "Quick wins ejecutables en 30 días",
@@ -145,7 +145,7 @@ export const SERVICES: readonly Service[] = [
       "Una visión única y comparable de la rentabilidad real de cada centro, con las desviaciones identificadas y un plan de acción priorizado para corregirlas. Es el punto de partida objetivo para cualquier decisión de mejora, cierre, inversión o integración.",
     faqs: [
       {
-        question: "¿Qué datos necesitáis para empezar?",
+        question: "¿Qué datos necesitas para empezar?",
         answer:
           "Los cierres contables de los últimos 12-24 meses, una extracción del sistema de gestión (ventas, agendas, actividad) y las plantillas por centro. Si la información está dispersa o incompleta, parte del trabajo consiste precisamente en normalizarla.",
       },
@@ -191,7 +191,7 @@ export const SERVICES: readonly Service[] = [
     format: "6-8 semanas · ejecución acompañada",
     priceFrom: 4500,
     priceLabel: "desde 4.500 €",
-    priceNote: "Precio orientativo según alcance y número de centros. Se define un objetivo de EBITDA y un plan cerrado antes de empezar.",
+    priceNote: "Precio orientativo sin IVA, según alcance y número de centros. Se define un objetivo de EBITDA y un plan cerrado antes de empezar.",
     cta: "Analizar potencial EBITDA",
     forWhom: [
       "Redes que ya saben que tienen potencial de mejora y necesitan convertirlo en resultados en un trimestre.",
@@ -248,7 +248,7 @@ export const SERVICES: readonly Service[] = [
       "Las palancas de rentabilidad convertidas en acciones ejecutadas, un cuadro de mando que mide su efecto semana a semana y un equipo que sabe cómo sostener la mejora. Sin promesas de porcentajes: el objetivo se fija con datos propios en la primera semana.",
     faqs: [
       {
-        question: "¿Garantizáis una mejora concreta de EBITDA?",
+        question: "¿Garantizas una mejora concreta de EBITDA?",
         answer:
           "No se prometen porcentajes antes de ver los datos: sería poco serio. En la primera semana se fija un objetivo realista a partir del P&L por centro y del benchmarking interno, y a partir de ahí se mide el avance cada semana.",
       },
@@ -289,7 +289,7 @@ export const SERVICES: readonly Service[] = [
     format: "100 días · dirección del plan de integración",
     priceFrom: 5000,
     priceLabel: "desde 5.000 €",
-    priceNote: "Precio orientativo según tamaño de la adquisición y número de centros integrados. Alcance cerrado antes del día 1.",
+    priceNote: "Precio orientativo sin IVA, según tamaño de la adquisición y número de centros integrados. Alcance cerrado antes del día 1.",
     cta: "Preparar integración",
     forWhom: [
       "Fondos de Private Equity con estrategia Buy & Build que integran add-ons sobre una plataforma.",
@@ -358,7 +358,7 @@ export const SERVICES: readonly Service[] = [
           "Idealmente antes del cierre: las semanas previas al día 1 son las más baratas para preparar comunicación, datos y retención. Si la operación ya está cerrada, se arranca con un diagnóstico de dos semanas y se construye el plan de 100 días desde ahí.",
       },
       {
-        question: "¿Trabajáis con los equipos del fondo?",
+        question: "¿Trabajas con los equipos del fondo?",
         answer:
           "Sí. El comité de integración incluye a dirección de la plataforma y al equipo de inversión u Operating Partner. El reporting está pensado para que el fondo tenga visibilidad sin tener que operar.",
       },
@@ -395,7 +395,7 @@ export const SERVICES: readonly Service[] = [
     priceFrom: 3000,
     priceLabel: "desde 3.000 €/mes",
     priceUnit: "al mes",
-    priceNote: "Precio orientativo según dedicación semanal y tamaño de la red. Compromiso inicial de 6 meses con revisión trimestral de objetivos.",
+    priceNote: "Precio orientativo sin IVA, según dedicación semanal y tamaño de la red. Compromiso inicial de 6 meses con revisión trimestral de objetivos.",
     cta: "Valorar Fractional COO",
     forWhom: [
       "Empresas de 5 a 50 M€ de facturación que han crecido más rápido que su estructura de dirección.",
@@ -467,7 +467,7 @@ export const SERVICES: readonly Service[] = [
           "Seis meses. Es el tiempo mínimo para implantar el cuadro de mando, las rutinas y ver resultados en el P&L. Después se revisa trimestralmente.",
       },
       {
-        question: "¿Trabajáis fuera de Barcelona?",
+        question: "¿Trabajas fuera de Barcelona?",
         answer:
           "Sí. La base es Barcelona, pero la mayoría de redes multicentro tienen centros en varias provincias. Se combina presencia periódica en los centros con dirección remota.",
       },

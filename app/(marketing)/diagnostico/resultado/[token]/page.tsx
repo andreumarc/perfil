@@ -5,6 +5,8 @@ import { Section } from "@/components/layout/section";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { getLeadByResultToken } from "@/db/queries/leads";
 import { calculateDiagnostic } from "@/lib/diagnostic/calculate";
+import { RESULT_PAGE_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
+import { getRequestMeta } from "@/lib/request-meta";
 import { pageMetadata } from "@/lib/seo";
 import { formatDate } from "@/lib/utils";
 
@@ -20,6 +22,11 @@ export const metadata = pageMetadata({
 
 export default async function DiagnosticResultPage({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params;
+  // Cada visita consulta Neon: límite por IP para evitar sondeos masivos.
+  const meta = await getRequestMeta();
+  const limit = await rateLimit(`result:${meta.rateKey}`, RESULT_PAGE_RATE_LIMIT);
+  if (!limit.ok) notFound();
+
   const view = await getLeadByResultToken(token);
   if (!view) notFound();
 

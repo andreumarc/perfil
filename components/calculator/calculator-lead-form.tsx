@@ -17,7 +17,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { getAttribution, getVisitorId, track } from "@/lib/analytics";
 import { locationsBand, revenueBand, type CalculatorResult } from "@/lib/ebitda-benchmark";
-import { meetingHref } from "@/lib/site";
+import { meetingCta, meetingHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import {
   contactFormSchema,
@@ -163,14 +163,14 @@ export function CalculatorLeadForm({ result, className }: CalculatorLeadFormProp
           <h3 className="font-display mt-4 text-3xl text-navy-900">Recibido.</h3>
           <p className="mt-3 text-lg text-gray-600">
             Te envío una primera lectura de tu benchmark en menos de 48 h.
-            {state.isHot
+            {state.priority === "high"
               ? " Por el perfil de tu red, te propongo que reservemos directamente 30 minutos para revisarla juntos."
               : " Si prefieres adelantarlo, reserva directamente 30 minutos y lo revisamos juntos."}
           </p>
           <Button asChild size="xl" className="mt-8 w-full sm:w-auto">
             <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: "calculator_success" }}>
               <CalendarCheckIcon />
-              Reservar sesión de 30 min
+              {meetingCta.label}
             </TrackedLink>
           </Button>
         </div>

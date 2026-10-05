@@ -12,6 +12,7 @@ import { DiagnosticSection } from "@/components/admin/leads/diagnostic-section";
 import { NotesPanel, type NoteItem } from "@/components/admin/leads/notes-panel";
 import { LEADS_PATH } from "@/components/admin/leads/query-string";
 import { ScoreCard } from "@/components/admin/leads/score-card";
+import { DeleteLeadButton } from "@/components/admin/leads/delete-lead-button";
 import { StatusSelect } from "@/components/admin/leads/status-select";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { getDb } from "@/db/client";
@@ -100,7 +101,10 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
             ) : null}
           </div>
         </div>
-        <StatusSelect leadId={lead.id} status={lead.status} className="lg:shrink-0" />
+        <div className="flex flex-col gap-2 lg:shrink-0 lg:items-end">
+          <StatusSelect leadId={lead.id} status={lead.status} />
+          <DeleteLeadButton leadId={lead.id} company={lead.company} />
+        </div>
       </header>
 
       <div className="grid gap-6 lg:grid-cols-3">

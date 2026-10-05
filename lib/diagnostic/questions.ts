@@ -168,7 +168,7 @@ export const QUESTIONS: readonly Question[] = [
   },
   {
     id: "q13",
-    title: "Facturación anual aproximada del grupo",
+    title: "¿Cuál es la facturación anual aproximada del grupo?",
     profileField: "companyRevenue",
     options: [
       { value: "<1M", label: "Menos de 1 M€" },
@@ -181,7 +181,7 @@ export const QUESTIONS: readonly Question[] = [
   },
   {
     id: "q14",
-    title: "Sector",
+    title: "¿En qué sector opera tu red?",
     profileField: "sector",
     options: [
       { value: "dental", label: "Dental" },

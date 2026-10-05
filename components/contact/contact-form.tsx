@@ -178,7 +178,7 @@ export function ContactForm({ className }: { className?: string }) {
             <Button asChild size="xl" className="mt-8 w-full sm:w-auto">
               <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: "contact_success" }}>
                 <CalendarCheckIcon />
-                Reservar ya una sesión de 30 min
+                {meetingIsExternal ? "Reservar ya una sesión de 30 min" : "Solicitar una sesión de 30 min"}
               </TrackedLink>
             </Button>
           ) : (
@@ -440,7 +440,10 @@ export function ContactForm({ className }: { className?: string }) {
           <Textarea
             id={`${ID}-message`}
             rows={5}
-            placeholder="Número de centros, sector y qué decisión tienes pendiente. Dos líneas bastan."
+            placeholder={
+              interest?.messagePlaceholder ??
+              "Número de centros, sector y qué decisión tienes pendiente. Dos líneas bastan."
+            }
             aria-invalid={Boolean(errors.message)}
             aria-describedby={errors.message ? `${ID}-message-error` : undefined}
             {...register("message")}

@@ -16,16 +16,30 @@ export interface AdminSession {
   exp: number;
 }
 
+const MIN_SECRET_LENGTH = 32;
+const MIN_PASSWORD_LENGTH = 12;
+
 function secretKey(): Uint8Array | null {
   const { authSecret } = serverEnv();
-  if (!authSecret || authSecret.length < 16) return null;
+  if (!authSecret || authSecret.length < MIN_SECRET_LENGTH) return null;
   return new TextEncoder().encode(authSecret);
 }
 
-/** Indica si el admin está configurado (secreto + credenciales). */
+/**
+ * Huella de la contraseña actual que viaja dentro del JWT: cambiar
+ * ADMIN_PASSWORD invalida todas las sesiones abiertas.
+ */
+export function passwordTag(password: string | undefined): string | null {
+  if (!password) return null;
+  return createHash("sha256").update(`pwd:${password}`).digest("hex").slice(0, 16);
+}
+
+/** Indica si el admin está configurado (secreto ≥ 32 chars + credenciales, contraseña ≥ 12). */
 export function isAdminConfigured(): boolean {
   const env = serverEnv();
-  return Boolean(secretKey() && env.adminEmail && env.adminPassword && env.adminPassword.length >= 8);
+  return Boolean(
+    secretKey() && env.adminEmail && env.adminPassword && env.adminPassword.length >= MIN_PASSWORD_LENGTH,
+  );
 }
 
 /** Comparación en tiempo constante de dos cadenas (hash previo para igualar longitud). */
@@ -45,8 +59,9 @@ export function verifyCredentials(email: string, password: string): boolean {
 
 export async function createSessionToken(email: string): Promise<string | null> {
   const key = secretKey();
-  if (!key) return null;
-  return new SignJWT({ email })
+  const pwd = passwordTag(serverEnv().adminPassword);
+  if (!key || !pwd) return null;
+  return new SignJWT({ email, pwd })
     .setProtectedHeader({ alg: "HS256" })
     .setSubject("admin")
     .setIssuedAt()
@@ -61,6 +76,7 @@ export async function verifySessionToken(token: string | undefined): Promise<Adm
   try {
     const { payload } = await jwtVerify(token, key, { algorithms: ["HS256"] });
     if (payload.sub !== "admin" || typeof payload.email !== "string") return null;
+    if (payload.pwd !== passwordTag(serverEnv().adminPassword)) return null;
     return {
       email: payload.email,
       iat: Number(payload.iat ?? 0),

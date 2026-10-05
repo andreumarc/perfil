@@ -7,10 +7,10 @@ import { recordEvent } from "@/db/queries/events";
 import { calculateDiagnostic, type DiagnosticResult } from "@/lib/diagnostic/calculate";
 import { sendDiagnosticResultToLead, sendNewLeadNotification } from "@/lib/email/send";
 import { serverEnv } from "@/lib/env";
-import { scoreLead, type LeadScore } from "@/lib/lead-scoring";
+import { scoreLead } from "@/lib/lead-scoring";
 import { FORM_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
 import { getRequestMeta } from "@/lib/request-meta";
-import { diagnosticSubmissionSchema, fieldErrors } from "@/lib/validation/lead";
+import { diagnosticSubmissionSchema, fieldErrors, isSuspiciousFillTime } from "@/lib/validation/lead";
 
 export type SubmitDiagnosticState =
   | { status: "idle" }
@@ -18,7 +18,6 @@ export type SubmitDiagnosticState =
   | {
       status: "success";
       result: DiagnosticResult;
-      score: LeadScore;
       leadId: string | null;
       resultToken: string | null;
       persisted: boolean;
@@ -26,7 +25,6 @@ export type SubmitDiagnosticState =
       emailQueued: boolean;
     };
 
-const MIN_FILL_TIME_MS = 3000;
 const CONSENT_TEXT_VERSION = "2026-10-01";
 
 /**
@@ -44,13 +42,13 @@ export async function submitDiagnostic(payload: unknown): Promise<SubmitDiagnost
   }
   const data = parsed.data;
 
-  // Anti-spam: honeypot (ya validado por el schema) + tiempo mínimo de cumplimentación.
-  if (data.antiSpam.startedAt && Date.now() - data.antiSpam.startedAt < MIN_FILL_TIME_MS) {
+  // Anti-spam: honeypot (ya validado por el schema) + ventana de cumplimentación plausible.
+  if (isSuspiciousFillTime(data.antiSpam.startedAt)) {
     return { status: "error", message: "No se ha podido procesar el envío. Inténtalo de nuevo." };
   }
 
   const meta = await getRequestMeta();
-  const limit = await rateLimit(`diagnostic:${meta.ipHash ?? "anon"}`, FORM_RATE_LIMIT);
+  const limit = await rateLimit(`diagnostic:${meta.rateKey}`, FORM_RATE_LIMIT);
   if (!limit.ok) {
     return {
       status: "error",
@@ -153,26 +151,32 @@ export async function submitDiagnostic(payload: unknown): Promise<SubmitDiagnost
     diagnostic: result,
   };
 
+  // El email al lead solo tiene sentido si el resultado quedó guardado (enlace permanente).
+  const emailQueued = persisted && Boolean(serverEnv().resendApiKey);
+
   // Los emails se envían tras responder al usuario: no retrasan el resultado.
   after(async () => {
     await Promise.allSettled([
       sendNewLeadNotification(emailInput),
-      sendDiagnosticResultToLead(data.lead.email, {
-        firstName: data.lead.firstName,
-        company: data.lead.company,
-        result,
-        resultToken,
-      }),
+      emailQueued
+        ? sendDiagnosticResultToLead(data.lead.email, {
+            firstName: data.lead.firstName,
+            company: data.lead.company,
+            result,
+            resultToken,
+            recommendedServiceSlug: result.recommendations.recommendedService.slug,
+          })
+        : Promise.resolve(null),
     ]);
   });
 
+  // El lead score es información comercial interna: no se devuelve al navegador.
   return {
     status: "success",
     result,
-    score,
     leadId,
     resultToken: persisted ? resultToken : null,
     persisted,
-    emailQueued: Boolean(serverEnv().resendApiKey),
+    emailQueued,
   };
 }

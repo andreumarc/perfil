@@ -141,7 +141,8 @@ async function main() {
         company: item.company,
         jobTitle: item.jobTitle,
         email,
-        phone: rand() > 0.5 ? `+34 6${Math.floor(10000000 + rand() * 89999999)}` : null,
+        // Rango claramente ficticio: nunca números móviles reales de terceros.
+        phone: rand() > 0.5 ? `+34 600 000 0${String(SEED_LEADS.indexOf(item)).padStart(2, "0")}` : null,
         sector: item.sector,
         companyRevenue: item.companyRevenue,
         numberLocations: item.numberLocations,

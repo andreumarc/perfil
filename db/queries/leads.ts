@@ -108,9 +108,13 @@ export interface LeadResultView {
   answers: (typeof diagnosticAnswers.$inferSelect)[];
 }
 
+/** Formato exacto de generateResultToken(): 24 bytes en base64url = 32 caracteres. */
+const RESULT_TOKEN_RE = /^[A-Za-z0-9_-]{32}$/;
+
 export async function getLeadByResultToken(token: string): Promise<LeadResultView | null> {
   const db = getDb();
-  if (!db || !token || token.length > 64) return null;
+  // Rechaza sin consultar la base de datos cualquier token que no pueda ser válido.
+  if (!db || !RESULT_TOKEN_RE.test(token)) return null;
   const lead = await db.query.leads.findFirst({ where: eq(leads.resultToken, token) });
   if (!lead) return null;
   const [result, answers] = await Promise.all([
@@ -269,7 +273,17 @@ export async function addLeadNote(id: string, note: string, author?: string) {
   return row ?? null;
 }
 
-export async function deleteLeadNote(noteId: string) {
+export async function deleteLeadNote(noteId: string, leadId: string) {
   const db = requireDb();
-  await db.delete(leadNotes).where(eq(leadNotes.id, noteId));
+  await db.delete(leadNotes).where(and(eq(leadNotes.id, noteId), eq(leadNotes.leadId, leadId)));
+}
+
+/**
+ * Borra un lead y, en cascada, sus respuestas, resultados y notas; los eventos
+ * quedan anónimos (lead_id = NULL). Para el derecho de supresión (RGPD art. 17).
+ */
+export async function deleteLead(id: string): Promise<boolean> {
+  const db = requireDb();
+  const rows = await db.delete(leads).where(eq(leads.id, id)).returning({ id: leads.id });
+  return rows.length > 0;
 }

@@ -2,7 +2,7 @@ import { ArrowUpRightIcon, CalendarCheckIcon, MailIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Button } from "@/components/ui/button";
-import { credentials, meetingHref, meetingIsExternal, site } from "@/lib/site";
+import { credentials, meetingCta, meetingHref, meetingIsExternal, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const LOCATION = "contact_page";
@@ -59,7 +59,7 @@ export function ContactAside({ className }: { className?: string }) {
           <Button asChild size="xl" className="w-full sm:w-auto">
             <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: LOCATION }}>
               <CalendarCheckIcon />
-              Reservar sesión de 30 min
+              {meetingCta.label}
             </TrackedLink>
           </Button>
         ) : (

@@ -2,7 +2,7 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { StatGrid } from "@/components/sections/stat-grid";
 import { Button } from "@/components/ui/button";
-import { meetingHref } from "@/lib/site";
+import { meetingCta, meetingHref } from "@/lib/site";
 
 export interface Advantage {
   title: string;
@@ -19,7 +19,7 @@ export function OperatorAdvantage({
   description,
   items,
   location,
-  ctaLabel = "Solicitar sesión estratégica de 30 min",
+  ctaLabel = meetingCta.label,
 }: {
   eyebrow?: string;
   title: string;

@@ -311,6 +311,9 @@ describe("recommendations", () => {
     expect(recommendations.headline).toContain(DIMENSION_LABELS.people.toLowerCase());
     expect(recommendations.headline).toContain("finanzas");
     expect(recommendations.headline).toContain("personas");
+    // El titular incluye la puntuación de cada bloque para que sea específico.
+    expect(recommendations.headline).toContain(`(${scores.finance}/100)`);
+    expect(recommendations.headline).toContain(`(${scores.people}/100)`);
   });
 
   it.each([
@@ -347,13 +350,26 @@ describe("recommendations", () => {
       expect(recommendations.recommendedService.slug).toBe("integration-100");
     });
 
-    it("problema principal 'integracion' o sector private_equity → integration-100", () => {
+    it("problema principal 'integracion' → integration-100", () => {
       expect(calculateDiagnostic({ ...WORST, q15: "integracion" }).recommendations.recommendedService.slug).toBe(
         "integration-100",
       );
-      expect(calculateDiagnostic({ ...WORST, q14: "private_equity" }).recommendations.recommendedService.slug).toBe(
-        "integration-100",
-      );
+    });
+
+    it("private_equity: integration-100 solo si estudia una adquisición; si no, audit (¿es real el EBITDA?)", () => {
+      expect(
+        calculateDiagnostic({ ...WORST, q14: "private_equity", q9: "considering" }).recommendations.recommendedService
+          .slug,
+      ).toBe("integration-100");
+      const pe = calculateDiagnostic({ ...WORST, q14: "private_equity", q9: "no" }).recommendations.recommendedService;
+      expect(pe.slug).toBe("multisite-performance-audit");
+      expect(pe.reason).toMatch(/participada|target/i);
+    });
+
+    it("cada disparador de integration-100 tiene una razón específica", () => {
+      const byAcquisition = calculateDiagnostic({ ...BEST, q9: "yes", q15: "rentabilidad" }).recommendations;
+      const byProblem = calculateDiagnostic({ ...WORST, q9: "no", q15: "integracion" }).recommendations;
+      expect(byAcquisition.recommendedService.reason).not.toBe(byProblem.recommendedService.reason);
     });
 
     it("sin adquisiciones, madurez alta y problema de rentabilidad → ebitda-improvement", () => {

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { getService } from "@/content/services";
 import type { DiagnosticResult } from "@/lib/diagnostic/calculate";
 import type { LeadScore } from "@/lib/lead-scoring";
-import { meetingHref, site } from "@/lib/site";
+import { meetingCta, meetingHref, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 interface ResultViewProps {
@@ -69,7 +69,7 @@ export function ResultView({ result, firstName, company, email, resultToken, per
             </h2>
             <p className="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">{result.levelSummary}</p>
             {email ? (
-              <p className="mt-4 text-sm text-gray-500">Te hemos enviado una copia a {email}.</p>
+              <p className="mt-4 text-sm text-gray-500">Te he enviado una copia a {email}.</p>
             ) : null}
             {persisted === false ? (
               <p className="mt-2 text-xs text-gray-500">Resultado calculado en tiempo real.</p>
@@ -118,12 +118,23 @@ export function ResultView({ result, firstName, company, email, resultToken, per
                 <span className="font-semibold text-navy-900">{service.priceLabel}</span> · {service.format}
               </p>
             </div>
-            <Button asChild variant="outline" size="lg" className="w-full lg:w-auto">
-              <TrackedLink href={serviceHref} event="cta_clicked" props={{ location: "diagnostic_result_service" }}>
-                Ver el servicio recomendado
-                <ArrowRightIcon />
-              </TrackedLink>
-            </Button>
+            <div className="flex flex-col gap-2 lg:w-auto">
+              <Button asChild size="lg" className="w-full lg:w-auto">
+                <TrackedLink
+                  href={`/contacto?interes=${service.slug}`}
+                  event="cta_clicked"
+                  props={{ location: "diagnostic_result_proposal" }}
+                >
+                  Solicitar propuesta de {service.shortName}
+                  <ArrowRightIcon />
+                </TrackedLink>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="w-full lg:w-auto">
+                <TrackedLink href={serviceHref} event="cta_clicked" props={{ location: "diagnostic_result_service" }}>
+                  Ver el servicio recomendado
+                </TrackedLink>
+              </Button>
+            </div>
           </div>
         </section>
       ) : null}
@@ -143,12 +154,7 @@ export function ResultView({ result, firstName, company, email, resultToken, per
             <Button asChild size="xl" className="w-full sm:w-auto">
               <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: "diagnostic_result" }}>
                 <CalendarCheckIcon />
-                Solicitar una sesión estratégica de 30 minutos
-              </TrackedLink>
-            </Button>
-            <Button asChild variant="link" size="lg">
-              <TrackedLink href={serviceHref} event="cta_clicked" props={{ location: "diagnostic_result_cta_secondary" }}>
-                Ver el servicio recomendado
+                {meetingCta.longLabel}
               </TrackedLink>
             </Button>
           </div>

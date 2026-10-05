@@ -16,6 +16,10 @@ import { publicEnv } from "@/lib/env";
  */
 export function AnalyticsProvider() {
   const consent = useConsent();
+  const pathname = usePathname();
+
+  // El CRM privado nunca carga analítica de terceros (URLs con ids de leads).
+  if (pathname.startsWith("/admin")) return null;
 
   const analyticsOk = consent?.analytics ?? false;
   const marketingOk = consent?.marketing ?? false;

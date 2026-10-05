@@ -4,7 +4,7 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/layout/container";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { Button } from "@/components/ui/button";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 
 import { Portrait } from "./portrait";
 
@@ -36,7 +36,7 @@ export function AboutHero() {
               </Button>
               <Button asChild size="xl" variant="outline" className="w-full sm:w-auto">
                 <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: "about_hero" }}>
-                  Reservar sesión de 30 min
+                  {meetingCta.label}
                 </TrackedLink>
               </Button>
             </div>

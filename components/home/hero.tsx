@@ -9,7 +9,7 @@ import { primaryCta, secondaryCta } from "@/lib/site";
 import { HeroVisual } from "./hero-visual";
 
 /** Línea de prueba bajo los CTAs: credenciales reales, sin resultados inventados. */
-const PROOF_POINTS = ["25 centros", "35 M€ de P&L", "250 personas", "Healthcare, dental, veterinaria y retail"] as const;
+const PROOF_POINTS = ["25 centros dirigidos", "35 M€ de P&L gestionado", "250 personas dirigidas", "Healthcare, dental, veterinaria y retail"] as const;
 
 export function Hero() {
   return (

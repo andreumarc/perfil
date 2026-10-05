@@ -60,7 +60,9 @@ export function DiagnosticTeaser({ location, className }: { location: string; cl
             <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-[0_24px_60px_-30px_rgba(10,26,51,0.35)] md:p-8">
               <div className="flex items-end justify-between border-b border-gray-200 pb-5">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Madurez operativa</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">
+                    Madurez operativa <span className="ml-1 rounded-full bg-gray-100 px-2 py-0.5 normal-case tracking-normal text-gray-500">Ejemplo ilustrativo</span>
+                  </p>
                   <p className="font-display tabular mt-2 text-5xl text-navy-900">
                     62<span className="text-2xl text-gray-400"> / 100</span>
                   </p>

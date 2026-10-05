@@ -171,6 +171,6 @@ export const PE_FAQS: readonly FaqItem[] = [
   {
     question: "¿Cómo funcionan los honorarios?",
     answer:
-      "Presupuesto cerrado por proyecto para due diligence, audit e integración (orientativamente desde 1.950 € el Multisite Performance Audit y desde 5.000 € el Integration 100) y cuota mensual para la dirección operativa continuada (Fractional COO, desde 3.000 €/mes). Se puede acordar un componente variable ligado a hitos operativos verificables. Sin retainers abiertos ni facturación por horas.",
+      "Presupuesto cerrado por proyecto para due diligence, audit e integración (orientativamente desde 1.950 € el Multisite Performance Audit —la due diligence operativa de un target se presupuesta como variante de 2-3 semanas de este audit— y desde 5.000 € el Integration 100) y cuota mensual para la dirección operativa continuada (Fractional COO, desde 3.000 €/mes). Se puede acordar un componente variable ligado a hitos operativos verificables. Sin cuotas abiertas ni facturación por horas.",
   },
 ];

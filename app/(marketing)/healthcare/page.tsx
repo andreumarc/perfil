@@ -15,7 +15,7 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { CtaBand } from "@/components/sections/cta-band";
 import { DiagnosticTeaser } from "@/components/sections/diagnostic-teaser";
 import { pageMetadata } from "@/lib/seo";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Operaciones y rentabilidad para grupos de clínicas | Healthcare",
@@ -46,7 +46,7 @@ export default function HealthcarePage() {
         title="Rentabilidad por clínica, una sola forma de operar y managers que dirigen con datos."
         description="Para grupos de clínicas dentales, veterinarias, oftalmológicas, capilares, de fisioterapia, estética, centros médicos y residencias. Ocupación de gabinetes, productividad por profesional, conversión de primera visita y EBITDA por clínica, con un método dirigido desde dentro de redes de hasta 25 centros."
         primary={{ label: primaryCta.label, href: primaryCta.href }}
-        secondary={{ label: "Solicitar sesión estratégica", href: meetingHref, event: "meeting_clicked" }}
+        secondary={{ label: meetingCta.label, href: meetingHref, event: "meeting_clicked" }}
         proofPoints={["25 centros dirigidos", "35 M€ de P&L", "250 personas", "Healthcare, dental y veterinaria"]}
         visual={<HealthcareVisual />}
       />

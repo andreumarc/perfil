@@ -7,6 +7,7 @@ import { isFreeEmail } from "@/lib/validation/free-email-domains";
 import {
   antiSpamSchema,
   contactFormSchema,
+  isSuspiciousFillTime,
   contactSubmissionSchema,
   corporateEmailSchema,
   diagnosticAnswersSchema,
@@ -195,15 +196,24 @@ describe("diagnosticAnswersSchema", () => {
 });
 
 describe("diagnosticSubmissionSchema", () => {
-  it("un envío completo pasa con antiSpam y source por defecto", () => {
-    const result = diagnosticSubmissionSchema.safeParse({ lead: VALID_LEAD, answers: VALID_ANSWERS });
+  it("un envío completo pasa con source y attribution por defecto; antiSpam.startedAt es obligatorio", () => {
+    const result = diagnosticSubmissionSchema.safeParse({
+      lead: VALID_LEAD,
+      answers: VALID_ANSWERS,
+      antiSpam: { startedAt: 1700000000000 },
+    });
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.antiSpam).toEqual({});
+      expect(result.data.antiSpam).toEqual({ website: "", startedAt: 1700000000000 });
       expect(result.data.source).toBe("diagnostic");
       expect(result.data.attribution).toEqual({});
       expect(result.data.visitorId).toBeUndefined();
     }
+    // Sin antiSpam (o sin startedAt) el envío se rechaza: un bot no puede saltarse el control de tiempo.
+    expect(diagnosticSubmissionSchema.safeParse({ lead: VALID_LEAD, answers: VALID_ANSWERS }).success).toBe(false);
+    expect(
+      diagnosticSubmissionSchema.safeParse({ lead: VALID_LEAD, answers: VALID_ANSWERS, antiSpam: {} }).success,
+    ).toBe(false);
   });
 
   it("acepta source 'linkedin' y atribución acotada", () => {
@@ -227,7 +237,7 @@ describe("diagnosticSubmissionSchema", () => {
     const result = diagnosticSubmissionSchema.safeParse({
       lead: VALID_LEAD,
       answers: VALID_ANSWERS,
-      antiSpam: { website: "https://spam.example" },
+      antiSpam: { website: "https://spam.example", startedAt: 1700000000000 },
     });
     expect(result.success).toBe(false);
     expect(errorsOf(result)["antiSpam.website"]).toBe("Spam detectado");
@@ -250,11 +260,26 @@ describe("diagnosticSubmissionSchema", () => {
 });
 
 describe("antiSpamSchema", () => {
-  it("acepta vacío y rechaza startedAt no positivo", () => {
-    expect(antiSpamSchema.safeParse({}).success).toBe(true);
-    expect(antiSpamSchema.safeParse({ website: "" }).success).toBe(true);
+  it("exige startedAt positivo y entero; website vacío por defecto", () => {
+    expect(antiSpamSchema.safeParse({}).success).toBe(false);
+    expect(antiSpamSchema.safeParse({ website: "" }).success).toBe(false);
+    expect(antiSpamSchema.safeParse({ startedAt: 1700000000000 }).success).toBe(true);
+    expect(antiSpamSchema.parse({ startedAt: 1700000000000 }).website).toBe("");
     expect(antiSpamSchema.safeParse({ startedAt: -1 }).success).toBe(false);
     expect(antiSpamSchema.safeParse({ startedAt: 1.5 }).success).toBe(false);
+  });
+
+  it("isSuspiciousFillTime rechaza envíos en menos de 3 s o de más de 6 h", () => {
+    const now = 1_700_000_000_000;
+    expect(isSuspiciousFillTime(now - 1_000, now)).toBe(true);
+    expect(isSuspiciousFillTime(now - 5_000, now)).toBe(false);
+    expect(isSuspiciousFillTime(now - 7 * 60 * 60 * 1000, now)).toBe(true);
+  });
+
+  it("los campos de identidad rechazan URLs y direcciones de email", () => {
+    expect(leadFormSchema.safeParse({ ...VALID_LEAD, firstName: "Urgente https://evil.example" }).success).toBe(false);
+    expect(leadFormSchema.safeParse({ ...VALID_LEAD, company: "soporte@evil.example" }).success).toBe(false);
+    expect(leadFormSchema.safeParse({ ...VALID_LEAD, company: "Grupo Dental Levante S.L." }).success).toBe(true);
   });
 });
 
@@ -289,26 +314,36 @@ describe("contactFormSchema", () => {
     expect(errorsOf(result).mainProblem).toBe("Selecciona el problema principal");
   });
 
-  it("contactSubmissionSchema aplica defaults (source contact, antiSpam {})", () => {
-    const result = contactSubmissionSchema.safeParse({ contact: VALID_CONTACT });
+  it("contactSubmissionSchema aplica defaults (source contact, attribution {}) y exige antiSpam", () => {
+    const result = contactSubmissionSchema.safeParse({ contact: VALID_CONTACT, antiSpam: { startedAt: 1700000000000 } });
     expect(result.success).toBe(true);
     if (result.success) {
       expect(result.data.source).toBe("contact");
-      expect(result.data.antiSpam).toEqual({});
+      expect(result.data.antiSpam).toEqual({ website: "", startedAt: 1700000000000 });
       expect(result.data.attribution).toEqual({});
     }
+    expect(contactSubmissionSchema.safeParse({ contact: VALID_CONTACT }).success).toBe(false);
   });
 
-  it("contactSubmissionSchema acepta context escalar y rechaza objetos anidados", () => {
+  it("contactSubmissionSchema acepta solo claves de contexto conocidas", () => {
+    const antiSpam = { startedAt: 1700000000000 };
     expect(
       contactSubmissionSchema.safeParse({
         contact: VALID_CONTACT,
         source: "calculator",
-        context: { centers: 12, revenue: "10-25M", hasEbitda: false },
+        antiSpam,
+        context: { locations: 12, revenue: 12_000_000, ebitdaMarginPct: 11, sector: "dental", opportunityLevel: "alto" },
       }).success,
     ).toBe(true);
     expect(
-      contactSubmissionSchema.safeParse({ contact: VALID_CONTACT, context: { nested: { a: 1 } } }).success,
+      contactSubmissionSchema.safeParse({ contact: VALID_CONTACT, antiSpam, context: { interes: "integration-100" } }).success,
+    ).toBe(true);
+    // Claves desconocidas, valores anidados o textos enormes se rechazan (no llegan a notas ni emails).
+    expect(
+      contactSubmissionSchema.safeParse({ contact: VALID_CONTACT, antiSpam, context: { nested: { a: 1 } } }).success,
+    ).toBe(false);
+    expect(
+      contactSubmissionSchema.safeParse({ contact: VALID_CONTACT, antiSpam, context: { interes: "x".repeat(61) } }).success,
     ).toBe(false);
   });
 });

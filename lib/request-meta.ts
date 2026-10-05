@@ -10,7 +10,10 @@ export type DeviceType = "mobile" | "tablet" | "desktop" | "bot" | "unknown";
 
 export interface RequestMeta {
   ip: string | null;
+  /** Hash con sal para almacenar junto al lead; null si no hay IP o no hay IP_HASH_SALT en producción. */
   ipHash: string | null;
+  /** Clave estable (no almacenada) para rate limiting; siempre disponible si hay IP. */
+  rateKey: string;
   userAgent: string | null;
   device: DeviceType;
   country: string | null;
@@ -25,11 +28,26 @@ export function detectDevice(ua: string | null | undefined): DeviceType {
   return "desktop";
 }
 
-/** Hash SHA-256 truncado y con sal: no permite recuperar la IP original. */
+/**
+ * Hash SHA-256 truncado y con sal: no permite recuperar la IP original.
+ * Devuelve null si no hay sal configurada en producción (ver lib/env.ts).
+ */
 export function hashIp(ip: string | null | undefined): string | null {
   if (!ip) return null;
   const { ipHashSalt } = serverEnv();
+  if (!ipHashSalt) return null;
   return createHash("sha256").update(`${ipHashSalt}:${ip}`).digest("hex").slice(0, 32);
+}
+
+/**
+ * Clave de rate limiting derivada de la IP con un secreto del servidor. No se
+ * persiste con el lead, así que puede usar AUTH_SECRET como sal de respaldo.
+ */
+export function rateLimitKey(ip: string | null | undefined, userAgent?: string | null): string {
+  const { ipHashSalt, authSecret } = serverEnv();
+  const salt = ipHashSalt ?? authSecret ?? "rate-limit";
+  const material = ip ?? `ua:${userAgent ?? "unknown"}`;
+  return createHash("sha256").update(`${salt}:${material}`).digest("hex").slice(0, 32);
 }
 
 export function extractIp(h: Headers): string | null {
@@ -47,6 +65,7 @@ export function metaFromHeaders(h: Headers): RequestMeta {
   return {
     ip,
     ipHash: hashIp(ip),
+    rateKey: rateLimitKey(ip, userAgent),
     userAgent: userAgent ? userAgent.slice(0, 400) : null,
     device: detectDevice(userAgent),
     country,

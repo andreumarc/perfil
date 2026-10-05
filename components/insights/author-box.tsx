@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
-import { meetingHref, site } from "@/lib/site";
+import { meetingCta, meetingHref, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /**
@@ -45,7 +45,7 @@ export function AuthorBox({ className }: { className?: string }) {
               props={{ location: "insight_author" }}
               className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-navy-900 underline-offset-4 hover:underline"
             >
-              Reservar sesión de 30 min
+              {meetingCta.label}
             </TrackedLink>
           </div>
         </div>

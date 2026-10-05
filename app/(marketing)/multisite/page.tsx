@@ -18,7 +18,7 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Methodology } from "@/components/sections/methodology";
 import { pageMetadata } from "@/lib/seo";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Gestión de empresas multicentro: más control, más EBITDA",
@@ -49,7 +49,7 @@ export default function MultisitePage() {
         title="Más control. Más EBITDA. Una sola forma de operar en todos tus centros."
         description="Para redes de 5 a 100 centros que crecen en unidades más rápido que en resultado: gimnasios, academias, ópticas, audiología, automoción, restauración, franquicias, retail y hospitality. P&L por centro, benchmarking interno, palancas priorizadas y managers que dirigen con indicadores."
         primary={{ label: primaryCta.label, href: primaryCta.href }}
-        secondary={{ label: "Solicitar sesión estratégica", href: meetingHref, event: "meeting_clicked" }}
+        secondary={{ label: meetingCta.label, href: meetingHref, event: "meeting_clicked" }}
         visual={<MultisiteVisual />}
       />
 
@@ -80,7 +80,7 @@ export default function MultisitePage() {
             props={{ location: "multisite_methodology" }}
             className="inline-flex min-h-11 shrink-0 items-center gap-2 text-base font-semibold text-navy-900 underline-offset-4 hover:underline"
           >
-            Ver cómo se aplicaría a tu red
+            Hablar de cómo se aplicaría a tu red · 30 min
             <ArrowRightIcon className="size-4" />
           </TrackedLink>
         </div>

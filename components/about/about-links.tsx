@@ -2,7 +2,7 @@ import { ArrowRightIcon, ArrowUpRightIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Button } from "@/components/ui/button";
-import { meetingHref, site } from "@/lib/site";
+import { meetingCta, meetingHref, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /**
@@ -14,7 +14,7 @@ export function AboutLinks({ location, className }: { location: string; classNam
     <div className={cn("flex flex-col gap-3 sm:flex-row", className)}>
       <Button asChild size="xl" className="w-full sm:w-auto">
         <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location }}>
-          Reservar sesión de 30 min
+          {meetingCta.label}
           <ArrowRightIcon />
         </TrackedLink>
       </Button>

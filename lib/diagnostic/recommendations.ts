@@ -166,11 +166,32 @@ function recommendService(input: BuildInput): Recommendations["recommendedServic
   const { pain, profile, scores } = input;
   const avg = Object.values(scores).reduce((a, b) => a + b, 0) / 5;
 
-  if (pain.acquisitions === "yes" || profile.mainProblem === "integracion" || profile.sector === "private_equity") {
+  if (pain.acquisitions === "yes") {
     return {
       slug: "integration-100",
       reason:
-        "Habéis adquirido centros recientemente o la integración es vuestro problema principal: el plan de 100 días evita que cada adquisición añada una forma más de operar.",
+        "Habéis adquirido centros recientemente: el plan de 100 días evita que cada adquisición añada una forma más de operar y fija responsables y calendario para las sinergias.",
+    };
+  }
+  if (profile.mainProblem === "integracion") {
+    return {
+      slug: "integration-100",
+      reason:
+        "La integración es vuestro problema principal: antes de la siguiente adquisición conviene un playbook con hitos a 30, 60 y 100 días y una única forma de operar.",
+    };
+  }
+  if (profile.sector === "private_equity" && pain.acquisitions === "considering") {
+    return {
+      slug: "integration-100",
+      reason:
+        "Estáis estudiando una adquisición: preparar la integración antes del día 1 es la forma más barata de proteger el EBITDA del plan de inversión.",
+    };
+  }
+  if (profile.sector === "private_equity") {
+    return {
+      slug: "multisite-performance-audit",
+      reason:
+        "Para una participada o un target, el primer paso es saber si el EBITDA es real y replicable centro a centro: el audit entrega ese diagnóstico con ranking, desviaciones y plan de acción.",
     };
   }
   if (avg >= 60 && (profile.mainProblem === "rentabilidad" || profile.mainProblem === "costes")) {
@@ -219,8 +240,8 @@ export function buildRecommendations(input: BuildInput): Recommendations {
     chosen.push(extra);
   }
 
-  const focusLabels = focus.map((d) => DIMENSION_LABELS[d].toLowerCase());
-  const headline = `Actualmente vuestro mayor potencial de mejora está en ${focusLabels[0]} y ${focusLabels[1]}.`;
+  const focusLabels = focus.map((d) => `${DIMENSION_LABELS[d].toLowerCase()} (${scores[d]}/100)`);
+  const headline = `Vuestro mayor potencial de mejora está en ${focusLabels[0]} y ${focusLabels[1]}. Por ahí empezaría.`;
 
   return {
     headline,

@@ -13,7 +13,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import { CASES } from "@/content/cases";
 import { pageMetadata } from "@/lib/seo";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Casos de intervención en redes multicentro",
@@ -55,7 +55,7 @@ export default function CasesPage() {
               </Button>
               <Button asChild size="xl" variant="outline" className="w-full sm:w-auto">
                 <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: "cases_hero" }}>
-                  Reservar sesión de 30 min
+                  {meetingCta.label}
                 </TrackedLink>
               </Button>
             </div>

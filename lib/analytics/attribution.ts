@@ -22,6 +22,17 @@ function sanitize(value: string | null | undefined, max = 200): string | undefin
   return v.length ? v : undefined;
 }
 
+/** Conserva solo origen + ruta del referrer: sin query strings (pueden contener tokens de terceros). */
+function stripReferrerQuery(ref: string): string {
+  if (!ref) return "";
+  try {
+    const url = new URL(ref);
+    return `${url.origin}${url.pathname}`;
+  } catch {
+    return "";
+  }
+}
+
 function read(): Attribution | null {
   try {
     const raw = window.sessionStorage.getItem(STORAGE_KEY);
@@ -55,7 +66,7 @@ export function captureAttribution(): Attribution {
 
   if (existing && !hasUtm) return existing;
 
-  const referrer = sanitize(document.referrer, 500);
+  const referrer = sanitize(stripReferrerQuery(document.referrer), 500);
   const isInternalReferrer = referrer ? referrer.startsWith(window.location.origin) : false;
 
   const next: Attribution = {

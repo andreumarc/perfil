@@ -81,3 +81,6 @@ export async function rateLimit(key: string, options: RateLimitOptions): Promise
 export const FORM_RATE_LIMIT: RateLimitOptions = { limit: 5, windowMs: 60 * 60 * 1000 };
 export const EVENTS_RATE_LIMIT: RateLimitOptions = { limit: 240, windowMs: 60 * 60 * 1000 };
 export const LOGIN_RATE_LIMIT: RateLimitOptions = { limit: 8, windowMs: 15 * 60 * 1000 };
+export const LOGIN_GLOBAL_RATE_LIMIT: RateLimitOptions = { limit: 50, windowMs: 15 * 60 * 1000 };
+export const HEALTH_RATE_LIMIT: RateLimitOptions = { limit: 30, windowMs: 60 * 1000 };
+export const RESULT_PAGE_RATE_LIMIT: RateLimitOptions = { limit: 60, windowMs: 60 * 1000 };

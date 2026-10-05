@@ -131,7 +131,7 @@ describe("metaFromHeaders", () => {
 
   it("sin cabeceras → todo null/unknown", () => {
     const meta = metaFromHeaders(new Headers());
-    expect(meta).toEqual({ ip: null, ipHash: null, userAgent: null, device: "unknown", country: null });
+    expect(meta).toEqual({ ip: null, ipHash: null, rateKey: expect.any(String), userAgent: null, device: "unknown", country: null });
   });
 
   it("trunca el user-agent a 400 caracteres", () => {

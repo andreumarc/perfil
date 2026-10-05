@@ -14,7 +14,7 @@ import { servicesItemListJsonLd } from "@/components/services/services-json-ld";
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/content/services";
 import { pageMetadata } from "@/lib/seo";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Servicios para empresas multicentro",
@@ -52,7 +52,7 @@ export default function ServicesPage() {
                       ejecución.
                     </p>
                     <p className="mt-4">
-                      Pensados para CEOs, Directores Generales, CFOs e inversores de redes de 5 a 100 centros en
+                      Pensados para CEOs, Directores Generales, COOs, CFOs e inversores de redes de 5 a 100 centros en
                       healthcare, dental, veterinaria, retail y servicios. Precios orientativos; el alcance se
                       cierra por escrito antes de empezar.
                     </p>
@@ -68,7 +68,7 @@ export default function ServicesPage() {
                 </Button>
                 <Button asChild size="xl" variant="outline">
                   <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: "services_hero" }}>
-                    Reservar sesión de 30 min
+                    {meetingCta.label}
                   </TrackedLink>
                 </Button>
               </div>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
         <SectionHeading
           eyebrow="Catálogo"
           title="Un servicio para cada fase: medir, ejecutar, integrar, dirigir"
-          description="Cada uno tiene un alcance, una duración y un precio orientativo definidos. Sin retainers abiertos ni propuestas que cambian a mitad de camino."
+          description="Cada uno tiene un alcance, una duración y un precio orientativo definidos. Sin cuotas abiertas ni propuestas que cambian a mitad de camino."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {SERVICES.map((service) => (

@@ -1,6 +1,7 @@
+import { getService } from "@/content/services";
 import type { DiagnosticResult } from "@/lib/diagnostic/calculate";
 import { DIMENSION_LABELS } from "@/lib/diagnostic/questions";
-import { site } from "@/lib/site";
+import { meetingCta, site } from "@/lib/site";
 import {
   COMPANY_REVENUE,
   JOB_TITLES,
@@ -127,6 +128,8 @@ export interface DiagnosticResultEmailInput {
   result: DiagnosticResult;
   resultUrl: string;
   bookingUrl: string;
+  /** Servicio recomendado (slug) para mostrar el formato de intervención que encaja. */
+  recommendedServiceSlug?: string;
 }
 
 export function diagnosticResultSubject(input: DiagnosticResultEmailInput): string {
@@ -154,6 +157,17 @@ export function diagnosticResultEmail(input: DiagnosticResultEmailInput): string
       .map((i) => `<li style="margin-bottom:6px;">${escapeHtml(i)}</li>`)
       .join("")}</ul>`;
 
+  const service = input.recommendedServiceSlug ? getService(input.recommendedServiceSlug) : undefined;
+  const serviceBlock = service
+    ? `<div style="margin:22px 0 0;border:1px solid #e3e8ef;border-radius:8px;padding:14px 16px;">
+        <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#667085;">Formato que encajaría</div>
+        <div style="font-weight:600;font-size:16px;margin-top:4px;">${escapeHtml(service.name)}</div>
+        <div style="font-size:13px;color:#344054;margin-top:2px;">${escapeHtml(service.format)} · ${escapeHtml(service.priceLabel)}</div>
+        <p style="margin:8px 0 0;font-size:14px;color:#344054;">${escapeHtml(result.recommendations.recommendedService.reason)}</p>
+        <a href="${site.url}/servicios/${service.slug}" style="display:inline-block;margin-top:8px;font-size:14px;color:#0a1a33;">Ver el servicio →</a>
+      </div>`
+    : "";
+
   const body = `
     <p style="margin:0 0 14px;">Hola ${escapeHtml(input.firstName)},</p>
     <p style="margin:0 0 18px;">Gracias por completar el Diagnóstico Multisite para <strong>${escapeHtml(input.company)}</strong>. Este es el resumen de vuestra madurez operativa:</p>
@@ -167,9 +181,10 @@ export function diagnosticResultEmail(input: DiagnosticResultEmailInput): string
     <h3 style="margin:18px 0 4px;font-size:15px;">Tres problemas detectados</h3>${list(result.recommendations.problems)}
     <h3 style="margin:18px 0 4px;font-size:15px;">Tres oportunidades</h3>${list(result.recommendations.opportunities)}
     <h3 style="margin:18px 0 4px;font-size:15px;">Tres acciones prioritarias</h3>${list(result.recommendations.actions)}
-    <p style="margin:26px 0 10px;">Si quieres, en una sesión estratégica de 30 minutos revisamos juntos estos resultados y qué palancas tendrían más impacto en vuestro EBITDA.</p>
+    ${serviceBlock}
+    <p style="margin:26px 0 10px;">Si quieres, en una sesión de 30 minutos revisamos juntos estos resultados y qué palancas tendrían más impacto en vuestro EBITDA. Si lo prefieres, responde a este email con dos franjas horarias y lo cerramos.</p>
     <p style="margin:0 0 10px;">
-      <a href="${input.bookingUrl}" style="display:inline-block;background:#0a1a33;color:#fff;text-decoration:none;padding:12px 20px;border-radius:6px;font-weight:600;">Solicitar sesión estratégica de 30 minutos</a>
+      <a href="${input.bookingUrl}" style="display:inline-block;background:#0a1a33;color:#fff;text-decoration:none;padding:12px 20px;border-radius:6px;font-weight:600;">${escapeHtml(meetingCta.longLabel)}</a>
     </p>
     <p style="margin:0;font-size:13px;color:#667085;">Puedes volver a consultar el resultado completo aquí: <a href="${input.resultUrl}" style="color:#0a1a33;">${input.resultUrl}</a></p>
     <p style="margin:24px 0 0;">Un saludo,<br><strong>${escapeHtml(site.name)}</strong><br><span style="color:#667085;font-size:13px;">${escapeHtml(site.role)}</span></p>`;

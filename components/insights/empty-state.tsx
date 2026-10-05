@@ -2,7 +2,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Button } from "@/components/ui/button";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /**
@@ -44,7 +44,7 @@ export function InsightsEmptyState({
             props={{ location }}
             className="inline-flex min-h-11 items-center justify-center text-sm font-semibold text-navy-900 underline-offset-4 hover:underline sm:justify-start"
           >
-            Reservar sesión de 30 min
+            {meetingCta.label}
           </TrackedLink>
         </div>
       </div>

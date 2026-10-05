@@ -5,7 +5,7 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { StatGrid } from "@/components/sections/stat-grid";
 import { Button } from "@/components/ui/button";
-import { meetingHref } from "@/lib/site";
+import { meetingCta, meetingHref } from "@/lib/site";
 
 /** Credenciales cualitativas verificables. Sin porcentajes de mejora ni clientes inventados. */
 const CREDENTIALS = [
@@ -47,7 +47,7 @@ export function Impact() {
       <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
         <Button asChild size="lg" variant="outline-light" className="w-full sm:w-auto">
           <TrackedLink href={meetingHref} event="meeting_clicked" props={{ location: "impact" }}>
-            Solicitar sesión estratégica de 30 min
+            {meetingCta.label}
           </TrackedLink>
         </Button>
         <Link

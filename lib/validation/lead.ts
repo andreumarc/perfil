@@ -25,6 +25,16 @@ export const safeText = (max: number, min = 1) =>
     .transform((v) => v.replace(/[\u0000-\u001F\u007F]/g, ""));
 
 /**
+ * Texto de identidad (nombre, apellidos, empresa): además, sin URLs ni emails.
+ * Evita que el email de resultado (enviado a la dirección indicada) se use
+ * como relé de phishing con texto controlado por el remitente.
+ */
+export const identityText = (max: number) =>
+  safeText(max).refine((v) => !/https?:\/\/|www\.|:\/\/|@/i.test(v), {
+    error: "No se admiten enlaces ni direcciones en este campo",
+  });
+
+/**
  * Email corporativo. Se normaliza (trim + minúsculas) ANTES de validar el
  * formato: en Zod v4 `z.email().trim()` validaría primero y rechazaría un
  * espacio final añadido por el autocompletado móvil.
@@ -83,10 +93,19 @@ export type AttributionInput = z.infer<typeof attributionSchema>;
 /** Campos anti-spam comunes a todos los formularios. */
 export const antiSpamSchema = z.object({
   /** Honeypot: debe llegar vacío. */
-  website: z.string().max(0, { error: "Spam detectado" }).optional().or(z.literal("")),
-  /** Timestamp de renderizado del formulario (ms). Rechaza envíos en < 3 s. */
-  startedAt: z.coerce.number().int().positive().optional(),
+  website: z.string().max(0, { error: "Spam detectado" }).default(""),
+  /** Timestamp de inicio del formulario (ms). Obligatorio: sin él no hay control de tiempo. */
+  startedAt: z.coerce.number({ error: "Envío no válido" }).int().positive(),
 });
+
+/** Ventana de cumplimentación aceptada: ≥ 3 s (bots) y ≤ 6 h (sesiones zombis / replay). */
+export const MIN_FILL_TIME_MS = 3_000;
+export const MAX_FILL_TIME_MS = 6 * 60 * 60 * 1000;
+
+export function isSuspiciousFillTime(startedAt: number, now = Date.now()): boolean {
+  const elapsed = now - startedAt;
+  return elapsed < MIN_FILL_TIME_MS || elapsed > MAX_FILL_TIME_MS;
+}
 
 export const gdprConsentSchema = z.literal(true, {
   error: "Debes aceptar la política de privacidad para continuar",
@@ -94,9 +113,9 @@ export const gdprConsentSchema = z.literal(true, {
 
 /** Formulario de captura de lead al final del diagnóstico. */
 export const leadFormSchema = z.object({
-  firstName: safeText(80),
-  lastName: safeText(120),
-  company: safeText(160),
+  firstName: identityText(80),
+  lastName: identityText(120),
+  company: identityText(160),
   jobTitle: jobTitleSchema,
   email: corporateEmailSchema,
   phone: phoneSchema,
@@ -135,7 +154,7 @@ export const diagnosticSubmissionSchema = z.object({
   lead: leadFormSchema,
   answers: diagnosticAnswersSchema,
   attribution: attributionSchema,
-  antiSpam: antiSpamSchema.default({}),
+  antiSpam: antiSpamSchema,
   /** Identificador anónimo de visitante (solo tras consentimiento). */
   visitorId: z.string().trim().max(64).optional(),
   /** Origen del formulario para atribución interna. */
@@ -146,9 +165,9 @@ export type DiagnosticSubmission = z.infer<typeof diagnosticSubmissionSchema>;
 
 /** Formulario de contacto directo. */
 export const contactFormSchema = z.object({
-  firstName: safeText(80),
-  lastName: safeText(120),
-  company: safeText(160),
+  firstName: identityText(80),
+  lastName: identityText(120),
+  company: identityText(160),
   jobTitle: jobTitleSchema,
   email: corporateEmailSchema,
   phone: phoneSchema,
@@ -166,12 +185,26 @@ export type ContactFormValues = z.infer<typeof contactFormSchema>;
 export const contactSubmissionSchema = z.object({
   contact: contactFormSchema,
   attribution: attributionSchema,
-  antiSpam: antiSpamSchema.default({}),
+  antiSpam: antiSpamSchema,
   visitorId: z.string().trim().max(64).optional(),
   /** Para distinguir el origen (contacto, calculadora…). */
   source: z.enum(["contact", "calculator"]).default("contact"),
-  /** Contexto adicional opcional (p. ej. inputs de la calculadora). */
-  context: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional(),
+  /** Contexto adicional opcional, acotado a claves conocidas (interés y datos de la calculadora). */
+  context: z
+    .object({
+      interes: z.string().trim().max(60).optional(),
+      revenue: z.number().finite().nonnegative().optional(),
+      locations: z.number().int().nonnegative().max(10_000).optional(),
+      ebitdaMarginPct: z.number().finite().optional(),
+      staffCostPct: z.number().finite().optional(),
+      purchasesPct: z.number().finite().optional(),
+      occupancyPct: z.number().finite().optional(),
+      sector: z.string().trim().max(40).optional(),
+      ebitda: z.number().finite().optional(),
+      opportunityLevel: z.string().trim().max(40).optional(),
+    })
+    .strict()
+    .optional(),
 });
 
 export type ContactSubmission = z.infer<typeof contactSubmissionSchema>;

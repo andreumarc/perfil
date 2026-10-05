@@ -14,9 +14,13 @@ const eventSchema = z.object({
   leadId: z.uuid().optional(),
   metadata: z
     .record(z.string().max(60), z.union([z.string().max(300), z.number(), z.boolean()]))
+    .refine((o) => Object.keys(o).length <= 20, { error: "Demasiadas claves" })
     .optional(),
   consented: z.boolean().optional(),
 });
+
+/** Un evento legítimo ocupa < 1 KB; cualquier cosa mayor es abuso. */
+const MAX_BODY_BYTES = 8_192;
 
 function isSameOrigin(request: NextRequest): boolean {
   const fetchSite = request.headers.get("sec-fetch-site");
@@ -40,9 +44,18 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Origen no permitido" }, { status: 403 });
   }
 
+  const declaredLength = Number(request.headers.get("content-length") ?? 0);
+  if (declaredLength > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload demasiado grande" }, { status: 413 });
+  }
+
   let body: unknown;
   try {
-    body = await request.json();
+    const raw = await request.text();
+    if (raw.length > MAX_BODY_BYTES) {
+      return NextResponse.json({ error: "Payload demasiado grande" }, { status: 413 });
+    }
+    body = JSON.parse(raw);
   } catch {
     return NextResponse.json({ error: "JSON inválido" }, { status: 400 });
   }
@@ -59,7 +72,7 @@ export async function POST(request: NextRequest) {
   const meta = metaFromHeaders(request.headers);
   if (meta.device === "bot") return NextResponse.json({ ok: true, stored: false });
 
-  const limit = await rateLimit(`events:${meta.ipHash ?? "anon"}`, EVENTS_RATE_LIMIT);
+  const limit = await rateLimit(`events:${meta.rateKey}`, EVENTS_RATE_LIMIT);
   if (!limit.ok) return NextResponse.json({ ok: false, error: "rate_limited" }, { status: 429 });
 
   // Sin consentimiento de analítica no se persiste un identificador estable

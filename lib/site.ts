@@ -53,9 +53,20 @@ export const secondaryCta = {
   href: "/#metodologia",
 } as const;
 
-/** Enlace de reunión: Calendly si está configurado, si no, formulario de contacto. */
-export const meetingHref = site.bookingUrl ?? "/contacto";
+/** Enlace de reunión: Calendly si está configurado, si no, formulario de contacto con interés "sesión". */
+export const meetingHref = site.bookingUrl ?? "/contacto?interes=sesion";
 export const meetingIsExternal = Boolean(site.bookingUrl);
+
+/**
+ * Texto único del CTA de reunión. Con Calendly el usuario "reserva"; sin él,
+ * "solicita" (aterriza en el formulario), para no prometer un calendario que no existe.
+ */
+export const meetingCta = {
+  label: meetingIsExternal ? "Reservar sesión de 30 min" : "Solicitar sesión de 30 min",
+  longLabel: meetingIsExternal
+    ? "Reservar una sesión estratégica de 30 minutos"
+    : "Solicitar una sesión estratégica de 30 minutos",
+} as const;
 
 export const mainNav = [
   { label: "Servicios", href: "/servicios" },

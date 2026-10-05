@@ -13,7 +13,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import { getService, type Service, type ServiceSlug } from "@/content/services";
 import { faqJsonLd, serviceJsonLd } from "@/lib/seo";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 
 import { ServiceViewTracker } from "./service-view-tracker";
 import { serviceContactHref, servicePath } from "./services-json-ld";
@@ -140,7 +140,7 @@ export function ServicePage({ service }: { service: Service }) {
                 props={{ location: "service_price_card", service: service.slug }}
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-navy-900 underline-offset-4 hover:underline"
               >
-                ¿Prefieres hablarlo antes? Reserva 30 minutos
+                ¿Prefieres hablarlo antes? {meetingCta.label}
                 <ArrowRightIcon className="size-4" />
               </TrackedLink>
             </aside>

@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
-import { meetingHref, primaryCta } from "@/lib/site";
+import { meetingCta, meetingHref, primaryCta } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 interface CtaBandProps {
@@ -25,11 +25,11 @@ interface CtaBandProps {
  */
 export function CtaBand({
   eyebrow = "Siguiente paso",
-  title = "¿Cuánto potencial de mejora tiene tu red de centros?",
+  title = "¿Por dónde empezaría yo en tu red? Averígualo en 3 minutos.",
   description = "Completa el diagnóstico de 3 minutos y descubre el nivel de madurez operativa de tu organización. Sin compromiso, resultado inmediato.",
   primaryLabel = primaryCta.label,
   primaryHref = primaryCta.href,
-  secondaryLabel = "Solicitar sesión estratégica de 30 min",
+  secondaryLabel = meetingCta.label,
   secondaryHref = meetingHref,
   location,
   tone = "navy",

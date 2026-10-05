@@ -17,7 +17,7 @@ interface QuestionStepProps {
   onSelect: (value: string) => void;
   onBack: () => void;
   onNext: () => void;
-  /** Texto discreto bajo el contador (p. ej. "Hemos recuperado tus respuestas"). */
+  /** Texto discreto bajo el contador (p. ej. "Respuestas recuperadas"). */
   notice?: string;
 }
 

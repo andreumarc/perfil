@@ -15,7 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { track } from "@/lib/analytics/track";
-import { footerNav, mainNav, meetingHref, meetingIsExternal, primaryCta, site } from "@/lib/site";
+import { footerNav, mainNav, meetingCta, meetingHref, meetingIsExternal, primaryCta, site } from "@/lib/site";
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
@@ -89,7 +89,7 @@ export function MobileNav() {
                 close();
               }}
             >
-              Solicitar sesión de 30 min
+              {meetingCta.label}
             </a>
           </Button>
         </SheetFooter>

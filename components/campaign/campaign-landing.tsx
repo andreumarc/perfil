@@ -5,7 +5,7 @@ import { CampaignAttribution } from "@/components/campaign/campaign-attribution"
 import { CampaignHeroCta } from "@/components/campaign/campaign-hero-cta";
 import { DiagnosticWizard } from "@/components/diagnostic/diagnostic-wizard";
 import { Container } from "@/components/layout/container";
-import { credentials, meetingHref, site } from "@/lib/site";
+import { credentials, meetingCta, meetingHref, site } from "@/lib/site";
 
 export interface CampaignLandingProps {
   /** Identificador de campaña para la atribución (utm_campaign por defecto). */
@@ -27,7 +27,7 @@ export function CampaignLanding({
   eyebrow,
   title,
   description,
-  problemsTitle = "Tres síntomas que vemos en redes como la tuya",
+  problemsTitle = "Tres síntomas habituales en redes como la tuya",
   problems,
   outcomes,
 }: CampaignLandingProps) {
@@ -78,7 +78,7 @@ export function CampaignLanding({
                 ))}
               </ul>
               <p className="mt-6 text-sm text-gray-500">
-                Sin coste, sin compromiso. Pedimos tus datos solo al final, para enviarte el resultado.
+                Sin coste, sin compromiso. Tus datos, solo al final y solo para enviarte el resultado.
               </p>
             </div>
           </div>
@@ -117,7 +117,7 @@ export function CampaignLanding({
               props={{ location: `${campaign}_footer` }}
               className="inline-flex min-h-11 items-center text-base font-semibold text-navy-900 underline-offset-4 hover:underline"
             >
-              ¿Prefieres hablar directamente? Reserva 30 minutos
+              ¿Prefieres hablar directamente? {meetingCta.label}
             </TrackedLink>
           </div>
         </Container>

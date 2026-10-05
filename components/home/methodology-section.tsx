@@ -28,7 +28,7 @@ export function MethodologySection() {
           props={{ location: "methodology" }}
           className="inline-flex min-h-11 shrink-0 items-center gap-2 text-base font-semibold text-navy-900 underline-offset-4 hover:underline"
         >
-          Ver cómo se aplicaría a tu red
+          Hablar de cómo se aplicaría a tu red · 30 min
           <ArrowRightIcon className="size-4" />
         </TrackedLink>
       </div>

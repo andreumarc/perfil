@@ -9,7 +9,7 @@ import {
   setSessionCookie,
   verifyCredentials,
 } from "@/lib/auth";
-import { LOGIN_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
+import { LOGIN_GLOBAL_RATE_LIMIT, LOGIN_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
 import { getRequestMeta } from "@/lib/request-meta";
 import { loginSchema } from "@/lib/validation/admin";
 
@@ -30,12 +30,19 @@ export async function loginAction(_prev: LoginState, formData: FormData): Promis
   if (!parsed.success) return { error: "Introduce un email y una contraseña válidos." };
 
   const meta = await getRequestMeta();
-  const limit = await rateLimit(`login:${meta.ipHash ?? "anon"}`, LOGIN_RATE_LIMIT);
-  if (!limit.ok) {
-    return { error: `Demasiados intentos. Espera ${Math.ceil(limit.retryAfterSeconds / 60)} minutos.` };
+  // Límite por IP y límite global: el segundo frena ataques distribuidos sin
+  // bloquear al único administrador legítimo (50 intentos / 15 min en total).
+  const [perIp, global] = await Promise.all([
+    rateLimit(`login:${meta.rateKey}`, LOGIN_RATE_LIMIT),
+    rateLimit("login:global", LOGIN_GLOBAL_RATE_LIMIT),
+  ]);
+  if (!perIp.ok || !global.ok) {
+    const wait = Math.max(perIp.retryAfterSeconds, global.retryAfterSeconds);
+    return { error: `Demasiados intentos. Espera ${Math.max(1, Math.ceil(wait / 60))} minutos.` };
   }
 
   if (!verifyCredentials(parsed.data.email, parsed.data.password)) {
+    console.warn(`[auth] intento de login fallido (${meta.rateKey.slice(0, 8)})`);
     return { error: "Credenciales incorrectas." };
   }
 

@@ -78,6 +78,8 @@ function Field({
 interface LeadFormProps {
   answers: Record<string, string>;
   source: DiagnosticSource;
+  /** Puntuación global ya calculada: se muestra como anticipo del resultado. */
+  previewScore?: number;
   /** Momento en que el usuario empezó el diagnóstico (anti-spam). */
   startedAt: number | null;
   /** Valores previos si el usuario reintenta tras un error. */
@@ -95,6 +97,7 @@ interface LeadFormProps {
 export function LeadForm({
   answers,
   source,
+  previewScore,
   startedAt,
   initialValues,
   onSuccess,
@@ -154,11 +157,7 @@ export function LeadForm({
           { totalScore: response.result.totalScore, level: response.result.level, leadId: response.leadId ?? undefined },
           { persist: false },
         );
-        track(
-          "lead_created",
-          { source, score: response.score.score, leadId: response.leadId ?? undefined },
-          { persist: false },
-        );
+        track("lead_created", { source, leadId: response.leadId ?? undefined }, { persist: false });
         onSuccess(response, values);
         return;
       }
@@ -192,10 +191,18 @@ export function LeadForm({
     <div className="animate-fade-up">
       <p className="eyebrow">Último paso</p>
       <h2 className="font-display mt-3 text-2xl leading-tight text-navy-900 md:text-3xl">
-        ¿A quién enviamos el diagnóstico?
+        {typeof previewScore === "number" ? (
+          <>
+            Tu red puntúa <span className="tabular whitespace-nowrap">{previewScore}/100</span>. ¿A quién envío el
+            detalle?
+          </>
+        ) : (
+          "¿A quién envío el diagnóstico?"
+        )}
       </h2>
       <p className="mt-3 text-base text-gray-600">
-        Verás el resultado completo al instante y te enviamos una copia por email.
+        Al instante: los cinco bloques, tres problemas, tres acciones y el formato de intervención que encaja. Y una
+        copia por email.
       </p>
 
       <form onSubmit={(event) => void handleSubmit(onSubmit)(event)} noValidate className="mt-8 space-y-6">
@@ -415,7 +422,7 @@ export function LeadForm({
             {!isSubmitting ? <ArrowRightIcon /> : null}
           </Button>
           <p className="text-center text-sm text-gray-500">
-            Sin spam. Solo el resultado y, si quieres, una sesión de 30 minutos.
+            Sin secuencias comerciales. Solo el resultado y, si lo pides, una conversación de 30 minutos.
           </p>
         </div>
       </form>

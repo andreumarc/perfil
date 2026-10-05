@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
-import { footerNav, meetingHref, primaryCta, site } from "@/lib/site";
+import { footerNav, meetingCta, meetingHref, primaryCta, site } from "@/lib/site";
 
 import { Container } from "./container";
 import { Logo } from "./logo";
@@ -54,7 +54,7 @@ export function Footer() {
                     props={{ location: "footer" }}
                     className="text-gray-600 hover:text-navy-900"
                   >
-                    Solicitar sesión de 30 min
+                    {meetingCta.label}
                   </TrackedLink>
                 </li>
                 {site.contactEmail ? (
