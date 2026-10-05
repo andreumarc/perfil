@@ -24,14 +24,23 @@ export const safeText = (max: number, min = 1) =>
     .refine((v) => !/[<>]/.test(v), { error: "Caracteres no permitidos" })
     .transform((v) => v.replace(/[\u0000-\u001F\u007F]/g, ""));
 
+/**
+ * Email corporativo. Se normaliza (trim + minúsculas) ANTES de validar el
+ * formato: en Zod v4 `z.email().trim()` validaría primero y rechazaría un
+ * espacio final añadido por el autocompletado móvil.
+ */
 export const corporateEmailSchema = z
-  .email({ error: "Introduce un email válido" })
+  .string({ error: "Introduce un email válido" })
   .trim()
   .toLowerCase()
-  .max(254)
-  .refine((email) => !isFreeEmail(email), {
-    error: "Utiliza tu email corporativo (no Gmail, Hotmail, etc.)",
-  });
+  .pipe(
+    z
+      .email({ error: "Introduce un email válido" })
+      .max(254)
+      .refine((email) => !isFreeEmail(email), {
+        error: "Utiliza tu email corporativo (no Gmail, Hotmail, etc.)",
+      }),
+  );
 
 export const phoneSchema = z
   .string()

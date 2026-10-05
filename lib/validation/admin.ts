@@ -20,7 +20,7 @@ export const updateLeadNotesSchema = z.object({
 });
 
 export const loginSchema = z.object({
-  email: z.email({ error: "Email no válido" }).trim().toLowerCase(),
+  email: z.string().trim().toLowerCase().pipe(z.email({ error: "Email no válido" })),
   password: z.string().min(1, { error: "Introduce la contraseña" }).max(200),
 });
 
