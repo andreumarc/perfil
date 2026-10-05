@@ -32,34 +32,34 @@ export const operacionesPlPosts: InsightPost[] = [
     blocks: [
       {
         type: "p",
-        text: "Cuando un CEO me pregunta qué hace exactamente un director de operaciones multicentro, suelo responder con otra pregunta: ¿cuánto tardas hoy en saber qué centro de tu red ha perdido margen este mes y por qué? Si la respuesta es más de cinco minutos, ya tienes la descripción del puesto. El trabajo consiste en que esa pregunta tenga respuesta todas las semanas y en que alguien haga algo con ella.",
+        text: "Cuando un CEO me pregunta qué hace un director de operaciones multicentro, suelo responder con otra pregunta: ¿cuánto tardas en saber qué centro de tu red ha perdido margen este mes y por qué? Si la respuesta es más de cinco minutos, ya tienes la descripción del puesto. El trabajo consiste en que esa pregunta tenga respuesta todas las semanas y en que alguien haga algo con ella.",
       },
       {
         type: "p",
-        text: "He dirigido redes de hasta 25 centros, con un P&L de 35 M€ y equipos de 250 personas, en healthcare, dental, veterinaria y retail. En todos los casos el puesto era el mismo aunque cambiara el sector: convertir un conjunto de unidades que funcionan cada una a su manera en una red que opera, mide y decide con un solo criterio.",
+        text: "He dirigido redes de hasta 25 centros, con un P&L de 35 M€ y equipos de 250 personas, en healthcare, dental, veterinaria y retail. El puesto era el mismo aunque cambiara el sector: convertir un conjunto de unidades que funcionan cada una a su manera en una red que opera, mide y decide con un solo criterio.",
       },
       { type: "h2", text: "El problema no es el centro, es la red" },
       {
         type: "p",
-        text: "Un buen responsable de centro sabe gestionar su unidad: su equipo, su agenda, sus clientes o pacientes, su caja. Lo que no puede hacer desde su posición es comparar. No sabe si su coste de personal sobre ventas es alto o bajo, si su ticket medio está en la media del grupo o si su ocupación justifica abrir una tarde más. Esa comparación solo existe si alguien construye la mirada transversal.",
+        text: "Un buen responsable de centro sabe gestionar su unidad: equipo, agenda, clientes o pacientes, caja. Lo que no puede hacer desde su posición es comparar: no sabe si su coste de personal sobre ventas es alto o bajo, si su ticket medio está en la media del grupo o si su ocupación justifica abrir una tarde más. Esa comparación solo existe si alguien construye la mirada transversal.",
       },
       {
         type: "p",
-        text: "El director de operaciones es, ante todo, el responsable de esa mirada. Su valor no está en operar mejor un centro concreto, sino en que los quince, veinticinco o cuarenta centros se gestionen con el mismo modelo, se midan con los mismos KPIs y se corrijan con la misma rapidez. Cuando no existe esa figura, la red funciona como una suma de pequeñas empresas y el CEO acaba haciendo de director de operaciones a ratos, que es la forma más cara de hacerlo.",
+        text: "El director de operaciones es, ante todo, el responsable de esa mirada. Su valor no está en operar mejor un centro concreto, sino en que los quince, veinticinco o cuarenta centros se gestionen con el mismo modelo, se midan con los mismos KPIs y se corrijan con la misma rapidez. Cuando no existe esa figura, el CEO acaba haciendo de director de operaciones a ratos, que es la forma más cara de hacerlo.",
       },
       { type: "h2", text: "Las cinco responsabilidades que no se delegan" },
       {
         type: "p",
-        text: "Hay tareas que se pueden repartir y otras que, si el director de operaciones no las asume personalmente, nadie las asume. Estas son las cinco que considero irrenunciables:",
+        text: "Hay tareas que se reparten y otras que, si el director de operaciones no las asume, nadie las asume. Estas cinco son irrenunciables:",
       },
       {
         type: "ul",
         items: [
-          "El P&L por centro. Que exista, que sea comparable entre unidades y que se revise cada mes con cada responsable. No basta con que finanzas cierre la contabilidad: alguien tiene que convertirla en una cuenta de resultados operativa por centro.",
+          "El P&L por centro. Que exista, que sea comparable y que se revise cada mes con cada responsable. Finanzas cierra la contabilidad; alguien tiene que convertirla en una cuenta de resultados operativa por centro.",
           "El cuadro de mando semanal. Seis u ocho indicadores, no cuarenta, que anticipan el resultado del mes: ventas, ocupación, conversión, ticket medio, horas de personal y coste de personal sobre ventas.",
-          "La dirección de los managers de centro. Objetivos, rutina de seguimiento, desarrollo y, cuando hace falta, sustitución. Los managers son la palanca de ejecución más potente de la red y la que más se descuida.",
+          "La dirección de los managers de centro. Objetivos, rutina de seguimiento, desarrollo y, cuando hace falta, sustitución. Son la palanca de ejecución más potente de la red y la que más se descuida.",
           "El modelo operativo. Decidir qué se hace igual en todos los centros (procesos clave, catálogo, plantilla tipo, estándares de servicio) y qué se deja a criterio local.",
-          "La capacidad y la plantilla. Dimensionar equipos en función de la demanda real de cada centro, no de la plantilla histórica ni de lo que pide cada responsable.",
+          "La capacidad y la plantilla. Dimensionar equipos según la demanda real de cada centro, no según la plantilla histórica ni lo que pide cada responsable.",
         ],
       },
       { type: "h2", text: "Una semana tipo" },
@@ -70,11 +70,11 @@ export const operacionesPlPosts: InsightPost[] = [
       {
         type: "ol",
         items: [
-          "Lunes: revisión del cuadro de mando de la semana anterior. Qué centros se han desviado, en qué indicador y qué acción se decide para cada uno. Dura una hora si los datos están bien; dura un día si no.",
-          "Martes y miércoles: visitas a centros. No para supervisar, sino para contrastar los datos con la realidad: agendas, equipos, flujo de clientes, estado de las instalaciones. Dos o tres centros por semana permiten recorrer una red de 25 en un trimestre.",
+          "Lunes: revisión del cuadro de mando de la semana anterior. Qué centros se han desviado, en qué indicador y qué acción se decide para cada uno. Una hora si los datos están bien; un día si no.",
+          "Martes y miércoles: visitas a centros, no para supervisar sino para contrastar los datos con la realidad: agendas, equipos, flujo de clientes, instalaciones. Dos o tres por semana permiten recorrer una red de 25 en un trimestre.",
           "Jueves: comité de dirección y reuniones transversales con compras, marketing, personas y finanzas. Aquí se defienden las decisiones que afectan a toda la red.",
-          "Viernes por la mañana: trabajo sobre el P&L. Análisis de desviaciones del cierre mensual, preparación de las revisiones con managers y seguimiento de los planes de acción abiertos.",
-          "Viernes por la tarde: conversaciones individuales con managers. Seguimiento de objetivos, dificultades concretas y decisiones que no pueden esperar a la revisión mensual.",
+          "Viernes por la mañana: P&L. Desviaciones del cierre mensual, preparación de las revisiones con managers y seguimiento de los planes de acción abiertos.",
+          "Viernes por la tarde: conversaciones individuales con managers. Objetivos, dificultades concretas y decisiones que no pueden esperar a la revisión mensual.",
         ],
       },
       { type: "h2", text: "Lo que no hace un director de operaciones" },
@@ -85,7 +85,7 @@ export const operacionesPlPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "Tampoco es su trabajo sustituir al director financiero en el cierre, ni al director comercial en la captación, ni al responsable de personas en la selección. Su función es que todas esas áreas tengan un impacto medible en el P&L de cada centro y que las decisiones se tomen con los mismos datos. Cuando el puesto se convierte en un comodín para todo lo que no tiene dueño, deja de aportar lo único que nadie más puede aportar: la visión comparada de la red.",
+        text: "Tampoco le corresponde sustituir al director financiero en el cierre ni al comercial en la captación: su función es que esas áreas tengan un impacto medible en el P&L de cada centro. Cuando el puesto es un comodín para todo lo que no tiene dueño, deja de aportar lo único que nadie más aporta: la visión comparada de la red.",
       },
       { type: "h2", text: "Qué perfil necesita una red de 5, 15 y 40 centros" },
       {
@@ -99,36 +99,36 @@ export const operacionesPlPosts: InsightPost[] = [
           [
             "5-8 centros",
             "El CEO sigue llevando la operación. Faltan datos comparables y rutinas con los managers.",
-            "Responsable de operaciones con base financiera, capaz de construir el P&L por centro y el cuadro de mando desde cero. Un formato fractional suele ser suficiente.",
+            "Responsable de operaciones con base financiera que construya el P&L por centro y el cuadro de mando. Un formato fractional suele bastar.",
           ],
           [
             "10-20 centros",
             "Ya hay managers, pero cada uno trabaja a su manera. Las desviaciones se detectan tarde y la expansión se improvisa.",
-            "Director de operaciones con experiencia en estandarización y en dirección de equipos de managers. Dedicación completa o fractional con alta presencia.",
+            "Director de operaciones con experiencia en estandarización y en dirección de managers. Dedicación completa o fractional con alta presencia.",
           ],
           [
             "25-40 centros o más",
             "Varias zonas o marcas, adquisiciones recientes, reporting a consejo o inversores.",
-            "COO con experiencia en integraciones, estructura de responsables de zona y reporting a inversores. Dedicación completa con equipo propio.",
+            "COO con experiencia en integraciones, responsables de zona y reporting a inversores. Dedicación completa con equipo propio.",
           ],
         ],
       },
       {
         type: "p",
-        text: "La trampa frecuente está en el tramo intermedio: redes de diez a veinte centros que contratan un perfil operativo de centro grande cuando lo que necesitan es alguien que construya el sistema de dirección de la red.",
+        text: "La trampa está en el tramo intermedio: redes de diez a veinte centros que contratan un perfil operativo de centro grande cuando necesitan a alguien que construya el sistema de dirección de la red.",
       },
       { type: "h2", text: "Cuándo tiene sentido un COO externo" },
       {
         type: "p",
-        text: "Hay un momento, normalmente entre los cinco y los veinte centros, en el que la empresa necesita la función de director de operaciones pero no justifica un coste fijo de 120.000 a 150.000 euros anuales, ni tiene claro todavía qué perfil interno acabará necesitando. Para esa fase existe el formato de Fractional COO: dirección de operaciones a tiempo parcial, con responsabilidad real sobre resultados y una duración definida.",
+        text: "Hay un momento, normalmente entre los cinco y los veinte centros, en el que la empresa necesita la función pero no justifica un coste fijo de 120.000 a 150.000 euros anuales ni sabe todavía qué perfil interno acabará necesitando. Para esa fase existe el Fractional COO: dirección de operaciones a tiempo parcial, con responsabilidad real sobre resultados y duración definida.",
       },
       {
         type: "quote",
-        text: "El objetivo de un COO externo no es quedarse. Es dejar la red con un P&L por centro, un cuadro de mando, unos managers dirigidos y un modelo operativo que el siguiente director de operaciones, ya interno, pueda heredar sin empezar de cero.",
+        text: "El objetivo de un COO externo no es quedarse: es dejar un P&L por centro, un cuadro de mando, unos managers dirigidos y un modelo operativo que el siguiente director de operaciones, ya interno, herede sin empezar de cero.",
       },
       {
         type: "p",
-        text: "Si tu red está en esa fase y quieres un punto de partida objetivo, el diagnóstico gratuito de tres minutos te sitúa en cinco bloques: finanzas, operaciones, personas, datos y escalabilidad. A partir de ahí se puede hablar de qué perfil necesitas y en qué formato.",
+        text: "Si tu red está en esa fase, el diagnóstico gratuito de tres minutos la sitúa en cinco bloques: finanzas, operaciones, personas, datos y escalabilidad. A partir de ahí hablamos de qué perfil necesitas y en qué formato.",
       },
     ],
     faqs: [
@@ -159,7 +159,7 @@ export const operacionesPlPosts: InsightPost[] = [
     excerpt:
       "Cuatro señales de que la red ha crecido más que su dirección, qué debe entregar un consultor de operaciones multicentro, los tres formatos posibles y cómo evaluar una propuesta en veinte minutos.",
     metaDescription:
-      "Cuándo contratar un consultor de operaciones multicentro, qué entregables exigir, diferencias con interim y Fractional COO y cómo evaluar una propuesta en 20 minutos.",
+      "Cuándo contratar un consultor de operaciones multicentro, qué entregables exigir, diferencias con interim y Fractional COO y cómo evaluar la propuesta.",
     category: "operaciones",
     tags: ["Consultoría de operaciones", "Fractional COO", "P&L por centro", "Diagnóstico operativo"],
     keywords: [
@@ -177,24 +177,24 @@ export const operacionesPlPosts: InsightPost[] = [
     blocks: [
       {
         type: "p",
-        text: "Contratar un consultor de operaciones multicentro es una decisión que se toma casi siempre tarde. No porque falte información, sino porque la red sigue facturando y el problema parece manejable hasta que el EBITDA deja de acompañar al crecimiento. He estado en los dos lados de la mesa: como director de operaciones que contrataba apoyo externo y como externo al que se llama cuando la red ya no se puede dirigir desde la agenda del CEO.",
+        text: "Contratar un consultor de operaciones multicentro es una decisión que casi siempre se toma tarde. No porque falte información, sino porque la red sigue facturando y el problema parece manejable hasta que el EBITDA deja de acompañar al crecimiento. He estado en los dos lados de la mesa: contratando apoyo externo como director de operaciones, y como externo al que se llama cuando la red ya no se dirige desde la agenda del CEO.",
       },
       {
         type: "p",
-        text: "Este artículo resume lo que me habría gustado saber en el primer caso: cuándo tiene sentido, qué hay que exigir y cómo distinguir una propuesta útil de un informe caro.",
+        text: "Este artículo resume lo que me habría gustado saber en el primer caso: cuándo tiene sentido, qué exigir y cómo distinguir una propuesta útil de un informe caro.",
       },
       { type: "h2", text: "Cuatro señales de que la red ha crecido más que su dirección" },
       {
         type: "p",
-        text: "Las redes no avisan de que necesitan ayuda. Lo hacen los datos, o la ausencia de ellos. Estas cuatro señales aparecen juntas con una frecuencia sospechosa:",
+        text: "Las redes no avisan de que necesitan ayuda. Lo hacen los datos, o su ausencia. Estas cuatro señales suelen aparecer juntas:",
       },
       {
         type: "ul",
         items: [
-          "La facturación crece y el EBITDA no. Cada apertura o adquisición añade ventas, pero el margen consolidado se queda igual o baja, y nadie puede explicar centro por centro dónde se pierde.",
-          "Consolidar la información lleva semanas. Cada centro reporta en un formato distinto, con criterios distintos, y el cierre mensual llega cuando ya es tarde para corregir nada.",
-          "El coste de personal se ha disparado en algunos centros sin que la actividad lo justifique, y no está claro si es un problema de plantilla, de agenda o de ventas.",
-          "El CEO es el cuello de botella. Todas las decisiones operativas pasan por él, los managers de centro no tienen objetivos ni rutina de seguimiento y la expansión se improvisa.",
+          "La facturación crece y el EBITDA no. Cada apertura o adquisición añade ventas, pero el margen consolidado no mejora y nadie puede explicar centro por centro dónde se pierde.",
+          "Consolidar la información lleva semanas. Cada centro reporta en un formato distinto y el cierre mensual llega cuando ya es tarde para corregir nada.",
+          "El coste de personal se ha disparado en algunos centros sin que la actividad lo justifique, y no está claro si el problema es de plantilla, de agenda o de ventas.",
+          "El CEO es el cuello de botella: todas las decisiones operativas pasan por él, los managers no tienen objetivos ni rutina de seguimiento y la expansión se improvisa.",
         ],
       },
       {
@@ -204,7 +204,7 @@ export const operacionesPlPosts: InsightPost[] = [
       { type: "h2", text: "Qué debe entregar un consultor de operaciones multicentro (y qué no)" },
       {
         type: "p",
-        text: "Un consultor de operaciones no se contrata para que opine. Se contrata para que entregue algo que la organización no puede producir sola en un plazo razonable. Esta tabla resume lo que pido yo cuando estoy del lado del cliente:",
+        text: "Un consultor de operaciones no se contrata para que opine, sino para que entregue algo que la organización no puede producir sola en un plazo razonable. Esto es lo que pido yo cuando estoy del lado del cliente:",
       },
       {
         type: "table",
@@ -218,7 +218,7 @@ export const operacionesPlPosts: InsightPost[] = [
           [
             "Ranking y mapa de desviaciones",
             "Qué centros destruyen margen, cuánto y por qué, con cuartiles y comparación interna.",
-            "Un informe de cien páginas sin un ranking claro en la primera.",
+            "Cien páginas sin un ranking claro en la primera.",
           ],
           [
             "Palancas cuantificadas",
@@ -233,53 +233,53 @@ export const operacionesPlPosts: InsightPost[] = [
           [
             "Transferencia",
             "Rutinas, plantillas y cuadro de mando que el equipo pueda mantener sin el consultor.",
-            "Dependencia: que todo siga pasando por su correo al terminar.",
+            "Que todo siga pasando por su correo al terminar.",
           ],
         ],
       },
       { type: "h2", text: "Consultor, interim o Fractional COO: tres formatos" },
       {
         type: "p",
-        text: "El mismo problema admite tres respuestas distintas según la fase de la empresa y el tiempo disponible.",
+        text: "El mismo problema admite tres respuestas según la fase de la empresa y el tiempo disponible.",
       },
       { type: "h3", text: "Consultor de operaciones" },
       {
         type: "p",
-        text: "Proyecto cerrado, de tres a ocho semanas, con un entregable definido: diagnóstico, P&L por centro, ranking y plan de acción. Encaja cuando la dirección es sólida y lo que falta es la fotografía objetiva y la priorización. El riesgo es que el plan se quede en el cajón si nadie dentro tiene tiempo para ejecutarlo.",
+        text: "Proyecto cerrado, de tres a ocho semanas, con un entregable definido: diagnóstico, P&L por centro, ranking y plan de acción. Encaja cuando la dirección es sólida y falta la fotografía objetiva y la priorización. El riesgo es que el plan se quede en el cajón si nadie dentro tiene tiempo para ejecutarlo.",
       },
       { type: "h3", text: "Interim COO" },
       {
         type: "p",
-        text: "Dirección de operaciones a tiempo completo durante un periodo definido, habitualmente entre seis y doce meses, para cubrir una vacante, una crisis o una integración. Encaja cuando hay urgencia y la red ya justifica un COO, pero todavía no ha encontrado al definitivo. Es el formato más caro y el más intenso.",
+        text: "Dirección de operaciones a tiempo completo durante un periodo definido, entre seis y doce meses, para cubrir una vacante, una crisis o una integración. Encaja cuando hay urgencia y la red ya justifica un COO pero no ha encontrado al definitivo. Es el formato más caro y el más intenso.",
       },
       { type: "h3", text: "Fractional COO" },
       {
         type: "p",
-        text: "Dirección de operaciones a tiempo parcial, dos o tres días por semana, con responsabilidad sobre resultados y una duración mínima de seis meses. Encaja en redes de cinco a cincuenta millones de facturación que necesitan la función pero no justifican todavía el coste fijo. A diferencia del consultor, no entrega recomendaciones: ejecuta con el equipo y forma parte del comité de dirección.",
+        text: "Dirección de operaciones a tiempo parcial, dos o tres días por semana, con responsabilidad sobre resultados y un mínimo de seis meses. Encaja en redes de cinco a cincuenta millones de facturación que necesitan la función pero no justifican el coste fijo. A diferencia del consultor, no entrega recomendaciones: ejecuta con el equipo y forma parte del comité de dirección.",
       },
       { type: "h2", text: "El error habitual: contratar antes de tener un P&L por centro" },
       {
         type: "callout",
         title: "Antes de firmar",
-        text: "Si la red no tiene un P&L por centro comparable, el primer encargo de cualquier externo debe ser construirlo. Contratar un programa de mejora de EBITDA, una reorganización o un plan de expansión sin esa base es decidir a ciegas con un asesor al lado. El orden importa: primero medir, después comparar, después actuar.",
+        text: "Si la red no tiene un P&L por centro comparable, el primer encargo de cualquier externo debe ser construirlo. Contratar un programa de mejora de EBITDA, una reorganización o un plan de expansión sin esa base es decidir a ciegas con un asesor al lado. Primero medir, después comparar, después actuar.",
       },
       {
         type: "p",
-        text: "Lo digo porque es el error que más veces he visto repetirse. La empresa contrata para resolver el síntoma visible (el coste de personal, la caída de margen de dos centros, la integración de una adquisición) y descubre en la tercera semana que no hay datos homogéneos para saber si el síntoma es real. Un buen consultor lo dirá en la primera reunión y ajustará el alcance. Uno malo facturará las tres semanas igualmente.",
+        text: "Es el error que más veces he visto. La empresa contrata para resolver el síntoma visible (coste de personal, caída de margen de dos centros, integración de una adquisición) y descubre en la tercera semana que no hay datos homogéneos para saber si el síntoma es real. Un buen consultor lo dirá en la primera reunión y ajustará el alcance. Uno malo facturará las tres semanas igualmente.",
       },
       { type: "h2", text: "Cómo evaluar la propuesta en 20 minutos" },
       {
         type: "p",
-        text: "No hace falta ser experto en operaciones para distinguir una propuesta útil. Basta con revisar seis puntos en este orden:",
+        text: "No hace falta ser experto en operaciones para distinguir una propuesta útil. Basta con revisar seis puntos:",
       },
       {
         type: "ol",
         items: [
-          "Datos de partida: ¿pide los cierres contables, las extracciones del sistema de gestión y las plantillas por centro, o propone empezar con entrevistas y talleres? Los datos van primero.",
+          "Datos de partida: ¿pide cierres contables, extracciones del sistema de gestión y plantillas por centro, o propone empezar con entrevistas y talleres? Los datos van primero.",
           "Entregable principal: ¿está escrito con una frase concreta (P&L por centro, ranking, plan a 90 días) o con sustantivos abstractos como transformación, excelencia o alineamiento?",
           "Cifras prometidas: ¿se compromete a un porcentaje de mejora antes de ver los datos? Si lo hace, desconfía. Lo serio es fijar el objetivo en la primera semana con datos propios.",
-          "Tiempo del equipo directivo: ¿cuántas horas pide y a quién? Un diagnóstico bien diseñado necesita entre cuatro y seis horas de dirección en total, no un comité semanal de dos horas.",
-          "Experiencia operativa: ¿ha dirigido una red de centros con responsabilidad sobre el P&L, o solo ha asesorado a quien la dirigía? La diferencia se nota en la primera visita a un centro.",
+          "Tiempo del equipo directivo: ¿cuántas horas pide y a quién? Un diagnóstico bien diseñado necesita entre cuatro y seis horas de dirección en total, no un comité semanal.",
+          "Experiencia operativa: ¿ha dirigido una red de centros con responsabilidad sobre el P&L, o solo ha asesorado a quien la dirigía? Se nota en la primera visita a un centro.",
           "Qué queda al terminar: ¿nombra las rutinas, plantillas y cuadros de mando que la organización mantendrá sola, o la continuidad depende de contratar otra fase?",
         ],
       },
@@ -290,7 +290,7 @@ export const operacionesPlPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "Cuando la fotografía está hecha, las palancas priorizadas y el plan en marcha, la empresa tiene dos caminos: ejecutar con el equipo interno o acompañar la ejecución durante un trimestre con un sprint de mejora de EBITDA o un Fractional COO. Las dos opciones son válidas. La única que no lo es consiste en archivar el diagnóstico y volver a la agenda de siempre.",
+        text: "Con la fotografía hecha, las palancas priorizadas y el plan en marcha, hay dos caminos: ejecutar con el equipo interno o acompañar la ejecución un trimestre con un sprint de mejora de EBITDA o un Fractional COO. Ambos son válidos. El único que no lo es consiste en archivar el diagnóstico y volver a la agenda de siempre.",
       },
     ],
     faqs: [
@@ -321,7 +321,7 @@ export const operacionesPlPosts: InsightPost[] = [
     excerpt:
       "La contabilidad cierra la empresa; el P&L por centro dirige la red. Estructura línea a línea, criterios de imputación de la estructura central, errores que invalidan la comparación y un ejemplo ilustrativo con doce centros.",
     metaDescription:
-      "Cómo construir un P&L por centro comparable: estructura línea a línea, criterios de imputación de costes centrales, errores habituales y un ejemplo con 12 centros.",
+      "Cómo construir un P&L por centro comparable: estructura línea a línea, criterios de imputación de costes centrales, errores habituales y ejemplo práctico.",
     category: "pl",
     tags: ["P&L por centro", "Imputación de costes", "Margen de contribución", "Cierre mensual", "CFO"],
     keywords: [
@@ -343,16 +343,16 @@ export const operacionesPlPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "El P&L por centro es la herramienta más importante de una empresa multicentro y, a la vez, la que menos redes tienen bien construida. Lo he montado desde cero en redes de distintos sectores, siempre con la misma estructura y los mismos tres debates sobre imputación. Este artículo recoge esa estructura y esos debates.",
+        text: "El P&L por centro es la herramienta más importante de una empresa multicentro y, a la vez, la que menos redes tienen bien construida. Lo he montado desde cero en varios sectores, siempre con la misma estructura y los mismos tres debates sobre imputación. Este artículo recoge ambas cosas.",
       },
       { type: "h2", text: "Por qué la contabilidad no es un P&L por centro" },
       {
         type: "p",
-        text: "La contabilidad responde a la pregunta de cuánto ha ganado la empresa y lo hace con criterios fiscales y de auditoría. El P&L por centro responde a otra: cuánto aporta cada unidad y qué explica la diferencia entre ellas. Son preguntas distintas y exigen decisiones distintas.",
+        text: "La contabilidad responde a cuánto ha ganado la empresa, con criterios fiscales y de auditoría. El P&L por centro responde a otra pregunta: cuánto aporta cada unidad y qué explica la diferencia entre ellas. Son preguntas distintas y exigen decisiones distintas.",
       },
       {
         type: "p",
-        text: "Tres diferencias habituales lo ilustran. La contabilidad registra el gasto donde se factura, no donde se consume: un pedido centralizado de consumibles aparece en la central aunque lo usen doce centros. Los periodos no coinciden con la actividad: una campaña local pagada en enero afecta a las ventas de febrero y marzo. Y la estructura central (dirección, finanzas, marketing, sistemas) existe para servir a los centros, pero contablemente no se reparte. Sin corregir esas tres cosas, comparar centros con la contabilidad es comparar peras con manzanas.",
+        text: "Tres diferencias lo ilustran. La contabilidad registra el gasto donde se factura, no donde se consume: un pedido centralizado de consumibles aparece en la central aunque lo usen doce centros. Los periodos no coinciden con la actividad: una campaña local pagada en enero afecta a las ventas de febrero y marzo. Y la estructura central existe para servir a los centros, pero contablemente no se reparte. Sin corregir esas tres cosas, la comparación entre centros no vale.",
       },
       { type: "h2", text: "La estructura línea a línea" },
       {
@@ -363,62 +363,38 @@ export const operacionesPlPosts: InsightPost[] = [
         type: "table",
         headers: ["Línea", "Qué incluye", "Criterio de imputación"],
         rows: [
-          [
-            "Ventas netas",
-            "Facturación del centro menos devoluciones, descuentos y anulaciones.",
-            "Por centro según el sistema de gestión, no según la factura.",
-          ],
+          ["Ventas netas", "Facturación menos devoluciones, descuentos y anulaciones.", "Por centro según el sistema de gestión, no según la factura."],
           [
             "Coste de ventas y consumibles",
-            "Material, producto, laboratorio, consumibles clínicos o mercancía vendida.",
-            "Consumo real del centro, no pedido central. Sin dato de consumo, se reparte por actividad.",
+            "Material, producto, laboratorio, consumibles o mercancía vendida.",
+            "Consumo real del centro, no pedido central. Sin dato de consumo, por actividad.",
           ],
           [
             "Personal directo",
-            "Salarios, seguridad social y variables del equipo que atiende en el centro.",
+            "Salarios, seguridad social y variables del equipo que atiende.",
             "Directo. Sustituciones y personal compartido, por horas trabajadas en cada centro.",
           ],
-          [
-            "Personal indirecto de centro",
-            "Responsable de centro, recepción, administración local.",
-            "Directo al centro al que pertenece.",
-          ],
+          ["Personal indirecto de centro", "Responsable de centro, recepción, administración local.", "Directo."],
           ["Alquiler y ocupación", "Renta, comunidad, tributos locales, seguros del local.", "Directo por contrato."],
           [
             "Suministros y mantenimiento",
             "Luz, agua, limpieza, reparaciones, pequeñas inversiones no activadas.",
-            "Directo. Lo contratado centralmente, por superficie o por consumo.",
+            "Directo. Lo contratado centralmente, por superficie o consumo.",
           ],
-          [
-            "Marketing local",
-            "Acciones del centro: eventos, señalización, campañas de zona.",
-            "Directo. El marketing de marca va a estructura central.",
-          ],
-          [
-            "Otros gastos de centro",
-            "Software local, telefonía, comisiones de pago, formación del equipo.",
-            "Directo, o por ventas si es un contrato de grupo.",
-          ],
-          [
-            "Margen de contribución",
-            "Ventas netas menos todas las líneas anteriores.",
-            "Es la cifra que mide la gestión del responsable de centro.",
-          ],
+          ["Marketing local", "Eventos, señalización, campañas de zona.", "Directo. El marketing de marca va a estructura central."],
+          ["Otros gastos de centro", "Software local, telefonía, comisiones de pago, formación.", "Directo, o por ventas si es contrato de grupo."],
+          ["Margen de contribución", "Ventas netas menos todas las líneas anteriores.", "Mide la gestión del responsable de centro."],
           [
             "Estructura central imputada",
             "Dirección, finanzas, personas, marketing de marca, sistemas, compras.",
-            "Por ventas, por actividad o por plantilla, siempre con el mismo criterio en todos los centros.",
+            "Por ventas, actividad o plantilla, con el mismo criterio en todos los centros.",
           ],
-          [
-            "EBITDA de centro",
-            "Margen de contribución menos estructura imputada.",
-            "Es la cifra que mide la viabilidad del centro dentro del grupo.",
-          ],
+          ["EBITDA de centro", "Margen de contribución menos estructura imputada.", "Mide la viabilidad del centro dentro del grupo."],
         ],
       },
       {
         type: "p",
-        text: "Amortizaciones, financiación e impuestos quedan fuera. No porque no importen, sino porque dependen de decisiones de inversión y fiscales que el centro no controla y que distorsionan la comparación operativa.",
+        text: "Amortizaciones, financiación e impuestos quedan fuera: dependen de decisiones de inversión y fiscales que el centro no controla y distorsionan la comparación operativa.",
       },
       { type: "h2", text: "Tres criterios de imputación y cuándo usar cada uno" },
       {
@@ -428,22 +404,22 @@ export const operacionesPlPosts: InsightPost[] = [
       { type: "h3", text: "Por ventas" },
       {
         type: "p",
-        text: "El más sencillo y el más utilizado. Cada centro absorbe estructura en proporción a su facturación. Funciona cuando los centros son parecidos en tamaño y mix. Su defecto es que penaliza a los centros que venden más y oculta la ineficiencia de los pequeños.",
+        text: "El más sencillo y el más utilizado: cada centro absorbe estructura en proporción a su facturación. Funciona cuando los centros son parecidos en tamaño y mix. Su defecto es que penaliza a los que venden más y oculta la ineficiencia de los pequeños.",
       },
       { type: "h3", text: "Por actividad" },
       {
         type: "p",
-        text: "Se reparte según el número de visitas, tratamientos, tickets o pedidos. Refleja mejor el uso real de los servicios centrales, como atención al cliente, sistemas o administración. Exige que la actividad se mida igual en todos los centros, lo que no siempre ocurre.",
+        text: "Se reparte según el número de visitas, tratamientos, tickets o pedidos. Refleja mejor el uso real de los servicios centrales (atención al cliente, sistemas, administración). Exige que la actividad se mida igual en todos los centros, lo que no siempre ocurre.",
       },
       { type: "h3", text: "Por uso directo" },
       {
         type: "p",
-        text: "Se imputa a cada centro lo que consume de forma identificable: horas de un responsable de zona, campañas de marketing por centro, licencias por puesto. Es el criterio más justo y el más laborioso. Suelo usarlo para las partidas grandes e identificables y repartir el resto por ventas o actividad.",
+        text: "Se imputa a cada centro lo que consume de forma identificable: horas de un responsable de zona, campañas por centro, licencias por puesto. Es el criterio más justo y el más laborioso. Lo uso para las partidas grandes e identificables y reparto el resto por ventas o actividad.",
       },
       { type: "h2", text: "Errores que invalidan la comparación" },
       {
         type: "p",
-        text: "Un P&L por centro mal construido es peor que ninguno, porque da apariencia de rigor a decisiones equivocadas. Los errores que más veces he tenido que corregir:",
+        text: "Un P&L por centro mal construido es peor que ninguno, porque da apariencia de rigor a decisiones equivocadas. Los errores que más he tenido que corregir:",
       },
       {
         type: "ul",
@@ -452,19 +428,19 @@ export const operacionesPlPosts: InsightPost[] = [
           "Cambiar el criterio de imputación de un mes a otro, o aplicar criterios distintos a centros propios y adquiridos.",
           "Registrar los pedidos centrales como gasto de central. Los consumibles son el segundo coste de la mayoría de redes y deben llegar al centro que los consume.",
           "No separar el margen de contribución del EBITDA de centro. Si se evalúa al responsable por una cifra que incluye estructura que no controla, se pierde la conversación útil.",
-          "Comparar centros con menos de doce meses de actividad con centros maduros sin marcarlo. La rampa de apertura distorsiona todo el ranking.",
-          "Cerrar el P&L por centro el día 25 del mes siguiente. Un P&L que llega tarde no dirige: documenta.",
+          "Comparar centros con menos de doce meses de actividad con centros maduros sin marcarlo: la rampa de apertura distorsiona el ranking.",
+          "Cerrar el P&L el día 25 del mes siguiente. Un P&L que llega tarde no dirige: documenta.",
         ],
       },
       { type: "h2", text: "Ejemplo ilustrativo con una red de 12 centros" },
       {
         type: "callout",
         title: "Ejemplo hipotético",
-        text: "Supongamos una red de 12 clínicas con 14 millones de euros de ventas y una estructura central de 1,4 millones. Repartida por ventas, cada centro absorbe el 10 % de su facturación. Al pasar a un reparto mixto (sistemas y atención al cliente por actividad, dirección de zona por uso directo, el resto por ventas), tres centros pequeños que parecían rentables pasan a EBITDA negativo y dos grandes mejoran. El margen total de la red no cambia ni un euro: cambia dónde hay que actuar. Las cifras son inventadas para el ejemplo; la conclusión se repite en casi todas las redes que he analizado.",
+        text: "Supongamos una red de 12 clínicas con 14 millones de euros de ventas y una estructura central de 1,4 millones. Repartida por ventas, cada centro absorbe el 10 % de su facturación. Al pasar a un reparto mixto (sistemas y atención al cliente por actividad, dirección de zona por uso directo, el resto por ventas), tres centros pequeños que parecían rentables pasan a EBITDA negativo y dos grandes mejoran. El margen total de la red no cambia ni un euro: cambia dónde hay que actuar. Las cifras son inventadas; la conclusión se repite en casi todas las redes.",
       },
       {
         type: "p",
-        text: "Ese es el valor del ejercicio. El P&L por centro no mejora el resultado por sí mismo. Lo que hace es señalar con precisión dónde están las decisiones pendientes: una plantilla sobredimensionada, un alquiler fuera de mercado, una agenda con huecos, un centro que debería cerrarse o reubicarse.",
+        text: "El P&L por centro no mejora el resultado por sí mismo: señala con precisión dónde están las decisiones pendientes.",
       },
       { type: "h2", text: "Del P&L a la decisión" },
       {
@@ -473,7 +449,19 @@ export const operacionesPlPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "La construcción es la parte técnica y se resuelve en tres o cuatro semanas con los datos que ya existen. La parte difícil viene después: la rutina mensual de revisión, el plan de acción por centro y la disciplina de mantener el criterio cuando un responsable discute su imputación. Si quieres saber en qué punto está hoy tu red, el diagnóstico gratuito de tres minutos es el primer paso.",
+        text: "La construcción es la parte técnica y se resuelve en tres o cuatro semanas con los datos existentes. Lo difícil viene después:",
+      },
+      {
+        type: "ol",
+        items: [
+          "Una rutina mensual: el P&L de cada centro revisado con su responsable antes del día 10.",
+          "Un plan de acción por centro con tres acciones, un dueño y una fecha.",
+          "La disciplina de mantener el criterio de imputación cuando un responsable discute el suyo.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Si quieres saber en qué punto está hoy tu red, el diagnóstico gratuito de tres minutos es el primer paso.",
       },
     ],
     faqs: [
@@ -526,122 +514,110 @@ export const operacionesPlPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "He construido rankings de centros en redes de healthcare, dental, veterinaria y retail. El ejercicio técnico es parecido en todos los casos. Lo que cambia, y lo que decide si el ranking sirve para algo, es qué se hace con él la semana siguiente.",
+        text: "He construido rankings de centros en healthcare, dental, veterinaria y retail: el ejercicio técnico es parecido en todos los casos. Lo que decide si sirve para algo es qué se hace con él la semana siguiente.",
       },
       { type: "h2", text: "Un ranking es una decisión, no un informe" },
       {
         type: "p",
-        text: "Cuando el comité de dirección ve por primera vez sus centros ordenados por EBITDA, pasan dos cosas. La primera es que alguien discute el criterio de imputación. La segunda es que los dos o tres últimos centros pasan a ser el tema de la reunión. Las dos reacciones son sanas si llevan a una decisión: revisar el criterio una vez y fijarlo, y abrir un plan concreto para cada centro de cola.",
+        text: "Cuando el comité de dirección ve por primera vez sus centros ordenados por EBITDA, pasan dos cosas: alguien discute el criterio de imputación y los dos o tres últimos centros pasan a ser el tema de la reunión. Las dos reacciones son sanas si llevan a una decisión: fijar el criterio de una vez y abrir un plan concreto para cada centro de cola.",
+      },
+      {
+        type: "quote",
+        text: "Un ranking que no mueve plantillas, agendas, precios, alquileres o responsables no es una herramienta de dirección: es un ejercicio de reporting.",
       },
       {
         type: "p",
-        text: "Lo que no es sano es repetir el ranking cada mes sin que cambie nada. Un ranking que no mueve plantillas, agendas, precios, alquileres o responsables no es una herramienta de dirección; es un ejercicio de reporting. La prueba es sencilla: pregunta qué decisión se tomó la última vez que se presentó.",
+        text: "La prueba es sencilla: pregunta qué decisión se tomó la última vez que se presentó.",
       },
       { type: "h2", text: "Qué métricas ordenan la red" },
       {
         type: "p",
-        text: "Ordenar por una sola cifra engaña. Un centro puede tener el mejor EBITDA absoluto porque es el más grande y, a la vez, el peor margen de la red. Uso una batería corta de indicadores, todos calculables desde el P&L por centro y el sistema de gestión:",
+        text: "Ordenar por una sola cifra engaña: un centro puede tener el mejor EBITDA absoluto porque es el más grande y, a la vez, el peor margen de la red. Uso una batería corta de indicadores, todos calculables desde el P&L por centro y el sistema de gestión:",
       },
       {
         type: "table",
         headers: ["KPI", "Fórmula", "Para qué sirve"],
         rows: [
-          [
-            "EBITDA de centro",
-            "Margen de contribución menos estructura imputada",
-            "Viabilidad del centro dentro del grupo. Ordena por valor absoluto.",
-          ],
+          ["EBITDA de centro", "Margen de contribución menos estructura imputada", "Viabilidad del centro dentro del grupo. Ordena por valor absoluto."],
           [
             "Margen de contribución %",
             "Margen de contribución / ventas netas",
             "Calidad de la gestión local, independiente del tamaño. Ordena por eficiencia.",
           ],
-          [
-            "Ventas por hora disponible",
-            "Ventas netas / horas de apertura o de agenda ofertada",
-            "Aprovechamiento de la capacidad instalada.",
-          ],
+          ["Ventas por hora disponible", "Ventas netas / horas de agenda ofertada", "Aprovechamiento de la capacidad instalada."],
           [
             "Coste de personal / ventas",
-            "Coste total de personal del centro / ventas netas",
+            "Coste de personal del centro / ventas netas",
             "Dimensionamiento. La primera palanca en la mayoría de redes de servicios.",
           ],
-          [
-            "Ocupación",
-            "Horas o citas realizadas / horas o citas disponibles",
-            "Si el problema es de demanda o de capacidad.",
-          ],
-          [
-            "Ticket medio",
-            "Ventas netas / número de visitas, tratamientos o tickets",
-            "Mix de servicios, precios y venta cruzada.",
-          ],
+          ["Ocupación", "Horas o citas realizadas / disponibles", "Si el problema es de demanda o de capacidad."],
+          ["Ticket medio", "Ventas netas / visitas, tratamientos o tickets", "Mix de servicios, precios y venta cruzada."],
           [
             "Conversión",
-            "Clientes que compran o pacientes que aceptan tratamiento / primeras visitas",
+            "Pacientes que aceptan tratamiento o clientes que compran / primeras visitas",
             "Eficacia comercial del equipo del centro.",
           ],
         ],
       },
       {
         type: "p",
-        text: "Con estas siete cifras por centro y por mes se puede explicar casi cualquier diferencia de rentabilidad. Más indicadores añaden ruido, no información.",
+        text: "Con estas siete cifras por centro y por mes se explica casi cualquier diferencia de rentabilidad. Más indicadores añaden ruido, no información.",
       },
       { type: "h2", text: "Cuartiles: la diferencia entre el primer y el último cuartil es tu plan de mejora" },
       {
         type: "callout",
         title: "Ejemplo ilustrativo",
-        text: "Imaginemos una red de 20 centros ordenados por margen de contribución. Los cinco mejores están entre el 24 % y el 30 %; los cinco peores, entre el 6 % y el 12 %. Si los del último cuartil alcanzaran solo la mediana de la red, el EBITDA consolidado subiría de forma significativa sin abrir un centro ni subir un precio. Las cifras son inventadas; la estructura del razonamiento es la que utilizo en cualquier red: la distancia entre cuartiles es la medida del potencial de mejora interno.",
+        text: "Imaginemos una red de 20 centros ordenados por margen de contribución. Los cinco mejores están entre el 24 % y el 30 %; los cinco peores, entre el 6 % y el 12 %. Si los del último cuartil alcanzaran solo la mediana, el EBITDA consolidado subiría de forma significativa sin abrir un centro ni subir un precio. Las cifras son inventadas; el razonamiento es el que aplico en cualquier red: la distancia entre cuartiles mide el potencial de mejora interno.",
       },
       {
         type: "p",
-        text: "Por eso el benchmarking interno es más útil que cualquier estudio sectorial. Los centros del primer cuartil demuestran que, con la misma marca, el mismo catálogo y los mismos sistemas, se puede operar a ese nivel. No hay excusa de mercado que resista esa comparación. La pregunta deja de ser si se puede mejorar y pasa a ser qué hacen distinto los de arriba.",
+        text: "Por eso el benchmarking interno es más útil que cualquier estudio sectorial. Los centros del primer cuartil demuestran que, con la misma marca, el mismo catálogo y los mismos sistemas, se puede operar a ese nivel. No hay excusa de mercado que resista esa comparación: la pregunta deja de ser si se puede mejorar y pasa a ser qué hacen distinto los de arriba.",
       },
       { type: "h2", text: "Benchmarking interno y externo" },
       { type: "h3", text: "Interno: la referencia que nadie puede discutir" },
       {
         type: "p",
-        text: "Comparar cada centro con los mejores de su propia red tiene tres ventajas: los datos son homogéneos, el contexto es idéntico y las prácticas que explican la diferencia están a una llamada de teléfono. Es el punto de partida de cualquier plan de mejora y, en redes de más de diez centros, suele ser suficiente para los dos primeros años.",
+        text: "Comparar cada centro con los mejores de su propia red tiene tres ventajas: los datos son homogéneos, el contexto es idéntico y las prácticas que explican la diferencia están a una llamada de teléfono. Es el punto de partida de cualquier plan de mejora y, en redes de más de diez centros, suele bastar durante los dos primeros años.",
       },
       { type: "h3", text: "Externo: útil para fijar la ambición, no para dirigir" },
       {
         type: "p",
-        text: "Los benchmarks sectoriales (ratios de coste de personal, márgenes típicos, ventas por metro cuadrado o por sala) sirven para saber si toda la red está por debajo de lo razonable. Pero se construyen con criterios distintos a los tuyos y rara vez se sabe qué hay detrás de cada cifra. Los uso para fijar la ambición a largo plazo, nunca para evaluar a un responsable de centro.",
+        text: "Los benchmarks sectoriales (coste de personal, márgenes típicos, ventas por metro cuadrado o por sala) sirven para saber si toda la red está por debajo de lo razonable. Pero se construyen con criterios distintos a los tuyos y rara vez se sabe qué hay detrás de cada cifra. Los uso para fijar la ambición, nunca para evaluar a un responsable de centro.",
       },
       { type: "h2", text: "Cinco trampas del ranking" },
       {
         type: "p",
-        text: "El ranking es tan bueno como los datos que lo alimentan y las correcciones que se le aplican. Estas son las cinco que más veces he visto distorsionar una decisión:",
+        text: "El ranking es tan bueno como los datos que lo alimentan y las correcciones que se le aplican. Las cinco que más veces he visto distorsionar una decisión:",
       },
       {
         type: "ul",
         items: [
           "Tamaño. Ordenar solo por EBITDA absoluto premia a los centros grandes. Hay que mirar siempre el valor absoluto junto al porcentaje.",
           "Antigüedad. Un centro con menos de doce o dieciocho meses está en rampa y debe compararse con su plan de apertura, no con la red.",
-          "Mix. Dos centros con el mismo catálogo pueden tener un mix de servicios muy distinto por su zona o su equipo. El ticket medio y el margen por servicio lo explican antes de culpar a la gestión.",
+          "Mix. Dos centros con el mismo catálogo pueden tener un mix muy distinto por su zona o su equipo. El ticket medio y el margen por servicio lo explican antes de culpar a la gestión.",
           "Estacionalidad. Un mes aislado engaña. El ranking se construye con doce meses móviles y se revisa la tendencia, no la foto.",
-          "Imputación. Si la estructura se reparte por ventas, los centros grandes cargan más y bajan posiciones. Hay que tener siempre el ranking por margen de contribución al lado del ranking por EBITDA.",
+          "Imputación. Si la estructura se reparte por ventas, los centros grandes cargan más y bajan posiciones. Hay que tener siempre el ranking por margen de contribución junto al de EBITDA.",
         ],
       },
       { type: "h2", text: "Cómo convertir el ranking en acciones en 90 días" },
       {
         type: "p",
-        text: "Un ranking bien hecho se convierte en plan en una tarde. Esta es la secuencia que sigo:",
+        text: "Un ranking bien hecho se convierte en plan en una tarde. La secuencia que sigo:",
       },
       {
         type: "ol",
         items: [
           "Semana 1: fijar el criterio de imputación, construir el ranking a doce meses por EBITDA y por margen de contribución y marcar los centros en rampa.",
-          "Semana 2: para los centros del último cuartil, descomponer la diferencia con la mediana en las siete métricas. Normalmente dos o tres explican la mayor parte.",
+          "Semana 2: para los centros del último cuartil, descomponer la diferencia con la mediana en las siete métricas. Normalmente dos o tres explican casi todo.",
           "Semana 3: visitar esos centros con los datos en la mano y contrastar con el responsable. La agenda, la plantilla y el flujo de clientes cuentan lo que el P&L no puede.",
-          "Semana 4: acordar un plan por centro con tres acciones, un responsable y una fecha. Nada más. Tres acciones ejecutadas valen más que diez planificadas.",
-          "Semanas 5 a 12: seguimiento semanal en el cuadro de mando de las métricas afectadas y revisión mensual del P&L. Lo que no mejora en ocho semanas necesita otra decisión, no otra reunión.",
+          "Semana 4: acordar un plan por centro con tres acciones, un responsable y una fecha. Tres acciones ejecutadas valen más que diez planificadas.",
+          "Semanas 5 a 12: seguimiento semanal de las métricas afectadas en el cuadro de mando y revisión mensual del P&L. Lo que no mejora en ocho semanas necesita otra decisión, no otra reunión.",
           "Día 90: nuevo ranking. Qué ha cambiado, qué centros han salido del último cuartil y cuáles necesitan una decisión estructural: cambio de responsable, reubicación o cierre.",
         ],
       },
       {
         type: "p",
-        text: "Si quieres un punto de partida objetivo antes de abrir ese proceso, el diagnóstico gratuito de tres minutos sitúa tu red en cinco bloques y te dice por cuál empezar.",
+        text: "Si quieres un punto de partida objetivo, el diagnóstico gratuito de tres minutos sitúa tu red en cinco bloques y te dice por cuál empezar.",
       },
     ],
     faqs: [
@@ -672,7 +648,7 @@ export const operacionesPlPosts: InsightPost[] = [
     excerpt:
       "Cuando cada centro trabaja a su manera, la red no escala: se multiplica. Qué significa tener una sola forma de operar, los siete elementos del modelo operativo, qué se estandariza y qué se deja local, y cómo implantarlo en 90 días.",
     metaDescription:
-      "Gestión multicentro: cómo pasar de quince formas de trabajar a un solo modelo operativo. Siete elementos, qué estandarizar y qué dejar local, plan a 30-60-90 días.",
+      "Gestión multicentro: cómo pasar de quince formas de trabajar a un solo modelo operativo. Siete elementos, qué estandarizar, qué dejar local y plan a 90 días.",
     category: "multisite",
     tags: ["Gestión multicentro", "Modelo operativo", "Estandarización", "Escalabilidad", "Integración"],
     keywords: [
@@ -690,87 +666,96 @@ export const operacionesPlPosts: InsightPost[] = [
     blocks: [
       {
         type: "p",
-        text: "La mayoría de las redes de centros que he dirigido o analizado no eran una empresa con quince centros. Eran quince empresas con la misma marca. Cada una con su forma de agendar, su lista de precios con excepciones, su plantilla heredada, su manera de cerrar la caja y su propia definición de lo que es un cliente nuevo.",
+        text: "La mayoría de las redes de centros que he dirigido o analizado no eran una empresa con quince centros: eran quince empresas con la misma marca. Cada una con su forma de agendar, su lista de precios con excepciones, su plantilla heredada, su manera de cerrar la caja y su propia definición de cliente nuevo.",
       },
       {
         type: "p",
-        text: "Eso funciona hasta un cierto tamaño. A partir de ahí, cada centro nuevo añade complejidad en lugar de escala, y el crecimiento se come el margen. La gestión multicentro consiste, en esencia, en resolver ese problema: que la red opere de una sola forma sin perder lo que hace bueno a cada centro.",
+        text: "Eso funciona hasta cierto tamaño. A partir de ahí, cada centro nuevo añade complejidad en lugar de escala y el crecimiento se come el margen. La gestión multicentro consiste en resolver ese problema: que la red opere de una sola forma sin perder lo que hace bueno a cada centro.",
       },
       { type: "h2", text: "La red que funciona como quince empresas distintas" },
       {
         type: "p",
-        text: "Los síntomas se parecen mucho de un sector a otro. Consolidar el cierre mensual lleva tres semanas porque cada centro reporta distinto. Un profesional que se traslada de un centro a otro necesita dos semanas para aprender cómo se hacen las cosas allí. Las compras se negocian localmente y el grupo no sabe qué precio real paga. Los KPIs tienen el mismo nombre y distinta fórmula según quién los calcule.",
+        text: "Los síntomas se parecen mucho de un sector a otro:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Consolidar el cierre mensual lleva tres semanas porque cada centro reporta distinto.",
+          "Un profesional que se traslada de un centro a otro necesita dos semanas para aprender cómo se hacen las cosas allí.",
+          "Las compras se negocian localmente y el grupo no sabe qué precio real paga.",
+          "Los KPIs tienen el mismo nombre y distinta fórmula según quién los calcule.",
+        ],
       },
       {
         type: "p",
-        text: "El coste de esta situación no aparece en ninguna línea del P&L, pero está en todas. Está en el tiempo de dirección dedicado a reconciliar datos, en el margen perdido en compras, en la rotación de equipos que no encuentran criterios claros y, sobre todo, en la imposibilidad de saber qué centro lo hace bien y copiarlo.",
+        text: "El coste de esta situación no aparece en ninguna línea del P&L, pero está en todas: tiempo de dirección reconciliando datos, margen perdido en compras, rotación de equipos sin criterios claros y, sobre todo, la imposibilidad de saber qué centro lo hace bien y copiarlo.",
       },
       { type: "h2", text: "Qué significa una sola forma de operar (y qué no)" },
       {
         type: "callout",
         title: "Una aclaración necesaria",
-        text: "Una sola forma de operar no es uniformar todo. No se trata de que todos los centros tengan la misma decoración, el mismo horario o el mismo discurso comercial. Se trata de que los procesos que determinan el resultado (cómo se agenda, cómo se vende, cómo se compra, cómo se mide y cómo se dirige) sean los mismos, para que las diferencias de resultado se expliquen por la ejecución y no por el método.",
+        text: "Una sola forma de operar no es uniformar todo: no se trata de que todos los centros tengan la misma decoración, el mismo horario o el mismo discurso comercial. Se trata de que los procesos que determinan el resultado (cómo se agenda, se vende, se compra, se mide y se dirige) sean los mismos, para que las diferencias de resultado se expliquen por la ejecución y no por el método.",
       },
       {
         type: "p",
-        text: "La distinción importa porque el argumento más habitual contra la estandarización es que cada centro es distinto. Y es cierto: la zona, el equipo y la clientela lo son. Pero un modelo operativo común es precisamente lo que permite ver esas diferencias con claridad. Sin él, todo se atribuye al contexto y nada se puede mejorar.",
+        text: "La distinción importa porque el argumento habitual contra la estandarización es que cada centro es distinto. Es cierto, y precisamente un modelo común es lo que permite ver esas diferencias con claridad: sin él, todo se atribuye al contexto y nada se puede mejorar.",
       },
       { type: "h2", text: "Los siete elementos del modelo operativo" },
       {
         type: "p",
-        text: "Cuando construyo o reconstruyo el modelo operativo de una red, trabajo siempre sobre estos siete bloques, en este orden:",
+        text: "Cuando construyo o reconstruyo el modelo operativo de una red, trabajo sobre estos siete bloques, en este orden:",
       },
       {
         type: "ol",
         items: [
-          "Catálogo y precios. Una lista única de servicios o productos, con precios de referencia y un margen de maniobra local definido. Las excepciones se autorizan, no se improvisan.",
-          "Procesos clave. Los cinco o seis procesos que determinan el resultado: captación y primera visita, agenda, venta y cobro, compras, cierre de caja y gestión de incidencias. Documentados en una página cada uno, no en un manual de doscientas.",
-          "Plantilla tipo. Cuántas personas, con qué perfiles y en qué turnos necesita cada formato de centro según su volumen de actividad. Es la referencia para dimensionar y para evaluar desviaciones de coste de personal.",
-          "Agenda y capacidad. Cómo se construye la agenda, cuántas horas se ofertan, cómo se gestionan los huecos y las listas de espera. La capacidad es la variable peor gestionada en las redes de servicios.",
-          "Compras. Proveedores homologados, condiciones de grupo y un catálogo de consumibles cerrado. Es la palanca más rápida y la que menos resistencia genera.",
+          "Catálogo y precios. Una lista única con precios de referencia y un margen de maniobra local definido. Las excepciones se autorizan, no se improvisan.",
+          "Procesos clave. Los cinco o seis que determinan el resultado: captación y primera visita, agenda, venta y cobro, compras, cierre de caja e incidencias. Documentados en una página cada uno, no en un manual de doscientas.",
+          "Plantilla tipo. Personas, perfiles y turnos que necesita cada formato de centro según su actividad. La referencia para dimensionar y para evaluar desviaciones de coste de personal.",
+          "Agenda y capacidad. Cómo se construye la agenda, cuántas horas se ofertan, cómo se gestionan huecos y listas de espera. La variable peor gestionada en las redes de servicios.",
+          "Compras. Proveedores homologados, condiciones de grupo y un catálogo de consumibles cerrado. La palanca más rápida y la que menos resistencia genera.",
           "KPIs y cierre mensual. Las mismas seis u ocho métricas con la misma fórmula en todos los centros, un cuadro de mando semanal y un P&L por centro antes del día 10.",
-          "Rutina de dirección. Reunión semanal del director de operaciones con los managers, revisión mensual del P&L por centro y comité de dirección con la red ordenada. Sin rutina, los otros seis elementos se degradan en un trimestre.",
+          "Rutina de dirección. Reunión semanal con los managers, revisión mensual del P&L por centro y comité de dirección con la red ordenada. Sin rutina, los otros seis elementos se degradan en un trimestre.",
         ],
       },
       { type: "h2", text: "Estandarizar sin matar la iniciativa local" },
       { type: "h3", text: "Qué se fija desde el centro de la red" },
       {
         type: "p",
-        text: "Todo lo que afecta a la comparabilidad y al margen: catálogo y precios de referencia, procesos clave, plantilla tipo, proveedores, definición de KPIs y calendario de cierre. Son decisiones que se toman una vez, se comunican con claridad y se revisan anualmente. Un manager no debería poder cambiarlas, pero sí proponer cambios con datos.",
+        text: "Todo lo que afecta a la comparabilidad y al margen: catálogo y precios de referencia, procesos clave, plantilla tipo, proveedores, KPIs y calendario de cierre. Decisiones que se toman una vez, se comunican con claridad y se revisan cada año. Un manager no debería poder cambiarlas, pero sí proponer cambios con datos.",
       },
       { type: "h3", text: "Qué se deja en manos del responsable de centro" },
       {
         type: "p",
-        text: "La gestión de su equipo dentro de la plantilla tipo, la relación con sus clientes o pacientes, las acciones de marketing local dentro de un presupuesto, la organización del día a día y la adaptación del horario a su zona. Es decir, todo lo que requiere conocer el terreno. Un buen modelo operativo da al manager menos cosas en las que pensar y más tiempo para dirigir.",
+        text: "La gestión de su equipo dentro de la plantilla tipo, la relación con sus clientes o pacientes, el marketing local dentro de un presupuesto y la organización del día a día: todo lo que exige conocer el terreno. Un buen modelo operativo da al manager menos cosas en las que pensar y más tiempo para dirigir.",
       },
       { type: "h2", text: "Antes y después en una red ilustrativa de 15 centros" },
       {
         type: "p",
-        text: "Para hacerlo tangible, así se vería el cambio en una red hipotética de quince clínicas que pasa de operar como quince unidades a hacerlo con un modelo común. Es un ejemplo construido para el artículo, no corresponde a ningún cliente:",
+        text: "Así se vería el cambio en una red hipotética de quince clínicas que pasa a operar con un modelo común. Es un ejemplo construido para el artículo, no corresponde a ningún cliente:",
       },
       {
         type: "table",
         headers: ["Ámbito", "Antes", "Después"],
         rows: [
-          ["Cierre mensual", "Día 25, con tres formatos de reporting distintos", "Día 8, un P&L por centro con el mismo criterio"],
-          ["Precios", "Lista general con excepciones en cada centro", "Catálogo único con un margen de maniobra local definido"],
-          ["Compras de consumibles", "Cada centro negocia con sus proveedores", "Cuatro proveedores homologados con condiciones de grupo"],
+          ["Cierre mensual", "Día 25, con tres formatos de reporting", "Día 8, un P&L por centro con el mismo criterio"],
+          ["Precios", "Lista general con excepciones en cada centro", "Catálogo único con margen de maniobra local definido"],
+          ["Compras", "Cada centro negocia con sus proveedores", "Cuatro proveedores homologados con condiciones de grupo"],
           ["Plantilla", "Heredada; nadie sabe si está bien dimensionada", "Plantilla tipo por formato; desviaciones visibles cada mes"],
           ["KPIs", "Mismo nombre, fórmula distinta según el centro", "Siete métricas con definición única y cuadro de mando semanal"],
-          ["Incorporación de un manager", "Seis meses para entender cómo funciona su centro", "Seis semanas con el modelo operativo documentado"],
-          ["Decisiones de dirección", "Basadas en la impresión del último centro visitado", "Basadas en el ranking de la red a doce meses"],
+          ["Incorporación de un manager", "Seis meses para entender su centro", "Seis semanas con el modelo operativo documentado"],
+          ["Decisiones de dirección", "Según la impresión del último centro visitado", "Según el ranking de la red a doce meses"],
         ],
       },
       { type: "h2", text: "Cómo se implanta: 30-60-90" },
       {
         type: "p",
-        text: "Un modelo operativo no se implanta con un manual enviado por correo. Se implanta por fases, con los managers dentro y midiendo desde la primera semana:",
+        text: "Un modelo operativo no se implanta con un manual enviado por correo, sino por fases, con los managers dentro y midiendo desde la primera semana:",
       },
       {
         type: "ol",
         items: [
-          "Días 1 a 30: medir. Construir el P&L por centro y el cuadro de mando con los datos existentes, fijar la definición de los KPIs y mapear cómo trabaja hoy cada centro en los cinco o seis procesos clave. Sin cambiar nada todavía.",
-          "Días 31 a 60: decidir. Definir el catálogo, la plantilla tipo, los proveedores homologados y los procesos clave en una página cada uno. Hacerlo con dos o tres managers de referencia, no contra ellos. Pilotar en tres centros.",
+          "Días 1 a 30: medir. Construir el P&L por centro y el cuadro de mando con los datos existentes, fijar la definición de los KPIs y mapear cómo trabaja hoy cada centro. Sin cambiar nada todavía.",
+          "Días 31 a 60: decidir. Definir catálogo, plantilla tipo, proveedores homologados y procesos clave en una página cada uno. Hacerlo con dos o tres managers de referencia, no contra ellos. Pilotar en tres centros.",
           "Días 61 a 90: desplegar. Extender a toda la red con formación corta y seguimiento semanal. Instaurar la rutina de dirección. Al día 90, revisar el ranking: qué ha cambiado y qué necesita una segunda ola.",
         ],
       },
@@ -781,7 +766,7 @@ export const operacionesPlPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "Esto es especialmente visible en dos situaciones: cuando se abren varios centros en poco tiempo y cuando se adquiere una empresa que trae su propia forma de trabajar. En ambos casos, tener una sola forma de operar antes de crecer es lo que distingue una expansión rentable de una expansión que solo suma facturación. Si quieres saber en qué punto está tu red, el diagnóstico gratuito de tres minutos es un buen primer paso.",
+        text: "Esto es especialmente visible al abrir varios centros en poco tiempo y al adquirir una empresa con su propia forma de trabajar. En ambos casos, operar de una sola forma antes de crecer distingue una expansión rentable de una que solo suma facturación. Si quieres saber en qué punto está tu red, el diagnóstico gratuito de tres minutos es un buen primer paso.",
       },
     ],
     faqs: [
