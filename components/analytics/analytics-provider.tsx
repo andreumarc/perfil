@@ -25,7 +25,8 @@ export function AnalyticsProvider() {
       <React.Suspense fallback={null}>
         <PageViewTracker />
       </React.Suspense>
-      <VercelAnalytics />
+      {/* El script de Vercel Analytics solo existe en despliegues de Vercel. */}
+      {process.env.NEXT_PUBLIC_VERCEL_ENV ? <VercelAnalytics /> : null}
 
       {analyticsOk && publicEnv.gaId ? (
         <>

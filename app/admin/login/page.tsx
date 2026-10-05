@@ -70,7 +70,9 @@ export default function AdminLoginPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-xl">Acceso al CRM</CardTitle>
+            <CardTitle className="text-xl">
+              <h1>Acceso al CRM</h1>
+            </CardTitle>
             <CardDescription>Área privada. Introduce tus credenciales de administrador.</CardDescription>
           </CardHeader>
           <CardContent>

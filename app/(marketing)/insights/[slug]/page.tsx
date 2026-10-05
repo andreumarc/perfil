@@ -109,9 +109,9 @@ export default async function InsightPostPage({ params }: { params: Params }) {
             publishedTime: post.publishedAt,
             modifiedTime: post.updatedAt ?? post.publishedAt,
             keywords: post.keywords,
+            image: `${path}/opengraph-image`,
+            articleSection: category.label,
           }),
-          image: `${site.url}${path}/opengraph-image`,
-          articleSection: category.label,
         }}
       />
     </>
