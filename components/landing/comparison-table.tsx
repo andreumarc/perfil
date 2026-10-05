@@ -39,13 +39,13 @@ export function ComparisonTable({
           <li key={row.label} className="grid gap-4 px-6 py-5 md:grid-cols-[1fr_1.4fr_1.4fr] md:gap-8 md:py-6">
             <p className="text-base font-semibold text-navy-900">{row.label}</p>
             <div>
-              <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-gray-400 md:hidden">
+              <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-gray-400 md:sr-only">
                 {beforeLabel}
               </span>
               <p className="text-[15px] leading-relaxed text-gray-600">{row.before}</p>
             </div>
             <div className="md:border-l md:border-signal/40 md:pl-6">
-              <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-signal md:hidden">
+              <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-signal md:sr-only">
                 {afterLabel}
               </span>
               <p className="text-[15px] leading-relaxed font-medium text-navy-900">{row.after}</p>

@@ -32,8 +32,8 @@ export function PhaseTimeline({ phases, className }: { phases: readonly Phase[];
             <span
               aria-hidden
               className={cn(
-                "absolute top-2 left-[7px] w-px bg-gray-200 lg:top-[7px] lg:left-0 lg:h-px lg:w-full",
-                last ? "bottom-auto h-0 lg:w-4" : "bottom-[-2.5rem]",
+                "absolute top-2 left-[7px] w-px bg-gray-200 lg:top-[7px] lg:left-0 lg:h-px",
+                last ? "bottom-auto h-0 lg:w-0" : "bottom-[-2.5rem] lg:w-[calc(100%+2rem)]",
               )}
             />
             <span

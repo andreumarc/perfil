@@ -1,4 +1,4 @@
-import { ArrowRightIcon, LinkedinIcon } from "lucide-react";
+import { ArrowRightIcon, ArrowUpRightIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Button } from "@/components/ui/button";
@@ -21,8 +21,8 @@ export function AboutLinks({ location, className }: { location: string; classNam
       {site.linkedinUrl ? (
         <Button asChild size="xl" variant="outline" className="w-full sm:w-auto">
           <TrackedLink href={site.linkedinUrl} event="linkedin_clicked" props={{ location }}>
-            <LinkedinIcon />
             Ver perfil en LinkedIn
+            <ArrowUpRightIcon />
           </TrackedLink>
         </Button>
       ) : null}
