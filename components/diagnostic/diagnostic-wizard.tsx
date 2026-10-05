@@ -189,7 +189,7 @@ export function DiagnosticWizard({ source = "diagnostic", compact = false, class
           score={success.score}
           firstName={lead?.firstName}
           company={lead?.company}
-          email={lead?.email}
+          email={success.emailQueued ? lead?.email : undefined}
           resultToken={success.resultToken}
           persisted={success.persisted}
         />

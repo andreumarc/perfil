@@ -6,6 +6,7 @@ import { createLead, findRecentLeadByEmail, generateResultToken } from "@/db/que
 import { recordEvent } from "@/db/queries/events";
 import { calculateDiagnostic, type DiagnosticResult } from "@/lib/diagnostic/calculate";
 import { sendDiagnosticResultToLead, sendNewLeadNotification } from "@/lib/email/send";
+import { serverEnv } from "@/lib/env";
 import { scoreLead, type LeadScore } from "@/lib/lead-scoring";
 import { FORM_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
 import { getRequestMeta } from "@/lib/request-meta";
@@ -21,6 +22,8 @@ export type SubmitDiagnosticState =
       leadId: string | null;
       resultToken: string | null;
       persisted: boolean;
+      /** true si Resend está configurado y se ha encolado el email con el resultado. */
+      emailQueued: boolean;
     };
 
 const MIN_FILL_TIME_MS = 3000;
@@ -170,5 +173,6 @@ export async function submitDiagnostic(payload: unknown): Promise<SubmitDiagnost
     leadId,
     resultToken: persisted ? resultToken : null,
     persisted,
+    emailQueued: Boolean(serverEnv().resendApiKey),
   };
 }

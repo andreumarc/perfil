@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   });
 }
 
-export default async function InsightPostPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function InsightPostPage({ params }: { params: Params }) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
