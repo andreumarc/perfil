@@ -10,7 +10,7 @@ import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { CtaBand } from "@/components/sections/cta-band";
-import { INSIGHT_CATEGORIES, getCategory, getPostsByCategory, type InsightCategorySlug } from "@/content/insights";
+import { INSIGHT_CATEGORIES, getCategory, getPostsByCategory } from "@/content/insights";
 import { pageMetadata } from "@/lib/seo";
 
 type Params = Promise<{ category: string }>;
@@ -38,7 +38,7 @@ export default async function InsightsCategoryPage({ params }: { params: Params 
   const category = getCategory(slug);
   if (!category) notFound();
 
-  const posts = getPostsByCategory(category.slug as InsightCategorySlug);
+  const posts = getPostsByCategory(category.slug);
   const otherCategories = INSIGHT_CATEGORIES.filter((c) => c.slug !== category.slug);
 
   return (
