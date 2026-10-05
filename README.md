@@ -172,12 +172,27 @@ capturan en cliente (`sessionStorage`) y se guardan con el lead.
 
 ## Seguridad
 
-- Validación Zod en servidor para todos los formularios y la API de eventos.
-- Rate limiting persistido en Neon (`rate_limits`) con fallback en memoria.
-- Honeypot + tiempo mínimo de cumplimentación; comprobación de origen en `/api/events`.
+- Validación Zod en servidor para todos los formularios y la API de eventos (payloads acotados, lista blanca de
+  claves de contexto, sin URLs ni emails en nombre/empresa).
+- Rate limiting persistido en Neon (`rate_limits`) con fallback en memoria; límite global adicional en el login.
+- Honeypot + ventana de cumplimentación obligatoria (3 s – 6 h); comprobación de origen en `/api/events`.
 - Cabeceras: CSP, HSTS, X-Frame-Options, Referrer-Policy, Permissions-Policy, nosniff.
-- Admin: sesión JWT (HS256, `AUTH_SECRET`) en cookie httpOnly, comprobada en `proxy.ts` y en el layout.
-- IPs anonimizadas con hash y sal; país vía cabecera de Vercel (sin servicios externos).
+- Admin: sesión JWT (HS256, `AUTH_SECRET` ≥ 32 caracteres) en cookie httpOnly, comprobada en `proxy.ts` y en el
+  layout; el token va ligado a la contraseña actual (cambiar `ADMIN_PASSWORD` cierra todas las sesiones).
+  `ADMIN_PASSWORD` debe tener al menos 12 caracteres.
+- IPs pseudonimizadas con hash y sal (`IP_HASH_SALT`). **En producción, sin sal no se almacena ningún hash.**
+  País vía cabecera de Vercel (sin servicios externos). El lead score nunca se devuelve al navegador.
+- `/api/health` es público pero solo muestra el estado de las integraciones con sesión de administrador.
+- El CRM permite eliminar un lead de forma definitiva (derecho de supresión, RGPD art. 17).
+
+## Antes de publicar
+
+1. Configura en Vercel **todas** las variables obligatorias y `IP_HASH_SALT`, `NEXT_PUBLIC_BOOKING_URL`
+   (sin Calendly, los CTA de reunión llevan al formulario de contacto con interés "sesión").
+2. Usa credenciales de producción distintas de las de desarrollo (contraseña del rol de Neon, `AUTH_SECRET`,
+   `ADMIN_PASSWORD`). Si una connection string se ha usado en otro entorno, rótala desde la consola de Neon.
+3. Completa `content/legal.ts` (NIF y domicilio) y revisa los rangos de referencia de `lib/ebitda-benchmark.ts`.
+4. Verifica un envío real del diagnóstico y del formulario de contacto, y que llegan los emails de Resend.
 
 ## RGPD
 
