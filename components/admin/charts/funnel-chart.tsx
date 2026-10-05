@@ -1,5 +1,4 @@
-import { formatNumber } from "@/lib/utils";
-import { cn } from "@/lib/utils";
+import { cn, formatNumber } from "@/lib/utils";
 
 import { SEQUENTIAL_NAVY, percentOf } from "./palette";
 

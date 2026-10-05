@@ -16,7 +16,7 @@ export interface OverviewStats {
   diagnosticsStarted30d: number;
   diagnosticsCompleted30d: number;
   diagnosticLeads30d: number;
-  /** % diagnósticos completados que acaban en lead. */
+  /** % de diagnósticos iniciados (30 d) que acaban en lead. */
   diagnosticConversion: number;
   visitors30d: number;
 }

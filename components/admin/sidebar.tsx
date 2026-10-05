@@ -57,7 +57,7 @@ export function Sidebar({
   return (
     <div className={cn("flex h-full min-h-0 flex-col bg-white", className)}>
       <div className="flex h-16 shrink-0 items-center border-b border-gray-200 px-5">
-        <Logo />
+        <Logo href="/admin" />
       </div>
 
       <nav aria-label="Navegación del admin" className="flex-1 overflow-y-auto px-3 py-4">

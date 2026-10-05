@@ -23,7 +23,7 @@ export function LoginForm() {
   const next = safeNext(searchParams.get("next"));
 
   return (
-    <form action={formAction} className="space-y-5" noValidate={false}>
+    <form action={formAction} className="space-y-5">
       <input type="hidden" name="next" value={next} />
 
       {state?.error ? (
@@ -46,7 +46,6 @@ export function LoginForm() {
           autoComplete="username"
           placeholder="tu@empresa.com"
           required
-          autoFocus
         />
       </div>
 

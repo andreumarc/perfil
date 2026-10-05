@@ -2,7 +2,7 @@
 
 import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
-import { SECTORS, labelFor } from "@/types/lead";
+import { SECTORS, labelFor, type Sector } from "@/types/lead";
 
 import { ChartTooltip } from "./chart-tooltip";
 import { AXIS_TICK, CHART_COLORS, CURSOR_FILL, GRID_STROKE } from "./palette";
@@ -14,11 +14,29 @@ export interface SectorDatum {
 
 const ROW_HEIGHT = 34;
 
+/** Etiquetas cortas para el eje (las de SECTORS son demasiado largas para móvil). */
+const SHORT_SECTOR_LABELS: Record<Sector, string> = {
+  dental: "Dental",
+  veterinaria: "Veterinaria",
+  healthcare: "Healthcare",
+  retail: "Retail",
+  fitness: "Fitness",
+  automocion: "Automoción",
+  franquicias: "Franquicias",
+  restauracion: "Restauración",
+  private_equity: "Private Equity",
+  otros: "Otros",
+};
+
+function sectorLabel(key: string): string {
+  return key in SHORT_SECTOR_LABELS ? SHORT_SECTOR_LABELS[key as Sector] : labelFor(SECTORS, key);
+}
+
 /** Barras horizontales de leads por sector, con etiquetas de SECTORS. */
 export function SectorBarChart({ data }: { data: SectorDatum[] }) {
   const rows = [...data]
     .sort((a, b) => b.value - a.value)
-    .map((item) => ({ key: item.key, label: labelFor(SECTORS, item.key), value: item.value }));
+    .map((item) => ({ key: item.key, label: sectorLabel(item.key), value: item.value }));
 
   if (rows.length === 0 || rows.every((row) => row.value === 0)) {
     return <p className="py-10 text-center text-sm text-gray-500">Sin leads con sector informado.</p>;
@@ -34,7 +52,7 @@ export function SectorBarChart({ data }: { data: SectorDatum[] }) {
         <YAxis
           type="category"
           dataKey="label"
-          width={168}
+          width={112}
           tick={{ ...AXIS_TICK, fill: "#344054" }}
           tickLine={false}
           axisLine={false}

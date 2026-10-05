@@ -30,7 +30,7 @@ import {
   getSectorBreakdown,
   getSourceBreakdown,
 } from "@/db/queries/analytics";
-import { listLeads } from "@/db/queries/leads";
+import { listLeads, listOpenHotLeads } from "@/db/queries/leads";
 import { formatDate, formatNumber } from "@/lib/utils";
 import { leadsFilterSchema } from "@/lib/validation/admin";
 
@@ -52,7 +52,7 @@ async function loadOverview() {
     getSectorBreakdown(),
     getFunnel(30),
     listLeads(leadsFilterSchema.parse({ pageSize: 10 })),
-    listLeads(leadsFilterSchema.parse({ hot: "1", sort: "score", dir: "desc", pageSize: 50 })),
+    listOpenHotLeads(HOT_LIMIT),
   ]);
   return {
     stats,
@@ -61,9 +61,7 @@ async function loadOverview() {
     sectors,
     funnel,
     recent: recent.items.slice(0, RECENT_LIMIT),
-    hotOpen: hot.items
-      .filter((lead) => lead.status === "NEW" || lead.status === "CONTACTED")
-      .slice(0, HOT_LIMIT),
+    hotOpen: hot,
   };
 }
 

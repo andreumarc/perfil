@@ -4,10 +4,18 @@ import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 /** Marca tipográfica: nombre + descriptor. Sin imagen → cero peso extra. */
-export function Logo({ tone = "light", className }: { tone?: "light" | "dark"; className?: string }) {
+export function Logo({
+  tone = "light",
+  className,
+  href = "/",
+}: {
+  tone?: "light" | "dark";
+  className?: string;
+  href?: string;
+}) {
   return (
     <Link
-      href="/"
+      href={href}
       aria-label={`${site.name} — inicio`}
       className={cn("group inline-flex items-center gap-3", className)}
     >

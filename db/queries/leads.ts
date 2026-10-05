@@ -190,6 +190,17 @@ export async function listLeads(filter: LeadsFilter): Promise<LeadsPage> {
   };
 }
 
+/** HOT leads todavía sin reunión (NEW / CONTACTED), los de mayor score primero. */
+export async function listOpenHotLeads(limit = 8): Promise<Lead[]> {
+  const db = requireDb();
+  return db
+    .select()
+    .from(leads)
+    .where(and(eq(leads.isHot, true), sql`${leads.status} in ('NEW', 'CONTACTED')`))
+    .orderBy(desc(leads.score), desc(leads.createdAt))
+    .limit(limit);
+}
+
 /** Número de leads que cumplen el filtro (sin traer filas). */
 export async function countLeads(filter: Partial<LeadsFilter>): Promise<number> {
   const db = requireDb();

@@ -84,7 +84,7 @@ export default async function AdminDiagnosticsPage() {
         <KpiCard label="Madurez media" value={stats.total > 0 ? stats.avgTotal : "—"} hint="Sobre 100" icon={<GaugeIcon />} />
         <KpiCard
           label="Bloque más débil"
-          value={weakest ? weakest.label : "—"}
+          value={weakest ? <span className="text-xl md:text-2xl">{weakest.label}</span> : "—"}
           hint={weakest ? `Media de ${weakest.value}/100 · mayor oportunidad comercial` : "Sin diagnósticos"}
           tone="signal"
           icon={<TrendingUpIcon />}

@@ -14,7 +14,7 @@ export function AdminMobileNav({ email }: { email: string }) {
 
   return (
     <header className="sticky top-0 z-40 flex h-14 shrink-0 items-center justify-between border-b border-gray-200 bg-white px-4 md:hidden">
-      <Logo />
+      <Logo href="/admin" />
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon" aria-label="Abrir navegación del admin">
