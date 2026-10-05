@@ -24,7 +24,7 @@ export type SubmitDiagnosticState =
     };
 
 const MIN_FILL_TIME_MS = 3000;
-const CONSENT_TEXT_VERSION = "2026-01";
+const CONSENT_TEXT_VERSION = "2026-10-01";
 
 /**
  * Server action: valida el envío del diagnóstico, calcula resultado y score,

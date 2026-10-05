@@ -15,7 +15,7 @@ export type SubmitContactState =
   | { status: "success"; leadId: string | null; score: number; isHot: boolean };
 
 const MIN_FILL_TIME_MS = 3000;
-const CONSENT_TEXT_VERSION = "2026-01";
+const CONSENT_TEXT_VERSION = "2026-10-01";
 
 /** Server action del formulario de contacto (y de la calculadora EBITDA). */
 export async function submitContact(payload: unknown): Promise<SubmitContactState> {

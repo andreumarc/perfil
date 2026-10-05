@@ -156,7 +156,15 @@ export function articleJsonLd(input: {
   publishedTime: string;
   modifiedTime?: string;
   keywords?: string[];
+  /** Ruta o URL absoluta de la imagen OG del artículo. */
+  image?: string;
+  articleSection?: string;
 }): JsonLd {
+  const image = input.image
+    ? input.image.startsWith("http")
+      ? input.image
+      : `${site.url}${input.image}`
+    : `${site.url}/opengraph-image`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -169,7 +177,8 @@ export function articleJsonLd(input: {
     inLanguage: "es-ES",
     author: { "@id": `${site.url}/#person` },
     publisher: { "@id": `${site.url}/#organization` },
-    image: `${site.url}/opengraph-image`,
+    image,
+    ...(input.articleSection ? { articleSection: input.articleSection } : {}),
     ...(input.keywords ? { keywords: input.keywords.join(", ") } : {}),
   };
 }
