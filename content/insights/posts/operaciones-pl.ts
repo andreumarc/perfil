@@ -709,7 +709,7 @@ export const operacionesPlPosts: InsightPost[] = [
         type: "ol",
         items: [
           "Catálogo y precios. Una lista única con precios de referencia y un margen de maniobra local definido. Las excepciones se autorizan, no se improvisan.",
-          "Procesos clave. Los cinco o seis que determinan el resultado: captación y primera visita, agenda, venta y cobro, compras, cierre de caja e incidencias. Documentados en una página cada uno, no en un manual de doscientas.",
+          "Procesos clave. Los cinco o seis que determinan el resultado: captación, agenda, venta y cobro, compras, cierre de caja e incidencias. Una página cada uno, no un manual de doscientas.",
           "Plantilla tipo. Personas, perfiles y turnos que necesita cada formato de centro según su actividad. La referencia para dimensionar y para evaluar desviaciones de coste de personal.",
           "Agenda y capacidad. Cómo se construye la agenda, cuántas horas se ofertan, cómo se gestionan huecos y listas de espera. La variable peor gestionada en las redes de servicios.",
           "Compras. Proveedores homologados, condiciones de grupo y un catálogo de consumibles cerrado. La palanca más rápida y la que menos resistencia genera.",
@@ -731,7 +731,7 @@ export const operacionesPlPosts: InsightPost[] = [
       { type: "h2", text: "Antes y después en una red ilustrativa de 15 centros" },
       {
         type: "p",
-        text: "Así se vería el cambio en una red hipotética de quince clínicas que pasa a operar con un modelo común. Es un ejemplo construido para el artículo, no corresponde a ningún cliente:",
+        text: "Así se vería el cambio en una red hipotética de quince clínicas que pasa a operar con un modelo común. Es un ejemplo construido para el artículo, no un cliente real:",
       },
       {
         type: "table",
@@ -749,13 +749,13 @@ export const operacionesPlPosts: InsightPost[] = [
       { type: "h2", text: "Cómo se implanta: 30-60-90" },
       {
         type: "p",
-        text: "Un modelo operativo no se implanta con un manual enviado por correo, sino por fases, con los managers dentro y midiendo desde la primera semana:",
+        text: "Un modelo operativo no se implanta por correo, sino por fases, con los managers dentro y midiendo desde la primera semana:",
       },
       {
         type: "ol",
         items: [
           "Días 1 a 30: medir. Construir el P&L por centro y el cuadro de mando con los datos existentes, fijar la definición de los KPIs y mapear cómo trabaja hoy cada centro. Sin cambiar nada todavía.",
-          "Días 31 a 60: decidir. Definir catálogo, plantilla tipo, proveedores homologados y procesos clave en una página cada uno. Hacerlo con dos o tres managers de referencia, no contra ellos. Pilotar en tres centros.",
+          "Días 31 a 60: decidir. Definir catálogo, plantilla tipo, proveedores y procesos clave con dos o tres managers de referencia, no contra ellos. Pilotar en tres centros.",
           "Días 61 a 90: desplegar. Extender a toda la red con formación corta y seguimiento semanal. Instaurar la rutina de dirección. Al día 90, revisar el ranking: qué ha cambiado y qué necesita una segunda ola.",
         ],
       },
