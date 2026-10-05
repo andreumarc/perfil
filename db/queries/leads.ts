@@ -190,6 +190,13 @@ export async function listLeads(filter: LeadsFilter): Promise<LeadsPage> {
   };
 }
 
+/** Número de leads que cumplen el filtro (sin traer filas). */
+export async function countLeads(filter: Partial<LeadsFilter>): Promise<number> {
+  const db = requireDb();
+  const rows = await db.select({ value: count() }).from(leads).where(buildLeadsWhere(filter));
+  return Number(rows[0]?.value ?? 0);
+}
+
 /** Todos los leads que cumplen el filtro (para exportación CSV). */
 export async function listAllLeads(filter: Partial<LeadsFilter>): Promise<Lead[]> {
   const db = requireDb();
