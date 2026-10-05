@@ -10,9 +10,11 @@ import { primaryCta } from "@/lib/site";
 /** CTA fijo inferior solo en móvil. Oculto en el propio diagnóstico y en contacto. */
 export function StickyCta() {
   const pathname = usePathname();
+  // Oculto donde la propia página ya es un formulario de conversión.
   const hidden =
     pathname.startsWith("/diagnostico") ||
     pathname.startsWith("/contacto") ||
+    pathname.startsWith("/calculadora-ebitda") ||
     pathname.startsWith("/admin");
   if (hidden) return null;
 
