@@ -133,7 +133,7 @@ export const healthcarePosts: InsightPost[] = [
     excerpt:
       "Los ocho KPIs que explican la rentabilidad de una clínica dental dentro de una red, cómo leer el ranking de clínicas y las palancas específicas del sector dental.",
     metaDescription:
-      "Gestión de clínicas dentales en red: los KPIs que explican la rentabilidad de cada clínica, cómo leer el ranking y las palancas de agenda, primera visita y laboratorio.",
+      "Gestión de clínicas dentales en red: los 8 KPIs que explican la rentabilidad de cada clínica, cómo leer el ranking y las palancas propias del sector dental.",
     category: "healthcare",
     tags: ["Clínicas dentales", "KPIs", "Healthcare", "Rentabilidad"],
     keywords: ["gestión clínicas dentales", "KPIs clínica dental", "rentabilidad clínica dental", "red de clínicas dentales"],
@@ -143,21 +143,21 @@ export const healthcarePosts: InsightPost[] = [
     blocks: [
       {
         type: "p",
-        text: "La gestión de clínicas dentales en red tiene una trampa: los indicadores que hacen rentable una clínica no son los que hacen rentable un grupo. Una clínica vive de su odontólogo de referencia y de su cartera de pacientes; una red vive de que 10 o 20 clínicas se dirijan con los mismos datos, la misma agenda y la misma disciplina de cobro. He dirigido redes sanitarias de hasta 25 centros y este artículo recoge los KPIs que, en mi experiencia, explican la diferencia entre una clínica dental que sostiene el grupo y una que lo lastra.",
+        text: "La gestión de clínicas dentales en red tiene una trampa: los indicadores que hacen rentable una clínica no son los que hacen rentable un grupo. Una clínica vive de su odontólogo de referencia y de su cartera de pacientes; una red vive de que 10 o 20 clínicas se dirijan con los mismos datos, la misma agenda y la misma disciplina de cobro. He dirigido redes sanitarias de hasta 25 centros y estos son los KPIs que, en mi experiencia, separan una clínica dental que sostiene el grupo de una que lo lastra.",
       },
       { type: "h2", text: "Por qué una clínica dental rentable no garantiza una red rentable" },
       {
         type: "p",
-        text: "En una clínica individual, el propietario es a la vez odontólogo, director y comercial. Compensa los huecos de agenda con horas propias, acepta presupuestos con descuento para no perder al paciente y conoce el precio de cada implante. Nada de eso escala. Cuando el grupo tiene 12 clínicas, el margen depende de managers y de odontólogos asalariados o por producción que no tienen la misma información ni los mismos incentivos.",
+        text: "En una clínica individual, el propietario es a la vez odontólogo, director y comercial. Compensa los huecos de agenda con horas propias, acepta presupuestos con descuento y conoce el precio de cada implante. Nada de eso escala. Con 12 clínicas, el margen depende de managers y de odontólogos asalariados o por producción que no tienen la misma información ni los mismos incentivos.",
       },
       {
         type: "p",
-        text: "Por eso la red necesita lo que la clínica individual no necesitaba: un P&L por clínica comparable, un conjunto reducido de KPIs con la misma definición en todas las unidades y una rutina semanal que los revise. Sin eso, la red es una suma de clínicas que la central contabiliza pero no dirige.",
+        text: "Por eso la red necesita lo que la clínica individual no necesitaba: un P&L por clínica comparable, pocos KPIs con la misma definición en todas las unidades y una rutina semanal que los revise. Sin eso, la red es una suma de clínicas que la central contabiliza pero no dirige.",
       },
       { type: "h2", text: "Los KPIs que importan" },
       {
         type: "p",
-        text: "Después de muchos cuadros de mando, el conjunto que explica la rentabilidad de una clínica dental cabe en una tabla. La clave no es la lista: es que se calcule igual en todas las clínicas y con la frecuencia adecuada.",
+        text: "El conjunto que explica la rentabilidad de una clínica dental cabe en una tabla. La clave no es la lista, sino que se calcule igual en todas las clínicas y con la frecuencia adecuada.",
       },
       {
         type: "table",
@@ -175,7 +175,7 @@ export const healthcarePosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "Los cuatro primeros son indicadores de actividad y los mueve el manager de clínica cada semana. Los cuatro últimos son de resultado y se revisan en el cierre mensual con el CFO. Mezclarlos en la misma reunión es la forma más rápida de que nadie actúe sobre ninguno.",
+        text: "Los cuatro primeros son de actividad y los mueve el manager cada semana. Los cuatro últimos son de resultado y se revisan en el cierre mensual con el CFO. Mezclarlos en la misma reunión es la forma más rápida de que nadie actúe sobre ninguno.",
       },
       { type: "h2", text: "Cómo leer el ranking de clínicas" },
       {
@@ -188,22 +188,22 @@ export const healthcarePosts: InsightPost[] = [
           "Dos clínicas con la misma facturación y márgenes muy distintos suelen diferir en coste de personal o en laboratorio, no en precios.",
           "Una clínica con alta ocupación y bajo ticket medio tiene un problema de mix: mucha higiene y revisión, poca rehabilitación o implantología.",
           "Una clínica con buena conversión y mucho presupuesto pendiente tiene un problema de agenda o de financiación al paciente, no de ventas.",
-          "Una clínica con baja ocupación y plantilla completa es la que más margen destruye y la que más rápido se recupera si se actúa sobre la agenda y los turnos.",
+          "Una clínica con baja ocupación y plantilla completa es la que más margen destruye y la que más rápido se recupera actuando sobre agenda y turnos.",
         ],
       },
       { type: "h3", text: "La brecha de cuartil" },
       {
         type: "p",
-        text: "La diferencia de margen entre el primer y el último cuartil de clínicas es el potencial real del grupo. Es más honesto que cualquier benchmark externo, porque demuestra lo que la propia red ya consigue en algunas unidades.",
+        text: "La diferencia de margen entre el primer y el último cuartil es el potencial real del grupo: más honesto que cualquier benchmark externo, porque la propia red ya lo consigue en algunas unidades.",
       },
       { type: "h2", text: "Las palancas específicas del dental" },
       {
         type: "ol",
         items: [
           "Agenda de gabinetes. Bloques por tipo de tratamiento, franjas de primera visita protegidas y un responsable de llenar huecos con la lista de pacientes con tratamiento pendiente.",
-          "Primera visita. Quién la hace, cuánto dura, cómo se presenta el plan de tratamiento y quién hace el seguimiento del presupuesto a las 48 horas. Es la palanca comercial más potente y la menos medida.",
+          "Primera visita. Quién la hace, cuánto dura, cómo se presenta el plan de tratamiento y quién sigue el presupuesto a las 48 horas. Es la palanca comercial más potente y la menos medida.",
           "Presupuestos pendientes. Una cartera de tratamientos aceptados sin ejecutar es ingreso aprobado que envejece. Debe revisarse cada semana por antigüedad y con un responsable de reactivación.",
-          "Laboratorio y consumibles. Homologar dos o tres laboratorios para toda la red y comparar el coste por tipo de prótesis entre clínicas suele revelar diferencias que nadie había visto.",
+          "Laboratorio y consumibles. Homologar dos o tres laboratorios para toda la red y comparar el coste por tipo de prótesis entre clínicas revela diferencias que nadie había visto.",
           "Retribución de odontólogos. Si cobran por producción, la palanca de productividad está alineada; si cobran fijo, la agenda la tiene que dirigir el manager. En ambos casos hay que medir facturación por hora.",
         ],
       },
@@ -212,19 +212,19 @@ export const healthcarePosts: InsightPost[] = [
         title: "Dato que casi nadie mide",
         text: "Las horas de gabinete disponibles sin agenda abierta. Muchas clínicas tienen un gabinete cerrado dos tardes a la semana por falta de profesional y lo cuentan como plena ocupación porque solo miden las horas abiertas.",
       },
-      { type: "h2", text: "Ejemplo ilustrativo: dos clínicas con la misma facturación" },
+      { type: "h2", text: "Ejemplo ilustrativo" },
       {
         type: "p",
-        text: "Supongamos dos clínicas dentales de la misma red, A y B, que facturan 1,2 millones de euros al año cada una. A tiene un margen EBITDA del 18 % y B del 6 %. Al comparar los KPIs, la ocupación de gabinete es similar (74 % y 71 %), pero B tiene un coste de personal del 52 % frente al 41 % de A, y un coste de laboratorio del 11 % frente al 8 %.",
+        text: "Supongamos dos clínicas dentales de la misma red, A y B, que facturan 1,2 millones de euros al año cada una. A tiene un margen EBITDA del 18 % y B del 6 %. La ocupación de gabinete es similar (74 % y 71 %), pero B tiene un coste de personal del 52 % frente al 41 % de A, y un coste de laboratorio del 11 % frente al 8 %.",
       },
       {
         type: "p",
-        text: "La lectura es inmediata: B no tiene un problema de demanda ni de precios, sino de dimensionamiento (un auxiliar más por gabinete que A para la misma actividad) y de laboratorio (trabaja con un proveedor local más caro). Las dos palancas son ejecutables en un trimestre sin tocar la actividad clínica. Las cifras son ilustrativas: lo que importa es que el P&L por clínica convierte una intuición en una decisión.",
+        text: "La lectura es inmediata: B no tiene un problema de demanda ni de precios, sino de dimensionamiento (un auxiliar más por gabinete que A para la misma actividad) y de laboratorio (trabaja con un proveedor local más caro). Ambas palancas se ejecutan en un trimestre sin tocar lo clínico. Las cifras son ilustrativas: lo que importa es que el P&L por clínica convierte una intuición en una decisión.",
       },
       { type: "h2", text: "Rutina semanal del director de red" },
       {
         type: "p",
-        text: "Todo lo anterior se sostiene con una rutina: una reunión semanal de 45 minutos con los managers de clínica, siempre el mismo día, con una página por clínica que muestra ocupación, facturación por hora, conversión de primera visita y presupuestos pendientes frente a objetivo. Cada manager explica su desviación y propone una acción para la semana. El director de red no resuelve: decide, prioriza y asegura que la acción se ejecuta. Una vez al mes, con el CFO, se revisan los KPIs de resultado y el ranking de clínicas.",
+        text: "Lo anterior se sostiene con una rutina: una reunión semanal de 45 minutos con los managers, siempre el mismo día, con una página por clínica que muestra ocupación, facturación por hora, conversión de primera visita y presupuestos pendientes frente a objetivo. Cada manager explica su desviación y propone una acción. El director de red no resuelve: decide, prioriza y asegura que la acción se ejecuta. Una vez al mes, con el CFO, se revisan los KPIs de resultado y el ranking.",
       },
       {
         type: "quote",
@@ -255,7 +255,7 @@ export const healthcarePosts: InsightPost[] = [
     excerpt:
       "Qué hace distinto al negocio veterinario multicentro, cómo construir el P&L por clínica, los KPIs que explican el margen y cómo integrar clínicas adquiridas.",
     metaDescription:
-      "Gestión de clínicas veterinarias multicentro: P&L por clínica, KPIs de margen, coste de personal y guardias, farmacia y stock, e integración de clínicas adquiridas.",
+      "Gestión de clínicas veterinarias multicentro: P&L por clínica, KPIs de margen, personal y guardias, farmacia y stock, e integración de clínicas adquiridas.",
     category: "healthcare",
     tags: ["Clínicas veterinarias", "Healthcare", "Buy & Build", "P&L por centro"],
     keywords: ["gestión clínicas veterinarias", "red de clínicas veterinarias", "rentabilidad clínica veterinaria", "integración clínicas veterinarias"],
@@ -265,7 +265,7 @@ export const healthcarePosts: InsightPost[] = [
     blocks: [
       {
         type: "p",
-        text: "El sector veterinario vive una consolidación acelerada: grupos que compran clínicas independientes, fondos que construyen plataformas y veterinarios propietarios que venden tras veinte años. El resultado son redes de 8, 15 o 40 clínicas con un reto común: dirigirlas con datos sin que el margen se diluya en la integración. He dirigido redes sanitarias multicentro y este artículo resume cómo abordo la gestión de clínicas veterinarias en red.",
+        text: "El sector veterinario vive una consolidación acelerada: grupos que compran clínicas independientes, fondos que construyen plataformas y veterinarios propietarios que venden. El resultado son redes de 8, 15 o 40 clínicas con un reto común: dirigirlas con datos sin que el margen se diluya en la integración. He dirigido redes sanitarias multicentro; así es como abordo la gestión de clínicas veterinarias en red.",
       },
       { type: "h2", text: "Qué hace distinto al veterinario multicentro" },
       {
@@ -284,7 +284,7 @@ export const healthcarePosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "Dirigir una red veterinaria sin tener en cuenta estas cinco diferencias lleva a aplicar recetas de otros sectores que no funcionan.",
+        text: "Ignorar estas cinco diferencias lleva a aplicar recetas de otros sectores que no funcionan.",
       },
       { type: "h2", text: "El P&L por clínica veterinaria: qué imputar y cómo" },
       {
@@ -327,7 +327,7 @@ export const healthcarePosts: InsightPost[] = [
       { type: "h2", text: "Capacidad, agendas y turnos: el coste de personal" },
       {
         type: "p",
-        text: "El coste de personal es la mayor partida del P&L veterinario y la que más diferencias genera entre clínicas. La causa raíz casi nunca son los salarios: es la relación entre turnos y demanda. Clínicas con dos veterinarios en consulta en franjas de mañana vacías y uno solo en las tardes con lista de espera. Guardias de urgencias dimensionadas para un volumen que no llega. Auxiliares que hacen tareas administrativas que un sistema podría resolver.",
+        text: "El coste de personal es la mayor partida del P&L veterinario y la que más diferencias genera entre clínicas. La causa raíz casi nunca son los salarios: es la relación entre turnos y demanda. Clínicas con dos veterinarios en franjas de mañana vacías y uno solo en las tardes con lista de espera. Guardias de urgencias dimensionadas para un volumen que no llega. Auxiliares que hacen tareas administrativas que un sistema podría resolver.",
       },
       {
         type: "p",
@@ -341,7 +341,7 @@ export const healthcarePosts: InsightPost[] = [
       { type: "h2", text: "Compras, farmacia y stock" },
       {
         type: "p",
-        text: "En una red veterinaria, la farmacia y los consumibles son la segunda partida del P&L y la primera oportunidad de grupo. Lo habitual tras varias adquisiciones es encontrar que cada clínica compra a sus proveedores históricos, que un mismo medicamento se paga a precios distintos y que el stock inmovilizado y los caducados no se miden.",
+        text: "La farmacia y los consumibles son la segunda partida del P&L veterinario y la primera oportunidad de grupo. Lo habitual tras varias adquisiciones es encontrar que cada clínica compra a sus proveedores históricos, que un mismo medicamento se paga a precios distintos y que el stock inmovilizado y los caducados no se miden.",
       },
       {
         type: "ul",
@@ -355,20 +355,20 @@ export const healthcarePosts: InsightPost[] = [
       { type: "h2", text: "Integración de clínicas adquiridas" },
       {
         type: "p",
-        text: "Casi todas las redes veterinarias crecen comprando. Y casi todas sufren el mismo problema: la clínica adquirida sigue funcionando como una empresa aparte un año después, con su sistema, sus proveedores y su forma de reportar. Entre tanto, el veterinario propietario que vendió pierde motivación y parte del equipo recibe ofertas.",
+        text: "Casi todas las redes veterinarias crecen comprando. Y casi todas sufren lo mismo: la clínica adquirida sigue funcionando como una empresa aparte un año después, con su sistema, sus proveedores y su forma de reportar. Entre tanto, el veterinario propietario que vendió pierde motivación y parte del equipo recibe ofertas.",
       },
       {
         type: "p",
-        text: "La integración debe planificarse antes del día 1 y ejecutarse en 100 días: comunicación al equipo, retención de perfiles clave, P&L con criterios del grupo desde el primer cierre, homologación de compras y agenda, y una sola forma de operar en lo que importa. La cultura de servicio que hizo valiosa a esa clínica se respeta; los datos y los procesos clave se unifican. Un grupo que encadena adquisiciones necesita un playbook que convierta cada integración en un proceso predecible, no en una crisis.",
+        text: "La integración debe planificarse antes del día 1 y ejecutarse en 100 días: comunicación al equipo, retención de perfiles clave, P&L con criterios del grupo desde el primer cierre, homologación de compras y agenda, y una sola forma de operar en lo que importa. La cultura de servicio que hizo valiosa a esa clínica se respeta; los datos y los procesos clave se unifican. Un grupo que encadena adquisiciones necesita un playbook que haga predecible cada integración.",
       },
       { type: "h2", text: "Ejemplo ilustrativo" },
       {
         type: "p",
-        text: "Supongamos una red de 11 clínicas veterinarias con 9 millones de euros de facturación, de las que cinco se adquirieron en los dos últimos años. El P&L por clínica muestra márgenes EBITDA entre el 19 % de la mejor y pérdidas en dos de las adquiridas. Tres causas explican la brecha: coste de personal del 55 % sobre ventas en las adquiridas (guardias sobredimensionadas y turnos de mañana sin demanda), farmacia un 4 % más cara sobre ventas por comprar fuera de las condiciones de grupo, y una clínica con un veterinario menos desde hace cuatro meses que ha perdido cirugía programada.",
+        text: "Supongamos una red de 11 clínicas veterinarias con 9 millones de euros de facturación, de las que cinco se adquirieron en los dos últimos años. El P&L por clínica muestra márgenes EBITDA entre el 19 % de la mejor y pérdidas en dos de las adquiridas. Tres causas explican la brecha: coste de personal del 55 % sobre ventas en las adquiridas (guardias sobredimensionadas y turnos de mañana sin demanda), farmacia un 4 % más cara por comprar fuera de las condiciones de grupo, y una clínica con un veterinario menos desde hace cuatro meses que ha perdido cirugía programada.",
       },
       {
         type: "p",
-        text: "El plan prioriza tres palancas en 90 días: redistribución de turnos y guardias en las dos clínicas en pérdidas, migración de compras al catálogo de grupo y cobertura de la vacante con un plan de retención. Todas las cifras son ilustrativas; el método es lo que importa.",
+        text: "El plan prioriza tres palancas en 90 días: redistribución de turnos y guardias en las dos clínicas en pérdidas, migración de compras al catálogo de grupo y cobertura de la vacante con un plan de retención. Las cifras son ilustrativas; el método es lo que importa.",
       },
       {
         type: "quote",
@@ -409,17 +409,17 @@ export const healthcarePosts: InsightPost[] = [
     blocks: [
       {
         type: "p",
-        text: "He visto más cuadros de mando abandonados que cuadros de mando en uso. Casi todos nacieron con buena intención, treinta indicadores y un informe mensual de veinte páginas que nadie leía al tercer mes. Este artículo explica cómo construyo un cuadro de mando semanal para redes de clínicas que la dirección y los managers usan de verdad, con los KPIs que caben en una página y la rutina que los mantiene vivos.",
+        text: "He visto más cuadros de mando abandonados que en uso. Casi todos nacieron con treinta indicadores y un informe mensual de veinte páginas que nadie leía al tercer mes. Así construyo un cuadro de mando semanal para redes de clínicas que dirección y managers usan de verdad: los KPIs que caben en una página y la rutina que los mantiene vivos.",
       },
       { type: "h2", text: "Por qué los cuadros de mando mueren en tres meses" },
       {
         type: "ul",
         items: [
-          "Demasiados indicadores: si hay treinta, no hay ninguno. La atención de un director es un recurso escaso y hay que asignarlo como el capital.",
-          "Sin dueño: un KPI que no tiene un responsable con nombre es una estadística, no un instrumento de dirección.",
-          "Sin objetivo ni umbral: un número sin referencia no provoca ninguna decisión. ¿El 68 % de ocupación es bueno o malo? Depende de cuál sea el objetivo.",
-          "Datos que llegan tarde: un cuadro de mando que se publica el día 20 del mes siguiente describe historia, no permite dirigir.",
-          "Sin reunión: el cuadro de mando no es un documento, es una conversación semanal con una agenda fija. Si la reunión desaparece, el documento muere.",
+          "Demasiados indicadores: si hay treinta, no hay ninguno. La atención de un director es un recurso escaso.",
+          "Sin dueño: un KPI sin responsable con nombre es una estadística, no un instrumento de dirección.",
+          "Sin objetivo ni umbral: un número sin referencia no provoca ninguna decisión. ¿El 68 % de ocupación es bueno o malo? Depende del objetivo.",
+          "Datos que llegan tarde: un cuadro de mando publicado el día 20 del mes siguiente describe historia, no permite dirigir.",
+          "Sin reunión: el cuadro de mando no es un documento, es una conversación semanal con agenda fija. Si la reunión desaparece, el documento muere.",
         ],
       },
       {
@@ -429,34 +429,34 @@ export const healthcarePosts: InsightPost[] = [
       { type: "h2", text: "Los KPIs que caben en una página" },
       {
         type: "p",
-        text: "Para una red de clínicas, el cuadro de mando semanal se organiza en cuatro bloques: actividad, comercial, personas y resultado. Los umbrales de la tabla son orientativos y deben fijarse con los datos de la propia red; su función es provocar una conversación, no sustituirla.",
+        text: "El cuadro de mando semanal de una red de clínicas se organiza en cuatro bloques: actividad, comercial, personas y resultado. Los umbrales son orientativos y deben fijarse con los datos de la propia red; su función es provocar una conversación, no sustituirla.",
       },
       {
         type: "table",
         headers: ["Bloque", "KPI", "Objetivo o umbral orientativo", "Dueño"],
         rows: [
-          ["Actividad", "Ocupación de agendas por clínica", "Objetivo por clínica según capacidad; alerta si cae más de 5 puntos frente a la media de las últimas cuatro semanas", "Manager de clínica"],
-          ["Actividad", "Facturación por profesional y hora", "Objetivo por tipología de profesional; alerta en el último cuartil de la red", "Manager de clínica"],
-          ["Actividad", "Pacientes atendidos frente a la semana anterior y al año anterior", "Tendencia; alerta si dos semanas consecutivas en descenso", "Manager de clínica"],
+          ["Actividad", "Ocupación de agendas por clínica", "Objetivo por clínica; alerta si cae más de 5 puntos frente a la media de cuatro semanas", "Manager de clínica"],
+          ["Actividad", "Facturación por profesional y hora", "Objetivo por tipología; alerta en el último cuartil de la red", "Manager de clínica"],
+          ["Actividad", "Pacientes atendidos frente a semana y año anterior", "Tendencia; alerta si dos semanas consecutivas en descenso", "Manager de clínica"],
           ["Comercial", "Conversión de primera visita", "Objetivo de red; alerta por clínica si está por debajo dos semanas", "Manager de clínica"],
-          ["Comercial", "Presupuestos pendientes por antigüedad", "Importe y número de más de 30 días; objetivo de reducción semanal", "Manager de clínica"],
+          ["Comercial", "Presupuestos pendientes por antigüedad", "Importe de más de 30 días; objetivo de reducción semanal", "Manager de clínica"],
           ["Comercial", "Cancelaciones y no presentados", "Umbral máximo por clínica", "Responsable de admisión"],
-          ["Personas", "Horas trabajadas frente a horas planificadas", "Desviación máxima acordada; alerta si hay horas extra sin actividad que las justifique", "Operaciones"],
+          ["Personas", "Horas trabajadas frente a horas planificadas", "Desviación máxima acordada; alerta por horas extra sin actividad", "Operaciones"],
           ["Personas", "Vacantes abiertas y días de cobertura", "Cero vacantes de más de 60 días", "Operaciones y RRHH"],
           ["Personas", "Bajas y ausencias", "Tendencia por clínica", "Operaciones"],
           ["Resultado", "Facturación acumulada del mes frente a objetivo", "Porcentaje de avance frente a días transcurridos", "Director de red"],
           ["Resultado", "Cobros frente a facturación", "Umbral mínimo de cobro en el periodo", "Administración"],
-          ["Resultado", "Coste de personal sobre ventas (estimado semanal)", "Umbral por tipología de clínica", "Director de red"],
+          ["Resultado", "Coste de personal sobre ventas estimado", "Umbral por tipología de clínica", "Director de red"],
         ],
       },
       {
         type: "p",
-        text: "Doce indicadores, una página, una fila por clínica. El EBITDA por clínica no está en la lista semanal porque es un dato mensual: aparece en el cierre, no en la reunión del lunes.",
+        text: "Doce indicadores, una página, una fila por clínica. El EBITDA por clínica no está porque es un dato mensual: aparece en el cierre, no en la reunión del lunes.",
       },
       { type: "h2", text: "Semanal frente a mensual: qué va en cada uno" },
       {
         type: "p",
-        text: "La confusión más habitual es mezclar ritmos. Lo semanal es actividad y acción: agendas, conversión, presupuestos, horas. Son indicadores que el manager puede mover en los siete días siguientes. Lo mensual es resultado y análisis: P&L por clínica, ranking, coste de personal real, compras, estructura. Son indicadores que explican por qué el mes salió como salió y orientan las decisiones del trimestre.",
+        text: "La confusión más habitual es mezclar ritmos. Lo semanal es actividad y acción: agendas, conversión, presupuestos, horas; indicadores que el manager puede mover en siete días. Lo mensual es resultado y análisis: P&L por clínica, ranking, coste de personal real, compras, estructura; indicadores que explican el mes y orientan las decisiones del trimestre.",
       },
       { type: "h3", text: "La prueba del lunes" },
       {
@@ -467,11 +467,11 @@ export const healthcarePosts: InsightPost[] = [
       {
         type: "ol",
         items: [
-          "Mismo día, misma hora, sin excepciones. El lunes a primera hora o el martes a media mañana, con los datos de la semana cerrada ya publicados.",
+          "Mismo día, misma hora, sin excepciones. Lunes a primera hora o martes a media mañana, con los datos de la semana cerrada ya publicados.",
           "Una sola página, enviada el día anterior. Nadie descubre los números en la reunión; se viene a decidir, no a leer.",
-          "Solo se habla de desviaciones. Las clínicas en objetivo se mencionan en una frase; el tiempo se dedica a las que se desvían.",
+          "Solo se habla de desviaciones. Las clínicas en objetivo se despachan en una frase.",
           "Cada desviación tiene una acción, un responsable y una fecha. Si no cabe en una frase, no es una acción.",
-          "Se revisan las acciones de la semana anterior antes de abrir nuevas. Es lo que convierte la reunión en dirección y no en comentario.",
+          "Se revisan las acciones de la semana anterior antes de abrir nuevas. Es lo que convierte la reunión en dirección.",
           "Termina a los 30 minutos. Lo que no se ha resuelto pasa a una conversación individual.",
         ],
       },
@@ -483,7 +483,7 @@ export const healthcarePosts: InsightPost[] = [
       { type: "h2", text: "Reglas de calidad del dato" },
       {
         type: "p",
-        text: "Un cuadro de mando con datos cuestionables es peor que no tener ninguno, porque la reunión se convierte en una discusión sobre el número en lugar de sobre la acción. Cuatro reglas:",
+        text: "Un cuadro de mando con datos cuestionables es peor que ninguno: la reunión se convierte en una discusión sobre el número y no sobre la acción. Cuatro reglas:",
       },
       {
         type: "ul",
@@ -497,16 +497,16 @@ export const healthcarePosts: InsightPost[] = [
       { type: "h2", text: "Ejemplo ilustrativo de una semana" },
       {
         type: "p",
-        text: "Supongamos una red de 10 clínicas. El lunes la página muestra que la clínica 7 ha caído del 76 % al 64 % de ocupación en dos semanas, con conversión estable y 14 cancelaciones frente a las 5 habituales. La clínica 3 tiene presupuestos pendientes de más de 30 días por 48.000 euros, el doble que el mes anterior. El resto está en objetivo.",
+        text: "Supongamos una red de 10 clínicas. El lunes la página muestra que la clínica 7 ha caído del 76 % al 64 % de ocupación en dos semanas, con conversión estable y 14 cancelaciones frente a las 5 habituales. La clínica 3 acumula 48.000 euros en presupuestos pendientes de más de 30 días, el doble que el mes anterior. El resto está en objetivo.",
       },
       {
         type: "p",
-        text: "La reunión dedica cinco minutos a la clínica 7: el manager explica que un profesional está de baja y la agenda no se ha redistribuido; la acción es reasignar franjas y llamar a los pacientes cancelados antes del jueves. Dedica otros cinco a la clínica 3: la acción es que admisión contacte esta semana a los 20 presupuestos de mayor importe. Las cifras son ilustrativas; la mecánica es la real.",
+        text: "La reunión dedica cinco minutos a la clínica 7: un profesional está de baja y la agenda no se ha redistribuido; la acción es reasignar franjas y llamar a los pacientes cancelados antes del jueves. Otros cinco a la clínica 3: admisión contacta esta semana a los 20 presupuestos de mayor importe. Las cifras son ilustrativas; la mecánica es la real.",
       },
       { type: "h2", text: "Qué hacer cuando un KPI se desvía" },
       {
         type: "p",
-        text: "Una desviación de una semana es información; de dos, una señal; de tres, un problema de dirección. Mi protocolo: en la primera semana, el manager explica y propone. En la segunda, el director de red visita o llama y revisa la acción. En la tercera, el problema sube al comité de dirección con un plan específico. Lo que nunca debe pasar es que un indicador lleve dos meses en rojo y la respuesta sea otra fila en la página.",
+        text: "Una desviación de una semana es información; de dos, una señal; de tres, un problema de dirección. Mi protocolo: la primera semana, el manager explica y propone. La segunda, el director de red visita o llama y revisa la acción. La tercera, el problema sube al comité de dirección con un plan específico. Lo que nunca debe pasar: un indicador dos meses en rojo y, como respuesta, otra fila en la página.",
       },
       {
         type: "quote",

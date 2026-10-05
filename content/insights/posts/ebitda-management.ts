@@ -23,7 +23,7 @@ export const ebitdaManagementPosts: InsightPost[] = [
       { type: "h2", text: "Qué es un consultor EBITDA (y qué no es)" },
       {
         type: "p",
-        text: "Un consultor EBITDA trabaja sobre la cuenta de resultados operativa para mejorar el resultado antes de intereses, impuestos, depreciaciones y amortizaciones. En la práctica, eso significa actuar sobre cuatro cosas: ingresos, margen bruto, costes de personal y costes de estructura. Todo lo demás es ruido.",
+        text: "Un consultor EBITDA trabaja sobre la cuenta de resultados operativa para mejorar el resultado antes de intereses, impuestos, depreciaciones y amortizaciones. En la práctica, eso significa actuar sobre cuatro cosas: ingresos, margen bruto, costes de personal y costes de estructura.",
       },
       {
         type: "p",
@@ -54,7 +54,7 @@ export const ebitdaManagementPosts: InsightPost[] = [
       { type: "h2", text: "Qué debe entregar en las primeras semanas" },
       {
         type: "p",
-        text: "Desconfío de cualquier propuesta que no concrete entregables para las primeras tres semanas. Esto es lo mínimo que yo exijo (y que me exijo):",
+        text: "Desconfío de cualquier propuesta sin entregables concretos para las primeras tres semanas. Lo mínimo que exijo, y que me exijo:",
       },
       {
         type: "ol",
@@ -109,11 +109,11 @@ export const ebitdaManagementPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "En ese ejemplo, la dirección debería dedicar entre cuatro y seis horas al diagnóstico y una reunión semanal de 45 minutos durante el sprint. El resto del trabajo se hace sin interrumpir la operación. Las cifras concretas de mejora no se fijan hasta ver los datos: eso es exactamente lo que diferencia un plan serio de una promesa comercial.",
+        text: "La dirección dedicaría entre cuatro y seis horas al diagnóstico y una reunión semanal de 45 minutos durante el sprint; el resto se hace sin interrumpir la operación. Las cifras de mejora no se fijan hasta ver los datos: eso es lo que diferencia un plan serio de una promesa comercial.",
       },
       {
         type: "p",
-        text: "Si estás en una de las tres situaciones que describo arriba, el primer paso no es contratar a nadie. Es construir, o pedir que te construyan, un P&L por centro comparable. Con eso en la mano, la decisión de contratar o no un consultor EBITDA se toma sola.",
+        text: "Si reconoces alguna de las tres señales, el primer paso no es contratar a nadie: es construir, o pedir que te construyan, un P&L por centro comparable. Con eso en la mano, la decisión se toma sola.",
       },
     ],
     faqs: [
@@ -150,12 +150,12 @@ export const ebitdaManagementPosts: InsightPost[] = [
     blocks: [
       {
         type: "p",
-        text: "Mejorar el EBITDA de una empresa con un solo centro es un problema de gestión. Mejorarlo en una red de 12, 25 o 40 centros es un problema de dirección: hay que decidir dónde actuar, en qué orden y con quién, porque no se puede estar en todos los sitios a la vez. He dirigido redes de hasta 25 centros y 35 millones de euros de P&L, y la lección más cara que aprendí es que las medidas «para toda la red» casi nunca funcionan.",
+        text: "Mejorar el EBITDA de un solo centro es un problema de gestión. Mejorarlo en una red de 12, 25 o 40 centros es un problema de dirección: hay que decidir dónde actuar, en qué orden y con quién. He dirigido redes de hasta 25 centros y 35 millones de euros de P&L, y la lección más cara que aprendí es que las medidas «para toda la red» casi nunca funcionan.",
       },
       { type: "h2", text: "Por qué el EBITDA de una red no se mejora «en general»" },
       {
         type: "p",
-        text: "Una red multicentro es, en realidad, una cartera de pequeñas empresas con la misma marca. Cada centro tiene su demanda, su equipo, su alquiler, su agenda y su manager. Cuando se lanza una medida general (recorte lineal de gasto, subida uniforme de precios, congelación de contrataciones), se penaliza a los centros que ya lo hacen bien y se alivia poco a los que destruyen margen.",
+        text: "Una red multicentro es una cartera de pequeñas empresas con la misma marca. Cada centro tiene su demanda, su equipo, su agenda y su manager. Cuando se lanza una medida general (recorte lineal de gasto, subida uniforme de precios, congelación de contrataciones), se penaliza a los centros que ya lo hacen bien y se alivia poco a los que destruyen margen.",
       },
       {
         type: "p",
@@ -164,21 +164,21 @@ export const ebitdaManagementPosts: InsightPost[] = [
       { type: "h2", text: "Primero el P&L por centro, después las palancas" },
       {
         type: "p",
-        text: "El primer paso es un P&L operativo por centro con criterios homogéneos. No el contable, que suele imputar costes como conviene a la fiscalidad, sino uno que permita comparar unidades: ingresos por línea, coste directo de personal, consumibles, alquiler, marketing local y una imputación explícita de estructura central.",
+        text: "El primer paso es un P&L operativo por centro con criterios homogéneos. No el contable, sino uno que permita comparar unidades: ingresos por línea, coste directo de personal, consumibles, alquiler, marketing local y una imputación explícita de estructura central.",
       },
       {
         type: "p",
-        text: "Con el P&L hecho, el ranking aparece solo. Y con el ranking aparece lo que yo llamo la brecha de cuartil: la diferencia de margen entre los centros del primer cuartil y los del último. Esa brecha es la medida más honesta del potencial de mejora, porque no compara con un benchmark externo discutible, sino con lo que la propia red ya demuestra que es posible.",
+        text: "Con el P&L hecho aparece el ranking y, con él, lo que llamo la brecha de cuartil: la diferencia de margen entre los centros del primer y del último cuartil. Es la medida más honesta del potencial, porque no compara con un benchmark externo discutible, sino con lo que la propia red ya demuestra que es posible.",
       },
       { type: "h3", text: "Qué no imputar al centro" },
       {
         type: "p",
-        text: "Un error habitual es cargar al centro costes que no controla: la nómina del CEO, el coste financiero, las amortizaciones de la sede. El centro debe responder de lo que su manager puede mover. Lo demás se analiza aparte como coste de estructura, que tiene su propia palanca.",
+        text: "Un error habitual es cargar al centro costes que no controla: nómina del CEO, coste financiero, amortizaciones de la sede. El centro responde de lo que su manager puede mover; lo demás es estructura y tiene su propia palanca.",
       },
       { type: "h2", text: "Las ocho palancas que de verdad mueven la cuenta" },
       {
         type: "p",
-        text: "Después de muchos P&L por centro, las palancas que explican la mayor parte de la diferencia entre un centro rentable y uno que no lo es se reducen a ocho. La tabla resume cómo se mide cada una, el plazo en que suele dar resultados y quién debe responder por ella.",
+        text: "Las palancas que explican la mayor parte de la diferencia entre un centro rentable y uno que no lo es se reducen a ocho. La tabla resume cómo se mide cada una, su plazo típico y quién responde por ella.",
       },
       {
         type: "table",
@@ -212,13 +212,14 @@ export const ebitdaManagementPosts: InsightPost[] = [
         ],
       },
       {
-        type: "p",
-        text: "Mi regla es seleccionar entre cinco y siete palancas, no más. Cada una con un responsable interno con nombre y apellido, un KPI semanal y una cifra objetivo.",
+        type: "callout",
+        title: "Regla práctica",
+        text: "Seleccionar entre cinco y siete palancas, no más. Cada una con un responsable interno con nombre y apellido, un KPI semanal y una cifra objetivo.",
       },
       { type: "h2", text: "Ejemplo ilustrativo con una red de 12 centros" },
       {
         type: "p",
-        text: "Supongamos una red de 12 centros de servicios con 15 millones de euros de facturación y un margen EBITDA del 9 %. El P&L por centro muestra que los tres mejores operan con un 17 % de margen y los tres peores con un 1 %. La brecha de cuartil es de 16 puntos: ese es el potencial teórico, aunque nunca se cierre del todo.",
+        text: "Supongamos una red de 12 centros de servicios con 15 millones de euros de facturación y un margen EBITDA del 9 %. El P&L por centro muestra que los tres mejores operan con un 17 % de margen y los tres peores con un 1 %. La brecha es de 16 puntos: el potencial teórico, aunque nunca se cierre del todo.",
       },
       {
         type: "p",
@@ -226,7 +227,7 @@ export const ebitdaManagementPosts: InsightPost[] = [
       },
       {
         type: "p",
-        text: "En paralelo, una comparación de precios de compra entre centros revela que un mismo consumible se paga a tres precios distintos. Esa palanca es de grupo, rápida y no exige ninguna decisión incómoda sobre personas. Todas las cifras de este ejemplo son ilustrativas: su valor está en el método, no en los números.",
+        text: "En paralelo, comparar precios de compra entre centros revela que un mismo consumible se paga a tres precios distintos: palanca de grupo, rápida y sin decisiones incómodas sobre personas. Las cifras son ilustrativas; el valor está en el método.",
       },
       { type: "h2", text: "Los errores que destruyen el plan" },
       {
@@ -234,7 +235,7 @@ export const ebitdaManagementPosts: InsightPost[] = [
         items: [
           "Atacar las ocho palancas a la vez. El equipo se dispersa y en tres meses no se ha movido ninguna.",
           "Fijar un porcentaje de mejora antes de tener el P&L por centro. Es la forma más rápida de perder credibilidad ante el consejo.",
-          "Delegar el plan en finanzas. Finanzas mide; la operación ejecuta. Si el responsable de cada palanca no es quien dirige el centro o la función, no pasará nada.",
+          "Delegar el plan en finanzas. Finanzas mide; la operación ejecuta. Cada palanca debe tener como responsable a quien dirige el centro o la función.",
           "Confundir recorte con mejora. Un recorte lineal de personal en un centro con agendas llenas destruye ingresos en el trimestre siguiente.",
           "No cambiar las rutinas. Si a las ocho semanas la reunión semanal desaparece, el EBITDA vuelve a su sitio en seis meses.",
         ],
@@ -247,10 +248,6 @@ export const ebitdaManagementPosts: InsightPost[] = [
       {
         type: "quote",
         text: "Una red multicentro no tiene un problema de EBITDA. Tiene tres o cuatro centros con un problema de EBITDA y una estructura central que nadie ha cuestionado. Encontrarlos es el trabajo; lo demás es ejecución.",
-      },
-      {
-        type: "p",
-        text: "Si no puedes construir hoy el ranking de tus centros por margen, ese es el punto de partida. Todo lo demás viene después.",
       },
     ],
     faqs: [
