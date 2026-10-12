@@ -15,3 +15,15 @@ export async function expectNoA11yViolations(page: Page) {
   const serious = results.violations.filter((v) => v.impact === "serious" || v.impact === "critical");
   expect(serious, serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length} nodos)`).join("\n")).toEqual([]);
 }
+
+/** Recorre la página para disparar las animaciones de entrada y espera a que todo sea visible (axe mide colores con la opacidad aplicada). */
+export async function settleReveals(page: Page) {
+  const height = await page.evaluate(() => document.body.scrollHeight);
+  for (let y = 0; y < height; y += 500) {
+    await page.evaluate((top) => window.scrollTo(0, top), y);
+    await page.waitForTimeout(60);
+  }
+  await page.waitForFunction(() => Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]")).every((el) => getComputedStyle(el).opacity === "1"), undefined, { timeout: 10_000 }).catch(() => undefined);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(400);
+}

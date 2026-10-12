@@ -1,5 +1,11 @@
 # Despliegue en Vercel con Neon
 
+## 0. Estado actual (12-10-2026)
+
+- Proyecto Neon `reformas` creado (ID `dawn-lab-59498990`, región `aws-eu-central-1`, Postgres 17) con el esquema aplicado (22 tablas). Falta cargar el contenido inicial: desde el panel (`/admin/ajustes → Cargar contenido inicial`) o con `npm run db:seed` desde una máquina con acceso a Neon.
+- El código está en la rama `claude/gracious-brown-v0fhtd` del repositorio `andreumarc/perfil` hasta que exista `andreumarc/reformas` (créalo vacío y haz `git push` de esa rama como `main`).
+- El proyecto de Vercel y los stores de Blob no se pudieron crear desde esta sesión (permisos insuficientes del token): sigue los pasos 2 y 3.
+
 ## 1. Base de datos (Neon)
 
 1. Crea un proyecto en Neon (región UE, por ejemplo Frankfurt `eu-central-1`).

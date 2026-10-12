@@ -50,6 +50,6 @@ export const getZone = cache(async (slug: string): Promise<LocalAreaContent | nu
     return zoneFromRow(row, LOCAL_AREAS.find((z) => z.slug === slug));
   } catch (error) {
     console.error("[cms] error leyendo local_area:", error);
-    return null;
+    return LOCAL_AREAS.find((z) => z.slug === slug && z.status === "published") ?? null;
   }
 });

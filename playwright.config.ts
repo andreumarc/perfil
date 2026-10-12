@@ -33,6 +33,14 @@ export default defineConfig({
         url: baseURL,
         reuseExistingServer: !process.env.CI,
         timeout: 300_000,
-        env: { PORT: String(port), NEXT_PUBLIC_SITE_URL: baseURL },
+        // El servidor usa la misma BD que el runner: si el runner no tiene
+        // DATABASE_URL, el servidor tampoco (evita que .env.local apunte a una
+        // Neon inalcanzable y devuelva 404 en las páginas de contenido).
+        env: {
+          PORT: String(port),
+          NEXT_PUBLIC_SITE_URL: baseURL,
+          DATABASE_URL: process.env.DATABASE_URL ?? "",
+          ADMIN_SETUP_TOKEN: process.env.ADMIN_SETUP_TOKEN ?? "",
+        },
       },
 });

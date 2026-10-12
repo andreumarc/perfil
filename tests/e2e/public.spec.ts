@@ -1,16 +1,20 @@
 import { expect, test } from "@playwright/test";
 
-import { dismissCookies, expectNoA11yViolations } from "./helpers";
+import { dismissCookies, expectNoA11yViolations, settleReveals } from "./helpers";
 
 const PAGES = ["/", "/servicios", "/servicios/reformas-cocinas", "/sectores/restaurantes", "/proyectos", "/calculadoras", "/blog", "/presupuesto", "/contacto", "/zonas/barcelona", "/politica-cookies"];
 
 test.describe("web pública", () => {
+  // Las animaciones de entrada (opacidad) falsean el cálculo de contraste de axe: se auditan sin movimiento.
+  test.use({ reducedMotion: "reduce" });
+
   for (const path of PAGES) {
     test(`renderiza ${path} con un único H1 y sin errores de accesibilidad graves`, async ({ page }) => {
       const response = await page.goto(path);
       expect(response?.status()).toBe(200);
       await dismissCookies(page);
       await expect(page.locator("h1")).toHaveCount(1);
+      await settleReveals(page);
       await expectNoA11yViolations(page);
     });
   }

@@ -551,7 +551,7 @@ export const CALCULATORS: CalculatorDefinition[] = [
       "Indica los metros cuadrados y el material. La calculadora estima suministro y colocación, retirada del suelo actual y rodapié.",
     serviceSlug: "suelos-pavimentos",
     formVariant: "vivienda",
-    imagePath: IMG("suelos-pavimentos"),
+    imagePath: IMG("suelos-carpinteria"),
     inputs: [
       m2Input("Superficie de suelo", 60),
       {
