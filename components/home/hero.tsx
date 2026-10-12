@@ -5,6 +5,7 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/layout/container";
 import { CommitmentIcon } from "@/components/sections/commitment-icon";
 import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
+import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { whatsappHref } from "@/lib/phone";
 import type { SiteSettings } from "@/lib/validation/settings";
@@ -46,14 +47,14 @@ export function Hero({ settings, hasImage }: { settings: SiteSettings; hasImage:
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-100/90 md:text-lg">{hero.subtitle}</p>
 
           {commitments.length ? (
-            <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 sm:flex sm:flex-wrap sm:divide-x sm:divide-white/15">
+            <RevealGroup className="mt-8 grid grid-cols-2 gap-x-6 gap-y-5 sm:flex sm:flex-wrap sm:divide-x sm:divide-white/15" amount={0.1}>
               {commitments.map((c) => (
-                <li key={c.title} className="flex items-center gap-3 sm:pr-6 sm:pl-6 sm:first:pl-0">
+                <RevealItem key={c.title} scale className="flex items-center gap-3 sm:pr-6 sm:pl-6 sm:first:pl-0">
                   <CommitmentIcon name={c.icon} className="size-6 shrink-0 text-copper-400" />
                   <span className="text-sm font-medium leading-tight text-white">{c.title}</span>
-                </li>
+                </RevealItem>
               ))}
-            </ul>
+            </RevealGroup>
           ) : null}
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">

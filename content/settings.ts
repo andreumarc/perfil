@@ -22,8 +22,18 @@ export const DEFAULT_SETTINGS: SiteSettings = {
     whatsappMessage: "Hola, me gustaría pedir presupuesto para una reforma.",
     email: "",
     hours: "Lunes a viernes, de 9:00 a 19:00",
-    zones: ["Barcelona", "Igualada", "Anoia"],
+    zones: ["Barcelona", "Igualada", "Anoia", "Toda Cataluña", "Toda España"],
     socials: { instagram: "", facebook: "", linkedin: "", youtube: "", tiktok: "" },
+  },
+  ticker: {
+    enabled: true,
+    messages: [
+      "Reformas integrales e instalaciones",
+      "Presupuesto detallado sin compromiso",
+      "Toda Cataluña y toda España",
+      "Instalaciones certificadas por profesionales habilitados",
+      "Un único interlocutor durante toda la obra",
+    ],
   },
   hero: {
     eyebrow: "Reformas integrales e instalaciones",
@@ -32,8 +42,8 @@ export const DEFAULT_SETTINGS: SiteSettings = {
     titleAfter: "nuevas historias",
     subtitle:
       "Reformas de viviendas, locales y todo tipo de negocios. Diseño, ejecución e instalaciones con un equipo profesional que se encarga de todo.",
-    imagePath: "/images/ilustrativas/hero-salon-cocina.webp",
-    imageAlt: "Salón y cocina abiertos con grandes ventanales, imagen ilustrativa",
+    imagePath: "/images/ilustrativas/hero-villa-piscina.webp",
+    imageAlt: "Vivienda moderna con terraza y piscina al atardecer, imagen ilustrativa",
     primaryCtaLabel: "Pedir presupuesto sin compromiso",
     secondaryCtaLabel: "Ver proyectos",
   },
@@ -78,7 +88,7 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
   seo: {
     defaultTitle: "Reformas integrales e instalaciones para viviendas y negocios",
     defaultDescription:
-      "Empresa de reformas integrales e instalaciones en Barcelona, Igualada y Anoia. Viviendas, locales, oficinas, gimnasios, restaurantes y clínicas. Presupuesto sin compromiso.",
+      "Empresa de reformas integrales e instalaciones en toda Cataluña y toda España, con base en Barcelona, Igualada y Anoia. Viviendas, locales, oficinas, gimnasios, restaurantes y clínicas. Presupuesto sin compromiso.",
     keywords: [
       "reformas integrales",
       "empresa de reformas",
@@ -95,6 +105,8 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
       "reformas Barcelona",
       "reformas Igualada",
       "reformas Anoia",
+      "reformas Cataluña",
+      "empresa de reformas España",
     ],
   },
   integrations: {

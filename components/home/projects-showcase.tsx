@@ -4,6 +4,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/layout/section";
 import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
+import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { ProjectContent } from "@/content/types";
 
 export function ProjectCard({ project, serviceName }: { project: ProjectContent; serviceName?: string }) {
@@ -43,11 +44,11 @@ export function ProjectsShowcase({ projects, serviceNames }: { projects: Project
             : "Una selección de obras realizadas."
         }
       />
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <RevealGroup className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.slice(0, 6).map((p) => (
-          <ProjectCard key={p.slug} project={p} serviceName={p.serviceSlug ? serviceNames[p.serviceSlug] : undefined} />
+          <RevealItem key={p.slug}><ProjectCard project={p} serviceName={p.serviceSlug ? serviceNames[p.serviceSlug] : undefined} /></RevealItem>
         ))}
-      </div>
+      </RevealGroup>
       <div className="mt-8">
         <Link href="/proyectos" className="inline-flex items-center gap-2 text-sm font-semibold text-ink-900 underline-offset-4 hover:underline">
           Ver todos los proyectos <ArrowRightIcon className="size-4" aria-hidden />

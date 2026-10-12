@@ -38,3 +38,9 @@ yarn-error.log*
 
 # drizzle local artifacts
 /drizzle/meta/_journal.json.bak
+
+# capturas de QA visual
+/screenshots
+
+# exportación HTML de revisión
+/preview

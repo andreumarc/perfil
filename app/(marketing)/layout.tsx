@@ -2,6 +2,7 @@ import { FloatingCta } from "@/components/layout/floating-cta";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { MobileActionBar } from "@/components/layout/mobile-action-bar";
+import { Ticker } from "@/components/layout/ticker";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getSettings } from "@/lib/cms/settings";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
@@ -19,6 +20,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
       >
         Saltar al contenido
       </a>
+      {settings.ticker.enabled ? <Ticker messages={settings.ticker.messages} /> : null}
       <Header settings={settings} />
       <main id="contenido" className="flex-1">
         {children}

@@ -1,3 +1,4 @@
+import { Counter } from "@/components/motion/counter";
 import { cn } from "@/lib/utils";
 import type { SiteSettings } from "@/lib/validation/settings";
 
@@ -13,7 +14,7 @@ export function StatGrid({ stats, tone = "light", className }: { stats: SiteSett
       {visible.map((stat) => (
         <div key={stat.label} className={cn("border-l pl-5", tone === "light" ? "border-copper-200" : "border-white/20")}>
           <dd className={cn("font-display tabular text-4xl leading-none md:text-5xl", tone === "light" ? "text-ink-900" : "text-white")}>
-            {stat.value}
+            <Counter value={stat.value} />
             {stat.suffix ? <span className="text-2xl md:text-3xl">{stat.suffix}</span> : null}
           </dd>
           <dt className={cn("mt-3 text-sm leading-snug", tone === "light" ? "text-gray-600" : "text-ink-200")}>{stat.label}</dt>

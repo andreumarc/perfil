@@ -60,3 +60,10 @@ export function truncate(text: string, max = 120) {
 export function initials(first: string, last?: string) {
   return `${first.charAt(0)}${(last ?? "").charAt(0)}`.toUpperCase();
 }
+
+/** True si la fecha ya ha pasado (helper fuera de componentes para no llamar Date.now() en render). */
+export function isPast(date: Date | string | number | null | undefined): boolean {
+  if (!date) return false;
+  const t = typeof date === "string" || typeof date === "number" ? new Date(date).getTime() : date.getTime();
+  return t < Date.now();
+}

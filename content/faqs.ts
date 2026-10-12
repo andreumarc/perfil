@@ -15,7 +15,7 @@ export const GLOBAL_FAQS: FaqItem[] = [
   {
     question: "¿Qué zonas cubrís?",
     answer:
-      "Principalmente Barcelona y provincia, Igualada y la comarca de l'Anoia. Para otras zonas de Cataluña consúltanos: dependerá del tipo y tamaño del proyecto.",
+      "Trabajamos en toda Cataluña y en el resto de España, con base de operaciones en Barcelona, Igualada y la comarca de l'Anoia. Para proyectos fuera de Cataluña valoramos cada caso según el tipo y el tamaño de la obra.",
   },
   {
     question: "¿Quién ejecuta las instalaciones que requieren habilitación?",

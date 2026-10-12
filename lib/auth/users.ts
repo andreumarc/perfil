@@ -45,14 +45,21 @@ export async function listUsers() {
 
 export async function updateUser(id: string, patch: { name?: string; role?: UserRole; isActive?: boolean; password?: string }) {
   const db = requireDb();
-  const set: Partial<typeof users.$inferInsert> = { updatedAt: new Date() };
-  if (patch.name !== undefined) set.name = patch.name;
-  if (patch.role !== undefined) set.role = patch.role;
-  if (patch.isActive !== undefined) set.isActive = patch.isActive;
-  if (patch.password !== undefined) set.passwordHash = await hashPassword(patch.password);
+  const passwordHash = patch.password !== undefined ? await hashPassword(patch.password) : undefined;
   // Cambiar contraseña o desactivar invalida todas las sesiones del usuario.
-  if (patch.password !== undefined || patch.isActive === false) set.sessionVersion = sql`${users.sessionVersion} + 1`;
-  const [row] = await db.update(users).set(set).where(eq(users.id, id)).returning();
+  const bumpSession = patch.password !== undefined || patch.isActive === false;
+  const [row] = await db
+    .update(users)
+    .set({
+      updatedAt: new Date(),
+      ...(patch.name !== undefined ? { name: patch.name } : {}),
+      ...(patch.role !== undefined ? { role: patch.role } : {}),
+      ...(patch.isActive !== undefined ? { isActive: patch.isActive } : {}),
+      ...(passwordHash !== undefined ? { passwordHash } : {}),
+      ...(bumpSession ? { sessionVersion: sql`${users.sessionVersion} + 1` } : {}),
+    })
+    .where(eq(users.id, id))
+    .returning();
   return row ?? null;
 }
 

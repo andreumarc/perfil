@@ -55,6 +55,10 @@ export const siteSettingsSchema = z.object({
       tiktok: optionalUrl,
     }),
   }),
+  ticker: z.object({
+    enabled: z.boolean(),
+    messages: z.array(shortText(120)).max(10),
+  }),
   hero: z.object({
     eyebrow: shortText(80),
     titleBefore: shortText(80),

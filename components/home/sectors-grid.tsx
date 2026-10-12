@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Section, SectionHeading } from "@/components/layout/section";
 import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
+import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { SectorContent } from "@/content/types";
 
 export function SectorsGrid({ sectors }: { sectors: SectorContent[] }) {
@@ -15,10 +16,10 @@ export function SectorsGrid({ sectors }: { sectors: SectorContent[] }) {
         title="Experiencia en cada tipo de espacio"
         description="Cada actividad tiene requisitos propios de instalaciones, normativa y licencias. Trabajamos con viviendas y con negocios de todo tipo."
       />
-      <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
+      <RevealGroup className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4" amount={0.05}>
         {featured.map((sector) => (
+          <RevealItem key={sector.slug} scale>
           <Link
-            key={sector.slug}
             href={`/sectores/${sector.slug}`}
             className="group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-lg bg-ink-900 focus-visible:outline-2 focus-visible:outline-copper-500"
           >
@@ -33,8 +34,9 @@ export function SectorsGrid({ sectors }: { sectors: SectorContent[] }) {
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/20 to-transparent" aria-hidden />
             <h3 className="font-display relative p-4 text-base text-white md:text-lg">{sector.name}</h3>
           </Link>
+          </RevealItem>
         ))}
-      </div>
+      </RevealGroup>
       {rest.length ? (
         <ul className="mt-6 flex flex-wrap gap-2">
           {rest.map((s) => (

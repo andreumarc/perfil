@@ -87,7 +87,7 @@ export function organizationJsonLd(settings: SiteSettings): JsonLd {
           },
         }
       : { address: { "@type": "PostalAddress", addressLocality: c.city || "Barcelona", addressCountry: "ES" } }),
-    areaServed: c.zones.map((z) => ({ "@type": "City", name: z })),
+    areaServed: areaServedJsonLd(c.zones),
     ...(sameAs.length ? { sameAs } : {}),
     ...(settings.integrations.gbpUrl ? { hasMap: settings.integrations.gbpUrl } : {}),
   };
@@ -105,6 +105,16 @@ export function websiteJsonLd(settings: SiteSettings): JsonLd {
   };
 }
 
+/** "Toda Cataluña" → AdministrativeArea, "Toda España" → Country, resto → City. */
+export function areaServedJsonLd(zones: string[]): JsonLd[] {
+  return zones.map((z) => {
+    const n = z.toLowerCase();
+    if (n.includes("españa") || n.includes("espana")) return { "@type": "Country", name: "España" };
+    if (n.includes("cataluña") || n.includes("catalunya")) return { "@type": "AdministrativeArea", name: "Cataluña" };
+    return { "@type": "City", name: z.replace(/^toda\s+/i, "") };
+  });
+}
+
 export function serviceJsonLd(input: { name: string; description: string; path: string; areaServed: string[] }): JsonLd {
   return {
     "@context": "https://schema.org",
@@ -113,7 +123,7 @@ export function serviceJsonLd(input: { name: string; description: string; path: 
     description: input.description,
     url: absoluteUrl(input.path),
     provider: { "@id": absoluteUrl("/#organization") },
-    areaServed: input.areaServed.map((z) => ({ "@type": "City", name: z })),
+    areaServed: areaServedJsonLd(input.areaServed),
     serviceType: input.name,
   };
 }

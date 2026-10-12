@@ -329,3 +329,30 @@
     scrollbar-width: none;
   }
 }
+
+/* Cartel superior en movimiento (marquee). Se detiene con reduced-motion. */
+@keyframes rf-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.rf-ticker {
+  animation: rf-marquee 30s linear infinite;
+}
+.rf-ticker:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rf-ticker {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .rf-ticker ul[aria-hidden="true"] {
+    display: none;
+  }
+}

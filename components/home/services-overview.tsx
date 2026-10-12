@@ -4,6 +4,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/layout/section";
 import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
+import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { ServiceContent, ServiceGroup } from "@/content/types";
 import { cn } from "@/lib/utils";
 
@@ -59,33 +60,33 @@ export function ServicesOverview({ groups }: { groups: { group: ServiceGroup; se
       {viviendas && viviendas.services.length ? (
         <div className="mt-12">
           <GroupHeader group={viviendas.group} />
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {viviendas.services.slice(0, 4).map((s, i) => (
-              <ServiceCard key={s.slug} service={s} priority={i < 2} />
+              <RevealItem key={s.slug}><ServiceCard service={s} priority={i < 2} /></RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       ) : null}
 
       {negocios && negocios.services.length ? (
         <div className="mt-12">
           <GroupHeader group={negocios.group} />
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {negocios.services.slice(0, 4).map((s) => (
-              <ServiceCard key={s.slug} service={s} />
+              <RevealItem key={s.slug}><ServiceCard service={s} /></RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       ) : null}
 
       {instalaciones && instalaciones.services.length ? (
         <div className="mt-12">
           <GroupHeader group={instalaciones.group} />
-          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          <RevealGroup className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5" amount={0.05}>
             {instalaciones.services.slice(0, 10).map((s) => (
-              <ServiceCard key={s.slug} service={s} compact />
+              <RevealItem key={s.slug} scale><ServiceCard service={s} compact /></RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       ) : null}
 

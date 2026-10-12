@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 
 import { AnalyticsProvider } from "@/components/analytics/analytics-provider";
 import { CookieBanner } from "@/components/analytics/cookie-banner";
+import { MotionProvider } from "@/components/motion/motion-provider";
+import { Preloader } from "@/components/motion/preloader";
 import { getSettings } from "@/lib/cms/settings";
 import { siteUrl } from "@/lib/seo";
 
@@ -44,7 +46,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="es" className={`${inter.variable} ${manrope.variable}`}>
       <body className="flex min-h-dvh flex-col">
-        {children}
+        <MotionProvider>
+          {children}
+          <Preloader />
+        </MotionProvider>
         <CookieBanner />
         <AnalyticsProvider
           ids={{ gtmId: s.integrations.gtmId, ga4Id: s.integrations.ga4Id, metaPixelId: s.integrations.metaPixelId }}
