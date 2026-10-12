@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRightIcon, CheckCircle2Icon, CircleAlertIcon, LoaderCircleIcon, MessageCircleIcon } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
 
+import { attachFilesAction } from "@/actions/attach-files";
 import { submitLead, type SubmitLeadState } from "@/actions/submit-lead";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { getAttribution } from "@/lib/analytics/attribution";
 import { track } from "@/lib/analytics/track";
 import { getVisitorId } from "@/lib/analytics/visitor";
-import { leadFormSchema, type FormVariantValue, type LeadFormInput, type LeadFormValues } from "@/lib/validation/lead";
+import { ATTACHMENT_ALLOWED_TYPES, ATTACHMENT_MAX_FILES, ATTACHMENT_MAX_FILE_BYTES, ATTACHMENT_MAX_TOTAL_BYTES, leadFormSchema, type FormVariantValue, type LeadFormInput, type LeadFormValues } from "@/lib/validation/lead";
 import { BUDGET_RANGES, PROPERTY_TYPES, TIMELINES, type LeadSource } from "@/types/lead";
 
 import { Field, describedBy } from "./field";
@@ -47,6 +48,8 @@ export interface LeadFormProps {
   /** Para el texto de contacto alternativo tras un error del servidor. */
   whatsappHref?: string | null;
   turnstileSiteKey?: string;
+  /** Muestra el campo de adjuntos (solo si el almacenamiento privado está configurado). */
+  attachmentsEnabled?: boolean;
   submitLabel?: string;
   /** Texto introductorio sobre el formulario. */
   intro?: string;
@@ -82,6 +85,7 @@ export function LeadForm({
   articleSlug,
   whatsappHref,
   turnstileSiteKey,
+  attachmentsEnabled = false,
   submitLabel = "Pedir presupuesto sin compromiso",
   intro,
   className,
@@ -124,6 +128,9 @@ export function LeadForm({
   // Marca de tiempo de inicio: no se renderiza, así que el valor del cliente no provoca desajustes de hidratación.
   const [startedAt] = React.useState(() => Date.now());
   const [turnstileToken, setTurnstileToken] = React.useState("");
+  const [files, setFiles] = React.useState<File[]>([]);
+  const [fileError, setFileError] = React.useState<string | null>(null);
+  const [attachedCount, setAttachedCount] = React.useState<number | null>(null);
   const [state, setState] = React.useState<SubmitLeadState>({ status: "idle" });
   const [pending, startTransition] = React.useTransition();
   const startedTracked = React.useRef(false);
@@ -159,13 +166,20 @@ export function LeadForm({
         sourcePage: typeof window !== "undefined" ? window.location.pathname : undefined,
         formVariant: variant,
         articleSlug,
-        attachmentCount: 0,
+        attachmentCount: files.length,
       });
       if (result.status === "error" && result.fieldErrors) {
         for (const [key, message] of Object.entries(result.fieldErrors)) {
           const field = key.replace(/^lead\./, "") as keyof LeadFormInput;
           if (field in values) setError(field, { type: "server", message });
         }
+      }
+      if (result.status === "success" && result.attachToken && files.length) {
+        const fd = new FormData();
+        fd.set("token", result.attachToken);
+        for (const f of files) fd.append("files", f);
+        const attached = await attachFilesAction(fd);
+        setAttachedCount(attached.ok ? attached.count : 0);
       }
       if (result.status === "success") {
         track("lead_created", { source, variant, leadId: result.leadId ?? undefined, articleSlug: articleSlug ?? null, calculator: extra?.context?.calculator ?? null }, { persist: false });
@@ -184,6 +198,9 @@ export function LeadForm({
             Gracias. Revisaremos tu solicitud y te contactaremos para concretar detalles y, si procede, concertar una
             visita. Si nos has dejado tu email, te hemos enviado una confirmación.
           </p>
+          {attachedCount !== null ? (
+            <p className="mt-2 text-sm text-gray-600">{attachedCount > 0 ? `${attachedCount} archivo(s) adjuntado(s) a tu solicitud.` : "No se han podido adjuntar los archivos; puedes enviárnoslos cuando te contactemos."}</p>
+          ) : null}
           <ol className="mt-5 space-y-2 text-sm text-gray-700">
             <li className="flex gap-3"><span className="tabular font-semibold text-copper-600">1.</span> Te llamamos o escribimos para entender el proyecto.</li>
             <li className="flex gap-3"><span className="tabular font-semibold text-copper-600">2.</span> Visitamos el espacio y tomamos medidas.</li>
@@ -433,6 +450,26 @@ export function LeadForm({
         <Field id="lf-message" label={compact ? "Cuéntanos brevemente tu proyecto" : "Descripción del proyecto"} optional error={errors.message?.message} className={compact ? undefined : "sm:col-span-2"}>
           <Textarea id="lf-message" rows={compact ? 3 : 5} maxLength={3000} placeholder="Qué quieres reformar, estado actual, plazos…" {...register("message")} />
         </Field>
+
+        {!compact && attachmentsEnabled ? (
+          <Field id="lf-files" label="Fotos o planos" optional error={fileError ?? undefined} hint={`Hasta ${ATTACHMENT_MAX_FILES} archivos (JPG, PNG, WebP o PDF), 4 MB en total.`} className="sm:col-span-2">
+            <Input
+              id="lf-files"
+              type="file"
+              multiple
+              accept={ATTACHMENT_ALLOWED_TYPES.join(",")}
+              onChange={(e) => {
+                const list = Array.from(e.target.files ?? []).slice(0, ATTACHMENT_MAX_FILES);
+                const bad = list.find((f) => !(ATTACHMENT_ALLOWED_TYPES as readonly string[]).includes(f.type) || f.size > ATTACHMENT_MAX_FILE_BYTES);
+                const total = list.reduce((acc, f) => acc + f.size, 0);
+                if (bad) setFileError(`${bad.name}: formato no admitido o mayor de 3 MB.`);
+                else if (total > ATTACHMENT_MAX_TOTAL_BYTES) setFileError("Los archivos superan 4 MB en total.");
+                else setFileError(null);
+                setFiles(bad || total > ATTACHMENT_MAX_TOTAL_BYTES ? [] : list);
+              }}
+            />
+          </Field>
+        ) : null}
 
         {/* Honeypot: invisible para personas, los bots lo rellenan. */}
         <div className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden" aria-hidden>

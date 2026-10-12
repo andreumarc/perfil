@@ -6,19 +6,21 @@ import { SERVICES } from "@/content/services";
 import { SECTORS } from "@/content/sectors";
 import { getDb } from "@/db/client";
 import { createLead } from "@/db/queries/leads";
+import { signAttachmentToken } from "@/lib/auth/attachment-token";
 import { getSettings } from "@/lib/cms/settings";
 import { isEmailConfigured, sendLeadConfirmation, sendNewLeadNotification } from "@/lib/email/send";
 import { serverEnv } from "@/lib/env";
 import { FORM_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
 import { getRequestMeta } from "@/lib/request-meta";
 import { siteUrl } from "@/lib/seo";
+import { isStorageConfigured } from "@/lib/storage/blob";
 import { verifyTurnstile } from "@/lib/turnstile";
 import { CONSENT_TEXT_VERSION, fieldErrors, isSuspiciousFillTime, leadSubmissionSchema } from "@/lib/validation/lead";
 
 export type SubmitLeadState =
   | { status: "idle" }
   | { status: "error"; message: string; fieldErrors?: Record<string, string> }
-  | { status: "success"; leadId: string | null };
+  | { status: "success"; leadId: string | null; attachToken?: string };
 
 /**
  * Server action común a todos los formularios de captación (presupuesto,
@@ -171,5 +173,6 @@ export async function submitLead(payload: unknown): Promise<SubmitLeadState> {
     await sendLeadConfirmation(l.email, { name: l.name, serviceName: service?.name ?? null }, brand, recipients[0]);
   });
 
-  return { status: "success", leadId };
+  const attachToken = leadId && data.attachmentCount > 0 && isStorageConfigured("private") ? await signAttachmentToken(leadId) : null;
+  return { status: "success", leadId, ...(attachToken ? { attachToken } : {}) };
 }

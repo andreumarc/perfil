@@ -4,8 +4,9 @@ import { getSettings } from "@/lib/cms/settings";
 import { SERVICE_GROUPS } from "@/content/services";
 import { publicEnv } from "@/lib/env";
 import { whatsappHref } from "@/lib/phone";
+import { isStorageConfigured } from "@/lib/storage/blob";
 
-type Props = Omit<LeadFormProps, "services" | "sectors" | "whatsappHref" | "turnstileSiteKey">;
+type Props = Omit<LeadFormProps, "services" | "sectors" | "whatsappHref" | "turnstileSiteKey" | "attachmentsEnabled">;
 
 /** Wrapper de servidor: carga opciones (servicios, sectores) y ajustes y renderiza el formulario cliente. */
 export async function QuoteForm(props: Props) {
@@ -18,6 +19,7 @@ export async function QuoteForm(props: Props) {
       sectors={sectors.map((s) => ({ slug: s.slug, name: s.name }))}
       whatsappHref={whatsappHref(settings.company.whatsapp, settings.company.whatsappMessage)}
       turnstileSiteKey={publicEnv.turnstileSiteKey}
+      attachmentsEnabled={isStorageConfigured("private")}
     />
   );
 }

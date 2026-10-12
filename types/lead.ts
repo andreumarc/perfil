@@ -87,6 +87,7 @@ export type ContentStatus = (typeof CONTENT_STATUSES)[number];
 
 export const MEDIA_KINDS = ["real", "illustrative"] as const;
 export type MediaKind = (typeof MEDIA_KINDS)[number];
+export const MEDIA_KIND_LABELS: Record<MediaKind, string> = { real: "Fotografía real", illustrative: "Ilustrativa" };
 
 export const DATA_REQUEST_TYPES = ["access", "rectification", "erasure", "other"] as const;
 export type DataRequestType = (typeof DATA_REQUEST_TYPES)[number];
