@@ -104,7 +104,7 @@ for (const route of routes) {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${title}</title>
 ${styles}
-<style>html{background:#faf8f5} [data-reveal]{opacity:1!important;transform:none!important}</style>
+<style>html{background:#faf8f5} [data-reveal],[style*="opacity:0;transform:translateY"]{opacity:1!important;transform:none!important}</style>
 </head>
 <body class="${bodyClass}">
 ${NOTE}
