@@ -36,7 +36,7 @@ export function RevealGroup({ className, children, amount = 0.15, ...props }: HT
 
 export function RevealItem({ className, children, scale = false, ...props }: HTMLMotionProps<"div"> & { scale?: boolean }) {
   return (
-    <m.div variants={scale ? itemScale : item} className={cn(className)} {...props}>
+    <m.div data-reveal variants={scale ? itemScale : item} className={cn(className)} {...props}>
       {children}
     </m.div>
   );
@@ -46,6 +46,7 @@ export function RevealItem({ className, children, scale = false, ...props }: HTM
 export function Reveal({ className, children, delay = 0, ...props }: HTMLMotionProps<"div"> & { delay?: number }) {
   return (
     <m.div
+      data-reveal
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

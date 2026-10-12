@@ -45,6 +45,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const s = await getSettings();
   return (
     <html lang="es" className={`${inter.variable} ${manrope.variable}`}>
+      <head>
+        {/* Sin JavaScript, los bloques con animación de entrada se muestran directamente. */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+      </head>
       <body className="flex min-h-dvh flex-col">
         <MotionProvider>
           {children}
