@@ -6,6 +6,7 @@ import { cache } from "react";
 import { GLOBAL_FAQS } from "@/content/faqs";
 import { SERVICES } from "@/content/services";
 import { SECTORS } from "@/content/sectors";
+import { LOCAL_AREAS } from "@/content/zones";
 import type { FaqItem } from "@/content/types";
 import { getDb } from "@/db/client";
 import { faqs } from "@/db/schema";
@@ -16,6 +17,7 @@ function fallback(scope: Scope, slug?: string): FaqItem[] {
   if (scope === "global") return GLOBAL_FAQS;
   if (scope === "service") return SERVICES.find((s) => s.slug === slug)?.faqs ?? [];
   if (scope === "sector") return SECTORS.find((s) => s.slug === slug)?.faqs ?? [];
+  if (scope === "area") return LOCAL_AREAS.find((z) => z.slug === slug)?.faqs ?? [];
   return [];
 }
 

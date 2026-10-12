@@ -1,5 +1,5 @@
 {
-  "id": "e256447e-667e-49cc-9f68-1a1387e0c15a",
+  "id": "2fedcbab-2d31-4c7a-b6f9-b99dbbaf97dc",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -2805,6 +2805,7 @@
         "zona",
         "proyecto",
         "blog",
+        "calculadora",
         "whatsapp",
         "telefono",
         "otro"

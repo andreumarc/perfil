@@ -1,3 +1,4 @@
+import { SECTOR_BODIES } from "./sector-bodies";
 import type { SectorContent } from "./types";
 
 const IMG = (name: string) => `/images/ilustrativas/${name}.webp`;
@@ -142,7 +143,13 @@ const RAW: Partial[] = [
   },
 ];
 
-export const SECTORS: SectorContent[] = RAW.map((s, index) => ({ ...s, body: s.body ?? "", order: index + 1, status: s.status ?? "published" }));
+export const SECTORS: SectorContent[] = RAW.map((s, index) => ({
+  ...s,
+  body: s.body ?? SECTOR_BODIES[s.slug]?.body ?? "",
+  faqs: s.faqs.length ? s.faqs : (SECTOR_BODIES[s.slug]?.faqs ?? []),
+  order: index + 1,
+  status: s.status ?? "published",
+}));
 export const SECTOR_SLUGS = SECTORS.map((s) => s.slug);
 export function getSectorContent(slug: string): SectorContent | undefined {
   return SECTORS.find((s) => s.slug === slug);

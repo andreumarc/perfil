@@ -1,3 +1,4 @@
+import { SERVICE_BODIES } from "./service-bodies";
 import type { ServiceContent, ServiceGroup, ServiceGroupSlug } from "./types";
 
 export const SERVICE_GROUPS: ServiceGroup[] = [
@@ -694,7 +695,7 @@ const RAW: Partial[] = [
 
 export const SERVICES: ServiceContent[] = RAW.map((s, index) => ({
   ...s,
-  body: s.body ?? "",
+  body: s.body ?? SERVICE_BODIES[s.slug]?.body ?? "",
   process: s.process ?? PROCESS_REFORMA,
   order: index + 1,
   status: s.status ?? "published",

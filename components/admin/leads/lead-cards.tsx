@@ -50,6 +50,26 @@ export function ContactCard({ lead }: { lead: Lead }) {
   );
 }
 
+const CONTEXT_LABELS: Record<string, string> = {
+  activity: "Actividad",
+  premisesState: "Estado del local",
+  installations: "Instalaciones",
+  kitchenType: "Tipo de cocina",
+  extraction: "Extracción de humos",
+  systemType: "Sistema",
+  interventionType: "Intervención",
+  calculator: "Calculadora",
+  calculatorInputs: "Datos del cálculo",
+  estimateMin: "Estimación mínima",
+  estimateMax: "Estimación máxima",
+};
+
+function contextValue(key: string, v: unknown): string {
+  if (Array.isArray(v)) return v.join(", ");
+  if ((key === "estimateMin" || key === "estimateMax") && typeof v === "number") return `${new Intl.NumberFormat("es-ES").format(v)} € (sin IVA)`;
+  return String(v);
+}
+
 export function ProjectCard({ lead, serviceName, sectorName }: { lead: Lead; serviceName?: string; sectorName?: string }) {
   const context = Object.entries((lead.context ?? {}) as Record<string, unknown>).filter(([, v]) => v !== null && v !== undefined && v !== "" && !(Array.isArray(v) && v.length === 0));
   return (
@@ -67,7 +87,7 @@ export function ProjectCard({ lead, serviceName, sectorName }: { lead: Lead; ser
             { label: "Superficie", value: lead.squareMeters ? `${lead.squareMeters} m²` : "—" },
             { label: "Presupuesto", value: labelFor(BUDGET_RANGES, lead.budgetRange) },
             { label: "Fecha prevista", value: labelFor(TIMELINES, lead.timeline) },
-            ...context.map(([k, v]) => ({ label: k, value: Array.isArray(v) ? v.join(", ") : String(v) })),
+            ...context.map(([k, v]) => ({ label: CONTEXT_LABELS[k] ?? k, value: contextValue(k, v) })),
           ]}
         />
         {lead.message ? (

@@ -29,6 +29,18 @@ export const menuItemSchema = z.object({
     }),
 });
 
+const legalDocSchema = z.object({
+  title: shortText(120).min(1, { error: "Título obligatorio" }),
+  body: z.string().max(80_000, { error: "Texto demasiado largo" }),
+});
+
+const rateRangeSchema = z
+  .object({
+    min: z.coerce.number().min(0).max(1_000_000),
+    max: z.coerce.number().min(0).max(1_000_000),
+  })
+  .refine((r) => r.max >= r.min, { error: "El máximo debe ser mayor o igual que el mínimo" });
+
 export const siteSettingsSchema = z.object({
   company: z.object({
     name: shortText(80).min(1),
@@ -140,6 +152,19 @@ export const siteSettingsSchema = z.object({
     email: shortText(254),
     registry: shortText(300),
     lastUpdated: shortText(20),
+  }),
+  /** Textos legales en Markdown. Admiten marcadores {{empresa}}, {{nif}}, {{direccion}}, {{email}}, {{web}}, {{fecha}}. */
+  legalDocs: z.object({
+    avisoLegal: legalDocSchema,
+    privacidad: legalDocSchema,
+    cookies: legalDocSchema,
+    terminos: legalDocSchema,
+  }),
+  /** Calculadoras de captación: tarifas orientativas editables por calculadora (€/unidad, rango min–max). */
+  calculators: z.object({
+    enabled: z.boolean(),
+    disclaimer: shortText(600),
+    rates: z.record(z.string().max(40), z.record(z.string().max(40), rateRangeSchema)),
   }),
 });
 

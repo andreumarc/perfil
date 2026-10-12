@@ -1,4 +1,8 @@
+import { LEGAL_DOCS } from "@/content/legal";
+import { allDefaultRates } from "@/lib/calculators/definitions";
 import type { SiteSettings } from "@/lib/validation/settings";
+
+const legalDoc = (slug: string, title: string) => ({ title: LEGAL_DOCS[slug]?.title ?? title, body: LEGAL_DOCS[slug]?.body ?? "" });
 
 /**
  * Configuración por defecto del sitio. Todo es editable desde /admin/ajustes;
@@ -127,6 +131,7 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
       { label: "Proyectos", href: "/proyectos" },
       { label: "Empresa", href: "/empresa" },
       { label: "Blog", href: "/blog" },
+      { label: "Calculadoras", href: "/calculadoras" },
       { label: "Contacto", href: "/contacto" },
     ],
     footer: [
@@ -159,6 +164,7 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
           { label: "Proyectos", href: "/proyectos" },
           { label: "Zonas de actuación", href: "/zonas" },
           { label: "Blog", href: "/blog" },
+          { label: "Calculadoras de precios", href: "/calculadoras" },
           { label: "Pedir presupuesto", href: "/presupuesto" },
           { label: "Contacto", href: "/contacto" },
         ],
@@ -182,5 +188,17 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
     email: "[POR CONFIRMAR: email de contacto]",
     registry: "[POR CONFIRMAR: datos registrales]",
     lastUpdated: "2026-10-12",
+  },
+  legalDocs: {
+    avisoLegal: legalDoc("aviso-legal", "Aviso legal"),
+    privacidad: legalDoc("politica-privacidad", "Política de privacidad"),
+    cookies: legalDoc("politica-cookies", "Política de cookies"),
+    terminos: legalDoc("terminos", "Términos y condiciones de uso"),
+  },
+  calculators: {
+    enabled: true,
+    disclaimer:
+      "Las calculadoras ofrecen una estimación orientativa a partir de rangos de mercado, sin IVA. No constituyen un presupuesto ni una oferta vinculante: el precio real se fija tras visitar el inmueble y presupuestar por partidas.",
+    rates: allDefaultRates(),
   },
 };

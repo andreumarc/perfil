@@ -20,6 +20,7 @@ import { leadFormSchema, type FormVariantValue, type LeadFormInput, type LeadFor
 import { BUDGET_RANGES, PROPERTY_TYPES, TIMELINES, type LeadSource } from "@/types/lead";
 
 import { Field, describedBy } from "./field";
+import { useLeadExtra } from "./lead-extra-context";
 import { Turnstile } from "./turnstile";
 
 export interface ServiceOption {
@@ -86,6 +87,7 @@ export function LeadForm({
   className,
 }: LeadFormProps) {
   const compact = layout === "compact";
+  const extra = useLeadExtra();
   const isBusiness = variant === "local" || variant === "gimnasio" || variant === "restaurante" || variant === "clinica";
 
   const form = useForm<LeadFormInput, unknown, LeadFormValues>({
@@ -129,7 +131,7 @@ export function LeadForm({
   const onFirstInteraction = () => {
     if (startedTracked.current) return;
     startedTracked.current = true;
-    track("quote_form_started", { source, variant, articleSlug: articleSlug ?? null });
+    track("quote_form_started", { source, variant, articleSlug: articleSlug ?? null, calculator: extra?.context?.calculator ?? null });
   };
 
   const { register, handleSubmit, control, setError, formState } = form;
@@ -139,7 +141,7 @@ export function LeadForm({
     setState({ status: "idle" });
     startTransition(async () => {
       const result = await submitLead({
-        lead: values,
+        lead: { ...values, squareMeters: values.squareMeters || extra?.squareMeters || values.squareMeters },
         context: {
           activity: activity || undefined,
           premisesState: premisesState || undefined,
@@ -148,6 +150,7 @@ export function LeadForm({
           extraction: extraction || undefined,
           systemType: systemType || undefined,
           interventionType: interventionType || undefined,
+          ...(extra?.context ?? {}),
         },
         attribution: getAttribution(),
         antiSpam: { website, startedAt, turnstileToken: turnstileToken || undefined },
@@ -165,7 +168,7 @@ export function LeadForm({
         }
       }
       if (result.status === "success") {
-        track("lead_created", { source, variant, leadId: result.leadId ?? undefined, articleSlug: articleSlug ?? null }, { persist: false });
+        track("lead_created", { source, variant, leadId: result.leadId ?? undefined, articleSlug: articleSlug ?? null, calculator: extra?.context?.calculator ?? null }, { persist: false });
       }
       setState(result);
     });

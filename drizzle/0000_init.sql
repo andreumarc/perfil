@@ -3,7 +3,7 @@ CREATE TYPE "public"."budget_range" AS ENUM('lt10k', '10k-25k', '25k-50k', '50k-
 CREATE TYPE "public"."content_status" AS ENUM('draft', 'published');--> statement-breakpoint
 CREATE TYPE "public"."data_request_status" AS ENUM('new', 'in_progress', 'closed');--> statement-breakpoint
 CREATE TYPE "public"."data_request_type" AS ENUM('access', 'rectification', 'erasure', 'other');--> statement-breakpoint
-CREATE TYPE "public"."lead_source" AS ENUM('presupuesto', 'contacto', 'servicio', 'sector', 'zona', 'proyecto', 'blog', 'whatsapp', 'telefono', 'otro');--> statement-breakpoint
+CREATE TYPE "public"."lead_source" AS ENUM('presupuesto', 'contacto', 'servicio', 'sector', 'zona', 'proyecto', 'blog', 'calculadora', 'whatsapp', 'telefono', 'otro');--> statement-breakpoint
 CREATE TYPE "public"."lead_status" AS ENUM('NEW', 'CONTACTED', 'VISIT_SCHEDULED', 'QUOTE_SENT', 'WON', 'LOST');--> statement-breakpoint
 CREATE TYPE "public"."media_kind" AS ENUM('real', 'illustrative');--> statement-breakpoint
 CREATE TYPE "public"."property_type" AS ENUM('piso', 'casa', 'local', 'oficina', 'nave', 'comunidad', 'otro');--> statement-breakpoint

@@ -13,6 +13,7 @@ export const EVENT_TYPES = [
   "service_viewed",
   "project_viewed",
   "article_viewed",
+  "calculator_used",
   "consent_updated",
 ] as const;
 
@@ -30,6 +31,7 @@ export const PERSISTED_EVENTS: ReadonlySet<EventType> = new Set<EventType>([
   "cta_clicked",
   "service_viewed",
   "project_viewed",
+  "calculator_used",
   "consent_updated",
 ]);
 
@@ -45,6 +47,7 @@ export const EVENT_LABELS: Record<EventType, string> = {
   service_viewed: "Servicio visto",
   project_viewed: "Proyecto visto",
   article_viewed: "Artículo visto",
+  calculator_used: "Calculadora usada",
   consent_updated: "Consentimiento actualizado",
 };
 

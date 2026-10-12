@@ -138,9 +138,16 @@ export const contextSchema = z
     extraction: z.enum(["si", "no", "no_se", ""]).optional(),
     systemType: optionalText(80), // instalaciones: tipo de sistema
     interventionType: optionalText(80), // vivienda: tipo de intervención
+    /* Calculadoras de captación */
+    calculator: optionalText(40),
+    calculatorInputs: optionalText(600),
+    estimateMin: z.coerce.number().int().min(0).max(100_000_000).optional(),
+    estimateMax: z.coerce.number().int().min(0).max(100_000_000).optional(),
   })
   .partial()
   .default({});
+
+export type ContextInput = z.input<typeof contextSchema>;
 
 /** Formulario de presupuesto / contacto (campos comunes). */
 export const leadFormSchema = z.object({
