@@ -2,9 +2,11 @@
 
 ## 0. Estado actual (12-10-2026)
 
-- Proyecto Neon `reformas` creado (ID `dawn-lab-59498990`, región `aws-eu-central-1`, Postgres 17) con el esquema aplicado (22 tablas). Falta cargar el contenido inicial: desde el panel (`/admin/ajustes → Cargar contenido inicial`) o con `npm run db:seed` desde una máquina con acceso a Neon.
-- El código está en la rama `claude/gracious-brown-v0fhtd` del repositorio `andreumarc/perfil` hasta que exista `andreumarc/reformas` (créalo vacío y haz `git push` de esa rama como `main`).
-- El proyecto de Vercel y los stores de Blob no se pudieron crear desde esta sesión (permisos insuficientes del token): sigue los pasos 2 y 3.
+- Código en https://github.com/andreumarc/reformas (rama `main`). La rama `claude/gracious-brown-v0fhtd` de `andreumarc/perfil` conserva una copia.
+- Proyecto Neon `reformas` (ID `dawn-lab-59498990`, región `aws-eu-central-1`, Postgres 17) con el esquema aplicado (22 tablas), el primer administrador creado y el contenido inicial cargado: servicios, sectores, proyectos de ejemplo, categorías, autor, 20 artículos en borrador, zonas y FAQs. La fila de `site_settings` se crea con la primera edición guardada en `/admin/ajustes`; hasta entonces el sitio usa los valores por defecto de `content/settings.ts`.
+- No hace falta `/admin/setup` ni `ADMIN_SETUP_TOKEN`: entra en `/admin/login` con las credenciales entregadas y cambia la contraseña en `/admin/cuenta`.
+- El proyecto de Vercel y los stores de Blob no se pudieron crear desde esta sesión (el token no tiene permisos): sigue los pasos 2 y 3. Las variables de entorno preparadas están en el fichero `vercel-env.txt` entregado con el informe.
+- Si hay que volver a sembrar sin acceso de red a Neon, `npm run db:seed:sql <carpeta>` genera el contenido como SQL idempotente (`INSERT ... ON CONFLICT DO NOTHING`) para ejecutarlo en la consola de Neon, junto con una consulta de verificación por hash.
 
 ## 1. Base de datos (Neon)
 
@@ -16,6 +18,7 @@
    DATABASE_URL=... npm run db:seed
    ```
    Para cambios de esquema: edita `db/schema.ts`, `npm run db:generate`, revisa el SQL en `drizzle/` y `npm run db:migrate`.
+   Sin acceso de red a Neon: `npm run db:seed:sql ./seed-sql` y ejecuta los ficheros `stmt-*.sql` en la consola SQL de Neon; `checks.sql` devuelve un hash por tabla que debe coincidir con `hashes.json`.
 
 ## 2. Proyecto en Vercel
 
@@ -28,7 +31,7 @@
 | `DATABASE_URL` | cadena pooled de Neon |
 | `NEXT_PUBLIC_SITE_URL` | `https://tu-dominio.com` (sin barra final) |
 | `AUTH_SECRET` | `openssl rand -base64 32` |
-| `ADMIN_SETUP_TOKEN` | token temporal para `/admin/setup`; bórralo tras crear el admin |
+| `ADMIN_SETUP_TOKEN` | solo si la tabla `users` está vacía: token temporal para `/admin/setup`; bórralo tras crear el admin |
 | `IP_HASH_SALT` | `openssl rand -hex 16` (sin ella no se guardan hashes de IP en producción) |
 | `RESEND_API_KEY`, `EMAIL_FROM` | remitente de un dominio verificado en Resend |
 | `NOTIFY_EMAIL` | destinatario de avisos si el panel no tiene emails configurados |
@@ -36,7 +39,7 @@
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY` | opcional, anti-spam |
 
 4. Despliega. Comprueba `https://tu-dominio.com/api/health`, `/sitemap.xml`, `/robots.txt` y `/rss.xml`.
-5. Crea el primer administrador en `/admin/setup` y elimina `ADMIN_SETUP_TOKEN`.
+5. Si la base de datos no tiene usuarios, crea el primer administrador en `/admin/setup` y elimina `ADMIN_SETUP_TOKEN`. En el proyecto actual el administrador ya existe: entra en `/admin/login` y cambia la contraseña en `/admin/cuenta`.
 6. Dominio: añade el dominio en Vercel y configura DNS. `NEXT_PUBLIC_SITE_URL` debe coincidir con el dominio canónico.
 
 ## 3. Integraciones (desde `/admin/ajustes`)
