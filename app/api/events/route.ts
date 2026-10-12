@@ -1,0 +1,80 @@
+import { NextResponse, type NextRequest } from "next/server";
+import { z } from "zod";
+
+import { recordEvent } from "@/db/queries/events";
+import { EVENT_TYPES, PERSISTED_EVENTS } from "@/lib/analytics/events";
+import { EVENTS_RATE_LIMIT, rateLimit } from "@/lib/rate-limit";
+import { isSameOrigin, metaFromHeaders } from "@/lib/request-meta";
+
+const eventSchema = z.object({
+  type: z.enum(EVENT_TYPES),
+  page: z.string().trim().max(500).optional(),
+  visitorId: z.string().trim().max(64).optional(),
+  sessionId: z.string().trim().max(64).optional(),
+  leadId: z.uuid().optional(),
+  metadata: z
+    .record(z.string().max(60), z.union([z.string().max(300), z.number(), z.boolean()]))
+    .refine((o) => Object.keys(o).length <= 20, { error: "Demasiadas claves" })
+    .optional(),
+  consented: z.boolean().optional(),
+});
+
+/** Un evento legítimo ocupa < 1 KB; cualquier cosa mayor es abuso. */
+const MAX_BODY_BYTES = 8_192;
+
+/**
+ * POST /api/events — guarda eventos clave del funnel en Neon.
+ * Acepta JSON (fetch) o Blob JSON (sendBeacon).
+ */
+export async function POST(request: NextRequest) {
+  if (!isSameOrigin(request)) {
+    return NextResponse.json({ error: "Origen no permitido" }, { status: 403 });
+  }
+
+  const declaredLength = Number(request.headers.get("content-length") ?? 0);
+  if (declaredLength > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload demasiado grande" }, { status: 413 });
+  }
+
+  let body: unknown;
+  try {
+    const raw = await request.text();
+    if (raw.length > MAX_BODY_BYTES) {
+      return NextResponse.json({ error: "Payload demasiado grande" }, { status: 413 });
+    }
+    body = JSON.parse(raw);
+  } catch {
+    return NextResponse.json({ error: "JSON inválido" }, { status: 400 });
+  }
+
+  const parsed = eventSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: "Evento inválido" }, { status: 400 });
+  }
+  const event = parsed.data;
+  if (!PERSISTED_EVENTS.has(event.type)) {
+    return NextResponse.json({ ok: true, stored: false });
+  }
+
+  const meta = metaFromHeaders(request.headers);
+  if (meta.device === "bot") return NextResponse.json({ ok: true, stored: false });
+
+  const limit = await rateLimit(`events:${meta.rateKey}`, EVENTS_RATE_LIMIT);
+  if (!limit.ok) return NextResponse.json({ ok: false, error: "rate_limited" }, { status: 429 });
+
+  const stored = await recordEvent({
+    eventType: event.type,
+    page: event.page ?? null,
+    visitorId: event.visitorId ?? null,
+    sessionId: event.sessionId ?? null,
+    leadId: event.leadId ?? null,
+    metadata: {
+      ...(event.metadata ?? {}),
+      device: meta.device,
+      ...(meta.country ? { country: meta.country } : {}),
+      consented: event.consented ?? false,
+    },
+  });
+
+  return NextResponse.json({ ok: true, stored });
+}

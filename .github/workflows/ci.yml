@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Lint · Typecheck · Test · Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # El build no necesita secretos: la app degrada sin DB/Resend/analítica.
+      NEXT_PUBLIC_SITE_URL: https://example.com
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Test
+        run: npm run test
+      - name: Build
+        run: npm run build
+
+  e2e:
+    name: E2E (Playwright)
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    container: mcr.microsoft.com/playwright:v1.56.0-noble
+    concurrency:
+      group: e2e-neon-branch
+      cancel-in-progress: false
+    env:
+      DATABASE_URL: ${{ secrets.E2E_DATABASE_URL }}
+      AUTH_SECRET: ${{ secrets.E2E_AUTH_SECRET }}
+      ADMIN_SETUP_TOKEN: e2e-setup-token-0123456789
+      IP_HASH_SALT: e2e-salt
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      NEXT_TELEMETRY_DISABLED: "1"
+      CI: "1"
+      HOME: /root
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: gate
+        name: Comprobar secretos E2E
+        run: echo "run=$([ -n "$DATABASE_URL" ] && [ -n "$AUTH_SECRET" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - if: steps.gate.outputs.run == 'true'
+        name: Migrar y sembrar la rama de pruebas
+        run: npm run db:migrate && npm run db:seed
+      - if: steps.gate.outputs.run == 'true'
+        name: Playwright
+        run: npx playwright test
+      - if: always() && steps.gate.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+      - if: steps.gate.outputs.run != 'true'
+        run: echo "E2E omitido: define E2E_DATABASE_URL y E2E_AUTH_SECRET en los secretos del repositorio."

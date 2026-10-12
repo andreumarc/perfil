@@ -1,0 +1,331 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ------------------------------------------------------------------
+   Design tokens — base clara cálida, secciones carbón y acento cobre.
+   ------------------------------------------------------------------ */
+:root {
+  --background: #faf8f5;
+  --foreground: #17191d;
+
+  --card: #ffffff;
+  --card-foreground: #17191d;
+  --popover: #ffffff;
+  --popover-foreground: #17191d;
+
+  --primary: #17191d;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1ede7;
+  --secondary-foreground: #17191d;
+
+  --muted: #f3f0eb;
+  --muted-foreground: #5f5b55;
+
+  --accent: #f4efe9;
+  --accent-foreground: #17191d;
+
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+
+  --border: #e6e1da;
+  --input: #d6d0c7;
+  --ring: #d3620f;
+
+  --radius: 0.5rem;
+
+  /* Carbón (secciones oscuras) */
+  --ink-50: #f5f5f4;
+  --ink-100: #e9e8e6;
+  --ink-200: #d2d0cc;
+  --ink-300: #a8a5a0;
+  --ink-400: #7a7772;
+  --ink-500: #55524e;
+  --ink-600: #3d3b38;
+  --ink-700: #2b2a28;
+  --ink-800: #1f2024;
+  --ink-900: #17191d;
+  --ink-950: #0e0f12;
+
+  /* Cobre (acento principal) */
+  --copper-50: #fdf5ee;
+  --copper-100: #fbe9db;
+  --copper-200: #f6cfae;
+  --copper-300: #efab75;
+  --copper-400: #e8781e;
+  --copper-500: #d3620f;
+  --copper-600: #b4500c;
+  --copper-700: #8f3f0b;
+
+  /* Oliva (secundario discreto: estados, badges) */
+  --olive-100: #e9ecdc;
+  --olive-500: #6b7a3a;
+  --olive-700: #4a5528;
+
+  /* Grises cálidos */
+  --gray-50: #f9f8f6;
+  --gray-100: #f1efeb;
+  --gray-200: #e4e1db;
+  --gray-300: #cdc8c0;
+  --gray-400: #9d978f;
+  --gray-500: #6f6a63;
+  --gray-600: #55514b;
+  --gray-700: #3f3c37;
+  --gray-800: #282623;
+  --gray-900: #17191d;
+
+  --success: #2f7a3e;
+  --warning: #b45309;
+
+  --chart-1: #17191d;
+  --chart-2: #d3620f;
+  --chart-3: #6b7a3a;
+  --chart-4: #efab75;
+  --chart-5: #9d978f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ink-50: var(--ink-50);
+  --color-ink-100: var(--ink-100);
+  --color-ink-200: var(--ink-200);
+  --color-ink-300: var(--ink-300);
+  --color-ink-400: var(--ink-400);
+  --color-ink-500: var(--ink-500);
+  --color-ink-600: var(--ink-600);
+  --color-ink-700: var(--ink-700);
+  --color-ink-800: var(--ink-800);
+  --color-ink-900: var(--ink-900);
+  --color-ink-950: var(--ink-950);
+
+  --color-copper-50: var(--copper-50);
+  --color-copper-100: var(--copper-100);
+  --color-copper-200: var(--copper-200);
+  --color-copper-300: var(--copper-300);
+  --color-copper-400: var(--copper-400);
+  --color-copper-500: var(--copper-500);
+  --color-copper-600: var(--copper-600);
+  --color-copper-700: var(--copper-700);
+
+  --color-olive-100: var(--olive-100);
+  --color-olive-500: var(--olive-500);
+  --color-olive-700: var(--olive-700);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 6px);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-manrope), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --container-8xl: 88rem;
+
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 0.5s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--copper-100);
+    color: var(--ink-900);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight text-balance;
+  }
+  p {
+    @apply text-pretty;
+  }
+  button,
+  [role="button"],
+  a.btn {
+    touch-action: manipulation;
+  }
+  :focus-visible {
+    outline: 2px solid var(--copper-500);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Utilidades propias registradas con @utility para poder usarlas con @apply */
+@utility font-display {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--copper-500);
+}
+
+@layer utilities {
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+  }
+  /* Fondo carbón con textura sutil (secciones oscuras) */
+  .bg-ink-grid {
+    background-color: var(--ink-900);
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .bg-ink-radial {
+    background-color: var(--ink-900);
+    background-image: radial-gradient(ellipse 70% 55% at 75% 0%, rgba(211, 98, 15, 0.22), transparent 60%);
+  }
+  .prose-site {
+    @apply text-base leading-relaxed text-gray-700 md:text-lg;
+  }
+  .prose-site h2 {
+    @apply font-display mt-12 mb-4 text-2xl text-ink-900 md:text-3xl;
+  }
+  .prose-site h3 {
+    @apply mt-8 mb-3 text-xl font-semibold text-ink-900;
+  }
+  .prose-site h4 {
+    @apply mt-6 mb-2 text-lg font-semibold text-ink-900;
+  }
+  .prose-site p {
+    @apply mb-5;
+  }
+  .prose-site ul {
+    @apply mb-6 list-disc space-y-2 pl-6;
+  }
+  .prose-site ol {
+    @apply mb-6 list-decimal space-y-2 pl-6;
+  }
+  .prose-site strong {
+    @apply font-semibold text-ink-900;
+  }
+  .prose-site blockquote {
+    @apply my-8 border-l-2 border-copper-500 pl-5 text-ink-900 italic;
+  }
+  .prose-site a {
+    @apply text-copper-600 underline decoration-copper-200 underline-offset-4 hover:decoration-copper-600;
+  }
+  .prose-site table {
+    @apply my-6 w-full border-collapse text-sm;
+  }
+  .prose-site th {
+    @apply border-b border-gray-300 py-2 pr-4 text-left font-semibold text-ink-900;
+  }
+  .prose-site td {
+    @apply border-b border-gray-200 py-2 pr-4 align-top;
+  }
+  .prose-site img {
+    @apply my-6 rounded-lg;
+  }
+  .prose-site hr {
+    @apply my-10 border-gray-200;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
