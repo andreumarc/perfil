@@ -32,7 +32,7 @@ Dos pisos iguales en el mismo edificio pueden recibir presupuestos que se difere
 
 **Estado de las instalaciones.** El factor que más pesa y el menos visible. Electricidad y fontanería de hace 40 años se renuevan enteras; un piso reformado hace 15 años quizá solo necesite acabados.
 
-**Cambio de distribución.** Derribar tabiques de ladrillo hueco es barato. Tocar un muro de carga exige proyecto, cálculo estructural y licencia de obra mayor. Mover la cocina o el baño implica nuevos desagües y, en muchos pisos, recrecidos que roban altura.
+**Cambio de distribución.** Derribar tabiques de ladrillo hueco es barato. Tocar un muro de carga exige proyecto y cálculo estructural de un técnico competente y, habitualmente, licencia de obras. Mover la cocina o el baño implica nuevos desagües y, en muchos pisos, recrecidos que roban altura.
 
 **Estancias húmedas.** Cada baño completo añade, de forma orientativa, entre 5.000 y 9.000 €; cada cocina, entre 7.000 y 15.000 € sin electrodomésticos. Son las partidas más caras por m² y no bajan con la superficie.
 
@@ -241,7 +241,7 @@ Si quieres saber cuánto costaría la reforma integral de tu piso con un presupu
   relatedServiceSlugs: ["reformas-integrales-viviendas", "reformas-pisos", "reformas-cocinas", "reformas-banos"],
   coverImagePath: "/images/blog/01-precio-reforma-integral-piso.webp",
   authorSlug: "equipo-tecnico",
-  readingMinutes: 14,
+  readingMinutes: 16,
   status: "draft",
   reviewedAt: "2026-10-12",
   keywordPrimary: "precio reforma integral piso",

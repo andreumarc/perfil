@@ -27,7 +27,7 @@ A esos rangos hay que añadir:
 
 - Andamio tubular: de forma orientativa, entre 8 y 15 €/m² de fachada por el primer mes de alquiler y montaje, más una cuota mensual por los meses siguientes. En fachadas estrechas o patios interiores a veces compensa una plataforma elevadora o trabajos verticales.
 - Proyecto, dirección de obra y coordinación de seguridad: entre el 6 % y el 10 % del presupuesto de ejecución según el tamaño de la obra.
-- Licencia de obras y tasa de ocupación de vía pública: variables según municipio y duración; en Barcelona la ocupación de acera con andamio se tasa por m² y día.
+- Licencia de obras y tasa de ocupación de vía pública: variables según municipio y duración; la ocupación de acera con andamio suele tasarse según la superficie ocupada y los días de duración.
 - Gestión de residuos y limpieza final.
 
 Si la fachada es de una casa unifamiliar, el precio por m² suele situarse en la parte alta del rango porque hay menos superficie para repartir los costes fijos. En [reformas de casas](/servicios/reformas-casas) explicamos cómo abordamos cubiertas y fachadas a la vez.
@@ -40,7 +40,7 @@ Si la fachada es de una casa unifamiliar, el precio por m² suele situarse en la
 
 **Elementos singulares.** Cornisas, molduras, balcones de piedra, esgrafiados y barandillas de forja, habituales en fincas antiguas del Eixample de Barcelona y de otros cascos urbanos, exigen restauración especializada y, si el edificio está catalogado, criterios de protección del patrimonio.
 
-**Balcones y voladizos.** Las armaduras oxidadas en frentes de forjado son el daño más frecuente en edificios de los años 60 y 70. Su reparación (saneado del hormigón, pasivado de armaduras y reconstrucción) se cobra por unidad y puede pesar mucho en el total.
+**Balcones y voladizos.** Las armaduras oxidadas en frentes de forjado son uno de los daños más frecuentes en edificios de los años 60 y 70. Su reparación (saneado del hormigón, pasivado de armaduras y reconstrucción) se cobra por unidad y puede pesar mucho en el total.
 
 **Aislamiento.** Añadir SATE duplica o triplica el precio por m² de un saneado, pero reduce la demanda de calefacción y refrigeración y puede optar a ayudas públicas a la rehabilitación energética según la convocatoria vigente. En [reforma energética de viviendas](/blog/reforma-energetica-vivienda-aislamiento-ventanas-climatizacion) lo encuadramos dentro de una actuación global.
 

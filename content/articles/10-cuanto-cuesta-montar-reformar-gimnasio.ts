@@ -26,7 +26,7 @@ Separa desde el principio la obra (albañilería, instalaciones, pavimentos, ves
 
 ### Nave industrial o local en planta baja
 
-Muchos boxes se montan en naves de polígono, como los de Igualada y la comarca de Anoia: techos altos, acceso fácil y menos problemas de ruido. A cambio hay que comprobar que el planeamiento permite el uso deportivo y, a menudo, construir vestuarios desde cero. Un local en planta baja de Barcelona está más cerca de los clientes, pero exige aislamiento acústico serio, salida de ventilación pactada con la comunidad y, con frecuencia, aumento de potencia.
+Muchos boxes se montan en naves de polígono, por ejemplo en los polígonos de Igualada y la comarca de Anoia: techos altos, acceso fácil y menos problemas de ruido. A cambio hay que comprobar que el planeamiento permite el uso deportivo y, a menudo, construir vestuarios desde cero. Un local en planta baja de Barcelona está más cerca de los clientes, pero exige aislamiento acústico serio, salida de ventilación pactada con la comunidad y, con frecuencia, aumento de potencia.
 
 ## Factores que cambian el presupuesto de un gimnasio
 
@@ -39,7 +39,9 @@ Muchos boxes se montan en naves de polígono, como los de Igualada y la comarca 
 - **Potencia eléctrica.** Máquinas de cardio, climatización, ventilación, ACS eléctrica si la hay, iluminación y saunas suman muchos kW. Un aumento de potencia con la distribuidora tiene coste y plazo.
 - **Aforo, evacuación y accesibilidad.** El aforo determina salidas, anchuras de paso, alumbrado de emergencia, extintores, y exige vestuario y aseo accesibles.
 
-## Pavimentos deportivos: tipos y precios orientativos
+## Las partidas que definen un gimnasio: pavimentos, vestuarios, aire e instalaciones
+
+### Pavimentos deportivos: tipos y precios orientativos
 
 El pavimento es lo que más se ve y lo que más sufre en un gimnasio. Elegir bien por zonas ahorra dinero y evita roturas.
 
@@ -53,7 +55,7 @@ El pavimento es lo que más se ve y lo que más sufre en un gimnasio. Elegir bie
 
 Precios orientativos según mercado, sobre soporte nivelado. Si la solera o el forjado necesitan recrecido o nivelación, añade entre 15 y 35 euros por m². En plantas sobre viviendas o negocios, el aislamiento de impactos bajo el caucho se proyecta con un estudio acústico. Detalle en [suelos y pavimentos](/servicios/suelos-pavimentos).
 
-## Vestuarios, duchas y agua caliente
+### Vestuarios, duchas y agua caliente
 
 Un vestuario de gimnasio se calcula con el aforo y el patrón de uso, no con la media. Lo habitual en un centro de barrio son dos vestuarios con entre 4 y 8 duchas cada uno, inodoros, lavabos, zona de taquillas y bancos, además de un vestuario o aseo accesible. Cada ducha necesita desagüe con pendiente, impermeabilización de suelo y paredes, alicatado hasta techo, mampara o cabina y extracción propia para evacuar la humedad.
 
@@ -61,7 +63,7 @@ El agua caliente sanitaria es el punto donde más fallan los gimnasios mal proye
 
 Como orden de magnitud, dos vestuarios completos con 6 duchas cada uno, un aseo accesible y la producción de ACS con acumulación pueden situarse entre 45.000 y 80.000 euros sin IVA según calidades y estado de partida. Es una cifra orientativa que varía mucho con la distribución y los desagües existentes.
 
-## Ventilación, climatización y calidad del aire
+### Ventilación, climatización y calidad del aire
 
 Si el aire de un gimnasio no se renueva, el CO2 sube, el olor se queda y el cliente no vuelve. El RITE (RD 1027/2007) fija categorías de calidad de aire interior según el uso del local y obliga a aportar un caudal de aire exterior en función de la ocupación; para gimnasios se dimensiona con el aforo y la intensidad de la actividad. En la práctica eso implica unidades de ventilación con filtros, conductos de impulsión y extracción, y recuperadores de calor para no tirar la energía de la climatización. Lo detallamos en [ventilación de gimnasios y locales comerciales: requisitos del RITE y soluciones](/blog/ventilacion-gimnasios-locales-rite) y en el servicio de [ventilación y extracción](/servicios/ventilacion-extraccion).
 
@@ -69,7 +71,7 @@ La climatización se zonifica: las salas dirigidas tienen picos de carga térmic
 
 Como referencia orientativa, la ventilación con recuperación y la climatización de un gimnasio de 500 m² con dos salas dirigidas pueden situarse entre 50.000 y 100.000 euros sin IVA según equipos y recorridos de conductos.
 
-## Electricidad, iluminación, acústica y protección contra incendios
+### Electricidad, iluminación, acústica y protección contra incendios
 
 La instalación eléctrica la ejecuta y certifica un instalador habilitado en baja tensión conforme al REBT (RD 842/2002), con las prescripciones de locales de pública concurrencia: alumbrado de emergencia, cuadro con protecciones por circuito y líneas específicas para cardio, climatización, ventilación, ACS y saunas. Conviene prever tomas en suelo o columna para cardio, red de datos para tornos y pantallas, y potencia de reserva para crecer. Detalle en [instalaciones eléctricas](/servicios/instalaciones-electricas).
 
@@ -81,7 +83,7 @@ Consulta siempre la normativa vigente y la ordenanza municipal, porque los detal
 
 ### Licencia de obras y licencia de actividad
 
-Son dos trámites distintos. La licencia o comunicación de obras autoriza la reforma; en Cataluña su régimen lo fijan la Ley 3/2012, el Decreto 64/2014 y la ordenanza municipal. La licencia de actividad autoriza el funcionamiento del gimnasio: por su aforo y por el ruido, suele exigir proyecto técnico de actividad, estudio acústico y, en muchos municipios, control inicial por una entidad acreditada. Antes de firmar el alquiler, comprueba con un técnico que el uso deportivo es compatible con el planeamiento, especialmente en naves industriales. Tramitamos todo a través de técnicos colegiados en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
+Son dos trámites distintos. La licencia o comunicación de obras autoriza la reforma; en Cataluña su régimen lo fijan la Ley 3/2012, el Decreto 64/2014 y la ordenanza municipal. La licencia de actividad autoriza el funcionamiento del gimnasio: por su aforo y por el ruido, suele exigir proyecto técnico de actividad, estudio acústico y, en muchos municipios, control inicial por una entidad acreditada. Antes de firmar el alquiler, comprueba con un técnico que el uso deportivo es compatible con el planeamiento, especialmente en naves industriales. Coordinamos la tramitación con técnicos competentes en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
 
 ### Código Técnico de la Edificación y reglamentos
 

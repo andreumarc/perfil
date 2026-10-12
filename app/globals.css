@@ -32,7 +32,7 @@
 
   --border: #e6e1da;
   --input: #d6d0c7;
-  --ring: #d3620f;
+  --ring: #b9530f;
 
   --radius: 0.5rem;
 
@@ -55,9 +55,9 @@
   --copper-200: #f6cfae;
   --copper-300: #efab75;
   --copper-400: #e8781e;
-  --copper-500: #d3620f;
-  --copper-600: #b4500c;
-  --copper-700: #8f3f0b;
+  --copper-500: #b9530f;
+  --copper-600: #9a440b;
+  --copper-700: #7a360a;
 
   /* Oliva (secundario discreto: estados, badges) */
   --olive-100: #e9ecdc;

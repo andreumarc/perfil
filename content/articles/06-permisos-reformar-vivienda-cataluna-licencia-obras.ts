@@ -175,7 +175,7 @@ Si vas a reformar tu vivienda en Cataluña y no sabes qué permiso necesitas, pi
   ],
   coverImagePath: "/images/blog/06-permisos-reformar-vivienda-cataluna.webp",
   authorSlug: "equipo-tecnico",
-  readingMinutes: 14,
+  readingMinutes: 13,
   status: "draft",
   reviewedAt: "2026-10-12",
   keywordPrimary: "permiso reforma vivienda Cataluña",

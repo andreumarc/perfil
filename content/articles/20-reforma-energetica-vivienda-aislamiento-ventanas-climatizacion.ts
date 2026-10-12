@@ -58,7 +58,7 @@ Nadie puede prometerte un porcentaje de ahorro sin estudiar tu vivienda. Lo que 
 - Del punto de partida. Cuanto peor aislada esté la vivienda y más cara sea la energía que usa (gasóleo, calefacción eléctrica por efecto Joule), mayor es el ahorro posible.
 - Del clima y la orientación. En el litoral catalán la demanda de refrigeración pesa más; en el interior, como la comarca de Anoia o la Cataluña central, la calefacción.
 - Del uso. Una vivienda ocupada todo el día amortiza antes que una segunda residencia.
-- De la combinación de medidas. Aislar y cambiar ventanas reduce la demanda; la aerotermia reduce el coste de cubrir la demanda que queda. Hacer solo lo segundo deja la mitad del ahorro sobre la mesa.
+- De la combinación de medidas. Aislar y cambiar ventanas reduce la demanda; la aerotermia reduce el coste de cubrir la demanda que queda. Hacer solo lo segundo renuncia a buena parte del ahorro posible.
 
 El certificado de eficiencia energética antes y después de la obra es la forma objetiva de medir la mejora: la letra y los kWh/m² al año que figuran en él permiten comparar, y son el dato que las ayudas públicas utilizan para valorar la actuación. El IDAE publica guías y herramientas sobre eficiencia energética en edificios que ayudan a interpretar esos datos.
 
@@ -108,7 +108,7 @@ Consulta las convocatorias vigentes en el IDAE, en la Generalitat de Catalunya y
 - Comprar el equipo antes de aislar. Una aerotermia dimensionada para una casa sin aislar queda sobredimensionada tras aislar, y cuesta más de lo necesario.
 - Aislar sin ventilar. Una vivienda hermética sin ventilación controlada acumula humedad, condensaciones y moho. La ventilación forma parte de la reforma, no es un extra.
 - Cambiar vidrios y dejar marcos y cajas de persiana antiguos. Resuelve una parte pequeña de las pérdidas del hueco.
-- Olvidar las protecciones solares. En Cataluña el verano pesa; persianas, toldos o lamas en orientaciones sur y oeste reducen la refrigeración más que cualquier equipo.
+- Olvidar las protecciones solares. En Cataluña el verano pesa; persianas, toldos o lamas en orientaciones sur y oeste reducen la demanda de refrigeración a un coste muy inferior al de cualquier equipo.
 - Contar con la ayuda como si fuera segura. Haz números sin ella y considera la subvención un extra.
 - Comparar presupuestos sin ver qué aislamiento, qué espesor, qué vidrio y qué equipo incluye cada uno. Los nombres se parecen; las prestaciones, no.
 - No pedir el certificado energético final. Es la prueba de la mejora, revaloriza la vivienda y lo exigen las ayudas.

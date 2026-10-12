@@ -5,7 +5,7 @@ export const article: ArticleContent = {
   title: "¿Cuánto cuesta reformar un local comercial en 2026? Precios por m² y tipo de negocio",
   excerpt:
     "Reformar un local comercial cuesta, de forma orientativa, entre 350 y 1.200 euros por m² sin IVA según el estado del local y la actividad. Precios por negocio, partidas, licencias y ejemplo simulado.",
-  body: `Reformar un local comercial cuesta, de forma orientativa, entre 350 y 800 euros por m² sin IVA cuando el local ya tuvo una actividad parecida y se renuevan distribución, instalaciones y acabados, y entre 700 y 1.200 euros por m² si está en bruto y hay que ejecutarlo todo desde cero. Los locales con instalaciones especiales, como bares, restaurantes o clínicas, suben con facilidad a 1.000 o 1.800 euros por m². Son rangos de mercado en España y Cataluña para 2026, varían según proyecto y el presupuesto real exige una visita al local.
+  body: `Reformar un local comercial cuesta, de forma orientativa, entre 450 y 800 euros por m² sin IVA cuando el local ya tuvo una actividad parecida y se renuevan distribución, instalaciones y acabados, y entre 700 y 1.200 euros por m² si está en bruto y hay que ejecutarlo todo desde cero. Un simple lavado de cara con pintura, iluminación y pavimento puede quedarse entre 250 y 450 euros por m². Los locales con instalaciones especiales, como bares, restaurantes o clínicas, suben con facilidad a 1.000 o 1.800 euros por m². Son rangos de mercado en España y Cataluña para 2026, varían según proyecto y el presupuesto real exige una visita al local.
 
 En esta guía tienes los precios por m² según el nivel de intervención, el coste orientativo por tipo de negocio, el desglose de partidas, un ejemplo simulado de presupuesto y los errores que más encarecen la obra de un local. Si quieres una primera cifra para tu caso, usa la [calculadora de reforma de local comercial](/calculadoras/local-comercial) y después pide un [presupuesto detallado](/presupuesto).
 
@@ -101,7 +101,7 @@ La instalación eléctrica la ejecuta y certifica un instalador habilitado en ba
 
 ### Proyecto, licencias y dirección técnica
 
-Para una adecuación de local necesitas, habitualmente, un proyecto o memoria técnica de actividad firmado por un técnico competente, la comunicación o licencia de obras y, si hay obra con cierta entidad, dirección técnica y coordinación de seguridad y salud. Los honorarios dependen de la superficie y de la complejidad de la actividad; como orden de magnitud, en un local de 100 m² con actividad inocua suelen moverse entre 2.500 y 5.000 euros sin IVA, y bastante más si hay proyecto de instalaciones específico. Lo tramitamos a través de técnicos colegiados en el servicio de [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
+Para una adecuación de local necesitas, habitualmente, un proyecto o memoria técnica de actividad firmado por un técnico competente, la comunicación o licencia de obras y, si hay obra con cierta entidad, dirección técnica y coordinación de seguridad y salud. Los honorarios dependen de la superficie y de la complejidad de la actividad; como orden de magnitud, en un local de 100 m² con actividad inocua suelen moverse entre 2.500 y 5.000 euros sin IVA, y bastante más si hay proyecto de instalaciones específico. Esa documentación la redactan y firman técnicos competentes; la coordinación del trámite dentro de la obra la explicamos en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
 
 ### El IVA va aparte
 
@@ -187,7 +187,7 @@ Si tienes el local localizado o ya firmado, el siguiente paso es una visita téc
   relatedServiceSlugs: ["reformas-locales-comerciales", "adecuacion-locales", "instalaciones-electricas", "climatizacion-aire-acondicionado", "licencias-direccion-tecnica"],
   coverImagePath: "/images/blog/07-precio-reforma-local-comercial.webp",
   authorSlug: "equipo-tecnico",
-  readingMinutes: 18,
+  readingMinutes: 17,
   status: "draft",
   reviewedAt: "2026-10-12",
   keywordPrimary: "precio reforma local comercial",

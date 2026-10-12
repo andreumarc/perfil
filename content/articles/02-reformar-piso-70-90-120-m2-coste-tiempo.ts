@@ -5,7 +5,7 @@ export const article: ArticleContent = {
   title: "Reformar un piso de 70, 90 o 120 m²: cuánto cuesta y cuánto tiempo se tarda",
   excerpt:
     "Cuánto cuesta reformar un piso de 70, 90 o 120 m² en 2026, cuántas semanas dura la obra por fases y qué partidas pesan más en el presupuesto, con rangos orientativos de mercado.",
-  body: `Reformar un piso de forma integral cuesta, de forma orientativa y según mercado, entre 450 y 1.300 €/m² sin IVA en España y Cataluña, en función de la calidad de los materiales y de lo que haya que tocar. Traducido a superficies habituales: un piso de 70 m² se mueve entre 32.000 y 90.000 €, uno de 90 m² entre 40.000 y 115.000 € y uno de 120 m² entre 54.000 y 155.000 €. Una reforma parcial, sin cambiar la distribución ni renovar todas las instalaciones, baja a un rango de 250 a 450 €/m².
+  body: `Reformar un piso de forma integral cuesta, de forma orientativa y según mercado, entre 450 y 1.300 €/m² sin IVA en España y Cataluña, en función de la calidad de los materiales y de lo que haya que tocar. Traducido a superficies habituales: un piso de 70 m² se mueve entre 31.500 y 91.000 €, uno de 90 m² entre 40.500 y 117.000 € y uno de 120 m² entre 54.000 y 156.000 €. Una reforma parcial, sin cambiar la distribución ni renovar todas las instalaciones, baja a un rango de 250 a 450 €/m².
 
 En tiempo, cuenta con 6 a 10 semanas de obra para 70 m², 8 a 12 para 90 m² y 10 a 16 para 120 m², más las semanas previas de diseño, presupuesto y permisos. En este artículo te explicamos de dónde salen esas cifras, qué partidas pesan más, qué fases tiene la obra y qué puede desviar el presupuesto o el calendario. Todos los precios son orientativos: el presupuesto real exige una visita al piso y una medición.
 
@@ -37,7 +37,7 @@ Dos pisos de 90 m² en el mismo edificio pueden tener presupuestos que se difere
 
 **Estado de origen.** Un piso con instalaciones de hace 40 años obliga a renovar electricidad y fontanería enteras; uno reformado hace 15 años quizá solo necesite acabados. Antes de pedir precio, averigua la fecha de la última reforma.
 
-**Cambio de distribución.** Tirar tabiques de ladrillo hueco es barato. Tocar un muro de carga exige técnico, proyecto, cálculo estructural y, casi siempre, licencia de obra mayor. Multiplica el coste de esa partida y añade semanas al calendario.
+**Cambio de distribución.** Tirar tabiques de ladrillo hueco es barato. Tocar un muro de carga exige técnico competente, proyecto, cálculo estructural y, habitualmente, licencia de obras. Multiplica el coste de esa partida y añade semanas al calendario.
 
 **Número de baños y cocina.** Cada baño completo añade, de forma orientativa, entre 5.000 y 9.000 € al presupuesto; una cocina completa, entre 7.000 y 15.000 € sin electrodomésticos. Un piso de 120 m² con tres baños puede costar más por m² que uno de 90 con uno solo.
 
@@ -115,7 +115,7 @@ El plazo de obra depende de la superficie, pero sobre todo del alcance: cuántas
 El calendario real empieza bastante antes de la obra. Cuenta con estas fases previas:
 
 - Visita, medición y propuesta de distribución: una o dos semanas. Si quieres planos y modelado del espacio antes de decidir, mira [proyecto, diseño y distribución](/servicios/proyectos-diseno).
-- Presupuesto cerrado por partidas y elección de materiales: una o dos semanas más. Cuanto antes elijas suelos, cocina y sanitarios, menos parones habrá después.
+- Presupuesto por partidas y elección de materiales: una o dos semanas más. Cuanto antes elijas suelos, cocina y sanitarios, menos parones habrá después.
 - Permisos: en Cataluña, muchas reformas interiores sin afectación estructural se tramitan por comunicación previa, que habitualmente es rápida. Las que afectan a estructura o fachada necesitan licencia, y ahí el plazo depende de cada ayuntamiento y puede ser de meses. Lo explicamos en [permisos para reformar una vivienda en Cataluña](/blog/permisos-reformar-vivienda-cataluna-licencia-obras).
 - Pedidos con plazo largo: ventanas a medida, cocina y puertas suelen tardar entre cuatro y ocho semanas en fabricarse. Si se piden el día que empieza la obra, la obra se para a mitad.
 - Aviso a la comunidad: horarios de obra, uso del ascensor, zona de acopio y seguro de responsabilidad civil de la empresa.
@@ -166,7 +166,7 @@ No necesitas conocer la normativa al detalle, pero sí saber qué existe y quié
 
 ## Siguiente paso
 
-Si tienes un piso de 70, 90 o 120 m² y quieres saber cuánto costaría y cuánto duraría tu reforma, pide un [presupuesto sin compromiso](/presupuesto). Visitamos el piso, medimos y te entregamos un presupuesto cerrado por partidas con calendario de obra. Trabajamos en toda Cataluña y en el resto de España, con base en Barcelona, Igualada y la comarca de Anoia.`,
+Si tienes un piso de 70, 90 o 120 m² y quieres saber cuánto costaría y cuánto duraría tu reforma, pide un [presupuesto sin compromiso](/presupuesto). Visitamos el piso, medimos y te entregamos un presupuesto detallado por partidas con calendario de obra. Trabajamos en toda Cataluña y en el resto de España, con base en Barcelona, Igualada y la comarca de Anoia.`,
   categorySlug: "reformas-viviendas",
   tags: ["reforma de piso", "precio reforma piso", "plazos de obra", "presupuesto por partidas", "reforma integral", "Cataluña"],
   relatedServiceSlugs: [

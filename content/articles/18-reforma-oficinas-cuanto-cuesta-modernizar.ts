@@ -37,13 +37,13 @@ Si la oficina está en un local a pie de calle, el precio se acerca al de un loc
 
 **Salas y despachos cerrados.** Cada sala cerrada exige tabique o mampara, puerta, su propio punto de climatización, iluminación independiente y, si se quiere confidencialidad, aislamiento acústico. Una planta diáfana con dos salas cuesta bastante menos que una con ocho despachos.
 
-**Acústica.** En oficinas abiertas el ruido es la queja número uno. Techos fonoabsorbentes, paneles, mamparas con vidrio acústico y cabinas de llamadas suman entre 30 y 80 €/m² según el tratamiento.
+**Acústica.** En oficinas abiertas el ruido es la queja más frecuente. Techos fonoabsorbentes, paneles, mamparas con vidrio acústico y cabinas de llamadas suman entre 30 y 80 €/m² según el tratamiento.
 
 **Cableado de datos y tecnología.** Un cableado estructurado de categoría 6 o 6A con rack, electrónica de red, wifi profesional y preinstalación de videoconferencia en salas es una partida que no se ve pero que condiciona el trabajo diario. Lo detallamos en [domótica y telecomunicaciones](/servicios/domotica-telecomunicaciones).
 
 **Horario y fases.** Trabajar de noche, en fines de semana o por fases para no interrumpir la actividad encarece la mano de obra y alarga el calendario, pero evita cerrar la oficina. Es una decisión económica que conviene tomar con números.
 
-**Imprevistos.** Instalaciones ocultas sin planos, amianto en edificios anteriores a 2002 o un cuadro eléctrico sin capacidad aparecen cuando ya has empezado. Reserva entre un 10 % y un 15 % del presupuesto.
+**Imprevistos.** Instalaciones ocultas sin planos, amianto en edificios anteriores a su prohibición en España (principios de los años 2000) o un cuadro eléctrico sin capacidad aparecen cuando ya has empezado. Reserva entre un 10 % y un 15 % del presupuesto.
 
 ## Desglose de partidas de una reforma de oficina
 
@@ -100,7 +100,7 @@ En muchas reformas de oficina la empresa no puede cerrar. Se puede trabajar con 
 4. Protege equipos y archivo. Traslado temporal a la zona no afectada, plásticos y filtros en la climatización para que el polvo no entre en los equipos.
 5. Nombra un interlocutor único por cada parte. Una persona de la empresa y un responsable de obra que hablen cada día evitan la mayoría de los conflictos.
 
-Trabajar con la oficina abierta alarga el calendario entre un 25 % y un 50 % y encarece las fases nocturnas o de fin de semana. Si la empresa puede teletrabajar durante las semanas más duras, la obra sale más rápida y más barata. En [reformas de oficinas](/servicios/reformas-oficinas) explicamos cómo planificamos la obra por fases.
+Trabajar con la oficina abierta alarga el calendario de forma apreciable (de forma orientativa, entre un 25 % y un 50 %) y encarece las fases nocturnas o de fin de semana. Si la empresa puede teletrabajar durante las semanas más duras, la obra sale más rápida y más barata. En [reformas de oficinas](/servicios/reformas-oficinas) explicamos cómo planificamos la obra por fases.
 
 ## Plazos orientativos de una reforma de oficina
 
@@ -119,7 +119,7 @@ Una reforma de oficina casi siempre necesita algún trámite municipal, y si cam
 
 - **Licencia o comunicación de obras.** En Cataluña, la Ley 3/2012 y el Decreto 64/2014 regulan el régimen de licencias y comunicaciones. Una reforma interior sin afectar estructura ni fachada suele tramitarse como comunicación previa en muchos municipios; si afecta a estructura, fachada o cambio de uso, requiere licencia con proyecto de técnico competente. En Barcelona el trámite se hace habitualmente por vía telemática a través del Ayuntamiento.
 - **Licencia de actividad.** Una oficina es una actividad y, al abrirla o modificarla de forma sustancial, suele exigir comunicación o licencia de actividad con documentación técnica. Si la oficina ocupa un local que antes tenía otro uso, revisa primero la compatibilidad urbanística. Lo detallamos en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
-- **Código Técnico de la Edificación (CTE, RD 314/2006).** Te afectan el DB-SI (seguridad en caso de incendio: recorridos de evacuación, sectorización, extintores y señalización), el DB-SUA (seguridad de utilización y accesibilidad: aseos adaptados, itinerarios accesibles, escaleras), el DB-HS (salubridad y calidad del aire) y el DB-HE (eficiencia energética, incluida la iluminación).
+- **Código Técnico de la Edificación (CTE, RD 314/2006).** Te afectan el DB-SI (seguridad en caso de incendio: recorridos de evacuación, sectorización, extintores y señalización), el DB-SUA (seguridad de utilización y accesibilidad: aseos adaptados, itinerarios accesibles, escaleras), el DB-HS (salubridad) y el DB-HE (eficiencia energética, incluida la iluminación).
 - **Reglamento de Instalaciones Térmicas en los Edificios (RITE, RD 1027/2007).** Fija la calidad del aire interior y la ventilación mínima según el uso y la ocupación, y las condiciones de la climatización. Las instalaciones las ejecuta y certifica una empresa habilitada.
 - **Reglamento Electrotécnico para Baja Tensión (REBT, RD 842/2002).** La instalación eléctrica de un local de pública concurrencia o de una oficina se ejecuta y certifica por instalador habilitado; según la potencia y el uso puede requerir proyecto eléctrico.
 - **Reglamento de instalaciones de protección contra incendios (RIPCI, RD 513/2017).** Las instalaciones de PCI las diseñan, instalan y mantienen empresas habilitadas.
@@ -168,7 +168,7 @@ Si tu empresa necesita modernizar la oficina, crecer en la misma planta o adecua
     {
       question: "¿Se puede reformar una oficina sin cerrar la empresa?",
       answer:
-        "Sí, planificando la obra por fases, con cerramientos provisionales, trabajos ruidosos en franjas pactadas y líneas provisionales de electricidad y datos. Alarga el plazo entre un 25 % y un 50 % y encarece las fases nocturnas o de fin de semana. Si la empresa puede teletrabajar unas semanas, la obra sale más rápida y más barata.",
+        "Sí, planificando la obra por fases, con cerramientos provisionales, trabajos ruidosos en franjas pactadas y líneas provisionales de electricidad y datos. Alarga el plazo de forma orientativa entre un 25 % y un 50 % y encarece las fases nocturnas o de fin de semana. Si la empresa puede teletrabajar unas semanas, la obra sale más rápida y más barata.",
     },
     {
       question: "¿Qué licencia necesito para reformar una oficina?",

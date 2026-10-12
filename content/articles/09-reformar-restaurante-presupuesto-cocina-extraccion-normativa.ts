@@ -36,7 +36,7 @@ Conviene separar tres bloques desde el primer día: la obra (albañilería, inst
 - **Insonorización.** Un restaurante bajo viviendas tiene que cumplir límites de ruido. El aislamiento acústico de techos, paredes, conductos y maquinaria es una partida seria, no un extra.
 - **Estado del local.** Un local que ya fue restaurante puede conservar salida de humos, separador de grasas y aseos, siempre que estén en buen estado y cumplan la normativa actual.
 
-## La cocina: distribución e instalaciones
+## Cocina, extracción e instalaciones: lo que define el proyecto
 
 Antes de hablar de azulejos conviene definir la carta, los servicios por turno y los equipos. De ahí salen la potencia térmica, el caudal de extracción, los puntos de agua y desagüe y la potencia eléctrica.
 
@@ -48,31 +48,27 @@ Una cocina bien distribuida evita cruces entre lo limpio y lo sucio: recepción 
 
 El gas sigue siendo lo habitual en fuegos y hornos de alta producción. La instalación receptora la ejecuta y certifica un instalador de gas habilitado conforme al RD 919/2006, con pruebas de estanqueidad y certificado de puesta en servicio. La inducción elimina el gas y reduce el calor en cocina, pero exige una potencia eléctrica elevada y equipos más caros. Se decide con el chef y con la potencia disponible. Te explicamos el proceso en el servicio de [instalaciones de gas](/servicios/instalaciones-gas).
 
-## Extracción de humos y ventilación
+### Extracción de humos: campana, filtros, conducto y salida a cubierta
 
-Después de la salida de humos, la ventilación es la partida que más sorprende en un presupuesto de restaurante. Las instalaciones de ventilación y extracción las diseña y certifica una empresa instaladora habilitada en instalaciones térmicas conforme al RITE.
-
-### Campana, filtros, conducto y salida a cubierta
-
-La campana se dimensiona por la potencia y el tipo de equipos que cubre, con filtros de grasa, iluminación estanca y, en cocinas grandes, extinción integrada. El conducto debe ser estanco, resistente al fuego, con registros de limpieza, y subir hasta la cubierta salvo que la ordenanza municipal permita otra solución. Muchos ayuntamientos fijan la altura de salida sobre cubierta y la distancia a ventanas de viviendas. Consulta la ordenanza antes de dar por hecha una salida de humos.
+Después de la salida de humos, la ventilación es la partida que más sorprende en un presupuesto de restaurante. Las instalaciones de ventilación y extracción las diseña y certifica una empresa instaladora habilitada en instalaciones térmicas conforme al RITE. La campana se dimensiona por la potencia y el tipo de equipos que cubre, con filtros de grasa, iluminación estanca y, en cocinas grandes, extinción integrada. El conducto debe ser estanco, resistente al fuego, con registros de limpieza, y subir hasta la cubierta salvo que la ordenanza municipal permita otra solución. Muchos ayuntamientos fijan la altura de salida sobre cubierta y la distancia a ventanas de viviendas. Consulta la ordenanza antes de dar por hecha una salida de humos.
 
 ### Aportación de aire y ventilación de la sala
 
 Lo que la campana extrae hay que reponerlo. Sin aportación de aire la cocina entra en depresión, la campana pierde eficacia y los olores se van a la sala. En la sala, el RITE exige una calidad de aire interior según uso y aforo: un caudal de aire exterior por persona y, en muchos casos, un recuperador de calor. Lo desarrollamos en [ventilación y extracción](/servicios/ventilacion-extraccion) y, para la parte de normativa, en [ventilación de gimnasios y locales comerciales: requisitos del RITE](/blog/ventilacion-gimnasios-locales-rite).
 
-## Electricidad, agua caliente, desagües y frío
+### Electricidad, agua caliente, desagües y frío
 
 La instalación eléctrica de un restaurante la ejecuta y certifica un instalador habilitado en baja tensión conforme al REBT (RD 842/2002), con las prescripciones de locales de pública concurrencia: alumbrado de emergencia, cuadro con protecciones por circuito y líneas independientes para cada equipo de cocina. El certificado de instalación es lo que te permite contratar la potencia. Detalle en [instalaciones eléctricas](/servicios/instalaciones-electricas).
 
 El agua caliente tiene picos de demanda en lavado y fregaderos; se dimensiona con acumulación o con un calentador de gran caudal. Los desagües de cocina pasan por un separador de grasas con registro de limpieza, exigido por la práctica totalidad de ordenanzas. Las cámaras necesitan desagüe de condensados y ventilación del motor o condensador remoto.
 
-## Sala, barra, aseos y accesibilidad
+### Sala, barra, aseos y accesibilidad
 
 En la sala cuentan la climatización con renovación de aire, la iluminación regulable, las tomas para TPV y datos y, si hay barra, sus fregaderos, lavavajillas, botelleros y máquina de café. Para elegir sistema de climatización tienes una comparativa en [aire acondicionado por conductos o cassette](/blog/aire-acondicionado-conductos-o-cassette-locales).
 
 Los aseos de público deben cumplir el DB-SUA del CTE: al menos uno accesible con espacio de giro, barras y aparatos adaptados. El acceso sin escalón o con rampa y la anchura de los recorridos de evacuación entre mesas forman parte del mismo requisito.
 
-## Insonorización y acústica
+### Insonorización y acústica
 
 Un restaurante bajo viviendas debe cumplir los límites de ruido del DB-HR del CTE y de la ordenanza municipal, que en muchos municipios exige estudio acústico y ensayo final. La solución habitual combina techo acústico desolidarizado, trasdosados en medianeras, silenciadores en conductos y bancadas antivibratorias para la maquinaria. Hacerlo con el local abierto es mucho más caro. Lo tratamos en [techos y aislamientos](/servicios/techos-aislamientos).
 
@@ -82,7 +78,7 @@ La normativa define el proyecto, no solo el trámite final. Consulta siempre la 
 
 ### Licencia de obras y licencia de actividad
 
-Son dos expedientes distintos. La licencia o comunicación de obras autoriza la reforma; en Cataluña su régimen lo fijan la Ley 3/2012, el Decreto 64/2014 y la ordenanza de cada municipio. La licencia de actividad autoriza el funcionamiento del restaurante y, para la restauración, suele exigir un proyecto técnico de actividad con sus instalaciones, estudio acústico, plan de evacuación y control inicial por una entidad acreditada en muchos casos. Antes de firmar el alquiler, comprueba con un técnico la compatibilidad de la actividad de restauración con el planeamiento y con la comunidad de propietarios. Para locales en la capital tienes una guía en [reforma de locales comerciales en Barcelona: precios, licencias y plazos](/blog/reforma-locales-comerciales-barcelona-precios-licencias-plazos), y tramitamos todo a través de técnicos colegiados en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
+Son dos expedientes distintos. La licencia o comunicación de obras autoriza la reforma; en Cataluña su régimen lo fijan la Ley 3/2012, el Decreto 64/2014 y la ordenanza de cada municipio. La licencia de actividad autoriza el funcionamiento del restaurante y, para la restauración, suele exigir un proyecto técnico de actividad con sus instalaciones, estudio acústico, plan de evacuación y control inicial por una entidad acreditada en muchos casos. Antes de firmar el alquiler, comprueba con un técnico la compatibilidad de la actividad de restauración con el planeamiento y con la comunidad de propietarios. Para locales en la capital tienes una guía en [reforma de locales comerciales en Barcelona: precios, licencias y plazos](/blog/reforma-locales-comerciales-barcelona-precios-licencias-plazos), y coordinamos la tramitación con técnicos competentes en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
 
 ### Código Técnico de la Edificación
 
@@ -94,7 +90,7 @@ El RITE (RD 1027/2007) regula climatización, ventilación y calidad del aire in
 
 ### Higiene alimentaria y autorización sanitaria
 
-El restaurante necesita la inscripción o autorización sanitaria que fije la normativa autonómica y municipal, y debe cumplir la normativa europea de higiene de los alimentos (Reglamento (CE) 852/2004): materiales lavables, lavamanos específicos, separación de zonas, cadena de frío y control de plagas.
+El restaurante necesita la inscripción o autorización sanitaria que fije la normativa autonómica y municipal, y debe cumplir la normativa de higiene de los alimentos, de origen europeo y aplicada por las autoridades sanitarias: materiales lavables, lavamanos específicos, separación de zonas, cadena de frío y control de plagas. Consulta los requisitos concretos con la administración sanitaria de tu territorio.
 
 ## Desglose de partidas de la reforma de un restaurante
 

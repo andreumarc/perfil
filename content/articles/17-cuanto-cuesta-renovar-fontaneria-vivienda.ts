@@ -31,7 +31,7 @@ En una casa la red es más larga, hay más plantas, a menudo hay instalación ex
 
 ## Factores que cambian el presupuesto
 
-Dos pisos de la misma superficie pueden tener presupuestos que se diferencien en un 60 %. Estas son las variables que más pesan.
+Dos pisos de la misma superficie pueden tener presupuestos muy distintos. Estas son las variables que más pesan.
 
 **Material actual.** El plomo hay que retirarlo entero y sin excepciones. El hierro galvanizado suele estar obstruido por dentro y se sustituye completo. El cobre en buen estado puede conservarse parcialmente, aunque mezclar tramos nuevos y viejos no suele compensar.
 
@@ -68,7 +68,7 @@ Una instalación de cobre o polietileno de menos de 25 años, sin fugas y con bu
 
 En la mayoría de viviendas la elección razonable en 2026 es PEX o multicapa con sistema de colector: desde un distribuidor con una llave por aparato salen tuberías continuas hasta cada punto, sin uniones ocultas dentro de la pared. Cuesta algo más en material que una instalación en serie, pero reduce las fugas al mínimo y permite cortar el agua de un solo aparato sin dejar sin servicio al resto de la casa.
 
-En desagües, el criterio son los diámetros y las pendientes: lavabos en 32 o 40 mm, duchas y fregaderos en 40 o 50 mm e inodoros en 110 mm, con pendiente suficiente para que el agua arrastre los sólidos. Un desagüe de ducha con poca pendiente es la causa más frecuente de olores y atascos en baños reformados.
+En desagües, el criterio son los diámetros y las pendientes que fija el DB-HS del Código Técnico según el aparato (de forma orientativa, lavabos en 32 o 40 mm, duchas y fregaderos en 40 o 50 mm e inodoros en 110 mm), con pendiente suficiente para que el agua arrastre los sólidos. Un desagüe de ducha con poca pendiente es la causa más frecuente de olores y atascos en baños reformados.
 
 ## Ejemplo simulado: fontanería completa de un piso de 85 m²
 
@@ -161,7 +161,7 @@ Si tu vivienda tiene tuberías de plomo o hierro, fugas repetidas o estás prepa
     {
       question: "¿Cuánto tiempo se tarda en renovar la fontanería de un piso?",
       answer:
-        "Entre 3 y 6 días de trabajo de fontanería para un piso con un baño y cocina, sin contar albañilería y acabados. Dentro de una reforma integral la fontanería se ejecuta en la fase de instalaciones y no alarga el plazo general. Los cortes de agua suelen limitarse a unas horas y se avisan a la comunidad.",
+        "De forma orientativa, entre 3 y 6 días de trabajo de fontanería para un piso con un baño y cocina, sin contar albañilería y acabados. Dentro de una reforma integral la fontanería se ejecuta en la fase de instalaciones y no alarga el plazo general. Los cortes de agua suelen limitarse a unas horas y se avisan a la comunidad.",
     },
   ],
   sources: [

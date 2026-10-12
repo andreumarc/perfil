@@ -19,11 +19,11 @@ Cada municipio regula en su plan general y en sus ordenanzas qué usos se admite
 
 ### Que el local pueda cumplir las condiciones de habitabilidad
 
-En Cataluña las condiciones mínimas de habitabilidad de las viviendas las fija el Decreto 141/2012 de la Generalitat y la cédula de habitabilidad acredita que se cumplen. Para un cambio de uso se aplican, en general, las exigencias de vivienda de nueva creación: superficie útil mínima, altura libre mínima (habitualmente del orden de 2,5 m en las piezas principales), fachada a calle o patio con dimensiones suficientes, ventilación e iluminación natural en salón y dormitorios, cocina y baño completos, y accesibilidad según el caso. Un local interior sin fachada, con techos bajos o muy profundo con una sola ventana puede no cumplir por mucho que se reforme. Fuera de Cataluña cada comunidad autónoma tiene su propia normativa.
+En Cataluña las condiciones mínimas de habitabilidad de las viviendas las fija la normativa de habitabilidad de la Generalitat y la cédula de habitabilidad acredita que se cumplen. Para un cambio de uso se aplican, en general, las exigencias de vivienda de nueva creación: superficie útil mínima, altura libre mínima en las piezas principales, fachada a calle o patio con dimensiones suficientes, ventilación e iluminación natural en salón y dormitorios, cocina y baño completos, y accesibilidad según el caso. Los valores concretos los fija la normativa vigente en cada momento; pídelos al técnico. Un local interior sin fachada, con techos bajos o muy profundo con una sola ventana puede no cumplir por mucho que se reforme. Fuera de Cataluña cada comunidad autónoma tiene su propia normativa.
 
 ### Que la comunidad y los estatutos no lo impidan
 
-El local es un elemento privativo y, en principio, su propietario puede cambiar el uso, pero los estatutos de la comunidad pueden prohibirlo o condicionarlo, y la obra suele afectar a elementos comunes: apertura de huecos en fachada, nuevas acometidas, conexión a bajantes, instalación de salida de humos o de unidades exteriores. Esas afectaciones requieren acuerdo de la junta según la normativa de propiedad horizontal aplicable (en Cataluña, el Código Civil catalán). Pide los estatutos y habla con el administrador antes de comprar.
+El local es un elemento privativo y, en principio, su propietario puede cambiar el uso, pero los estatutos de la comunidad pueden prohibirlo o condicionarlo, y la obra suele afectar a elementos comunes: apertura de huecos en fachada, nuevas acometidas, conexión a bajantes, instalación de salida de humos o de unidades exteriores. Esas afectaciones requieren acuerdo de la junta según la normativa de propiedad horizontal aplicable en cada territorio. Pide los estatutos y habla con el administrador antes de comprar.
 
 ## Requisitos técnicos que suele exigir el cambio de uso
 
@@ -58,7 +58,7 @@ Los locales en planta baja o semisótano suelen tener solera sin barrera de vapo
 7. **Licencia de primera ocupación o comunicación**, según exija el municipio, y alta de suministros como vivienda.
 8. **Escritura de cambio de uso, Registro de la Propiedad y Catastro.** Se formaliza ante notario la modificación de la descripción de la finca, se inscribe en el registro y se actualiza el catastro, que afecta al IBI.
 
-Todo el proceso lo coordinamos con técnicos colegiados a través del servicio de [licencias y dirección técnica](/servicios/licencias-direccion-tecnica). Tienes el marco general de permisos de vivienda en [permisos para reformar una vivienda en Cataluña: cuándo necesitas licencia de obras](/blog/permisos-reformar-vivienda-cataluna-licencia-obras).
+Todo el proceso lo coordinamos con técnicos competentes a través del servicio de [licencias y dirección técnica](/servicios/licencias-direccion-tecnica). Tienes el marco general de permisos de vivienda en [permisos para reformar una vivienda en Cataluña: cuándo necesitas licencia de obras](/blog/permisos-reformar-vivienda-cataluna-licencia-obras).
 
 ## Cuánto cuesta convertir un local en vivienda
 

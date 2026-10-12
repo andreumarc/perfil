@@ -31,7 +31,7 @@ Antes de comparar presupuestos conviene saber qué los mueve. Estos son los fact
 - **Gama de cerámica y formato.** El porcelánico de gran formato (60x120 o más) reduce juntas y queda mejor, pero su colocación cuesta más por m² y exige paredes bien regularizadas.
 - **Acceso y evacuación de escombros.** Un piso sin ascensor en un casco antiguo encarece la demolición y la subida de material. En Barcelona y otras ciudades, el contenedor o los sacos en la calle requieren además permiso de ocupación de vía pública.
 - **Extras de confort.** Toallero radiador, suelo radiante eléctrico, nicho de obra en la ducha, espejo con luz integrada, inodoro suspendido con cisterna empotrada o grifería termostática empotrada. Cada uno suma entre 150 y 1.000 euros instalado.
-- **Zona y momento.** La mano de obra en Barcelona y su área metropolitana suele ser algo más cara que en Igualada, Anoia o el resto de Cataluña. Los plazos de entrega de cerámica y sanitarios también influyen en el calendario y, a veces, en el precio.
+- **Zona y momento.** La mano de obra en Barcelona y su área metropolitana puede ser algo más cara que en Igualada, Anoia o el resto de Cataluña. Los plazos de entrega de cerámica y sanitarios también influyen en el calendario y, a veces, en el precio.
 
 ## Desglose de partidas de una reforma de baño
 
@@ -120,7 +120,7 @@ Una reforma de baño que no toca estructura ni fachada suele tramitarse como obr
 
 ### Comunidad de propietarios y ocupación de vía pública
 
-Si la obra afecta a la bajante, a un conducto de ventilación común o a la fachada (por ejemplo, para sacar la extracción), tienes que comunicarlo a la comunidad y, en algunos casos, pedir autorización. Para colocar un contenedor o sacos de escombros en la calle hace falta un permiso de ocupación de vía pública con su tasa. Son importes pequeños, pero conviene tenerlos en el presupuesto desde el principio.
+Si la obra afecta a la bajante, a un conducto de ventilación común o a la fachada (por ejemplo, para sacar la extracción), tienes que comunicarlo a la comunidad y, en algunos casos, pedir autorización. Para colocar un contenedor o sacos de escombros en la calle hace falta un permiso de ocupación de vía pública con su tasa. Suelen ser importes moderados, pero conviene tenerlos en el presupuesto desde el principio.
 
 ## Errores habituales que encarecen la reforma del baño
 

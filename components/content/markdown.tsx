@@ -42,7 +42,7 @@ const components: Components = {
     );
   },
   table: ({ children }) => (
-    <div className="my-6 overflow-x-auto rounded-md border border-gray-200">
+    <div className="my-6 overflow-x-auto rounded-md border border-gray-200" tabIndex={0} role="region" aria-label="Tabla con desplazamiento horizontal">
       <table className="my-0! min-w-full">{children}</table>
     </div>
   ),

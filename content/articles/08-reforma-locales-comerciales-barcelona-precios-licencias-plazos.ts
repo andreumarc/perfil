@@ -7,7 +7,7 @@ export const article: ArticleContent = {
     "Cuánto cuesta reformar un local comercial en Barcelona por m², qué licencias de obra y de actividad necesitas, cuánto tarda cada fase y qué errores encarecen la obra o retrasan la apertura.",
   body: `Reformar un local comercial en Barcelona cuesta, de forma orientativa y según mercado, entre 250 y 450 euros por m² si solo adecuas un local que ya estuvo en uso, entre 450 y 800 euros por m² en una reforma media con instalaciones renovadas, y entre 800 y 1.300 euros por m² si partes de un local en bruto o necesitas instalaciones completas y acabados de nivel alto. Todo sin IVA, que en locales es habitualmente el 21 %. Un restaurante o una clínica se van por encima de esas cifras por la cocina, la extracción o el equipamiento sanitario.
 
-A ese presupuesto hay que sumar dos cosas que en Barcelona pesan más que en otros municipios: la tramitación (permiso de obras y licencia o comunicación de actividad, cada uno con su documentación) y la logística urbana (horarios, ocupación de vía pública, acceso de vehículos). Este artículo te da los precios por m² y por tipo de negocio, el desglose de partidas, qué licencias necesitas y en qué orden, cuánto tarda cada fase y los errores que más retrasan una apertura. El presupuesto real sale siempre de una visita al local y de un proyecto.
+A ese presupuesto hay que sumar dos cosas que en Barcelona pesan más que en otros municipios: la tramitación (permiso de obras y licencia o comunicación de actividad) y la logística urbana (horarios, ocupación de vía pública, acceso de vehículos). Aquí tienes los precios por m² y por tipo de negocio, el desglose de partidas, qué licencias necesitas y en qué orden, cuánto tarda cada fase y los errores que más retrasan una apertura. El presupuesto real sale siempre de una visita al local y de un proyecto.
 
 ## Cuánto cuesta reformar un local comercial en Barcelona: precios por m²
 
@@ -21,7 +21,7 @@ El precio depende más del estado de partida y de las instalaciones que de los m
 | Reforma media | Redistribución con pladur, instalación eléctrica renovada, climatización, aseo accesible, escaparate, acabados | 450 a 800 |
 | Reforma completa o local en bruto | Acometidas, instalaciones nuevas, falsos techos, aseos, climatización y ventilación, carpinterías, acabados de nivel alto | 800 a 1.300 |
 
-Son rangos de mercado para Barcelona y su área metropolitana. Varían según proyecto, calidades y estado del edificio. En el resto de Cataluña la mano de obra y la logística suelen ser algo más baratas, pero las partidas de instalaciones apenas cambian.
+Son rangos orientativos de mercado para Barcelona y su área metropolitana, IVA excluido, que varían según proyecto, calidades y estado del edificio. En el resto de Cataluña la mano de obra y la logística suelen ser algo más baratas, pero las partidas de instalaciones apenas cambian.
 
 ### Precios orientativos según el tipo de negocio
 
@@ -40,15 +40,15 @@ Si quieres el detalle por tipo de negocio, en [cuánto cuesta reformar un local 
 
 ### El estado de partida del local
 
-Local en bruto significa suelo de hormigón, sin falso techo, sin aseo, sin cuadro eléctrico y a veces sin acometida de agua. Cada carencia es una partida completa. Un local que ya tuvo una actividad similar puede reutilizar acometida, cuadro, aseo y parte de la climatización, siempre que un instalador habilitado lo revise y lo certifique.
+Local en bruto significa suelo de hormigón, sin falso techo, sin aseo, sin cuadro eléctrico y a veces sin acometida de agua. Cada carencia es una partida completa. Un local con actividad similar previa puede reutilizar acometida, cuadro, aseo y parte de la climatización, siempre que un instalador habilitado lo revise y lo certifique.
 
 ### El cambio de actividad
 
-Pasar de tienda a restaurante, de oficina a clínica o de almacén a academia cambia las exigencias de ventilación, evacuación, aseos y potencia eléctrica. También cambia el trámite: una actividad con más incidencia ambiental o sanitaria suele exigir más documentación y, en Barcelona, en algunos casos la certificación de una entidad colaboradora antes de presentar la comunicación. Antes de firmar el alquiler, comprueba que el uso que quieres es compatible con el planeamiento de la zona. Lo vemos en [adecuación de locales para otros negocios](/servicios/adecuacion-locales).
+Pasar de tienda a restaurante, de oficina a clínica o de almacén a academia cambia las exigencias de ventilación, evacuación, aseos y potencia eléctrica. También cambia el trámite: una actividad con más incidencia ambiental o sanitaria suele exigir más documentación y, en algunos casos, la certificación de una entidad colaboradora. Antes de firmar el alquiler, comprueba que el uso es compatible con el planeamiento de la zona. Lo vemos en [adecuación de locales para otros negocios](/servicios/adecuacion-locales).
 
 ### Potencia eléctrica y acometidas
 
-Es el factor más olvidado y el que más sorpresas da. Un comercio con climatización e iluminación LED suele moverse en potencias que no exigen obra en la acometida. Una cocina eléctrica, un centro de estética con aparatología o un gimnasio pueden necesitar trifásica o un aumento de potencia con obras de la distribuidora, con su plazo y su coste. Pídelo al principio, no al final.
+Es el factor más olvidado. Un comercio con climatización e iluminación LED suele moverse en potencias que no exigen obra en la acometida. Una cocina eléctrica, un centro de estética con aparatología o un gimnasio pueden necesitar trifásica o un aumento de potencia con obras de la distribuidora, con su plazo y su coste. Pídelo al principio, no al final.
 
 ### Fachada, escaparate y rótulo
 
@@ -56,15 +56,11 @@ En Barcelona la fachada no es solo tuya. Escaparate, rótulo, toldo y cualquier 
 
 ### Accesibilidad y aseos
 
-El DB-SUA del Código Técnico fija las condiciones de accesibilidad y seguridad de uso. En la práctica, un local abierto al público suele necesitar acceso sin escalón o con rampa, anchos de paso suficientes y, según superficie y uso, un aseo accesible. Una rampa interior para salvar el desnivel de la entrada se come metros de venta. Mejor saberlo en el plano que en la obra.
+El DB-SUA del Código Técnico fija las condiciones de accesibilidad y seguridad de uso. Un local abierto al público suele necesitar acceso sin escalón o con rampa, anchos de paso suficientes y, según superficie y uso, un aseo accesible. Una rampa interior se come metros de venta: mejor saberlo en el plano que en la obra.
 
-### Acústica, horarios y vecinos
+### Acústica, vecinos y logística urbana
 
-Casi todos los locales de Barcelona tienen viviendas encima. La ordenanza municipal de medio ambiente limita el ruido que puede transmitir una actividad y, en bares, restaurantes, gimnasios o academias de música, obliga a aislamientos que encarecen techos y paredes. Durante la obra, los trabajos ruidosos se limitan habitualmente a días laborables en horario diurno, lo que alarga el calendario.
-
-### Logística urbana
-
-Contenedor en la calle con permiso de ocupación de vía pública y tasa, carga y descarga en calles con restricciones, acceso de furgonetas condicionado por la zona de bajas emisiones, ascensores pequeños o inexistentes. Todo se traduce en horas de mano de obra. En Barcelona es normal que la partida de medios auxiliares y residuos pese algo más que en otros municipios.
+Casi todos los locales de Barcelona tienen viviendas encima. La ordenanza municipal limita el ruido que puede transmitir una actividad y, en bares, restaurantes, gimnasios o academias de música, obliga a aislamientos que encarecen techos y paredes. Durante la obra, los trabajos ruidosos se limitan habitualmente a días laborables en horario diurno, lo que alarga el calendario. Súmale contenedor con permiso de ocupación de vía pública, carga y descarga en calles con restricciones, acceso condicionado por la zona de bajas emisiones y ascensores pequeños o inexistentes: en Barcelona la partida de medios auxiliares y residuos suele pesar algo más que en otros municipios.
 
 ## Desglose de partidas: en qué se va el dinero
 
@@ -90,7 +86,7 @@ Las partidas de electricidad, climatización, gas y protección contra incendios
 
 ## Licencias para reformar y abrir un local en Barcelona
 
-Aquí está la diferencia entre abrir en plazo y abrir con retraso. En un local hay dos trámites distintos: el permiso para hacer la obra y la autorización para ejercer la actividad. Ambos se gestionan ante el Ayuntamiento de Barcelona, habitualmente por sede electrónica, y los dos los firma un técnico competente. En [licencias y dirección técnica](/servicios/licencias-direccion-tecnica) coordinamos los dos trámites con el calendario de obra.
+En un local hay dos trámites distintos: el permiso para hacer la obra y la autorización para ejercer la actividad. Ambos se gestionan ante el Ayuntamiento de Barcelona y los dos los firma un técnico competente. En [licencias y dirección técnica](/servicios/licencias-direccion-tecnica) coordinamos los dos trámites con el calendario de obra.
 
 ### Permiso de obras: enterado, comunicado o licencia
 
@@ -100,7 +96,7 @@ La ordenanza municipal de Barcelona que regula la intervención en las obras cla
 - Obras interiores con cierta entidad (redistribución, instalaciones nuevas, aseos, falsos techos) suelen ir por comunicado diferido: presentas documentación técnica y esperas el plazo que marque la ordenanza antes de empezar.
 - Obras que afectan a estructura, fachada, edificios protegidos, cambio de uso o aumento de superficie exigen licencia de obras con proyecto completo, y no puedes empezar hasta que se concede.
 
-El régimen concreto depende de la ordenanza vigente y de la zona, porque los entornos protegidos tienen criterios propios. Si tu reforma toca el escaparate o modifica la fachada, da por hecho que el trámite se complica. Si dudas, la consulta previa en urbanismo te evita un expediente de disciplina urbanística.
+El régimen concreto depende de la ordenanza vigente y de la zona, porque los entornos protegidos tienen criterios propios. Si tu reforma toca el escaparate o la fachada, da por hecho que el trámite se complica. Si dudas, la consulta previa en urbanismo te evita un expediente de disciplina urbanística.
 
 ### Licencia de actividad: comunicación previa o licencia
 
@@ -108,23 +104,15 @@ La actividad se regula por la legislación catalana de prevención y control amb
 
 - Comercios minoristas, oficinas, academias, peluquerías o servicios de poca incidencia suelen ir por comunicación previa o declaración responsable. Se presenta con la obra terminada y un certificado técnico que acredita que el local cumple la normativa, y habitualmente se puede abrir al presentarla.
 - Actividades con más incidencia (restauración, gimnasios con cierto aforo, talleres, actividades con música) suelen requerir, además, la certificación de una entidad colaboradora de la administración o un procedimiento de licencia con informes previos.
-- Algunas actividades tienen autorizaciones sectoriales aparte: las clínicas y centros sanitarios necesitan la autorización de la Generalitat, y los establecimientos de restauración, el registro sanitario correspondiente.
+- Algunas actividades tienen autorizaciones sectoriales aparte: las clínicas y centros sanitarios necesitan la autorización sanitaria de la Generalitat, y los establecimientos de restauración, la inscripción o registro sanitario que corresponda.
 
 Lo importante: la comunicación de actividad se presenta con la obra acabada, pero el proyecto de actividad se redacta antes de empezarla. Si diseñas la obra sin ese proyecto, el certificado final puede no poder firmarse.
 
-### Otros permisos frecuentes en Barcelona
+### Otros permisos y documentación
 
-| Permiso | Cuándo hace falta | Quién lo tramita habitualmente |
-| --- | --- | --- |
-| Ocupación de vía pública | Contenedor, andamio, descarga de materiales en la calle | La empresa de reformas o el técnico |
-| Rótulo, toldo o cambio de escaparate | Cualquier elemento en fachada regulado por la ordenanza de paisaje urbano | El técnico, junto con el permiso de obras |
-| Terraza en vía pública | Bares y restaurantes que quieran mesas fuera | El titular con el técnico, según la ordenanza de terrazas |
-| Autorización sanitaria | Clínicas, centros médicos, estética con determinados tratamientos | El titular ante la Generalitat, con documentación técnica |
-| Alta o aumento de potencia eléctrica | Casi siempre en cambios de actividad | El instalador habilitado con el certificado de instalación |
+Según el caso se suman la ocupación de vía pública (contenedor, andamio), el permiso de rótulo, toldo o escaparate conforme a la ordenanza de paisaje urbano, la terraza en vía pública para bares y restaurantes, la autorización sanitaria de la Generalitat para clínicas y centros sanitarios, y el alta o aumento de potencia eléctrica con el certificado del instalador habilitado.
 
-### Documentación que te pedirán
-
-Para el permiso de obras: planos de estado actual y reformado, memoria o proyecto según el régimen, presupuesto, estudio básico de seguridad y salud cuando hay proyecto, documento de gestión de residuos y justificante de tasas. Para la actividad: proyecto o memoria técnica de actividad, planos de evacuación, justificación de accesibilidad, ventilación e insonorización, certificados de las instalaciones eléctricas, térmicas y de protección contra incendios, y el certificado final del técnico. En edificios protegidos, informe de patrimonio. Si tocas elementos comunes, conviene además la autorización de la comunidad de propietarios.
+Para el permiso de obras te pedirán planos de estado actual y reformado, memoria o proyecto según el régimen, presupuesto, gestión de residuos y tasas. Para la actividad: proyecto o memoria técnica, planos de evacuación, justificación de accesibilidad, ventilación e insonorización, certificados de las instalaciones y el certificado final del técnico. Si tocas elementos comunes, conviene además la autorización de la comunidad de propietarios.
 
 ## Plazos reales: cuánto tarda reformar un local en Barcelona
 
@@ -132,7 +120,7 @@ Nadie te puede garantizar una fecha de apertura sin conocer el local, pero sí s
 
 | Fase | Plazo orientativo | De qué depende |
 | --- | --- | --- |
-| Consulta previa y comprobación de compatibilidad urbanística | 1 a 3 semanas | Respuesta del ayuntamiento, zona, uso |
+| Consulta previa y comprobación de compatibilidad urbanística | Variable, habitualmente semanas | Respuesta del ayuntamiento, zona, uso |
 | Proyecto de obra y de actividad, presupuesto cerrado | 2 a 6 semanas | Complejidad, decisiones del cliente, manual de franquicia |
 | Permiso de obras | Días (enterado o comunicado inmediato) a varios meses (licencia) | Régimen que corresponda, documentación completa, entorno protegido |
 | Obra | 3 a 5 semanas (adecuación básica), 6 a 10 semanas (reforma media), 10 a 16 semanas (completa) | Estado inicial, instalaciones, suministro de materiales, horarios |
@@ -141,15 +129,7 @@ Nadie te puede garantizar una fecha de apertura sin conocer el local, pero sí s
 
 Sumando fases, un comercio o una oficina en Barcelona suele estar abierto entre tres y seis meses después de firmar el contrato de alquiler, si no hay licencia de obras de por medio. Un restaurante o una clínica se van habitualmente a entre cinco y nueve meses. Son orientaciones de mercado y cada proyecto varía.
 
-### Lo que más retrasa una apertura
-
-- Pedir el aumento de potencia a la distribuidora cuando la obra ya está acabada. Los plazos de la compañía no los controla nadie más que ella.
-- Cambiar la distribución a mitad de obra. Cada cambio toca instalaciones ya ejecutadas y reabre la documentación técnica.
-- Equipos de climatización, puertas de escaparate o mobiliario a medida con plazos de entrega de semanas que nadie reservó.
-- Empezar la obra sin el comunicado presentado. Una inspección puede paralizarla.
-- Diseñar la fachada al final y descubrir que el rótulo no cumple la ordenanza.
-
-Negocia con el propietario una carencia de alquiler que cubra al menos la obra y la tramitación. Es una práctica habitual en locales de Barcelona y te ahorra meses de renta sin ingresos.
+Lo que más retrasa una apertura: pedir el aumento de potencia a la distribuidora con la obra acabada, cambiar la distribución a mitad de obra, equipos y escaparates con plazos de entrega que nadie reservó, y empezar sin el comunicado presentado, porque una inspección puede paralizar la obra. Negocia con el propietario una carencia de alquiler que cubra al menos la obra y la tramitación: es una práctica habitual y te ahorra meses de renta sin ingresos.
 
 ## Ejemplo simulado: tienda de 100 m² en Barcelona
 
@@ -171,43 +151,33 @@ Ejemplo simulado, con cifras orientativas y redondeadas, para una tienda de 100 
 | Gestión de residuos, ocupación de vía pública y limpieza final | 2.300 € |
 | Total simulado | 72.300 € |
 
-Son unos 720 euros por m², IVA excluido. Con el IVA del 21 % el total rondaría los 87.500 euros. Aparte quedan las tasas municipales y el ICIO, que dependen del presupuesto de ejecución material, y el mobiliario comercial. Con un local en bruto, el mismo proyecto subiría con facilidad por encima de los 95.000 euros sin IVA por acometidas, solera y aseo desde cero. Con un local recién reformado por un negocio parecido, podría quedarse por debajo de los 40.000 euros. Por eso el presupuesto real requiere visita.
+Son unos 720 euros por m², IVA excluido. Con el IVA del 21 % el total rondaría los 87.500 euros. Aparte quedan las tasas municipales, el ICIO y el mobiliario comercial. Con un local en bruto, el mismo proyecto subiría con facilidad por encima de los 95.000 euros sin IVA por acometidas, solera y aseo desde cero; con un local recién reformado por un negocio parecido, podría quedarse por debajo de los 40.000. Por eso el presupuesto real requiere visita.
 
 ## Errores habituales al reformar un local en Barcelona
 
 ### Firmar el alquiler sin comprobar la actividad
 
-El error más caro. Un local puede ser estupendo y no admitir tu actividad por el planeamiento, por las condiciones del edificio o porque en algunos distritos de Barcelona existen planes de usos que limitan determinadas actividades, sobre todo de restauración. Pide la consulta previa o un informe urbanístico antes de firmar.
+El error más caro. Un local puede ser estupendo y no admitir tu actividad por el planeamiento, por las condiciones del edificio o porque en algunos distritos de Barcelona existen planes de usos que limitan determinadas actividades, sobre todo de restauración. Pide la consulta previa antes de firmar.
 
 ### No revisar la instalación eléctrica existente
 
-"El cuadro ya está" no significa que sirva. Si la instalación es antigua, no tiene certificado o la potencia no llega, el instalador habilitado tendrá que renovarla igual, y es mejor presupuestarlo desde el principio. Lo explicamos en [instalaciones eléctricas](/servicios/instalaciones-electricas).
+"El cuadro ya está" no significa que sirva. Si la instalación es antigua, no tiene certificado o la potencia no llega, el instalador habilitado tendrá que renovarla igual. Lo explicamos en [instalaciones eléctricas](/servicios/instalaciones-electricas).
 
-### Dimensionar la climatización a ojo
+### Dimensionar la climatización a ojo y olvidar ventilación y acústica
 
-Un local con escaparate orientado al sur, puerta abierta y aforo variable tiene cargas térmicas muy distintas de una oficina interior. El cálculo de cargas y la elección entre conductos o cassette se decide en proyecto, no en la tienda de equipos. En [aire acondicionado por conductos o cassette para locales](/blog/aire-acondicionado-conductos-o-cassette-locales) comparamos las dos opciones, y en [climatización y aire acondicionado](/servicios/climatizacion-aire-acondicionado) explicamos cómo se dimensiona y certifica.
-
-### Olvidar la ventilación y la acústica
-
-Renovación de aire, extracción de aseos y aislamiento acústico respecto a las viviendas superiores no se ven, pero el técnico tiene que justificarlos en el proyecto de actividad. Añadirlos a posteriori implica abrir techos recién acabados.
+Un local con escaparate al sur, puerta abierta y aforo variable tiene cargas térmicas muy distintas de una oficina interior. El cálculo de cargas y la elección entre conductos o cassette se decide en proyecto, no en la tienda de equipos. En [aire acondicionado por conductos o cassette para locales](/blog/aire-acondicionado-conductos-o-cassette-locales) comparamos las dos opciones, y en [climatización y aire acondicionado](/servicios/climatizacion-aire-acondicionado) explicamos cómo se dimensiona y certifica. Renovación de aire, extracción de aseos y aislamiento acústico respecto a las viviendas superiores no se ven, pero el técnico tiene que justificarlos en el proyecto de actividad, y añadirlos a posteriori implica abrir techos recién acabados.
 
 ### Pedir presupuestos sin memoria de calidades
 
-Tres presupuestos con alcances distintos no se pueden comparar. Pide a cada empresa que presupueste sobre los mismos planos y la misma memoria, con mediciones por partida, y pregunta qué no está incluido: tasas, ICIO, mobiliario, rótulo, legalizaciones.
-
-### Dejar la tramitación para el final
-
-El proyecto de actividad condiciona la obra: salidas, anchos, aseos, ventilación. Si la obra va por delante del proyecto, acabas rehaciendo. Y si empiezas sin el permiso de obras, te arriesgas a una paralización.
+Tres presupuestos con alcances distintos no se pueden comparar. Pide a cada empresa que presupueste sobre los mismos planos y la misma memoria, con mediciones por partida, y pregunta qué no está incluido: tasas, ICIO, mobiliario, rótulo, legalizaciones. Y no dejes la tramitación para el final: el proyecto de actividad condiciona salidas, anchos, aseos y ventilación, y si la obra va por delante del proyecto, acabas rehaciendo.
 
 ## Consejos prácticos para abrir a tiempo y sin sobrecostes
 
 - Antes de firmar: consulta previa de compatibilidad, revisión del local por un técnico y verificación de potencia, agua y saneamiento disponibles.
-- Fija un presupuesto cerrado con mediciones y una reserva del 10 % al 15 % para imprevistos. En locales antiguos del centro de Barcelona aparecen sorpresas detrás de los falsos techos.
-- Planifica la obra con un calendario por hitos y reserva pronto los elementos con plazo de entrega largo: climatización, escaparate, puertas, mobiliario a medida.
-- Pide el aumento de potencia y las altas de suministro en cuanto tengas el proyecto, no al terminar.
-- Exige los certificados de cada instalación al finalizar: certificado de instalación eléctrica, certificado de la instalación térmica y certificados de protección contra incendios. Los necesitas para la actividad y para el seguro.
-- Si abres una franquicia, entrega el manual de imagen al técnico desde el primer día. Los acabados de marca suelen venir con proveedores y plazos propios.
-- Si el local tiene vecinos encima, invierte en acústica aunque la ordenanza no te lo exija al límite. Te ahorrará quejas y cierres.
+- Fija un presupuesto cerrado con mediciones y una reserva del 10 % al 15 % para imprevistos. En locales antiguos aparecen sorpresas detrás de los falsos techos.
+- Reserva pronto los elementos con plazo de entrega largo (climatización, escaparate, puertas, mobiliario a medida) y pide el aumento de potencia en cuanto tengas el proyecto.
+- Exige los certificados de cada instalación al finalizar: eléctrica, térmica y de protección contra incendios. Los necesitas para la actividad y para el seguro.
+- Si abres una franquicia, entrega el manual de imagen al técnico desde el primer día: los acabados de marca suelen venir con proveedores y plazos propios.
 
 Para negocios con exigencias propias tenemos guías específicas: [reformar un restaurante](/blog/reformar-restaurante-presupuesto-cocina-extraccion-normativa), [reforma de clínicas dentales](/blog/reforma-clinica-dental-distribucion-instalaciones-normativa), [montar o reformar un gimnasio](/blog/cuanto-cuesta-montar-reformar-gimnasio) y [reforma de oficinas](/blog/reforma-oficinas-cuanto-cuesta-modernizar).
 
@@ -220,8 +190,7 @@ Esta es la normativa que, con carácter general, afecta a la reforma de un local
 - Reglamento de Instalaciones Térmicas en los Edificios (RITE, RD 1027/2007). Climatización, ventilación y calidad del aire interior, con ejecución y certificación por empresa instaladora habilitada.
 - Reglamento de instalaciones de protección contra incendios (RIPCI, RD 513/2017). Instalación y mantenimiento de extintores, BIE, detección y alumbrado de emergencia por empresas habilitadas. En [protección contra incendios](/servicios/proteccion-contra-incendios) explicamos cómo se integra en la obra.
 - Reglamento técnico de distribución y utilización de combustibles gaseosos (RD 919/2006), si tu actividad usa gas, con instalador habilitado.
-- Ley de Ordenación de la Edificación (Ley 38/1999). Define quién puede redactar proyectos y dirigir obras, y las responsabilidades de cada agente.
-- RD 1627/1997 sobre seguridad y salud en obras de construcción. Estudio o estudio básico de seguridad y salud, y coordinación cuando intervienen varias empresas.
+- Ley de Ordenación de la Edificación (Ley 38/1999), que define quién puede redactar proyectos y dirigir obras, y RD 1627/1997 sobre seguridad y salud en obras de construcción.
 - Normativa urbanística catalana (Ley 3/2012 y Decreto 64/2014) y ordenanzas del Ayuntamiento de Barcelona sobre obras, actividades, paisaje urbano, medio ambiente y terrazas.
 
 Si tu reforma afecta a una vivienda o quieres cambiar el uso del local, en [permisos para reformar una vivienda en Cataluña](/blog/permisos-reformar-vivienda-cataluna-licencia-obras) y en [convertir un local comercial en vivienda](/blog/convertir-local-comercial-en-vivienda) tienes el detalle de esos trámites.
@@ -248,7 +217,7 @@ Si tienes un local en Barcelona, en cualquier punto de Cataluña o en el resto d
   ],
   coverImagePath: "/images/blog/08-reforma-locales-comerciales-barcelona.webp",
   authorSlug: "equipo-tecnico",
-  readingMinutes: 13,
+  readingMinutes: 16,
   status: "draft",
   reviewedAt: "2026-10-12",
   keywordPrimary: "reforma locales comerciales Barcelona",

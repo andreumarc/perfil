@@ -41,5 +41,5 @@ export function row(label: string, value: string | number | null | undefined) {
 }
 
 export function button(href: string, label: string) {
-  return `<a href="${escapeHtml(href)}" style="display:inline-block;background:#d3620f;color:#fff;text-decoration:none;padding:12px 20px;border-radius:6px;font-weight:600;">${escapeHtml(label)}</a>`;
+  return `<a href="${escapeHtml(href)}" style="display:inline-block;background:#b9530f;color:#fff;text-decoration:none;padding:12px 20px;border-radius:6px;font-weight:600;">${escapeHtml(label)}</a>`;
 }

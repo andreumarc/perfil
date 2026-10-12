@@ -43,7 +43,7 @@ jobs:
     needs: verify
     runs-on: ubuntu-latest
     timeout-minutes: 25
-    container: mcr.microsoft.com/playwright:v1.56.0-noble
+    container: mcr.microsoft.com/playwright:v1.64.0-noble
     concurrency:
       group: e2e-neon-branch
       cancel-in-progress: false

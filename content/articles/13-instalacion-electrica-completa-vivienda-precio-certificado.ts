@@ -33,7 +33,7 @@ El precio se mueve sobre todo con el tamaño de la vivienda, el número de punto
 
 Otra forma de orientarse es por punto: entre 35 y 70 euros por punto instalado con mecanismo de gama media, más el cuadro y la derivación individual. Por metro cuadrado, una instalación completa suele situarse entre 40 y 80 euros por m². Son cifras orientativas, varían según proyecto y se concretan con la visita.
 
-El grado de electrificación cambia mucho el resultado. La ITC-BT-25 del REBT distingue entre electrificación básica, con potencia prevista de 5.750 W y un mínimo de cinco circuitos, y electrificación elevada, con potencia de 9.200 W o más y circuitos adicionales para aire acondicionado, secadora, calefacción eléctrica o automatización. La elevada es obligatoria cuando la vivienda supera los 160 m² o cuando se prevén estos consumos. Hoy casi cualquier reforma con aire acondicionado por conductos, placa de inducción y horno independiente acaba en electrificación elevada.
+El grado de electrificación cambia mucho el resultado. La ITC-BT-25 del REBT distingue entre electrificación básica, con una potencia mínima prevista y un número mínimo de circuitos, y electrificación elevada, con más potencia y circuitos adicionales para aire acondicionado, secadora, calefacción eléctrica o automatización. La elevada es obligatoria a partir de cierta superficie útil de la vivienda o cuando se prevén estos consumos; el instalador habilitado determina el grado que corresponde. Hoy casi cualquier reforma con aire acondicionado por conductos, placa de inducción y horno independiente acaba en electrificación elevada.
 
 ## Factores que cambian el presupuesto
 
@@ -67,7 +67,7 @@ El cuadro es el corazón de la instalación. Para una electrificación elevada l
 
 ## Materiales: lo que se instala hoy
 
-- **Cable de cobre con aislamiento libre de halógenos.** Es el estándar actual para viviendas. Secciones de 1,5 mm² para alumbrado, 2,5 mm² para tomas generales, 4 mm² para lavadora o aire acondicionado y 6 mm² para cocina y horno, según lo que marca la ITC-BT-25.
+- **Cable de cobre con aislamiento libre de halógenos.** Es el estándar actual para viviendas. Las secciones habituales que marca la ITC-BT-25 son 1,5 mm² para alumbrado, 2,5 mm² para tomas generales, 4 mm² para lavadora, lavavajillas y termo, y 6 mm² para cocina, horno y aire acondicionado; el instalador las confirma según cada circuito.
 - **Tubo corrugado empotrado o rígido en superficie.** Los cables nunca van empotrados directamente. El tubo permite sustituir un cable en el futuro sin abrir la pared.
 - **Mecanismos.** Interruptores, conmutadores, pulsadores y tomas con toma de tierra lateral. En baños y exteriores, con el grado de protección que exige el REBT para cada volumen.
 - **Iluminación.** La instalación eléctrica es el momento de decidir dónde van las luminarias empotradas, las tiras LED o los puntos regulables, porque cada uno necesita su cable y su caja. Lo ampliamos en [iluminación](/servicios/iluminacion).
@@ -104,7 +104,7 @@ Solo un instalador o empresa instaladora habilitada puede emitir el boletín. Un
 ## Normativa que afecta a la instalación eléctrica de una vivienda
 
 - **REBT (Real Decreto 842/2002).** Reglamento Electrotécnico para Baja Tensión y sus instrucciones técnicas complementarias. Las más relevantes en vivienda son la ITC-BT-25 (instalaciones interiores en viviendas: grados de electrificación, circuitos y secciones), la ITC-BT-26 (prescripciones generales de instalación), la ITC-BT-27 (locales con bañera o ducha), la ITC-BT-17 (dispositivos generales de mando y protección) y la ITC-BT-18 (puestas a tierra). También regula quién puede ejecutar y certificar.
-- **CTE (Real Decreto 314/2006).** El DB-HE regula la eficiencia de las instalaciones de iluminación en determinados usos y el DB-SI afecta a la reacción al fuego de los cables en zonas comunes.
+- **CTE (Real Decreto 314/2006).** Aplica a la obra en su conjunto; en la parte eléctrica de una vivienda su incidencia es limitada, pero el DB-HE regula la eficiencia de las instalaciones de iluminación en usos distintos del residencial privado y el DB-SI fija las condiciones de seguridad en caso de incendio que el proyecto debe respetar.
 - **Licencias urbanísticas.** Una renovación eléctrica aislada no suele exigir licencia de obra mayor, pero las rozas y los trabajos interiores pueden ir por comunicación previa según la ordenanza municipal. En Cataluña rigen la Ley 3/2012 y el Decreto 64/2014. Lo tienes ampliado en [permisos para reformar una vivienda en Cataluña](/blog/permisos-reformar-vivienda-cataluna-licencia-obras).
 - **Seguridad en obra.** El Real Decreto 1627/1997 establece las disposiciones mínimas de seguridad y salud en las obras de construcción.
 
@@ -142,7 +142,7 @@ Si tu instalación tiene más de veinte años, no tiene tierra o no admite la po
   relatedServiceSlugs: ["instalaciones-electricas", "iluminacion", "domotica-telecomunicaciones", "reformas-integrales-viviendas"],
   coverImagePath: "/images/blog/13-instalacion-electrica-vivienda.webp",
   authorSlug: "equipo-tecnico",
-  readingMinutes: 11,
+  readingMinutes: 12,
   status: "draft",
   reviewedAt: "2026-10-12",
   keywordPrimary: "precio instalación eléctrica vivienda",
@@ -186,7 +186,6 @@ Si tu instalación tiene más de veinte años, no tiene tierra o no admite la po
     { title: "Reglamento Electrotécnico para Baja Tensión (RD 842/2002), BOE", url: "https://www.boe.es/buscar/act.php?id=BOE-A-2002-18099" },
     { title: "Código Técnico de la Edificación (RD 314/2006), BOE", url: "https://www.boe.es/buscar/act.php?id=BOE-A-2006-5515" },
     { title: "Generalitat de Catalunya", url: "https://web.gencat.cat/" },
-    { title: "IDAE, Instituto para la Diversificación y Ahorro de la Energía", url: "https://www.idae.es/" },
   ],
   formVariant: "instalaciones",
   metaTitle: "Precio instalación eléctrica vivienda: guía y boletín",

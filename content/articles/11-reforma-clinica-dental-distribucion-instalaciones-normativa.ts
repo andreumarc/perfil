@@ -25,7 +25,7 @@ Separa la obra (albañilería, instalaciones, acabados, licencias) del equipamie
 
 ## Distribución de una clínica dental
 
-La distribución la condicionan el número de gabinetes, el flujo de pacientes y los requisitos de la autorización sanitaria autonómica, que fija superficies y dependencias mínimas. Una clínica de tamaño medio suele organizarse así:
+La distribución la condicionan el número de gabinetes, el flujo de pacientes y los requisitos de la autorización sanitaria autonómica, que suele fijar dependencias y condiciones mínimas. Una clínica de tamaño medio suele organizarse así:
 
 - **Recepción y sala de espera**, con acceso accesible desde la calle y aseo adaptado para pacientes.
 - **Gabinetes**, habitualmente de 9 a 12 m² cada uno, con lavamanos, sillón, mueble clínico y, en muchos casos, radiología intraoral.
@@ -71,7 +71,7 @@ Consulta siempre la normativa vigente y la ordenanza municipal, porque los requi
 
 ### Tres expedientes distintos
 
-Una clínica dental necesita, habitualmente, tres trámites. La licencia o comunicación de obras, que en Cataluña se rige por la Ley 3/2012, el Decreto 64/2014 y la ordenanza municipal. La licencia o comunicación de actividad ante el ayuntamiento, que suele resolverse con un proyecto o memoria técnica. Y la autorización sanitaria de funcionamiento ante la administración autonómica (en Cataluña, el Departament de Salut), que revisa superficies, dependencias, equipamiento, esterilización, personal y residuos sanitarios antes de la apertura. La obra se proyecta para cumplir los tres desde el inicio. Lo coordinamos a través de técnicos colegiados en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica), y tienes la referencia de trámites de locales en [reforma de locales comerciales en Barcelona: precios, licencias y plazos](/blog/reforma-locales-comerciales-barcelona-precios-licencias-plazos).
+Una clínica dental necesita, habitualmente, tres trámites. La licencia o comunicación de obras, que en Cataluña se rige por la Ley 3/2012, el Decreto 64/2014 y la ordenanza municipal. La licencia o comunicación de actividad ante el ayuntamiento, que suele resolverse con un proyecto o memoria técnica. Y la autorización sanitaria de funcionamiento ante la administración autonómica (en Cataluña, el Departament de Salut), que revisa superficies, dependencias, equipamiento, esterilización, personal y residuos sanitarios antes de la apertura. La obra se proyecta para cumplir los tres desde el inicio. Coordinamos la tramitación con técnicos competentes en [licencias y dirección técnica](/servicios/licencias-direccion-tecnica), y tienes la referencia de trámites de locales en [reforma de locales comerciales en Barcelona: precios, licencias y plazos](/blog/reforma-locales-comerciales-barcelona-precios-licencias-plazos).
 
 ### Código Técnico y reglamentos de instalaciones
 
@@ -129,7 +129,7 @@ Una clínica de tres o cuatro gabinetes en local con actividad previa suele nece
 ## Errores habituales al reformar una clínica dental
 
 - **Proyectar sin las fichas técnicas de los equipos.** Las conexiones del sillón, la posición del compresor o los requisitos del equipo de rayos X definen la obra. Si llegan después, se abre lo que ya estaba cerrado.
-- **Olvidar la autorización sanitaria hasta el final.** Fija superficies y dependencias mínimas. Un gabinete o una esterilización que no cumplen obligan a rehacer la distribución.
+- **Olvidar la autorización sanitaria hasta el final.** Suele fijar dependencias y condiciones mínimas. Un gabinete o una esterilización que no cumplen obligan a rehacer la distribución.
 - **Escatimar en potencia eléctrica y climatización.** Quedarse corto significa saltos de protecciones y gabinetes calurosos.
 - **Pedir presupuestos sin memoria de calidades ni mediciones.** Sin partidas medidas y certificados incluidos, las ofertas no son comparables.
 

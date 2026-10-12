@@ -25,7 +25,7 @@ Son cifras orientativas según mercado y varían según proyecto. Una cocina de 
 
 - **Mantener o mover los puntos de agua.** Dejar el fregadero y el lavavajillas donde están ahorra albañilería y evita problemas de pendiente en los desagües. Llevar el fregadero a una isla puede obligar a recrecer el suelo.
 - **Estado de las instalaciones.** En viviendas de más de 30 años es habitual encontrar cableado sin toma de tierra, un único circuito para toda la cocina y tuberías de hierro o plomo. Si el resto de la vivienda está igual, valóralo con la guía sobre [cuánto cuesta renovar la fontanería de una vivienda](/blog/cuanto-cuesta-renovar-fontaneria-vivienda).
-- **Abrir la cocina al salón.** Derribar un tabique no estructural es barato. Si el muro es de carga, hacen falta cálculo, proyecto de técnico competente y licencia de obra mayor.
+- **Abrir la cocina al salón.** Derribar un tabique no estructural es barato. Si el muro es de carga, hacen falta cálculo, proyecto de técnico competente y, habitualmente, licencia de obras.
 - **Gama del mobiliario y de la encimera.** Entre una cocina de melamina con encimera laminada y una lacada con encimera porcelánica puede haber más de 8.000 euros de diferencia para la misma distribución.
 - **Electrodomésticos.** Pasar de gas a inducción, añadir lavavajillas o integrar el frigorífico cambia el presupuesto y, a veces, la potencia eléctrica que necesitas contratar.
 - **Acceso.** Un piso sin ascensor en un casco antiguo encarece la demolición y la retirada de escombros.
@@ -51,6 +51,20 @@ Un presupuesto serio se presenta por partidas, con unidades y precios unitarios,
 | Residuos y tasas | 300 a 800 euros | Gestión de residuos de obra y tasa de la comunicación previa o licencia |
 
 La mano de obra supone habitualmente entre el 40 y el 50 % del total en gama media. Si la empresa aporta los materiales y la vivienda cumple las condiciones legales, la factura puede aplicar el IVA reducido del 10 %; si no, se aplica el 21 %. Compruébalo antes de firmar.
+
+### Materiales: mobiliario, encimera y revestimientos
+
+Por metro lineal de mueble bajo y alto, orientativamente y sin IVA, cuenta de 350 a 600 euros en melamina de serie, de 600 a 1.000 euros en laminado de alta presión o lacado y más de 1.000 euros en madera, lacados especiales o fabricación a medida. Los herrajes marcan la diferencia en el uso diario: guías de extracción total con cierre amortiguado, extraíbles de rincón y columnas con bandejas.
+
+| Encimera | Precio orientativo por metro lineal colocada (sin IVA) | A tener en cuenta |
+| --- | --- | --- |
+| Laminado postformado | 60 a 150 euros | Económico; las juntas sufren con el agua y no tolera ollas calientes |
+| Granito | 180 a 400 euros | Resistente y natural; requiere sellado periódico |
+| Cuarzo compacto | 250 a 450 euros | No poroso y fácil de limpiar; sensible al calor directo y al sol intenso |
+| Porcelánico de gran formato | 350 a 650 euros | Resiste calor, rayado y manchas; colocación exigente y cantos delicados |
+| Madera maciza | 200 a 400 euros | Cálida y reparable; necesita aceite y marca con agua y calor |
+
+Para el suelo, el porcelánico es la opción más equilibrada: resiste manchas, agua y tránsito. En el frontal entre encimera y muebles altos sirve el mismo porcelánico, una pieza de la encimera o vidrio templado; en el resto de paredes basta pintura lavable. Si el suelo actual está nivelado y en buen estado, el servicio de [suelos y pavimentos](/servicios/suelos-pavimentos) puede valorar colocar un porcelánico fino encima y ahorrarte la demolición.
 
 ## Distribución: cómo elegirla bien
 
@@ -99,20 +113,6 @@ El Código Técnico de la Edificación, en su documento básico DB-HS3 sobre cal
 
 Una cocina necesita tres capas de luz: general en techo, luz de trabajo bajo los muebles altos y, si hay isla o mesa, luz de ambiente regulable. Usa LED de 3.000 a 4.000 K y alta reproducción cromática, para que los alimentos se vean con su color real. El estudio de [iluminación](/servicios/iluminacion) se cierra antes de las regatas, no después.
 
-## Materiales: mobiliario, encimera y revestimientos
-
-Por metro lineal de mueble bajo y alto, orientativamente y sin IVA, cuenta de 350 a 600 euros en melamina de serie, de 600 a 1.000 euros en laminado de alta presión o lacado y más de 1.000 euros en madera, lacados especiales o fabricación a medida. Los herrajes marcan la diferencia en el uso diario: guías de extracción total con cierre amortiguado, extraíbles de rincón y columnas con bandejas.
-
-| Encimera | Precio orientativo por metro lineal colocada (sin IVA) | A tener en cuenta |
-| --- | --- | --- |
-| Laminado postformado | 60 a 150 euros | Económico; las juntas sufren con el agua y no tolera ollas calientes |
-| Granito | 180 a 400 euros | Resistente y natural; requiere sellado periódico |
-| Cuarzo compacto | 250 a 450 euros | No poroso y fácil de limpiar; sensible al calor directo y al sol intenso |
-| Porcelánico de gran formato | 350 a 650 euros | Resiste calor, rayado y manchas; colocación exigente y cantos delicados |
-| Madera maciza | 200 a 400 euros | Cálida y reparable; necesita aceite y marca con agua y calor |
-
-Para el suelo, el porcelánico es la opción más equilibrada: resiste manchas, agua y tránsito. En el frontal entre encimera y muebles altos sirve el mismo porcelánico, una pieza de la encimera o vidrio templado; en el resto de paredes basta pintura lavable. Si el suelo actual está nivelado y en buen estado, el servicio de [suelos y pavimentos](/servicios/suelos-pavimentos) puede valorar colocar un porcelánico fino encima y ahorrarte la demolición.
-
 ## Ejemplo simulado de presupuesto
 
 Ejemplo simulado, con precios orientativos de mercado y sin IVA, para una cocina de 10 m² en L en un piso de Barcelona o Igualada, gama media, manteniendo la posición del fregadero y sin abrirla al salón.
@@ -146,23 +146,25 @@ Con IVA del 10 %, si la vivienda cumple las condiciones, el total sería de 17.4
 
 Consulta siempre la normativa vigente y la ordenanza municipal; las condiciones cambian entre municipios y con el tiempo. Las fuentes oficiales están al final del artículo.
 
-## Errores habituales
+## Errores habituales y consejos para ahorrar
+
+### Errores que encarecen la obra
 
 - **Elegir los muebles antes de cerrar las instalaciones.** El plano de tomas, puntos de agua y campana debe estar definido antes de demoler; cambiarlo después cuesta regatas nuevas y días de obra.
-- **Quedarse corto de enchufes.** Es la queja más repetida al mes de estrenar la cocina. Cuenta los pequeños electrodomésticos que usas a diario y añade dos tomas más.
+- **Quedarse corto de enchufes.** Es una de las quejas más repetidas al mes de estrenar la cocina. Cuenta los pequeños electrodomésticos que usas a diario y añade dos tomas más.
 - **Campana sin salida real.** Una campana potente con un conducto de 100 mm lleno de codos hace ruido y no extrae. Decide la salida antes de comprarla.
 - **Comprar electrodomésticos sin medidas definitivas.** Los huecos se fabrican para modelos concretos. Primero el proyecto de mobiliario, después la compra.
 - **Ahorrar en herrajes.** Una puerta bonita con bisagras baratas se descuelga en dos años. Si hay que recortar, recorta en el acabado.
 - **Comparar presupuestos cerrados sin partidas.** Un total sin desglose no dice qué incluye. Pide unidades, precios unitarios y marcas.
 
-## Consejos para ahorrar sin arrepentirte
+### Cómo ahorrar sin arrepentirte
 
 - **Mantén las instalaciones donde están.** Cada metro que desplazas el fregadero añade albañilería. Si la distribución actual funciona, mejórala en lugar de cambiarla.
 - **Reparte la inversión.** Gasta en lo que tocas cada día (herrajes, grifería, encimera) y ahorra en lo que no se ve (interiores en melamina, pintura en lugar de alicatado en paredes sin uso).
 - **Mezcla materiales.** Cuarzo en la zona de fregadero y laminado en la zona de desayuno, o porcelánico solo en el frontal de trabajo.
 - **No cambies el suelo si está bien.** Un porcelánico fino sobre el existente ahorra demolición, escombros y días de obra.
 - **Aprovecha la obra para renovar lo oculto.** Renovar electricidad y fontanería con la cocina abierta cuesta una fracción de hacerlo con la cocina montada.
-- **Cierra todas las decisiones antes de demoler.** Los cambios en obra son la primera causa de desviación del presupuesto.
+- **Cierra todas las decisiones antes de demoler.** Los cambios en obra son una de las primeras causas de desviación del presupuesto.
 
 Si dudas entre reformar solo la cocina o acometer más estancias, la guía sobre [reformar un piso de 70, 90 o 120 m²](/blog/reformar-piso-70-90-120-m2-coste-tiempo) te ayuda a ver el coste conjunto, y la de [reforma de baño completo](/blog/cuanto-cuesta-reformar-bano-completo) cubre la otra estancia húmeda.
 
@@ -207,7 +209,7 @@ Si quieres saber cuánto costaría reformar tu cocina, pide un [presupuesto](/pr
     {
       question: "¿Necesito licencia para reformar la cocina?",
       answer:
-        "En la mayoría de municipios catalanes una reforma de cocina sin cambios estructurales se tramita como obra menor mediante comunicación previa o declaración responsable. Si derribas un muro de carga o modificas la fachada, hace falta proyecto de técnico competente y licencia de obra mayor. Consulta la ordenanza de tu ayuntamiento, porque las tasas y los plazos varían.",
+        "En la mayoría de municipios catalanes una reforma de cocina sin cambios estructurales se tramita como obra menor mediante comunicación previa o declaración responsable. Si derribas un muro de carga o modificas la fachada, hace falta proyecto de técnico competente y licencia de obras. Consulta la ordenanza de tu ayuntamiento, porque las tasas y los plazos varían.",
     },
     {
       question: "¿Puedo abrir la cocina al salón?",

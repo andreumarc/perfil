@@ -112,7 +112,7 @@ La climatización de un local no es solo confort: forma parte de la documentaci�
 - **CTE (Real Decreto 314/2006).** El DB-HE afecta a la eficiencia energética y el DB-HR a la protección frente al ruido, relevante para la unidad exterior y para los ventiladores en locales que lindan con viviendas.
 - **REBT (Real Decreto 842/2002).** La alimentación eléctrica del equipo es un circuito específico que ejecuta y certifica un instalador habilitado en baja tensión.
 - **Gases fluorados.** La manipulación de refrigerantes la realiza personal certificado. Los equipos actuales usan refrigerantes de menor impacto, lo que puede afectar a la elección del modelo.
-- **Ordenanzas municipales.** Regulan la colocación de unidades exteriores en fachadas y cubiertas, los niveles de ruido y las condiciones de evacuación de condensados. En Barcelona el Ayuntamiento es restrictivo con las unidades en fachada visibles desde la vía pública. En Cataluña las obras asociadas se tramitan conforme a la Ley 3/2012 y el Decreto 64/2014 y a la ordenanza de cada municipio.
+- **Ordenanzas municipales.** Regulan la colocación de unidades exteriores en fachadas y cubiertas, los niveles de ruido y las condiciones de evacuación de condensados. Muchos ayuntamientos, Barcelona entre ellos, limitan las unidades en fachada visibles desde la vía pública. En Cataluña las obras asociadas se tramitan conforme a la Ley 3/2012 y el Decreto 64/2014 y a la ordenanza de cada municipio.
 
 Consulta siempre la normativa vigente y la ordenanza de tu municipio.
 
@@ -133,7 +133,7 @@ Consulta siempre la normativa vigente y la ordenanza de tu municipio.
 - Pide dos ofertas con el mismo cálculo de cargas y la misma categoría de ventilación para poder compararlas.
 - Prioriza la eficiencia estacional (SEER y SCOP) en locales que funcionan muchas horas.
 - Deja previsiones (tubos vacíos, espacio en cuadro) para ampliar o añadir una unidad si el negocio crece.
-- Contrata un mantenimiento conforme al RITE desde el primer año: filtros limpios y gas correcto son la diferencia entre un equipo que dura 15 años y uno que falla a los 5.
+- Contrata un mantenimiento conforme al RITE desde el primer año: filtros limpios y gas correcto son lo que marca la diferencia entre un equipo que dura muchos años y uno que falla pronto.
 - Si el local es un restaurante o un gimnasio, la climatización se diseña junto con la extracción y la renovación de aire. Lo tratamos en [ventilación y extracción](/servicios/ventilacion-extraccion).
 
 ## Siguiente paso

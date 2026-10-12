@@ -37,7 +37,7 @@ Dos casas de la misma superficie y época pueden costar una el doble que la otra
 
 **Instalaciones.** En una casa de más de 40 años lo normal es renovar electricidad, fontanería y saneamiento enteros. Entre el 15 % y el 25 % del presupuesto se va ahí, y no es la partida donde ahorrar.
 
-**Envolvente y eficiencia.** Aislar fachadas y cubierta y cambiar ventanas convierte una casa fría y cara de calentar en una casa habitable. Es la única inversión que después devuelve dinero cada mes en forma de menor factura.
+**Envolvente y eficiencia.** Aislar fachadas y cubierta y cambiar ventanas convierte una casa fría y cara de calentar en una casa habitable. Es la inversión que después devuelve dinero cada mes en forma de menor factura.
 
 **Protección patrimonial.** Una casa catalogada o en un casco histórico limita qué puedes cambiar en fachada, cubierta o carpinterías, y suele exigir materiales concretos: más tramitación y más coste.
 
@@ -112,6 +112,7 @@ No necesitas leer la normativa, pero sí saber qué exige, porque marca partidas
 - **RITE (RD 1027/2007).** Climatización, aerotermia y agua caliente sanitaria las ejecuta y certifica una empresa instaladora habilitada.
 - **Reglamento de gas (RD 919/2006).** Si mantienes o instalas gas, solo un instalador habilitado puede ejecutar y certificar la instalación.
 - **Ley de Ordenación de la Edificación (LOE, Ley 38/1999).** Define las responsabilidades de promotor, proyectista, constructor y dirección facultativa, y las garantías de la obra.
+
 Consulta siempre la normativa vigente y la ordenanza municipal: cambian, y el técnico que firma el proyecto es quien las aplica al caso concreto.
 
 ## Errores habituales al reformar una casa antigua
@@ -204,7 +205,7 @@ Si tienes una casa antigua y quieres saber qué costaría reformarla de verdad, 
     {
       question: "¿Es mejor reformar una casa antigua o derribarla y construir de nuevo?",
       answer:
-        "Depende del estado de la estructura y de lo que permita el planeamiento. Si los muros y la cimentación están sanos, rehabilitar suele ser más barato y rápido, conserva el carácter de la casa y en muchos cascos urbanos es la única opción permitida. Si la estructura está muy dañada o la distribución no sirve, un técnico debe comparar ambos escenarios con números antes de decidir.",
+        "Depende del estado de la estructura y de lo que permita el planeamiento. Si los muros y la cimentación están sanos, rehabilitar suele ser más barato y rápido, conserva el carácter de la casa y en muchos cascos urbanos puede ser la única opción que permite el planeamiento. Si la estructura está muy dañada o la distribución no sirve, un técnico debe comparar ambos escenarios con números antes de decidir.",
     },
     {
       question: "¿Cuánto tiempo se tarda en reformar una casa antigua?",
