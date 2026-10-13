@@ -495,7 +495,7 @@ const RAW: Partial[] = [
     ],
     requiresLicensedPro: true,
     licenseNote: LICENSED_NOTE_GAS,
-    imagePath: IMG("reformas-restaurantes"),
+    imagePath: IMG("instalaciones-gas"),
     process: PROCESS_INSTALACION,
   },
   {
@@ -529,7 +529,7 @@ const RAW: Partial[] = [
       { question: "¿Qué iluminación recomendáis para un comercio?", answer: "Una combinación de luz general uniforme, acentos sobre producto y escaparate con buena reproducción cromática. Se diseña con los niveles de lux adecuados a cada zona." },
     ],
     requiresLicensedPro: false,
-    imagePath: IMG("reformas-cocinas"),
+    imagePath: IMG("iluminacion"),
     process: PROCESS_INSTALACION,
   },
   {
