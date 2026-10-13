@@ -477,7 +477,7 @@ const RAW: Partial[] = [
     ],
     requiresLicensedPro: true,
     licenseNote: "Las instalaciones térmicas de ACS las ejecuta y certifica una empresa instaladora habilitada conforme al RITE.",
-    imagePath: IMG("fontaneria-saneamiento"),
+    imagePath: IMG("agua-caliente-sanitaria"),
     process: PROCESS_INSTALACION,
   },
   {
