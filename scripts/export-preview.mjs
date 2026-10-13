@@ -54,7 +54,7 @@ function localImage(src) {
   return `images/${rel}`;
 }
 
-const NOTE = `<div style="position:sticky;top:0;z-index:100;background:#17191d;color:#fff;font:600 12px/1.4 system-ui,sans-serif;letter-spacing:.04em;text-align:center;padding:8px 12px">VISTA PREVIA ESTÁTICA PARA REVISIÓN · los formularios y el menú móvil no son funcionales en esta copia · las imágenes son ilustrativas</div>`;
+const NOTE = `<div style="position:sticky;top:0;z-index:100;background:#17191d;color:#fff;font:600 12px/1.4 system-ui,sans-serif;letter-spacing:.04em;text-align:center;padding:8px 12px">VISTA PREVIA ESTÁTICA PARA REVISIÓN · los formularios y el menú móvil no son funcionales en esta copia</div>`;
 
 for (const route of routes) {
   const res = await fetch(new URL(route, base));

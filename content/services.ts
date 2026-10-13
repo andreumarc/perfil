@@ -112,7 +112,7 @@ const RAW: Partial[] = [
       { question: "¿Se puede tirar un tabique?", answer: "Los tabiques no estructurales sí; los muros de carga requieren proyecto y cálculo de un técnico competente. Lo comprobamos en la primera visita." },
     ],
     requiresLicensedPro: false,
-    imagePath: IMG("reformas-integrales-viviendas"),
+    imagePath: IMG("reformas-pisos"),
   },
   {
     slug: "reformas-casas",

@@ -4,7 +4,6 @@ import { ArrowRightIcon, MessageCircleIcon, PlayIcon } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Container } from "@/components/layout/container";
 import { CommitmentIcon } from "@/components/sections/commitment-icon";
-import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { whatsappHref } from "@/lib/phone";
@@ -13,7 +12,7 @@ import type { SiteSettings } from "@/lib/validation/settings";
 /**
  * Hero cinematográfico: fotografía a sangre con degradado oscuro desde la
  * izquierda, titular con palabra destacada, compromisos y dos CTA.
- * La imagen se marca como ilustrativa (recurso de diseño, no obra real).
+ * La imagen es un recurso de diseño editable desde ajustes.
  */
 export function Hero({ settings, hasImage }: { settings: SiteSettings; hasImage: boolean }) {
   const { hero, company, commitments } = settings;
@@ -81,7 +80,6 @@ export function Hero({ settings, hasImage }: { settings: SiteSettings; hasImage:
             )}
           </div>
         </div>
-        {hasImage ? <IllustrativeBadge className="absolute right-5 bottom-5 sm:right-8" /> : null}
       </Container>
     </section>
   );

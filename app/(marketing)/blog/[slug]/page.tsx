@@ -15,7 +15,6 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { Faq } from "@/components/sections/faq";
-import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import { ARTICLES } from "@/content/articles";
@@ -138,7 +137,6 @@ export default async function ArticlePage({ params }: { params: Params }) {
           <Container className="pt-8 md:pt-10">
             <div className="relative aspect-[21/9] overflow-hidden rounded-lg bg-ink-900">
               <Image src={article.coverImagePath} alt="" fill priority sizes="(min-width: 1024px) 1100px, 100vw" className="object-cover" />
-              <IllustrativeBadge className="absolute top-4 left-4" />
             </div>
           </Container>
         ) : null}

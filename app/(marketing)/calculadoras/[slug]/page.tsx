@@ -11,7 +11,6 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Faq } from "@/components/sections/faq";
-import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { JsonLd } from "@/components/seo/json-ld";
 import { CALCULATORS, CALCULATOR_IDS, getCalculator, resolveRates } from "@/lib/calculators/definitions";
 import { getService } from "@/lib/cms/services";
@@ -68,7 +67,6 @@ export default async function CalculatorPage({ params }: { params: Params }) {
             {def.imagePath ? (
               <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-ink-900">
                 <Image src={def.imagePath} alt="" fill priority sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover" />
-                <IllustrativeBadge className="absolute top-3 left-3" />
               </div>
             ) : null}
           </div>

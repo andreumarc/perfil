@@ -9,7 +9,6 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { CtaBand } from "@/components/sections/cta-band";
-import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { CALCULATORS } from "@/lib/calculators/definitions";
 import { getSettings } from "@/lib/cms/settings";
 import { whatsappHref } from "@/lib/phone";
@@ -63,7 +62,6 @@ export default async function CalculatorsPage() {
                   {c.imagePath ? (
                     <>
                       <Image src={c.imagePath} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" priority={i < 3} className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
-                      <IllustrativeBadge className="absolute top-3 left-3" />
                     </>
                   ) : (
                     <div className="absolute inset-0 bg-ink-grid" aria-hidden />

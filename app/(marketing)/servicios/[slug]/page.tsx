@@ -15,7 +15,6 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { Faq } from "@/components/sections/faq";
-import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { LicenseNotice } from "@/components/sections/license-notice";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
@@ -108,7 +107,6 @@ export default async function ServicePage({ params }: { params: Params }) {
             {service.imagePath ? (
               <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-ink-900">
                 <Image src={service.imagePath} alt="" fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
-                <IllustrativeBadge className="absolute top-3 left-3" />
               </div>
             ) : null}
           </div>
@@ -173,7 +171,7 @@ export default async function ServicePage({ params }: { params: Params }) {
 
       {relatedProjects.length ? (
         <Section tone="white">
-          <SectionHeading eyebrow="Proyectos" title="Alcance habitual de este tipo de obra" description="Ejemplos del alcance y el proceso. Las imágenes son ilustrativas hasta que se publiquen proyectos reales desde el panel." />
+          <SectionHeading eyebrow="Proyectos" title="Alcance habitual de este tipo de obra" description="Ejemplos del alcance y el proceso habituales en este tipo de obra." />
           <RevealGroup className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {relatedProjects.map((p) => (
               <RevealItem key={p.slug}>

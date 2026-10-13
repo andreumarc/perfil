@@ -22,7 +22,7 @@ const RAW: Partial[] = [
     summary: "Reformas de pisos con gestión de comunidad, escombros y horarios, pensadas para molestar lo mínimo.",
     serviceSlugs: ["reformas-pisos", "reformas-integrales-viviendas", "reformas-cocinas", "reformas-banos", "pladur-albanileria"],
     faqs: [],
-    imagePath: IMG("reformas-integrales-viviendas"),
+    imagePath: IMG("reformas-pisos"),
   },
   {
     slug: "casas",

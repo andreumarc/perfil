@@ -50,7 +50,7 @@ export function ProjectsGallery({ projects, services, sectors, activeService, ac
           <p className="mt-5 max-w-2xl text-base text-gray-600 md:text-lg">{description}</p>
           {illustrative ? (
             <p className="mt-4 max-w-2xl rounded-md border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-600">
-              Los proyectos marcados como <strong className="text-ink-900">proyecto tipo</strong> son ejemplos de alcance con imágenes ilustrativas, no obras ejecutadas. Los proyectos reales se publican con fotografías propias desde el panel.
+              Los proyectos marcados como <strong className="text-ink-900">proyecto tipo</strong> son ejemplos del alcance y el proceso de cada tipo de obra. Los proyectos reales se publican con fotografías propias.
             </p>
           ) : null}
         </Container>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Section, SectionHeading } from "@/components/layout/section";
-import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { SectorContent } from "@/content/types";
 
@@ -26,7 +25,6 @@ export function SectorsGrid({ sectors }: { sectors: SectorContent[] }) {
             {sector.imagePath ? (
               <>
                 <Image src={sector.imagePath} alt="" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
-                <IllustrativeBadge className="absolute top-3 left-3" />
               </>
             ) : (
               <div className="absolute inset-0 bg-ink-grid" aria-hidden />

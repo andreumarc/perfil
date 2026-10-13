@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRightIcon } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/layout/section";
-import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { ServiceContent, ServiceGroup } from "@/content/types";
 import { cn } from "@/lib/utils";
@@ -27,7 +26,6 @@ export function ServiceCard({ service, compact = false, priority = false }: { se
             priority={priority}
             className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
           />
-          <IllustrativeBadge className="absolute top-3 left-3" />
         </>
       ) : (
         <div className="absolute inset-0 bg-ink-grid" aria-hidden />

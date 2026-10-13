@@ -95,15 +95,15 @@ export default async function ProjectPage({ params }: { params: Params }) {
       <Section tone="white" size="compact">
         <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-ink-900">
           {project.coverImagePath ? (
-            <Image src={project.coverImagePath} alt={project.isIllustrative ? `Imagen ilustrativa: ${project.title}` : project.title} fill priority sizes="(min-width: 1024px) 1100px, 100vw" className="object-cover" />
+            <Image src={project.coverImagePath} alt={project.title} fill priority sizes="(min-width: 1024px) 1100px, 100vw" className="object-cover" />
           ) : (
             <div className="absolute inset-0 bg-ink-grid" aria-hidden />
           )}
-          {project.isIllustrative ? <IllustrativeBadge className="absolute top-4 left-4" label="Proyecto tipo · imagen ilustrativa" /> : null}
+          {project.isIllustrative ? <IllustrativeBadge className="absolute top-4 left-4" label="Proyecto tipo" /> : null}
         </div>
         {project.isIllustrative ? (
           <p className="mt-4 text-sm text-gray-600">
-            Este proyecto tipo describe el alcance habitual de una obra de este tipo. Las imágenes son ilustrativas y no corresponden a una obra ejecutada.
+            Este proyecto tipo describe el alcance y el proceso habituales de una obra de este tipo.
           </p>
         ) : null}
       </Section>
@@ -156,7 +156,6 @@ export default async function ProjectPage({ params }: { params: Params }) {
                 <figure className="overflow-hidden rounded-lg border border-gray-200 bg-white">
                   <div className="relative aspect-[4/3] bg-ink-900">
                     <Image src={img.url} alt={img.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
-                    {project.isIllustrative ? <IllustrativeBadge className="absolute top-3 left-3" /> : null}
                   </div>
                   {img.caption ? <figcaption className="p-3 text-sm text-gray-600">{img.caption}</figcaption> : null}
                 </figure>

@@ -16,7 +16,7 @@ export function ProjectCard({ project, serviceName }: { project: ProjectContent;
         ) : (
           <div className="absolute inset-0 bg-ink-grid" aria-hidden />
         )}
-        {project.isIllustrative ? <IllustrativeBadge className="absolute top-3 left-3" label="Proyecto tipo · imagen ilustrativa" /> : null}
+        {project.isIllustrative ? <IllustrativeBadge className="absolute top-3 left-3" label="Proyecto tipo" /> : null}
       </div>
       <div className="flex flex-1 flex-col p-5">
         <p className="text-xs font-semibold uppercase tracking-[0.12em] text-copper-600">{serviceName ?? "Proyecto"}{project.locality ? ` · ${project.locality}` : ""}</p>
@@ -40,7 +40,7 @@ export function ProjectsShowcase({ projects, serviceNames }: { projects: Project
         title="Alcance y proceso de cada tipo de reforma"
         description={
           illustrative
-            ? "Ejemplos del alcance habitual de cada tipo de obra. Las imágenes son ilustrativas: los proyectos reales se publican con fotografías propias desde el panel."
+            ? "Ejemplos del alcance habitual de cada tipo de obra. Los proyectos reales se publican con fotografías propias."
             : "Una selección de obras realizadas."
         }
       />

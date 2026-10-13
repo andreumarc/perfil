@@ -47,7 +47,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
     subtitle:
       "Reformas de viviendas, locales y todo tipo de negocios. Diseño, ejecución e instalaciones con un equipo profesional que se encarga de todo.",
     imagePath: "/images/ilustrativas/hero-villa-piscina.webp",
-    imageAlt: "Vivienda moderna con terraza y piscina al atardecer, imagen ilustrativa",
+    imageAlt: "Vivienda moderna con terraza y piscina al atardecer",
     primaryCtaLabel: "Pedir presupuesto sin compromiso",
     secondaryCtaLabel: "Ver proyectos",
   },

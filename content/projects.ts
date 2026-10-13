@@ -3,7 +3,7 @@ import type { ProjectContent } from "./types";
 const IMG = (name: string) => `/images/ilustrativas/${name}.webp`;
 
 /**
- * Proyectos tipo. Son ejemplos de alcance y proceso con imágenes ilustrativas:
+ * Proyectos tipo. Son ejemplos de alcance y proceso (isIllustrative = true, no son obras ejecutadas):
  * NO son obras ejecutadas. Se marcan como tales en la web hasta que el
  * administrador los sustituya por proyectos reales con fotografías propias.
  */
