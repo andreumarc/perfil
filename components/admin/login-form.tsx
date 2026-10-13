@@ -35,8 +35,8 @@ export function LoginForm() {
         </Alert>
       ) : null}
       <div className="space-y-2">
-        <Label htmlFor="admin-email">Email</Label>
-        <Input id="admin-email" name="email" type="email" inputMode="email" autoComplete="username" required />
+        <Label htmlFor="admin-email">Email o usuario</Label>
+        <Input id="admin-email" name="email" type="text" autoCapitalize="none" autoCorrect="off" spellCheck={false} autoComplete="username" required />
       </div>
       <div className="space-y-2">
         <Label htmlFor="admin-password">Contraseña</Label>

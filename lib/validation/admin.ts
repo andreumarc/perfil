@@ -23,8 +23,16 @@ export const createFollowUpSchema = z.object({
   assignedTo: z.uuid().nullable().optional(),
 });
 
+/** Dominio interno para cuentas con nombre de usuario (sin email): «reformas» → reformas@reformas.local. */
+export const LOCAL_LOGIN_DOMAIN = "reformas.local";
+
 export const loginSchema = z.object({
-  email: z.string().trim().toLowerCase().pipe(z.email({ error: "Email no válido" })),
+  email: z
+    .string()
+    .trim()
+    .toLowerCase()
+    .transform((value) => (value.includes("@") ? value : `${value}@${LOCAL_LOGIN_DOMAIN}`))
+    .pipe(z.email({ error: "Email o usuario no válido" })),
   password: z.string().min(1, { error: "Introduce la contraseña" }).max(200),
 });
 

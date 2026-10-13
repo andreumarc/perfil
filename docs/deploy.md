@@ -4,7 +4,8 @@
 
 - Código en https://github.com/andreumarc/reformas (rama `main`). La rama `claude/gracious-brown-v0fhtd` de `andreumarc/perfil` conserva una copia.
 - Proyecto Neon `reformas` (ID `dawn-lab-59498990`, región `aws-eu-central-1`, Postgres 17) con el esquema aplicado (22 tablas), el primer administrador creado y el contenido inicial cargado: servicios, sectores, proyectos de ejemplo, categorías, autor, 20 artículos en borrador, zonas y FAQs. La fila de `site_settings` se crea con la primera edición guardada en `/admin/ajustes`; hasta entonces el sitio usa los valores por defecto de `content/settings.ts`.
-- No hace falta `/admin/setup` ni `ADMIN_SETUP_TOKEN`: entra en `/admin/login` con las credenciales entregadas y cambia la contraseña en `/admin/cuenta`.
+- No hace falta `/admin/setup` ni `ADMIN_SETUP_TOKEN`: entra en `/admin/login` con las credenciales entregadas y cambia la contraseña en `/admin/cuenta`. El acceso admite email o nombre de usuario: un usuario sin arroba se resuelve como `usuario@reformas.local`.
+- Variables ya cargadas en Vercel (proyecto `reformas`, equipo `marc19`): `DATABASE_URL` (integración Neon, producción y desarrollo; copia manual para previsualización), `AUTH_SECRET` e `IP_HASH_SALT`. Los stores de Blob siguen pendientes de crear a mano.
 - El proyecto de Vercel y los stores de Blob no se pudieron crear desde esta sesión (el token no tiene permisos): sigue los pasos 2 y 3. Las variables de entorno preparadas están en el fichero `vercel-env.txt` entregado con el informe.
 - Si hay que volver a sembrar sin acceso de red a Neon, `npm run db:seed:sql <carpeta>` genera el contenido como SQL idempotente (`INSERT ... ON CONFLICT DO NOTHING`) para ejecutarlo en la consola de Neon, junto con una consulta de verificación por hash.
 
