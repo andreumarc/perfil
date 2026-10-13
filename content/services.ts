@@ -253,7 +253,7 @@ const RAW: Partial[] = [
       { question: "¿Podemos seguir trabajando durante la obra?", answer: "En muchos casos sí, planificando la obra por fases y en horarios compatibles. Lo definimos en el calendario de obra." },
     ],
     requiresLicensedPro: false,
-    imagePath: IMG("pladur-albanileria"),
+    imagePath: IMG("reformas-oficinas"),
     process: PROCESS_NEGOCIO,
   },
   {

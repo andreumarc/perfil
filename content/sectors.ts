@@ -58,7 +58,7 @@ const RAW: Partial[] = [
     summary: "Mamparas, salas, cableado, climatización y acústica, con obra por fases para no parar la actividad.",
     serviceSlugs: ["reformas-oficinas", "domotica-telecomunicaciones", "climatizacion-aire-acondicionado", "iluminacion", "pladur-albanileria"],
     faqs: [],
-    imagePath: IMG("pladur-albanileria"),
+    imagePath: IMG("reformas-oficinas"),
   },
   {
     slug: "gimnasios",
