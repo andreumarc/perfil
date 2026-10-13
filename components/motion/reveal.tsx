@@ -25,6 +25,8 @@ const itemScale: Variants = {
 /**
  * Contenedor que revela a sus hijos `RevealItem` en cascada al entrar en el viewport.
  * Los elementos nacen visibles si JS no carga (SSR) y solo se ocultan al animar.
+ * Solo para hijos estáticos: un `RevealItem` montado después de que el grupo se haya revelado
+ * (paginación, «cargar más») se quedaría invisible; en esos casos usa `Reveal` por elemento.
  */
 export function RevealGroup({ className, children, amount = 0.15, ...props }: HTMLMotionProps<"div"> & { amount?: number }) {
   return (

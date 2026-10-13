@@ -4,7 +4,7 @@ import * as React from "react";
 import { SearchIcon } from "lucide-react";
 
 import { ArticleCard, type ArticleCardData } from "@/components/blog/article-card";
-import { RevealGroup, RevealItem } from "@/components/motion/reveal";
+import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -46,13 +46,15 @@ export function BlogList({ articles, emptyMessage = "Todavía no hay artículos 
       </p>
 
       {visible.length ? (
-        <RevealGroup key={q} className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" amount={0.05}>
-          {visible.map((a) => (
-            <RevealItem key={a.slug}>
+        // Cada tarjeta se revela por su cuenta: las que añade «Cargar más» se montan después de que el
+        // grupo ya se haya animado y, dentro de un RevealGroup, se quedarían invisibles.
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {visible.map((a, i) => (
+            <Reveal key={a.slug} delay={(i % 3) * 0.08}>
               <ArticleCard article={a} className="h-full" />
-            </RevealItem>
+            </Reveal>
           ))}
-        </RevealGroup>
+        </div>
       ) : (
         <p className="mt-8 rounded-md border border-dashed border-gray-300 bg-white p-6 text-sm text-gray-600">{q ? "No hay artículos que coincidan con tu búsqueda." : emptyMessage}</p>
       )}
