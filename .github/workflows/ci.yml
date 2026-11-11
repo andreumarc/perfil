@@ -78,4 +78,5 @@ jobs:
           name: playwright-report
           path: playwright-report
       - if: steps.gate.outputs.run != 'true'
-        run: echo "E2E omitido: define E2E_DATABASE_URL y E2E_AUTH_SECRET en los secretos del repositorio."
+        run: |
+          echo "E2E omitido: define E2E_DATABASE_URL y E2E_AUTH_SECRET en los secretos del repositorio."
