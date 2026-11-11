@@ -1,5 +1,5 @@
 export const title = "Aviso legal";
-export const updatedAt = "2026-10-12";
+export const updatedAt = "2026-11-11";
 export const body = `*Documento preparado como base; requiere revisión por un profesional antes de su publicación.*
 
 Última actualización: {{lastUpdated}}
@@ -16,9 +16,9 @@ En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios
 | Domicilio | {{address}} |
 | Email de contacto | {{email}} |
 | Datos registrales | {{registry}} |
-| Teléfono | [POR CONFIRMAR: teléfono de contacto] |
+| Teléfono | {{phone}} |
 
-Actividad: reformas integrales e instalaciones en viviendas, locales comerciales, oficinas y otros inmuebles, con base en Barcelona, Igualada y la comarca de l'Anoia y actuación en toda Cataluña y en el resto de España.
+Actividad: reformas integrales e instalaciones en viviendas, locales comerciales, oficinas y otros inmuebles, con oficina en L'Hospitalet de Llobregat (Barcelona) y actuación en Barcelona, Igualada, la comarca de l'Anoia, toda Cataluña y el resto de España.
 
 [POR CONFIRMAR: número de inscripción en el Registro de Empresas Acreditadas (REA) del sector de la construcción, que la Ley 32/2006 exige a las empresas que actúan como contratistas o subcontratistas en obras de construcción, y cualquier otra inscripción o habilitación profesional que la empresa posea.]
 
@@ -105,7 +105,7 @@ Si eres consumidor, tienes a tu disposición las hojas oficiales de queja, recla
 
 ## 12. Ley aplicable y jurisdicción
 
-Este aviso legal se rige por la legislación española. Si eres consumidor, cualquier controversia se someterá a los juzgados y tribunales de tu domicilio, conforme a la normativa de protección de consumidores. En el resto de casos, y siempre que una norma imperativa no disponga otra cosa, las partes se someten a los juzgados y tribunales de [POR CONFIRMAR: ciudad del domicilio social de la empresa].
+Este aviso legal se rige por la legislación española. Si eres consumidor, cualquier controversia se someterá a los juzgados y tribunales de tu domicilio, conforme a la normativa de protección de consumidores. En el resto de casos, y siempre que una norma imperativa no disponga otra cosa, las partes se someten a los juzgados y tribunales de L'Hospitalet de Llobregat.
 
 ## 13. Modificaciones y vigencia
 

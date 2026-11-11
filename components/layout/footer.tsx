@@ -24,7 +24,7 @@ export function Footer({ settings }: { settings: SiteSettings }) {
       <Container size="wide" className="py-14 md:py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(4,minmax(0,1fr))]">
           <div className="max-w-sm">
-            <Logo name={company.name} tagline={company.tagline} />
+            <Logo name={company.name} />
             <p className="mt-5 text-sm leading-relaxed text-gray-600">{settings.seo.defaultDescription}</p>
             <ul className="mt-6 space-y-2.5 text-sm text-gray-600">
               {phoneHref ? (

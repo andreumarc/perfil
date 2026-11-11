@@ -11,7 +11,7 @@ export default async function NotFound() {
     <div className="flex min-h-dvh flex-col">
       <header className="border-b border-gray-200">
         <Container size="wide" className="flex h-16 items-center">
-          <Logo name={s.company.name} tagline={s.company.tagline} />
+          <Logo name={s.company.name} />
         </Container>
       </header>
       <main className="flex flex-1 items-center">

@@ -17,7 +17,7 @@ export function Header({ settings }: { settings: SiteSettings }) {
   return (
     <header className="sticky top-0 z-40 border-b border-gray-200/80 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
       <Container size="wide" className="flex h-16 items-center justify-between gap-6 md:h-[72px]">
-        <Logo name={company.name} tagline={company.tagline} />
+        <Logo name={company.name} priority />
 
         <nav aria-label="Principal" className="hidden items-center gap-1 lg:flex">
           {menus.main.map((item) => (

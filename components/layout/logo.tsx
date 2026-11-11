@@ -1,44 +1,58 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
-/** Icono de marca: trazo de casa con tejado en cobre (sin imagen, cero peso). */
-export function LogoMark({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 40 40" aria-hidden className={cn("size-9", className)} fill="none">
-      <path d="M6 22 20 8l14 14" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M10 20v12h8v-8h4v8h8V20" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
+/** Logo horizontal de Mardari (icono + wordmark), en PNG con fondo transparente. */
+const LOGO_SRC = {
+  light: "/images/logo/mardari.png",
+  dark: "/images/logo/mardari-blanco.png",
+} as const;
 
-/** Marca tipográfica: icono + nombre + descriptor. Editable desde ajustes. */
+/** Dimensiones reales del PNG; la altura visible la fija la clase `h-*`. */
+const LOGO_WIDTH = 1097;
+const LOGO_HEIGHT = 256;
+
+/**
+ * Marca: imagen del logo con un descriptor opcional (p. ej. «Panel» en el administrador).
+ * `tone="dark"` usa la versión con el wordmark en blanco para fondos oscuros.
+ */
 export function Logo({
   name,
   tagline,
   tone = "light",
   className,
   href = "/",
+  priority = false,
 }: {
   name: string;
   tagline?: string;
   tone?: "light" | "dark";
   className?: string;
   href?: string;
+  priority?: boolean;
 }) {
   return (
-    <Link href={href} aria-label={`${name} — inicio`} className={cn("group inline-flex items-center gap-2.5", className)}>
-      <LogoMark className="text-copper-500" />
-      <span className="flex flex-col leading-none">
-        <span className={cn("font-display text-[15px] font-bold tracking-tight uppercase", tone === "light" ? "text-ink-900" : "text-white")}>
-          {name}
+    <Link href={href} aria-label={`${name} — inicio`} className={cn("inline-flex items-center gap-3", className)}>
+      <Image
+        src={LOGO_SRC[tone]}
+        alt=""
+        width={LOGO_WIDTH}
+        height={LOGO_HEIGHT}
+        sizes="(min-width: 768px) 200px, 172px"
+        priority={priority}
+        className="h-10 w-auto md:h-[46px]"
+      />
+      {tagline ? (
+        <span
+          className={cn(
+            "border-l pl-3 text-[10px] font-semibold uppercase tracking-[0.18em]",
+            tone === "light" ? "border-gray-200 text-gray-500" : "border-white/25 text-ink-200",
+          )}
+        >
+          {tagline}
         </span>
-        {tagline ? (
-          <span className={cn("mt-1 text-[10px] font-medium uppercase tracking-[0.18em]", tone === "light" ? "text-gray-500" : "text-ink-200")}>
-            {tagline}
-          </span>
-        ) : null}
-      </span>
+      ) : null}
     </Link>
   );
 }

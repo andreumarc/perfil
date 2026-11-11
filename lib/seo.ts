@@ -73,6 +73,7 @@ export function organizationJsonLd(settings: SiteSettings): JsonLd {
     url: siteUrl,
     description: settings.seo.defaultDescription,
     image: absoluteUrl("/opengraph-image"),
+    logo: absoluteUrl("/images/logo/mardari.png"),
     ...(c.phone ? { telephone: c.phone } : {}),
     ...(c.email ? { email: c.email } : {}),
     ...(hasAddress

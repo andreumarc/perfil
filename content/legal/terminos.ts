@@ -1,5 +1,5 @@
 export const title = "Términos y condiciones de uso";
-export const updatedAt = "2026-10-12";
+export const updatedAt = "2026-11-11";
 export const body = `*Documento preparado como base; requiere revisión por un profesional antes de su publicación.*
 
 Última actualización: {{lastUpdated}}
@@ -114,7 +114,7 @@ La empresa puede modificar estos términos para adaptarlos a cambios normativos,
 
 ## 15. Ley aplicable y jurisdicción
 
-Estos términos se rigen por la legislación española. Si eres consumidor, cualquier controversia se someterá a los juzgados y tribunales de tu domicilio, de acuerdo con la normativa de protección de consumidores y usuarios. En el resto de casos, y salvo que una norma imperativa disponga otra cosa, las partes se someten a los juzgados y tribunales de [POR CONFIRMAR: ciudad del domicilio social de la empresa].
+Estos términos se rigen por la legislación española. Si eres consumidor, cualquier controversia se someterá a los juzgados y tribunales de tu domicilio, de acuerdo con la normativa de protección de consumidores y usuarios. En el resto de casos, y salvo que una norma imperativa disponga otra cosa, las partes se someten a los juzgados y tribunales de L'Hospitalet de Llobregat.
 
 [POR CONFIRMAR: disponibilidad de este texto en catalán, de acuerdo con los derechos lingüísticos que el Código de consumo de Cataluña reconoce a los consumidores.]
 `;

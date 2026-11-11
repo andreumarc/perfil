@@ -8,25 +8,25 @@ const legalDoc = (slug: string, title: string) => ({ title: LEGAL_DOCS[slug]?.ti
  * Configuración por defecto del sitio. Todo es editable desde /admin/ajustes;
  * estos valores se usan en desarrollo sin base de datos y como semilla inicial.
  *
- * No contiene datos de empresa reales: nombre, teléfono, dirección y NIF son
- * marcadores hasta que el administrador los confirme.
+ * Datos de empresa de Mardari Reformas Integrales SL (nombre, CIF, dirección, teléfono y WhatsApp).
+ * El email y el código postal se completan desde el panel cuando se confirmen.
  */
 export const DEFAULT_SETTINGS: SiteSettings = {
   company: {
-    name: "Nombre Empresa",
-    tagline: "Reformas e instalaciones",
-    legalName: "",
-    nif: "",
-    address: "",
+    name: "Mardari Reformas Integrales",
+    tagline: "Reformas integrales e instalaciones",
+    legalName: "Mardari Reformas Integrales SL",
+    nif: "B05888698",
+    address: "Carrer General Prim 78, bajo local 2, oficina 7",
     postalCode: "",
-    city: "Barcelona",
+    city: "L'Hospitalet de Llobregat",
     province: "Barcelona",
-    phone: "",
-    whatsapp: "",
+    phone: "+34 641 07 63 02",
+    whatsapp: "+34 641 07 63 02",
     whatsappMessage: "Hola, me gustaría pedir presupuesto para una reforma.",
     email: "",
     hours: "Lunes a viernes, de 9:00 a 19:00",
-    zones: ["Barcelona", "Igualada", "Anoia", "Toda Cataluña", "Toda España"],
+    zones: ["L'Hospitalet de Llobregat", "Barcelona", "Igualada", "Anoia", "Toda Cataluña", "Toda España"],
     socials: { instagram: "", facebook: "", linkedin: "", youtube: "", tiktok: "" },
   },
   ticker: {
@@ -87,12 +87,12 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
 - Instalaciones ejecutadas por profesionales habilitados cuando la normativa lo exige.
 - Garantía legal de obra conforme a la Ley de Ordenación de la Edificación.
 
-*Los datos corporativos, el equipo y las referencias se completan desde el panel de administración.*`,
+*El equipo y las referencias se completan desde el panel de administración.*`,
   },
   seo: {
     defaultTitle: "Reformas integrales e instalaciones para viviendas y negocios",
     defaultDescription:
-      "Empresa de reformas integrales e instalaciones en toda Cataluña y toda España, con base en Barcelona, Igualada y Anoia. Viviendas, locales, oficinas, gimnasios, restaurantes y clínicas. Presupuesto sin compromiso.",
+      "Empresa de reformas integrales e instalaciones con oficina en L'Hospitalet de Llobregat (Barcelona) y actuación en Barcelona, Igualada, Anoia, toda Cataluña y toda España. Viviendas, locales, oficinas, gimnasios, restaurantes y clínicas. Presupuesto sin compromiso.",
     keywords: [
       "reformas integrales",
       "empresa de reformas",
@@ -181,13 +181,15 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
       },
     ],
   },
+  // Vacío = se usa el dato de `company` (razón social, CIF, domicilio, email). Solo los datos
+  // registrales (Registro Mercantil) siguen pendientes de confirmar.
   legal: {
-    responsibleName: "[POR CONFIRMAR: razón social]",
-    nif: "[POR CONFIRMAR: NIF]",
-    address: "[POR CONFIRMAR: dirección completa]",
-    email: "[POR CONFIRMAR: email de contacto]",
+    responsibleName: "",
+    nif: "",
+    address: "",
+    email: "",
     registry: "[POR CONFIRMAR: datos registrales]",
-    lastUpdated: "2026-10-12",
+    lastUpdated: "2026-11-11",
   },
   legalDocs: {
     avisoLegal: legalDoc("aviso-legal", "Aviso legal"),

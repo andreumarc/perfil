@@ -1,3 +1,6 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+
 import { ImageResponse } from "next/og";
 
 import { getSettings } from "@/lib/cms/settings";
@@ -8,9 +11,19 @@ export const alt = "Reformas integrales e instalaciones";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+/** Logo con el wordmark en blanco (fondo oscuro de la imagen). Si no se puede leer, se omite. */
+async function loadLogo(): Promise<ArrayBuffer | null> {
+  try {
+    const file = await readFile(join(process.cwd(), "public/images/logo/mardari-blanco.png"));
+    return Uint8Array.from(file).buffer;
+  } catch {
+    return null;
+  }
+}
+
 /** Imagen OpenGraph por defecto (WhatsApp, LinkedIn, X). */
 export default async function OpenGraphImage() {
-  const s = await getSettings();
+  const [s, logo] = await Promise.all([getSettings(), loadLogo()]);
   return new ImageResponse(
     (
       <div
@@ -27,14 +40,11 @@ export default async function OpenGraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <svg viewBox="0 0 40 40" width="64" height="64" fill="none">
-            <path d="M6 22 20 8l14 14" stroke="#d3620f" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M10 20v12h8v-8h4v8h8V20" stroke="#ffffff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          {logo ? (
+            <img src={logo as unknown as string} alt="" height={92} style={{ height: 92 }} />
+          ) : (
             <div style={{ fontSize: 30, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1 }}>{s.company.name}</div>
-            <div style={{ fontSize: 18, letterSpacing: 4, textTransform: "uppercase", opacity: 0.75 }}>{s.company.tagline}</div>
-          </div>
+          )}
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 14, color: "#e8781e", fontSize: 20, letterSpacing: 4, textTransform: "uppercase" }}>
