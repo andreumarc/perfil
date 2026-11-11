@@ -1,10 +1,14 @@
+import { QuoteForm } from "@/components/forms/quote-form";
+import { QuotePopup } from "@/components/forms/quote-popup";
 import { FloatingCta } from "@/components/layout/floating-cta";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { MobileActionBar } from "@/components/layout/mobile-action-bar";
 import { Ticker } from "@/components/layout/ticker";
+import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getSettings } from "@/lib/cms/settings";
+import { whatsappHref } from "@/lib/phone";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 /** Las páginas públicas son estáticas con regeneración incremental cada 5 minutos. */
@@ -12,6 +16,7 @@ export const revalidate = 300;
 
 export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
   const settings = await getSettings();
+  const wa = whatsappHref(settings.company.whatsapp, settings.company.whatsappMessage);
   return (
     <>
       <a
@@ -27,7 +32,11 @@ export default async function MarketingLayout({ children }: { children: React.Re
       </main>
       <Footer settings={settings} />
       <FloatingCta />
+      <WhatsAppButton href={wa} />
       <MobileActionBar company={settings.company} />
+      <QuotePopup whatsappHref={wa}>
+        <QuoteForm layout="compact" source="presupuesto" variant="general" submitLabel="Pedir presupuesto" />
+      </QuotePopup>
       <JsonLd data={[organizationJsonLd(settings), websiteJsonLd(settings)]} />
     </>
   );

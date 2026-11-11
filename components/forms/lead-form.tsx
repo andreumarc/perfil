@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { getAttribution } from "@/lib/analytics/attribution";
+import { LEAD_CREATED_EVENT } from "@/lib/analytics/keys";
 import { track } from "@/lib/analytics/track";
 import { getVisitorId } from "@/lib/analytics/visitor";
 import { ATTACHMENT_ALLOWED_TYPES, ATTACHMENT_MAX_FILES, ATTACHMENT_MAX_FILE_BYTES, ATTACHMENT_MAX_TOTAL_BYTES, leadFormSchema, type FormVariantValue, type LeadFormInput, type LeadFormValues } from "@/lib/validation/lead";
@@ -183,6 +184,7 @@ export function LeadForm({
       }
       if (result.status === "success") {
         track("lead_created", { source, variant, leadId: result.leadId ?? undefined, articleSlug: articleSlug ?? null, calculator: extra?.context?.calculator ?? null }, { persist: false });
+        window.dispatchEvent(new CustomEvent(LEAD_CREATED_EVENT, { detail: { source } }));
       }
       setState(result);
     });

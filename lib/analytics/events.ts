@@ -15,6 +15,8 @@ export const EVENT_TYPES = [
   "article_viewed",
   "calculator_used",
   "consent_updated",
+  "popup_shown",
+  "popup_closed",
 ] as const;
 
 export type EventType = (typeof EVENT_TYPES)[number];
@@ -33,6 +35,8 @@ export const PERSISTED_EVENTS: ReadonlySet<EventType> = new Set<EventType>([
   "project_viewed",
   "calculator_used",
   "consent_updated",
+  "popup_shown",
+  "popup_closed",
 ]);
 
 export const EVENT_LABELS: Record<EventType, string> = {
@@ -49,6 +53,8 @@ export const EVENT_LABELS: Record<EventType, string> = {
   article_viewed: "Artículo visto",
   calculator_used: "Calculadora usada",
   consent_updated: "Consentimiento actualizado",
+  popup_shown: "Pop-up de presupuesto mostrado",
+  popup_closed: "Pop-up de presupuesto cerrado",
 };
 
 export type EventProps = Record<string, string | number | boolean | null | undefined>;
