@@ -40,7 +40,8 @@ export function LoginForm() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="admin-password">Contraseña</Label>
-        <Input id="admin-password" name="password" type="password" autoComplete="current-password" required minLength={12} />
+        {/* Sin minLength: la longitud mínima solo aplica al crear o cambiar contraseñas, no al entrar. */}
+        <Input id="admin-password" name="password" type="password" autoComplete="current-password" required />
       </div>
       <Button type="submit" variant="dark" size="lg" className="w-full" disabled={pending} aria-busy={pending}>
         {pending ? "Entrando…" : "Entrar"}
