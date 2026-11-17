@@ -1,6 +1,6 @@
 # Plan de captación de clientes — Mardari Reformas Integrales SL
 
-Guía operativa para conseguir solicitudes de presupuesto desde la primera semana. Todo el material de este documento está listo para copiar y pegar. Datos usados: Carrer General Prim 78, bajo local 2, oficina 7, L'Hospitalet de Llobregat · 641 07 63 02 (teléfono y WhatsApp) · web https://reformas-ten.vercel.app (cámbiala por el dominio propio en cuanto lo tengas).
+Guía operativa para conseguir solicitudes de presupuesto desde la primera semana. Todo el material de este documento está listo para copiar y pegar. Datos usados: Carrer General Prim 78, bajo local 2, oficina 7, L'Hospitalet de Llobregat · 641 07 63 02 (teléfono y WhatsApp) · web https://reformasmardari.com (hasta que el dominio esté conectado, la web responde en https://reformas-ten.vercel.app).
 
 Reglas que se repiten en todos los canales:
 
@@ -193,20 +193,20 @@ La web guarda el origen de cada visita y lo asocia a la solicitud de presupuesto
 
 | Dónde | Enlace |
 | --- | --- |
-| Google Business Profile | https://reformas-ten.vercel.app/?utm_source=google&utm_medium=gbp&utm_campaign=perfil |
-| Habitissimo | https://reformas-ten.vercel.app/?utm_source=habitissimo&utm_medium=marketplace&utm_campaign=perfil |
-| Cronoshare | https://reformas-ten.vercel.app/?utm_source=cronoshare&utm_medium=marketplace&utm_campaign=perfil |
-| Instapro | https://reformas-ten.vercel.app/?utm_source=instapro&utm_medium=marketplace&utm_campaign=perfil |
-| Houzz | https://reformas-ten.vercel.app/?utm_source=houzz&utm_medium=marketplace&utm_campaign=perfil |
-| Milanuncios | https://reformas-ten.vercel.app/presupuesto?utm_source=milanuncios&utm_medium=clasificados&utm_campaign=anuncios |
-| Wallapop | https://reformas-ten.vercel.app/presupuesto?utm_source=wallapop&utm_medium=clasificados&utm_campaign=anuncios |
-| Instagram (biografía) | https://reformas-ten.vercel.app/?utm_source=instagram&utm_medium=social&utm_campaign=bio |
-| Facebook (página) | https://reformas-ten.vercel.app/?utm_source=facebook&utm_medium=social&utm_campaign=pagina |
-| TikTok | https://reformas-ten.vercel.app/?utm_source=tiktok&utm_medium=social&utm_campaign=bio |
-| Google Ads | https://reformas-ten.vercel.app/presupuesto?utm_source=google&utm_medium=cpc&utm_campaign=busqueda |
-| Meta Ads | https://reformas-ten.vercel.app/presupuesto?utm_source=meta&utm_medium=paid-social&utm_campaign=whatsapp |
-| Email a prescriptores | https://reformas-ten.vercel.app/sectores?utm_source=email&utm_medium=outreach&utm_campaign=prescriptores |
-| Lona de obra y furgoneta | https://reformas-ten.vercel.app/?utm_source=lona&utm_medium=offline&utm_campaign=obra |
+| Google Business Profile | https://reformasmardari.com/?utm_source=google&utm_medium=gbp&utm_campaign=perfil |
+| Habitissimo | https://reformasmardari.com/?utm_source=habitissimo&utm_medium=marketplace&utm_campaign=perfil |
+| Cronoshare | https://reformasmardari.com/?utm_source=cronoshare&utm_medium=marketplace&utm_campaign=perfil |
+| Instapro | https://reformasmardari.com/?utm_source=instapro&utm_medium=marketplace&utm_campaign=perfil |
+| Houzz | https://reformasmardari.com/?utm_source=houzz&utm_medium=marketplace&utm_campaign=perfil |
+| Milanuncios | https://reformasmardari.com/presupuesto?utm_source=milanuncios&utm_medium=clasificados&utm_campaign=anuncios |
+| Wallapop | https://reformasmardari.com/presupuesto?utm_source=wallapop&utm_medium=clasificados&utm_campaign=anuncios |
+| Instagram (biografía) | https://reformasmardari.com/?utm_source=instagram&utm_medium=social&utm_campaign=bio |
+| Facebook (página) | https://reformasmardari.com/?utm_source=facebook&utm_medium=social&utm_campaign=pagina |
+| TikTok | https://reformasmardari.com/?utm_source=tiktok&utm_medium=social&utm_campaign=bio |
+| Google Ads | https://reformasmardari.com/presupuesto?utm_source=google&utm_medium=cpc&utm_campaign=busqueda |
+| Meta Ads | https://reformasmardari.com/presupuesto?utm_source=meta&utm_medium=paid-social&utm_campaign=whatsapp |
+| Email a prescriptores | https://reformasmardari.com/sectores?utm_source=email&utm_medium=outreach&utm_campaign=prescriptores |
+| Lona de obra y furgoneta | https://reformasmardari.com/?utm_source=lona&utm_medium=offline&utm_campaign=obra |
 
 Para los contactos que llegan por WhatsApp sin pasar por la web, pregunta siempre «¿cómo nos has conocido?» y anótalo en el lead del panel.
 

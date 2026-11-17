@@ -41,7 +41,12 @@
 
 4. Despliega. Comprueba `https://tu-dominio.com/api/health`, `/sitemap.xml`, `/robots.txt` y `/rss.xml`.
 5. Si la base de datos no tiene usuarios, crea el primer administrador en `/admin/setup` y elimina `ADMIN_SETUP_TOKEN`. En el proyecto actual el administrador ya existe: entra en `/admin/login` y cambia la contraseña en `/admin/cuenta`.
-6. Dominio: añade el dominio en Vercel y configura DNS. `NEXT_PUBLIC_SITE_URL` debe coincidir con el dominio canónico.
+6. Dominio `reformasmardari.com` (registrado en Namecheap):
+   - En Vercel: proyecto `reformas` → Settings → Domains → Add → `reformasmardari.com`. Añade también `www.reformasmardari.com` y márcalo como redirección (308) a `reformasmardari.com`.
+   - En Namecheap: Domain List → Manage → Advanced DNS. Borra los registros de «parking» y crea los que Vercel muestre en la pantalla del dominio. Normalmente son un registro `A` para `@` con la IP de Vercel (`76.76.21.21`) y un `CNAME` para `www` hacia `cname.vercel-dns.com`. Usa siempre los valores que indique Vercel.
+   - Espera a que Vercel marque el dominio como válido y emita el certificado (de minutos a unas horas por la propagación DNS).
+   - `NEXT_PUBLIC_SITE_URL` no es imprescindible: sin ella, la web usa `VERCEL_PROJECT_PRODUCTION_URL`, que pasa a ser el dominio propio en cuanto se añade al proyecto. Si se define, debe ser `https://reformasmardari.com` (sin barra final). Tras cambiar el dominio, lanza un redeploy para regenerar canónicas, sitemap y JSON-LD.
+   - Después: actualiza la web en Google Business Profile, los marketplaces y los anuncios, y añade la propiedad en Google Search Console.
 
 ## 3. Integraciones (desde `/admin/ajustes`)
 
