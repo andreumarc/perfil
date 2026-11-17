@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { MenuIcon, MessageCircleIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, MenuIcon, MessageCircleIcon, PhoneIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -71,6 +71,14 @@ export function MobileNav({ company, menus }: { company: SiteSettings["company"]
               <a href={phoneHref} onClick={() => track("phone_clicked", { location: "mobile_menu" })}>
                 <PhoneIcon aria-hidden />
                 {formatPhone(company.phone)}
+              </a>
+            </Button>
+          ) : null}
+          {company.email ? (
+            <Button asChild variant="ghost" size="lg" className="w-full">
+              <a href={`mailto:${company.email}`} onClick={() => track("email_clicked", { location: "mobile_menu" })}>
+                <MailIcon aria-hidden />
+                {company.email}
               </a>
             </Button>
           ) : null}

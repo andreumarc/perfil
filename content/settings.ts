@@ -9,7 +9,7 @@ const legalDoc = (slug: string, title: string) => ({ title: LEGAL_DOCS[slug]?.ti
  * estos valores se usan en desarrollo sin base de datos y como semilla inicial.
  *
  * Datos de empresa de Mardari Reformas Integrales SL (nombre, CIF, dirección, teléfono y WhatsApp).
- * El email y el código postal se completan desde el panel cuando se confirmen.
+ * El código postal se completa desde el panel cuando se confirme.
  */
 export const DEFAULT_SETTINGS: SiteSettings = {
   company: {
@@ -21,10 +21,10 @@ export const DEFAULT_SETTINGS: SiteSettings = {
     postalCode: "",
     city: "L'Hospitalet de Llobregat",
     province: "Barcelona",
-    phone: "+34 641 07 63 02",
-    whatsapp: "+34 641 07 63 02",
+    phone: "+34 711 506 037",
+    whatsapp: "+34 711 506 037",
     whatsappMessage: "Hola, me gustaría pedir presupuesto para una reforma.",
-    email: "",
+    email: "reformasmardari@gmail.com",
     hours: "Lunes a viernes, de 9:00 a 19:00",
     zones: ["L'Hospitalet de Llobregat", "Barcelona", "Igualada", "Anoia", "Toda Cataluña", "Toda España"],
     socials: { instagram: "", facebook: "", linkedin: "", youtube: "", tiktok: "" },

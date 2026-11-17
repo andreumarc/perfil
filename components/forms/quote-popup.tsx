@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { usePathname } from "next/navigation";
+import { MailIcon, PhoneIcon } from "lucide-react";
 
 import { WhatsAppIcon } from "@/components/layout/whatsapp-button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -35,7 +36,19 @@ type Trigger = "time" | "scroll" | "exit";
  * formulario, legales ni en el panel, y nunca a quien ya ha enviado una solicitud.
  * `children` es el formulario compacto de presupuesto (componente de servidor).
  */
-export function QuotePopup({ whatsappHref, children }: { whatsappHref: string | null; children: React.ReactNode }) {
+export function QuotePopup({
+  whatsappHref,
+  phoneHref,
+  phoneLabel,
+  email,
+  children,
+}: {
+  whatsappHref: string | null;
+  phoneHref: string | null;
+  phoneLabel: string;
+  email: string;
+  children: React.ReactNode;
+}) {
   const pathname = usePathname();
   const consent = useConsent();
   const [open, setOpen] = React.useState(false);
@@ -114,19 +127,41 @@ export function QuotePopup({ whatsappHref, children }: { whatsappHref: string | 
           </DialogDescription>
         </DialogHeader>
         {children}
-        {whatsappHref ? (
-          <p className="text-center text-sm text-gray-600">
-            ¿Prefieres escribirnos?{" "}
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => track("whatsapp_clicked", { location: "popup" })}
-              className="inline-flex items-center gap-1.5 font-semibold text-ink-900 underline underline-offset-4 hover:text-copper-600"
-            >
-              <WhatsAppIcon className="size-4 text-[#25d366]" />
-              Hablar por WhatsApp
-            </a>
+        {phoneHref || whatsappHref || email ? (
+          <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center text-sm text-gray-600">
+            <span>¿Prefieres hablar directamente?</span>
+            {phoneHref ? (
+              <a
+                href={phoneHref}
+                onClick={() => track("phone_clicked", { location: "popup" })}
+                className="inline-flex items-center gap-1.5 font-semibold text-ink-900 underline underline-offset-4 hover:text-copper-600"
+              >
+                <PhoneIcon className="size-4" aria-hidden />
+                <span className="tabular">{phoneLabel}</span>
+              </a>
+            ) : null}
+            {whatsappHref ? (
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("whatsapp_clicked", { location: "popup" })}
+                className="inline-flex items-center gap-1.5 font-semibold text-ink-900 underline underline-offset-4 hover:text-copper-600"
+              >
+                <WhatsAppIcon className="size-4 text-[#25d366]" />
+                WhatsApp
+              </a>
+            ) : null}
+            {email ? (
+              <a
+                href={`mailto:${email}`}
+                onClick={() => track("email_clicked", { location: "popup" })}
+                className="inline-flex items-center gap-1.5 font-semibold text-ink-900 underline underline-offset-4 hover:text-copper-600"
+              >
+                <MailIcon className="size-4" aria-hidden />
+                Email
+              </a>
+            ) : null}
           </p>
         ) : null}
       </DialogContent>
