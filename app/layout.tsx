@@ -30,7 +30,14 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: { card: "summary_large_image", title, description: s.seo.defaultDescription },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
-    ...(s.integrations.gscVerification ? { verification: { google: s.integrations.gscVerification } } : {}),
+    ...(s.integrations.gscVerification || s.integrations.bingVerification
+      ? {
+          verification: {
+            ...(s.integrations.gscVerification ? { google: s.integrations.gscVerification } : {}),
+            ...(s.integrations.bingVerification ? { other: { "msvalidate.01": s.integrations.bingVerification } } : {}),
+          },
+        }
+      : {}),
   };
 }
 

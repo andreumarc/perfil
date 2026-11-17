@@ -118,6 +118,7 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
     ga4Id: "",
     metaPixelId: "",
     gscVerification: "",
+    bingVerification: "",
     gbpUrl: "",
     mapsUrl: "",
   },

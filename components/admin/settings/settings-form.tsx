@@ -359,7 +359,8 @@ export function SettingsForm({ initial, mediaOptions }: { initial: SiteSettings;
               <Text id="i-gtm" label="Google Tag Manager (GTM-XXXXXXX)" value={s.integrations.gtmId} onChange={(v) => patch("integrations", { gtmId: v })} error={E("integrations.gtmId")} />
               <Text id="i-ga4" label="Google Analytics 4 (G-XXXXXXXXXX)" value={s.integrations.ga4Id} onChange={(v) => patch("integrations", { ga4Id: v })} error={E("integrations.ga4Id")} hint="Si hay GTM, GA4 se configura dentro de GTM." />
               <Text id="i-meta" label="Meta Pixel ID" value={s.integrations.metaPixelId} onChange={(v) => patch("integrations", { metaPixelId: v })} error={E("integrations.metaPixelId")} />
-              <Text id="i-gsc" label="Verificación de Search Console" value={s.integrations.gscVerification} onChange={(v) => patch("integrations", { gscVerification: v })} error={E("integrations.gscVerification")} />
+              <Text id="i-gsc" label="Verificación de Search Console" value={s.integrations.gscVerification} onChange={(v) => patch("integrations", { gscVerification: v })} error={E("integrations.gscVerification")} hint="Solo el valor content de la etiqueta meta google-site-verification." />
+              <Text id="i-bing" label="Verificación de Bing Webmaster Tools" value={s.integrations.bingVerification} onChange={(v) => patch("integrations", { bingVerification: v })} error={E("integrations.bingVerification")} hint="Solo el valor content de la etiqueta meta msvalidate.01." />
               <Text id="i-gbp" label="URL de Google Business Profile" value={s.integrations.gbpUrl} onChange={(v) => patch("integrations", { gbpUrl: v })} error={E("integrations.gbpUrl")} />
               <Text id="i-maps" label="URL de Google Maps" value={s.integrations.mapsUrl} onChange={(v) => patch("integrations", { mapsUrl: v })} error={E("integrations.mapsUrl")} />
             </div>

@@ -80,3 +80,23 @@ jobs:
       - if: steps.gate.outputs.run != 'true'
         run: |
           echo "E2E omitido: define E2E_DATABASE_URL y E2E_AUTH_SECRET en los secretos del repositorio."
+
+  indexnow:
+    name: Avisar a buscadores (IndexNow)
+    needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Esperar al despliegue de Vercel
+        run: sleep 120
+      - name: Enviar el sitemap publicado a IndexNow
+        env:
+          # Variable de repositorio SITE_URL para cambiar de dominio sin tocar el workflow.
+          SITE_URL: ${{ vars.SITE_URL || 'https://reformas-ten.vercel.app' }}
+        run: node scripts/indexnow.mjs

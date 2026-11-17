@@ -134,6 +134,13 @@ export const siteSettingsSchema = z.object({
       .trim()
       .max(120)
       .refine((v) => v === "" || /^[A-Za-z0-9_-]+$/.test(v), { error: "Token no válido" }),
+    bingVerification: z
+      .string()
+      .trim()
+      .max(120)
+      .refine((v) => v === "" || /^[A-Za-z0-9_-]+$/.test(v), { error: "Token no válido" })
+      .optional()
+      .default(""),
     gbpUrl: optionalUrl,
     mapsUrl: optionalUrl,
   }),
