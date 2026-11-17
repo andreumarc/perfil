@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { usePathname } from "next/navigation";
-import { PhoneIcon } from "lucide-react";
+import { MailIcon, PhoneIcon } from "lucide-react";
 
 import { WhatsAppIcon } from "@/components/layout/whatsapp-button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -40,11 +40,13 @@ export function QuotePopup({
   whatsappHref,
   phoneHref,
   phoneLabel,
+  email,
   children,
 }: {
   whatsappHref: string | null;
   phoneHref: string | null;
   phoneLabel: string;
+  email: string;
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
@@ -125,7 +127,7 @@ export function QuotePopup({
           </DialogDescription>
         </DialogHeader>
         {children}
-        {phoneHref || whatsappHref ? (
+        {phoneHref || whatsappHref || email ? (
           <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center text-sm text-gray-600">
             <span>¿Prefieres hablar directamente?</span>
             {phoneHref ? (
@@ -148,6 +150,16 @@ export function QuotePopup({
               >
                 <WhatsAppIcon className="size-4 text-[#25d366]" />
                 WhatsApp
+              </a>
+            ) : null}
+            {email ? (
+              <a
+                href={`mailto:${email}`}
+                onClick={() => track("email_clicked", { location: "popup" })}
+                className="inline-flex items-center gap-1.5 font-semibold text-ink-900 underline underline-offset-4 hover:text-copper-600"
+              >
+                <MailIcon className="size-4" aria-hidden />
+                Email
               </a>
             ) : null}
           </p>

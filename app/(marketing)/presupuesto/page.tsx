@@ -79,7 +79,14 @@ export default async function QuotePage() {
                 <div className="rounded-lg border border-gray-200 bg-white p-6 text-sm text-gray-700">
                   <h2 className="text-base font-semibold text-ink-900">¿Prefieres hablar directamente?</h2>
                   {company.phone ? <p className="tabular mt-3">Teléfono: {formatPhone(company.phone)}</p> : null}
-                  {company.email ? <p className="mt-1">Email: {company.email}</p> : null}
+                  {company.email ? (
+                    <p className="mt-1">
+                      Email:{" "}
+                      <a href={`mailto:${company.email}`} className="font-medium text-ink-900 underline underline-offset-4 hover:text-copper-600">
+                        {company.email}
+                      </a>
+                    </p>
+                  ) : null}
                   {company.hours ? <p className="mt-1 text-gray-500">{company.hours}</p> : null}
                 </div>
               ) : null}
