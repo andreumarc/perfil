@@ -1,6 +1,6 @@
 # Plan de captación de clientes — Mardari Reformas Integrales SL
 
-Guía operativa para conseguir solicitudes de presupuesto desde la primera semana. Todo el material de este documento está listo para copiar y pegar. Datos usados: Carrer General Prim 78, bajo local 2, oficina 7, L'Hospitalet de Llobregat · 641 07 63 02 (teléfono y WhatsApp) · web https://reformas-ten.vercel.app (cámbiala por el dominio propio en cuanto lo tengas).
+Guía operativa para conseguir solicitudes de presupuesto desde la primera semana. Todo el material de este documento está listo para copiar y pegar. Datos usados: Carrer General Prim 78, bajo local 2, oficina 7, L'Hospitalet de Llobregat · 711 506 037 (teléfono y WhatsApp) · web https://reformas-ten.vercel.app (cámbiala por el dominio propio en cuanto lo tengas).
 
 Reglas que se repiten en todos los canales:
 
@@ -13,7 +13,7 @@ Reglas que se repiten en todos los canales:
 ## 0. Esta semana, en este orden
 
 1. Comprar el dominio y conectarlo a Vercel (Namecheap → DNS → Vercel). Un dominio propio multiplica la confianza y es obligatorio para Google Ads y para Google Business Profile.
-2. Activar WhatsApp Business en el 641 07 63 02: perfil de empresa, horario, mensaje de bienvenida y respuestas rápidas (textos en el apartado 10).
+2. Activar WhatsApp Business en el 711 506 037: perfil de empresa, horario, mensaje de bienvenida y respuestas rápidas (textos en el apartado 10).
 3. Crear y verificar el perfil de Google Business Profile (apartado 1).
 4. Darse de alta como profesional en Habitissimo y Cronoshare (apartados 2 y 3) y publicar los seis anuncios de Milanuncios (apartado 4).
 5. Pedir reseña en Google a los últimos clientes satisfechos (plantilla en el apartado 9). Tres reseñas marcan la diferencia en la primera semana.
@@ -23,13 +23,13 @@ Reglas que se repiten en todos los canales:
 
 Quien busca «empresa de reformas L'Hospitalet» o «reformas Barcelona» en Google o en Maps ve primero las tres fichas del mapa. Sin ficha no existes en esa búsqueda.
 
-Alta: https://business.google.com → «Gestionar ahora» → nombre «Mardari Reformas Integrales» → categoría principal **Empresa de reformas** → sin dirección visible si no recibes clientes en la oficina (marca «zona de servicio» y añade L'Hospitalet de Llobregat, Barcelona, Cornellà, Esplugues, Sant Boi, El Prat, Sant Joan Despí, Gavà, Viladecans, Castelldefels, Badalona, Santa Coloma, Sant Cugat, Igualada y la comarca de l'Anoia) → teléfono 641 07 63 02 → web con UTM (apartado 11) → verificación (vídeo o carta; sigue el proceso que proponga Google).
+Alta: https://business.google.com → «Gestionar ahora» → nombre «Mardari Reformas Integrales» → categoría principal **Empresa de reformas** → sin dirección visible si no recibes clientes en la oficina (marca «zona de servicio» y añade L'Hospitalet de Llobregat, Barcelona, Cornellà, Esplugues, Sant Boi, El Prat, Sant Joan Despí, Gavà, Viladecans, Castelldefels, Badalona, Santa Coloma, Sant Cugat, Igualada y la comarca de l'Anoia) → teléfono 711 506 037 → web con UTM (apartado 11) → verificación (vídeo o carta; sigue el proceso que proponga Google).
 
 Categorías secundarias: Contratista de obras, Empresa de reformas de cocinas, Empresa de reformas de baños, Electricista, Fontanero, Empresa de climatización, Empresa de pladur.
 
 Descripción (750 caracteres máximo):
 
-> Mardari Reformas Integrales SL es una empresa de reformas integrales e instalaciones con oficina en L'Hospitalet de Llobregat. Reformamos pisos, casas, cocinas y baños, y adecuamos locales comerciales, oficinas, gimnasios, restaurantes y clínicas en Barcelona, el Baix Llobregat, toda Cataluña y el resto de España. Un único interlocutor coordina albañilería, electricidad, fontanería, climatización, pladur, carpintería y pintura, con presupuesto cerrado por partidas y calendario de obra. Las instalaciones sujetas a normativa las ejecutan y certifican profesionales habilitados. Visitamos tu espacio y te entregamos un presupuesto detallado sin compromiso. Llámanos o escríbenos por WhatsApp al 641 07 63 02.
+> Mardari Reformas Integrales SL es una empresa de reformas integrales e instalaciones con oficina en L'Hospitalet de Llobregat. Reformamos pisos, casas, cocinas y baños, y adecuamos locales comerciales, oficinas, gimnasios, restaurantes y clínicas en Barcelona, el Baix Llobregat, toda Cataluña y el resto de España. Un único interlocutor coordina albañilería, electricidad, fontanería, climatización, pladur, carpintería y pintura, con presupuesto cerrado por partidas y calendario de obra. Las instalaciones sujetas a normativa las ejecutan y certifican profesionales habilitados. Visitamos tu espacio y te entregamos un presupuesto detallado sin compromiso. Llámanos o escríbenos por WhatsApp al 711 506 037.
 
 Servicios que hay que dar de alta en la ficha (con precio orientativo «desde», sin IVA, los mismos de las calculadoras de la web): reforma integral de piso, reforma de cocina, reforma de baño, reforma de local comercial, instalación eléctrica, fontanería, climatización y aerotermia, pladur y pintura.
 
@@ -49,7 +49,7 @@ Qué peticiones comprar (los créditos se acaban rápido): reforma integral, coc
 
 Primer mensaje al cliente (envíalo en minutos y llama justo después):
 
-> Hola {nombre}, soy {tu nombre}, de Mardari Reformas Integrales (L'Hospitalet). Acabo de ver tu petición para {tipo de reforma} en {población}. Podemos pasar a verlo esta semana y entregarte un presupuesto detallado por partidas, sin compromiso. ¿Te va bien que te llame hoy sobre las {hora} para concretar? También puedes escribirme por WhatsApp al 641 07 63 02.
+> Hola {nombre}, soy {tu nombre}, de Mardari Reformas Integrales (L'Hospitalet). Acabo de ver tu petición para {tipo de reforma} en {población}. Podemos pasar a verlo esta semana y entregarte un presupuesto detallado por partidas, sin compromiso. ¿Te va bien que te llame hoy sobre las {hora} para concretar? También puedes escribirme por WhatsApp al 711 506 037.
 
 Al terminar cada obra pide la valoración en Habitissimo (y en Google). Un perfil con cinco valoraciones recientes convierte el doble que uno sin ellas.
 
@@ -67,27 +67,27 @@ Publica un anuncio por servicio en «Servicios» → «Reformas» (y los de inst
 
 Anuncio 1 · Reformas integrales de pisos y casas en L'Hospitalet y Barcelona
 
-> Empresa de reformas integrales con oficina en L'Hospitalet de Llobregat. Reformamos pisos y casas completos: distribución, electricidad con boletín, fontanería, pladur, suelos, cocina, baños y pintura. Un solo responsable de obra, presupuesto cerrado por partidas y calendario por fases. Trabajamos en Barcelona, Baix Llobregat y toda Cataluña. Visita y presupuesto sin compromiso. Mardari Reformas Integrales SL · 641 07 63 02 (llamada o WhatsApp).
+> Empresa de reformas integrales con oficina en L'Hospitalet de Llobregat. Reformamos pisos y casas completos: distribución, electricidad con boletín, fontanería, pladur, suelos, cocina, baños y pintura. Un solo responsable de obra, presupuesto cerrado por partidas y calendario por fases. Trabajamos en Barcelona, Baix Llobregat y toda Cataluña. Visita y presupuesto sin compromiso. Mardari Reformas Integrales SL · 711 506 037 (llamada o WhatsApp).
 
 Anuncio 2 · Reforma de cocinas: obra, instalaciones y mobiliario
 
-> Reformamos tu cocina completa o la abrimos al salón: derribos, electricidad, fontanería, alicatados, suelos, falso techo con luz LED y montaje de mobiliario. Te damos un presupuesto detallado tras ver la cocina, sin compromiso. Empresa con CIF, obra con garantía legal. L'Hospitalet, Barcelona y alrededores. 641 07 63 02.
+> Reformamos tu cocina completa o la abrimos al salón: derribos, electricidad, fontanería, alicatados, suelos, falso techo con luz LED y montaje de mobiliario. Te damos un presupuesto detallado tras ver la cocina, sin compromiso. Empresa con CIF, obra con garantía legal. L'Hospitalet, Barcelona y alrededores. 711 506 037.
 
 Anuncio 3 · Reforma de baños: cambio de bañera por ducha y baños completos
 
-> Cambio de bañera por plato de ducha, baños completos y baños accesibles. Fontanería nueva, alicatado, mueble, mampara y grifería. Presupuesto por partidas en 72 horas tras la visita. Empresa de reformas de L'Hospitalet de Llobregat con cobertura en Barcelona y Baix Llobregat. Mardari Reformas Integrales · 641 07 63 02.
+> Cambio de bañera por plato de ducha, baños completos y baños accesibles. Fontanería nueva, alicatado, mueble, mampara y grifería. Presupuesto por partidas en 72 horas tras la visita. Empresa de reformas de L'Hospitalet de Llobregat con cobertura en Barcelona y Baix Llobregat. Mardari Reformas Integrales · 711 506 037.
 
 Anuncio 4 · Reformas de locales comerciales, oficinas, gimnasios y restaurantes
 
-> Adecuación de locales para abrir tu negocio: pladur, instalaciones eléctricas trifásicas con boletín, climatización, extracción, iluminación, aseos accesibles y documentación para la licencia de actividad. Experiencia con tiendas, oficinas, gimnasios, restaurantes y clínicas. Obra por fases para no parar la actividad. Presupuesto sin compromiso. 641 07 63 02.
+> Adecuación de locales para abrir tu negocio: pladur, instalaciones eléctricas trifásicas con boletín, climatización, extracción, iluminación, aseos accesibles y documentación para la licencia de actividad. Experiencia con tiendas, oficinas, gimnasios, restaurantes y clínicas. Obra por fases para no parar la actividad. Presupuesto sin compromiso. 711 506 037.
 
 Anuncio 5 · Electricista y fontanero: instalaciones completas con certificado
 
-> Instalaciones eléctricas completas de viviendas y locales con boletín, cuadros nuevos, puntos de luz, y fontanería de agua y desagües con tubería multicapa. Ejecutadas por profesionales habilitados. También climatización, aerotermia y agua caliente. Presupuesto cerrado tras la visita. L'Hospitalet y Barcelona. 641 07 63 02.
+> Instalaciones eléctricas completas de viviendas y locales con boletín, cuadros nuevos, puntos de luz, y fontanería de agua y desagües con tubería multicapa. Ejecutadas por profesionales habilitados. También climatización, aerotermia y agua caliente. Presupuesto cerrado tras la visita. L'Hospitalet y Barcelona. 711 506 037.
 
 Anuncio 6 · Pladur, pintura y suelos: reformas parciales rápidas
 
-> Tabiques y falsos techos de pladur, aislamiento, pintura de pisos completos y cambio de suelos (laminado, vinílico, porcelánico). Trabajos limpios, con fecha de inicio y fin cerradas. Ideal para pisos de alquiler y locales. Presupuesto gratuito en 48 horas. Mardari Reformas Integrales, L'Hospitalet · 641 07 63 02.
+> Tabiques y falsos techos de pladur, aislamiento, pintura de pisos completos y cambio de suelos (laminado, vinílico, porcelánico). Trabajos limpios, con fecha de inicio y fin cerradas. Ideal para pisos de alquiler y locales. Presupuesto gratuito en 48 horas. Mardari Reformas Integrales, L'Hospitalet · 711 506 037.
 
 ## 5. Otras plataformas que merecen la pena
 
@@ -122,13 +122,13 @@ Negativas (campaña entera): gratis, curso, cursos, empleo, trabajo, ofertas de 
 
 Anuncio adaptable de búsqueda (titulares de 30 caracteres máximo, descripciones de 90):
 
-- Titulares: «Reformas integrales Barcelona» · «Empresa de reformas L'Hospitalet» · «Presupuesto por partidas» · «Visita y presupuesto gratis» · «Un solo responsable de obra» · «Instaladores habilitados» · «Reforma de pisos y locales» · «Llámanos: 641 07 63 02».
+- Titulares: «Reformas integrales Barcelona» · «Empresa de reformas L'Hospitalet» · «Presupuesto por partidas» · «Visita y presupuesto gratis» · «Un solo responsable de obra» · «Instaladores habilitados» · «Reforma de pisos y locales» · «Llámanos: 711 506 037».
 - Descripciones: «Reformas integrales de pisos, cocinas, baños y locales. Presupuesto cerrado por partidas antes de empezar.» · «Coordinamos todos los gremios con un único interlocutor. Visitamos tu espacio y presupuestamos sin compromiso.» · «Electricidad, fontanería, climatización y pladur con profesionales habilitados. Barcelona y Baix Llobregat.»
-- Extensiones: llamada (641 07 63 02), ubicación (ficha de Google), enlaces a /presupuesto, /servicios/reformas-cocinas, /servicios/reformas-banos y /calculadoras, texto destacado «Presupuesto sin compromiso», «Obra con garantía legal».
+- Extensiones: llamada (711 506 037), ubicación (ficha de Google), enlaces a /presupuesto, /servicios/reformas-cocinas, /servicios/reformas-banos y /calculadoras, texto destacado «Presupuesto sin compromiso», «Obra con garantía legal».
 
 ### Meta Ads (Instagram y Facebook)
 
-Objetivo «Mensajes» hacia WhatsApp (el 641 07 63 02 con WhatsApp Business) o «Clientes potenciales» con formulario instantáneo. Público: 28 a 65 años, radio de 20 km de L'Hospitalet, intereses en vivienda, decoración, compra de vivienda y reformas; excluye a quienes ya te han escrito. Creativos: vídeo vertical de 15 segundos de una obra real (antes y después) o carrusel de tres fotos. Presupuesto inicial de 8 a 12 euros al día durante dos semanas; conserva el anuncio con menor coste por conversación.
+Objetivo «Mensajes» hacia WhatsApp (el 711 506 037 con WhatsApp Business) o «Clientes potenciales» con formulario instantáneo. Público: 28 a 65 años, radio de 20 km de L'Hospitalet, intereses en vivienda, decoración, compra de vivienda y reformas; excluye a quienes ya te han escrito. Creativos: vídeo vertical de 15 segundos de una obra real (antes y después) o carrusel de tres fotos. Presupuesto inicial de 8 a 12 euros al día durante dos semanas; conserva el anuncio con menor coste por conversación.
 
 Texto del anuncio:
 
@@ -148,7 +148,7 @@ Guion de contacto (email o visita):
 
 > Asunto: Empresa de reformas en L'Hospitalet para sus clientes / comunidades
 >
-> Hola {nombre}, soy {tu nombre}, de Mardari Reformas Integrales SL, empresa de reformas e instalaciones con oficina en L'Hospitalet de Llobregat. Trabajamos con {administradores de fincas / inmobiliarias / estudios} que necesitan una constructora que presupueste por partidas, cumpla plazos y coordine todos los gremios con un solo interlocutor. Me gustaría enseñarle cómo trabajamos en 15 minutos y dejarle nuestro dosier. ¿Le va bien el {día} a las {hora}? Un saludo, {tu nombre} · 641 07 63 02 · {web}
+> Hola {nombre}, soy {tu nombre}, de Mardari Reformas Integrales SL, empresa de reformas e instalaciones con oficina en L'Hospitalet de Llobregat. Trabajamos con {administradores de fincas / inmobiliarias / estudios} que necesitan una constructora que presupueste por partidas, cumpla plazos y coordine todos los gremios con un solo interlocutor. Me gustaría enseñarle cómo trabajamos en 15 minutos y dejarle nuestro dosier. ¿Le va bien el {día} a las {hora}? Un saludo, {tu nombre} · 711 506 037 · {web}
 
 Acuerda por escrito cómo se recompensa la recomendación (una comisión fija por obra firmada o un descuento para el cliente final) y cumple siempre los plazos pactados: es lo único que mantiene la relación.
 
@@ -166,7 +166,7 @@ Pide la reseña de Google el día que entregas la obra, en persona y por WhatsAp
 
 Programa de referidos: por cada cliente nuevo que venga recomendado y firme obra, un regalo o descuento para quien recomienda (por ejemplo, una mejora en su próxima reparación o una tarjeta regalo). Dilo al entregar cada obra y ponlo en la factura.
 
-Visibilidad física: lona en cada obra con el logo y el 641 07 63 02 (pide permiso a la comunidad), rotulación de la furgoneta y tarjetas en comercios cercanos a cada obra.
+Visibilidad física: lona en cada obra con el logo y el 711 506 037 (pide permiso a la comunidad), rotulación de la furgoneta y tarjetas en comercios cercanos a cada obra.
 
 ## 10. Proceso comercial: del contacto a la obra
 
@@ -179,7 +179,7 @@ Visibilidad física: lona en cada obra con el logo y el 641 07 63 02 (pide permi
 
 Mensajes de WhatsApp Business (respuestas rápidas):
 
-- Bienvenida automática: «Hola, gracias por escribir a Mardari Reformas Integrales. Dinos qué quieres reformar y en qué población, y te contestamos en cuanto podamos (lunes a viernes de 9:00 a 19:00). Si prefieres, llámanos al 641 07 63 02.»
+- Bienvenida automática: «Hola, gracias por escribir a Mardari Reformas Integrales. Dinos qué quieres reformar y en qué población, y te contestamos en cuanto podamos (lunes a viernes de 9:00 a 19:00). Si prefieres, llámanos al 711 506 037.»
 - Primera respuesta: «Hola {nombre}, soy {tu nombre} de Mardari. Para darte un precio real necesitamos ver el espacio: ¿te va bien una visita el {día} por la {mañana/tarde}? Es gratis y sin compromiso.»
 - Tras la visita: «Gracias por recibirnos hoy, {nombre}. Estamos preparando el presupuesto por partidas; lo tendrás el {día}. Cualquier duda, por aquí.»
 - Presupuesto enviado: «Te hemos enviado el presupuesto por email. Lo repasamos juntos cuando quieras por teléfono; dime qué hora te viene bien.»

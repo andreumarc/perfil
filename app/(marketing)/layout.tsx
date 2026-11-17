@@ -8,7 +8,7 @@ import { Ticker } from "@/components/layout/ticker";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getSettings } from "@/lib/cms/settings";
-import { whatsappHref } from "@/lib/phone";
+import { formatPhone, telHref, whatsappHref } from "@/lib/phone";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 /** Las páginas públicas son estáticas con regeneración incremental cada 5 minutos. */
@@ -34,7 +34,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
       <FloatingCta />
       <WhatsAppButton href={wa} />
       <MobileActionBar company={settings.company} />
-      <QuotePopup whatsappHref={wa}>
+      <QuotePopup whatsappHref={wa} phoneHref={telHref(settings.company.phone)} phoneLabel={formatPhone(settings.company.phone)}>
         <QuoteForm layout="compact" source="presupuesto" variant="general" submitLabel="Pedir presupuesto" />
       </QuotePopup>
       <JsonLd data={[organizationJsonLd(settings), websiteJsonLd(settings)]} />
