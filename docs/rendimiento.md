@@ -6,7 +6,7 @@ Qué está optimizado y qué hay que respetar al añadir contenido o código. Me
 
 | Página | Antes | Después |
 | --- | --- | --- |
-| Portada | 67 (LCP 5,3 s, TBT 480 ms) | 95 (LCP 2,7 s, TBT 90 ms) |
+| Portada | 67 (LCP 5,3 s, TBT 480 ms) | 88-95 según la pasada (LCP 2,7-3,7 s, TBT 90 ms) |
 | Servicio (reformas de cocinas) | — | 94 |
 | Blog | — | 93 |
 | Presupuesto (formulario completo en servidor) | — | 83 |
