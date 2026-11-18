@@ -6,13 +6,14 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { IllustrativeBadge } from "@/components/sections/illustrative-badge";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { ProjectContent } from "@/content/types";
+import { CARD_IMAGE_QUALITY } from "@/lib/images";
 
 export function ProjectCard({ project, serviceName }: { project: ProjectContent; serviceName?: string }) {
   return (
     <Link href={`/proyectos/${project.slug}`} className="group flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white focus-visible:outline-2 focus-visible:outline-copper-500">
       <div className="relative aspect-[4/3] bg-ink-900">
         {project.coverImagePath ? (
-          <Image src={project.coverImagePath} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
+          <Image src={project.coverImagePath} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" quality={CARD_IMAGE_QUALITY} className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
         ) : (
           <div className="absolute inset-0 bg-ink-grid" aria-hidden />
         )}

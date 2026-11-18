@@ -12,7 +12,7 @@ Web de captación de leads para una empresa de reformas integrales e instalacion
 
 ## Stack (no cambiar versiones)
 
-Next.js 16 (App Router, `proxy.ts`, `params`/`searchParams`/`cookies()` async), React 19, TypeScript estricto, Tailwind v4 (tokens en `app/globals.css`), Drizzle + Neon (`getDb()` puede ser `null`), Zod 4 (`{ error }`, `z.email()`, `z.uuid()`), RHF, jose, Resend, Motion (`motion/react-m` con `LazyMotion strict`), Vitest + PGlite, Playwright.
+Next.js 16 (App Router, `proxy.ts`, `params`/`searchParams`/`cookies()` async), React 19, TypeScript estricto, Tailwind v4 (tokens en `app/globals.css`), Drizzle + Neon (`getDb()` puede ser `null`), Zod 4 (`{ error }`, `z.email()`, `z.uuid()`), RHF, jose, Resend, Motion (solo `animate()` en contadores y calculadoras; las animaciones de entrada son CSS + IntersectionObserver en `components/motion/reveal.tsx`), Vitest + PGlite, Playwright.
 
 ## Arquitectura
 

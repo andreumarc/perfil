@@ -2,13 +2,16 @@ import type { Metadata, Viewport } from "next";
 
 import { AnalyticsProvider } from "@/components/analytics/analytics-provider";
 import { CookieBanner } from "@/components/analytics/cookie-banner";
-import { MotionProvider } from "@/components/motion/motion-provider";
 import { Preloader } from "@/components/motion/preloader";
 import { getSettings } from "@/lib/cms/settings";
+import { CONSENT_COOKIE } from "@/lib/analytics/keys";
 import { siteUrl } from "@/lib/seo";
 
 import { inter, manrope } from "./fonts";
 import "./globals.css";
+
+/** Marca <html> si existe la cookie de consentimiento; sin cookie, el banner forma parte del primer pintado. */
+const CONSENT_BOOT_SCRIPT = `try{if(document.cookie.indexOf("${CONSENT_COOKIE}=")!==-1)document.documentElement.classList.add("rf-consented")}catch(e){}`;
 
 export async function generateMetadata(): Promise<Metadata> {
   const s = await getSettings();
@@ -53,16 +56,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="es" className={`${inter.variable} ${manrope.variable}`}>
       <head>
-        {/* Sin JavaScript, los bloques con animación de entrada se muestran directamente. */}
-        <noscript>
-          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
-        </noscript>
+        {/* Con consentimiento ya guardado, oculta el banner de cookies antes del primer pintado (ver globals.css). */}
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_BOOT_SCRIPT }} />
       </head>
       <body className="flex min-h-dvh flex-col">
-        <MotionProvider>
-          {children}
-          <Preloader />
-        </MotionProvider>
+        {children}
+        <Preloader />
         <CookieBanner />
         <AnalyticsProvider
           ids={{ gtmId: s.integrations.gtmId, ga4Id: s.integrations.ga4Id, metaPixelId: s.integrations.metaPixelId }}

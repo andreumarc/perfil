@@ -8,7 +8,7 @@ import { TrackView } from "@/components/analytics/track-view";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { ArticleCard } from "@/components/blog/article-card";
 import { Markdown } from "@/components/content/markdown";
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { ProjectCard } from "@/components/home/projects-showcase";
 import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
@@ -229,7 +229,7 @@ export default async function ServicePage({ params }: { params: Params }) {
             ) : null}
           </div>
           <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-[0_8px_30px_rgba(23,25,29,0.06)] md:p-8">
-            <QuoteForm layout="full" source="servicio" variant={variant} defaultServiceSlug={service.slug} />
+            <QuoteFormLazy layout="full" source="servicio" variant={variant} defaultServiceSlug={service.slug} />
           </div>
         </div>
       </Section>

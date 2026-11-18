@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { recordEvent } from "@/db/queries/events";
 import { EVENT_TYPES, PERSISTED_EVENTS } from "@/lib/analytics/events";

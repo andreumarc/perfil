@@ -1,62 +1,108 @@
 "use client";
 
-import * as m from "motion/react-m";
-import type { HTMLMotionProps, Variants } from "motion/react";
+import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-const EASE = [0.22, 1, 0.36, 1] as const;
-
-const container: Variants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
-};
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE } },
-};
-
-const itemScale: Variants = {
-  hidden: { opacity: 0, y: 12, scale: 0.94 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: EASE } },
-};
-
 /**
- * Contenedor que revela a sus hijos `RevealItem` en cascada al entrar en el viewport.
- * Los elementos nacen visibles si JS no carga (SSR) y solo se ocultan al animar.
- * Solo para hijos estáticos: un `RevealItem` montado después de que el grupo se haya revelado
- * (paginación, «cargar más») se quedaría invisible; en esos casos usa `Reveal` por elemento.
+ * Animaciones de entrada al hacer scroll, sin ocultar nada en el HTML inicial.
+ *
+ * Todo se renderiza visible en servidor (SEO, sin JavaScript y LCP sin esperar
+ * a la hidratación). Al montarse en el cliente, solo los bloques que quedan por
+ * debajo de la pantalla pasan a `data-reveal="pending"` (ocultos por CSS) y se
+ * muestran con una transición cuando entran en el viewport. Con
+ * `prefers-reduced-motion` no se oculta nada.
+ *
+ * `RevealGroup` revela a sus `RevealItem` en cascada; `Reveal` es individual.
  */
-export function RevealGroup({ className, children, amount = 0.15, ...props }: HTMLMotionProps<"div"> & { amount?: number }) {
+
+type RevealState = "idle" | "pending" | "shown";
+
+const STAGGER_S = 0.08;
+const BASE_DELAY_S = 0.05;
+
+function reducedMotion(): boolean {
+  return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+/** Oculta el elemento si queda fuera de la pantalla y lo muestra cuando entra en el viewport. */
+function useReveal(ref: React.RefObject<HTMLElement | null>, amount: number): RevealState {
+  const [state, setState] = React.useState<RevealState>("idle");
+
+  React.useEffect(() => {
+    const el = ref.current;
+    if (!el || reducedMotion() || typeof IntersectionObserver === "undefined") return;
+    // Lo que ya está en pantalla (o por encima) no se toca.
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+    setState("pending");
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setState("shown");
+          io.disconnect();
+        }
+      },
+      { threshold: Math.min(Math.max(amount, 0), 1) },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [ref, amount]);
+
+  return state;
+}
+
+const GroupContext = React.createContext<RevealState>("idle");
+
+type DivProps = React.HTMLAttributes<HTMLDivElement>;
+
+export function RevealGroup({ className, children, amount = 0.15, ...props }: DivProps & { amount?: number }) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const state = useReveal(ref, amount);
+
+  // Cascada: retardo creciente por hijo, asignado en el DOM al ocultar el grupo.
+  React.useEffect(() => {
+    const el = ref.current;
+    if (!el || state !== "pending") return;
+    let i = 0;
+    for (const child of Array.from(el.children)) {
+      if (child instanceof HTMLElement && child.hasAttribute("data-reveal")) {
+        child.style.transitionDelay = `${BASE_DELAY_S + i * STAGGER_S}s`;
+        i += 1;
+      }
+    }
+  }, [state]);
+
   return (
-    <m.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true, amount }} className={cn(className)} {...props}>
-      {children}
-    </m.div>
+    <GroupContext.Provider value={state}>
+      <div ref={ref} className={cn(className)} {...props}>
+        {children}
+      </div>
+    </GroupContext.Provider>
   );
 }
 
-export function RevealItem({ className, children, scale = false, ...props }: HTMLMotionProps<"div"> & { scale?: boolean }) {
+export function RevealItem({ className, children, scale = false, ...props }: DivProps & { scale?: boolean }) {
+  const state = React.useContext(GroupContext);
   return (
-    <m.div data-reveal variants={scale ? itemScale : item} className={cn(className)} {...props}>
+    <div data-reveal={state === "idle" ? undefined : state} data-reveal-scale={scale ? "" : undefined} className={cn(className)} {...props}>
       {children}
-    </m.div>
+    </div>
   );
 }
 
 /** Reveal individual (sin cascada). */
-export function Reveal({ className, children, delay = 0, ...props }: HTMLMotionProps<"div"> & { delay?: number }) {
+export function Reveal({ className, children, delay = 0, style, ...props }: DivProps & { delay?: number }) {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const state = useReveal(ref, 0.2);
   return (
-    <m.div
-      data-reveal
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: EASE, delay }}
+    <div
+      ref={ref}
+      data-reveal={state === "idle" ? undefined : state}
       className={cn(className)}
+      style={state === "idle" || !delay ? style : { ...style, transitionDelay: `${delay}s` }}
       {...props}
     >
       {children}
-    </m.div>
+    </div>
   );
 }

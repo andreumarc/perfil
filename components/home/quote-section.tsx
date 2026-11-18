@@ -1,6 +1,6 @@
 import { CheckIcon } from "lucide-react";
 
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { Section } from "@/components/layout/section";
 
 const POINTS = [
@@ -34,7 +34,7 @@ export function QuoteSection() {
           </ul>
         </div>
         <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-[0_8px_30px_rgba(23,25,29,0.06)] md:p-8">
-          <QuoteForm layout="compact" source="presupuesto" variant="general" submitLabel="Pedir presupuesto" />
+          <QuoteFormLazy layout="compact" source="presupuesto" variant="general" submitLabel="Pedir presupuesto" />
         </div>
       </div>
     </Section>

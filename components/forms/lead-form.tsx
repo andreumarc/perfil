@@ -397,6 +397,8 @@ export function LeadForm({
                   <label key={opt} className={`inline-flex cursor-pointer items-center gap-2 rounded-full border px-3 py-1.5 text-sm ${checked ? "border-copper-500 bg-copper-50 text-copper-700" : "border-gray-300 text-gray-700"}`}>
                     <input
                       type="checkbox"
+                      name="installations"
+                      value={opt}
                       className="sr-only"
                       checked={checked}
                       onChange={(e) => setInstallations((prev) => (e.target.checked ? [...prev, opt] : prev.filter((i) => i !== opt)))}

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRightIcon, CheckIcon, MinusIcon } from "lucide-react";
 
 import { CalculatorForm } from "@/components/calculators/calculator-form";
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
@@ -75,7 +75,7 @@ export default async function CalculatorPage({ params }: { params: Params }) {
 
       <Section tone="muted" className="py-12 md:py-16">
         <CalculatorForm id={def.id} rates={rates} disclaimer={settings.calculators.disclaimer}>
-          <QuoteForm
+          <QuoteFormLazy
             layout="compact"
             source="calculadora"
             variant={def.formVariant}

@@ -56,6 +56,8 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ["image/avif", "image/webp"],
+    // Calidades permitidas: 75 por defecto y 60 para tarjetas y hero (lib/images.ts).
+    qualities: [60, 75],
     remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
   },
   async headers() {

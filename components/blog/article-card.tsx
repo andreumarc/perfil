@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon, ClockIcon } from "lucide-react";
 
+import { CARD_IMAGE_QUALITY } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 export interface ArticleCardData {
@@ -27,6 +28,7 @@ export function ArticleCard({ article, featured = false, priority = false, class
               alt=""
               fill
               priority={priority}
+              quality={CARD_IMAGE_QUALITY}
               sizes={featured ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"}
               className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
             />

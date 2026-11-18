@@ -1,6 +1,6 @@
 "use server";
 
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { revalidateAdmin, revalidateSite } from "@/lib/admin/revalidate";
 import { audit } from "@/lib/audit";

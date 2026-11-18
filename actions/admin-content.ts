@@ -1,6 +1,6 @@
 "use server";
 
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { RESOURCES } from "@/lib/admin/resource-meta";
 import { SlugConflictError, deleteRow, insertRow, parseValues, setRowStatus, updateRow } from "@/lib/admin/resources";

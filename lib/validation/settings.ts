@@ -1,4 +1,4 @@
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 /**
  * Esquema de la configuración editable del sitio (fila única `site_settings`).

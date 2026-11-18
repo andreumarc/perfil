@@ -1,4 +1,4 @@
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { CONTENT_STATUSES } from "@/types/lead";
 

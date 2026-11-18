@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Markdown } from "@/components/content/markdown";
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { ServiceCard } from "@/components/home/services-overview";
 import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
@@ -127,7 +127,7 @@ export default async function ZonePage({ params }: { params: Params }) {
             ) : null}
           </div>
           <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-[0_8px_30px_rgba(23,25,29,0.06)] md:p-8">
-            <QuoteForm layout="full" source="zona" variant="general" />
+            <QuoteFormLazy layout="full" source="zona" variant="general" />
           </div>
         </div>
       </Section>

@@ -1,4 +1,4 @@
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { QuotePopup } from "@/components/forms/quote-popup";
 import { FloatingCta } from "@/components/layout/floating-cta";
 import { Footer } from "@/components/layout/footer";
@@ -35,7 +35,7 @@ export default async function MarketingLayout({ children }: { children: React.Re
       <WhatsAppButton href={wa} />
       <MobileActionBar company={settings.company} />
       <QuotePopup whatsappHref={wa} phoneHref={telHref(settings.company.phone)} phoneLabel={formatPhone(settings.company.phone)} email={settings.company.email}>
-        <QuoteForm layout="compact" source="presupuesto" variant="general" submitLabel="Pedir presupuesto" />
+        <QuoteFormLazy layout="compact" source="presupuesto" variant="general" submitLabel="Pedir presupuesto" />
       </QuotePopup>
       <JsonLd data={[organizationJsonLd(settings), websiteJsonLd(settings)]} />
     </>

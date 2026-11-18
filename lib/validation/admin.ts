@@ -1,4 +1,4 @@
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { ACTIVITY_TYPES, LEAD_SOURCES, LEAD_STATUSES, USER_ROLES } from "@/types/lead";
 

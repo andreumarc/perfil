@@ -27,7 +27,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
     email: "reformasmardari@gmail.com",
     hours: "Lunes a viernes, de 9:00 a 19:00",
     zones: ["L'Hospitalet de Llobregat", "Barcelona", "Igualada", "Anoia", "Toda Cataluña", "Toda España"],
-    socials: { instagram: "", facebook: "", linkedin: "", youtube: "", tiktok: "" },
+    socials: { instagram: "https://www.instagram.com/reformasmardarisl/", facebook: "", linkedin: "", youtube: "", tiktok: "" },
   },
   ticker: {
     enabled: true,

@@ -11,6 +11,7 @@ import { Breadcrumbs } from "@/components/sections/breadcrumbs";
 import { CtaBand } from "@/components/sections/cta-band";
 import { CALCULATORS } from "@/lib/calculators/definitions";
 import { getSettings } from "@/lib/cms/settings";
+import { CARD_IMAGE_QUALITY } from "@/lib/images";
 import { whatsappHref } from "@/lib/phone";
 import { pageMetadata } from "@/lib/seo";
 
@@ -61,7 +62,7 @@ export default async function CalculatorsPage() {
                 <div className="relative aspect-[16/9] bg-ink-900">
                   {c.imagePath ? (
                     <>
-                      <Image src={c.imagePath} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" priority={i < 3} className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
+                      <Image src={c.imagePath} alt="" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" priority={i < 3} quality={CARD_IMAGE_QUALITY} className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
                     </>
                   ) : (
                     <div className="absolute inset-0 bg-ink-grid" aria-hidden />

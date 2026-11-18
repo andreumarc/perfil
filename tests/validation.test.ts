@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { leadsFilterSchema, loginSchema, passwordSchema, setupSchema } from "@/lib/validation/admin";
 import {

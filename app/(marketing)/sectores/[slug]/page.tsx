@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { ArticleCard } from "@/components/blog/article-card";
 import { Markdown } from "@/components/content/markdown";
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { ProjectCard } from "@/components/home/projects-showcase";
 import { ServiceCard } from "@/components/home/services-overview";
 import { Container } from "@/components/layout/container";
@@ -165,7 +165,7 @@ export default async function SectorPage({ params }: { params: Params }) {
             </p>
           </div>
           <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-[0_8px_30px_rgba(23,25,29,0.06)] md:p-8">
-            <QuoteForm layout="full" source="sector" variant={variant} defaultSectorSlug={sector.slug} defaultServiceSlug={related[0]?.slug ?? ""} />
+            <QuoteFormLazy layout="full" source="sector" variant={variant} defaultSectorSlug={sector.slug} defaultServiceSlug={related[0]?.slug ?? ""} />
           </div>
         </div>
       </Section>

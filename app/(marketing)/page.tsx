@@ -53,12 +53,15 @@ export default async function HomePage() {
   ]);
   const serviceNames = Object.fromEntries(services.map((s) => [s.slug, s.shortName]));
   const heroHasImage = settings.hero.imagePath.startsWith("http") || publicFileExists(settings.hero.imagePath);
+  // Recorte vertical para móvil: mismo nombre con sufijo «-movil» (solo para imágenes locales).
+  const heroMobileCandidate = settings.hero.imagePath.replace(/(\.[a-z0-9]+)$/i, "-movil$1");
+  const heroMobileImagePath = heroHasImage && heroMobileCandidate !== settings.hero.imagePath && publicFileExists(heroMobileCandidate) ? heroMobileCandidate : undefined;
   const wa = whatsappHref(settings.company.whatsapp, settings.company.whatsappMessage);
   const verifiedStats = settings.verifiedStats.filter((s) => s.verified && s.value);
 
   return (
     <>
-      <Hero settings={settings} hasImage={heroHasImage} />
+      <Hero settings={settings} hasImage={heroHasImage} mobileImagePath={heroMobileImagePath} />
 
       {verifiedStats.length ? (
         <Section tone="white" size="compact">

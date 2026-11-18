@@ -5,6 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { ServiceContent, ServiceGroup } from "@/content/types";
+import { CARD_IMAGE_QUALITY } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 export function ServiceCard({ service, compact = false, priority = false }: { service: ServiceContent; compact?: boolean; priority?: boolean }) {
@@ -24,6 +25,7 @@ export function ServiceCard({ service, compact = false, priority = false }: { se
             fill
             sizes={compact ? "(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw" : "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"}
             priority={priority}
+            quality={CARD_IMAGE_QUALITY}
             className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
           />
         </>
@@ -59,8 +61,8 @@ export function ServicesOverview({ groups }: { groups: { group: ServiceGroup; se
         <div className="mt-12">
           <GroupHeader group={viviendas.group} />
           <RevealGroup className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {viviendas.services.slice(0, 4).map((s, i) => (
-              <RevealItem key={s.slug}><ServiceCard service={s} priority={i < 2} /></RevealItem>
+            {viviendas.services.slice(0, 4).map((s) => (
+              <RevealItem key={s.slug}><ServiceCard service={s} /></RevealItem>
             ))}
           </RevealGroup>
         </div>

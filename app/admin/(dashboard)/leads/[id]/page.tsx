@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, PaperclipIcon } from "lucide-react";
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { SourceBadge } from "@/components/admin/badges";
 import { ActivityPanel, type ActivityItem } from "@/components/admin/leads/activity-panel";

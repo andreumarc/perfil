@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
+import { preload } from "react-dom";
 import { ArrowRightIcon, MessageCircleIcon, PlayIcon } from "lucide-react";
 
 import { TrackedLink } from "@/components/analytics/tracked-link";
@@ -9,12 +10,45 @@ import { Button } from "@/components/ui/button";
 import { whatsappHref } from "@/lib/phone";
 import type { SiteSettings } from "@/lib/validation/settings";
 
+/** Punto de corte por debajo del cual se sirve el recorte vertical del hero (móvil). */
+const MOBILE_MEDIA = "(max-width: 767px)";
+const DESKTOP_MEDIA = "(min-width: 768px)";
+/** Calidad algo inferior a la estándar: el hero va bajo un degradado oscuro y es la imagen más grande de la página. */
+const HERO_QUALITY = 60;
+
+/**
+ * Imagen del hero con prioridad real de descarga (es el LCP en todas las pantallas):
+ * `fetchpriority="high"`, precarga en el `<head>` y, si existe el recorte vertical
+ * (`<imagen>-movil.webp`), dirección de arte con `<picture>` para no descargar en
+ * móvil una foto apaisada de la que solo se ve el centro.
+ */
+function HeroImage({ src, mobileSrc, alt }: { src: string; mobileSrc?: string; alt: string }) {
+  const common = { alt, fill: true, sizes: "100vw", quality: HERO_QUALITY, priority: true } as const;
+  const { props: desktop } = getImageProps({ ...common, src });
+  const mobile = mobileSrc ? getImageProps({ ...common, src: mobileSrc }).props : null;
+
+  // Precarga explícita (getImageProps no la emite): una por variante, con su media query.
+  if (mobile) {
+    preload(mobile.src, { as: "image", imageSrcSet: mobile.srcSet, imageSizes: mobile.sizes, fetchPriority: "high", media: MOBILE_MEDIA });
+    preload(desktop.src, { as: "image", imageSrcSet: desktop.srcSet, imageSizes: desktop.sizes, fetchPriority: "high", media: DESKTOP_MEDIA });
+  } else {
+    preload(desktop.src, { as: "image", imageSrcSet: desktop.srcSet, imageSizes: desktop.sizes, fetchPriority: "high" });
+  }
+
+  return (
+    <picture>
+      {mobile ? <source media={MOBILE_MEDIA} srcSet={mobile.srcSet} sizes={mobile.sizes} /> : null}
+      <img {...desktop} alt={alt} fetchPriority="high" decoding="async" className="object-cover object-center" />
+    </picture>
+  );
+}
+
 /**
  * Hero cinematográfico: fotografía a sangre con degradado oscuro desde la
  * izquierda, titular con palabra destacada, compromisos y dos CTA.
  * La imagen es un recurso de diseño editable desde ajustes.
  */
-export function Hero({ settings, hasImage }: { settings: SiteSettings; hasImage: boolean }) {
+export function Hero({ settings, hasImage, mobileImagePath }: { settings: SiteSettings; hasImage: boolean; mobileImagePath?: string }) {
   const { hero, company, commitments } = settings;
   const wa = whatsappHref(company.whatsapp, company.whatsappMessage);
 
@@ -22,14 +56,7 @@ export function Hero({ settings, hasImage }: { settings: SiteSettings; hasImage:
     <section className="relative isolate overflow-hidden bg-ink-900 text-white">
       <div className="absolute inset-0 -z-10">
         {hasImage ? (
-          <Image
-            src={hero.imagePath}
-            alt={hero.imageAlt}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
+          <HeroImage src={hero.imagePath} mobileSrc={mobileImagePath} alt={hero.imageAlt} />
         ) : (
           <div className="h-full w-full bg-ink-grid" aria-hidden />
         )}

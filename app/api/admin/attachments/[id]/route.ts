@@ -1,7 +1,7 @@
 import { get } from "@vercel/blob";
 import { eq } from "drizzle-orm";
 import { NextResponse, type NextRequest } from "next/server";
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { getDb } from "@/db/client";
 import { leadAttachments } from "@/db/schema";

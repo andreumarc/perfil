@@ -1,22 +1,22 @@
 "use client";
 
 import * as React from "react";
-import * as m from "motion/react-m";
 
-/** Solo anima en navegaciones del cliente: la primera carga se renderiza visible (SSR sin opacidad 0). */
+/**
+ * Fundido suave entre páginas públicas, solo en navegaciones del cliente: la
+ * primera carga (y el HTML de servidor) se renderiza visible, sin opacidad 0.
+ * Animación en CSS (`rf-page-in`, globals.css): respeta prefers-reduced-motion.
+ */
 let firstMount = true;
 
 export function PageTransition({ children }: { children: React.ReactNode }) {
   const [animateIn] = React.useState(() => {
+    if (typeof window === "undefined") return false;
     if (firstMount) {
       firstMount = false;
       return false;
     }
     return true;
   });
-  return (
-    <m.div initial={animateIn ? { opacity: 0, y: 8 } : false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}>
-      {children}
-    </m.div>
-  );
+  return <div className={animateIn ? "rf-page-in" : undefined}>{children}</div>;
 }

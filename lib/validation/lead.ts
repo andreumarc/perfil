@@ -1,4 +1,4 @@
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { SERVICE_SLUGS } from "@/content/services";
 import { SECTOR_SLUGS } from "@/content/sectors";

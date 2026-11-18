@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { z } from "zod";
+import * as z from "@/lib/validation/zod";
 
 import { getDb } from "@/db/client";
 import { consentRecords } from "@/db/schema";

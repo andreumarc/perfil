@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { getConsent, saveConsent, type ConsentState } from "@/lib/analytics/consent";
 import { OPEN_COOKIE_SETTINGS_EVENT } from "@/lib/analytics/keys";
 import { track } from "@/lib/analytics/track";
+import { useConsent } from "@/lib/analytics/use-consent";
 
 function recordConsent(state: ConsentState) {
   const body = JSON.stringify({ analytics: state.analytics, marketing: state.marketing, version: state.version });
@@ -29,30 +30,33 @@ function recordConsent(state: ConsentState) {
  * Ningún script no esencial se carga antes de la decisión del usuario.
  */
 export function CookieBanner() {
-  const [visible, setVisible] = React.useState(false);
+  // Visible en el HTML inicial (pinta con la página, sin esperar a hidratar). Si ya hay
+  // consentimiento, el script de <head> lo oculta antes del primer pintado y aquí se desmonta
+  // en cuanto el estado de consentimiento (useSyncExternalStore) llega al cliente.
+  const consent = useConsent();
+  const [forcedOpen, setForcedOpen] = React.useState(false);
   const [configuring, setConfiguring] = React.useState(false);
   const [analytics, setAnalytics] = React.useState(false);
   const [marketing, setMarketing] = React.useState(false);
+  const visible = forcedOpen || consent === null;
 
   React.useEffect(() => {
-    const id = window.setTimeout(() => setVisible(getConsent() === null), 600);
+    // A partir de aquí manda React (reabrir ajustes debe poder mostrarlo).
+    document.documentElement.classList.remove("rf-consented");
     const open = () => {
       const current = getConsent();
       setAnalytics(current?.analytics ?? false);
       setMarketing(current?.marketing ?? false);
       setConfiguring(true);
-      setVisible(true);
+      setForcedOpen(true);
     };
     window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, open);
-    return () => {
-      window.clearTimeout(id);
-      window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, open);
-    };
+    return () => window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, open);
   }, []);
 
   const decide = (a: boolean, m: boolean) => {
     const state = saveConsent({ analytics: a, marketing: m });
-    setVisible(false);
+    setForcedOpen(false);
     setConfiguring(false);
     recordConsent(state);
     track("consent_updated", { analytics: a, marketing: m }, { persist: false });
@@ -62,6 +66,7 @@ export function CookieBanner() {
 
   return (
     <div
+      data-cookie-banner=""
       role="dialog"
       aria-modal="false"
       aria-labelledby="cookie-title"

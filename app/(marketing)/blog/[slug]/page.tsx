@@ -9,7 +9,7 @@ import { TrackedLink } from "@/components/analytics/tracked-link";
 import { ArticleCard } from "@/components/blog/article-card";
 import { Markdown, extractToc } from "@/components/content/markdown";
 import { Toc } from "@/components/content/toc";
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
@@ -266,7 +266,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
             ) : null}
           </div>
           <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-[0_8px_30px_rgba(23,25,29,0.06)] md:p-8">
-            <QuoteForm layout="full" source="blog" variant={article.formVariant} articleSlug={article.slug} defaultServiceSlug={relatedServices[0]?.slug ?? ""} />
+            <QuoteFormLazy layout="full" source="blog" variant={article.formVariant} articleSlug={article.slug} defaultServiceSlug={relatedServices[0]?.slug ?? ""} />
           </div>
         </div>
       </Section>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { SectorContent } from "@/content/types";
+import { CARD_IMAGE_QUALITY } from "@/lib/images";
 
 export function SectorsGrid({ sectors }: { sectors: SectorContent[] }) {
   const featured = sectors.slice(0, 8);
@@ -24,7 +25,7 @@ export function SectorsGrid({ sectors }: { sectors: SectorContent[] }) {
           >
             {sector.imagePath ? (
               <>
-                <Image src={sector.imagePath} alt="" fill sizes="(min-width: 768px) 25vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
+                <Image src={sector.imagePath} alt="" fill sizes="(min-width: 768px) 25vw, 50vw" quality={CARD_IMAGE_QUALITY} className="object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100" />
               </>
             ) : (
               <div className="absolute inset-0 bg-ink-grid" aria-hidden />

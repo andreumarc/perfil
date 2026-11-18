@@ -7,7 +7,7 @@ import { ArrowRightIcon, MapPinIcon } from "lucide-react";
 import { TrackView } from "@/components/analytics/track-view";
 import { TrackedLink } from "@/components/analytics/tracked-link";
 import { Markdown } from "@/components/content/markdown";
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteFormLazy } from "@/components/forms/quote-form-lazy";
 import { ProjectCard } from "@/components/home/projects-showcase";
 import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
@@ -173,7 +173,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
             <p className="mt-4 text-base text-gray-600 md:text-lg">Cuéntanoslo y te preparamos un presupuesto por partidas adaptado a tu espacio, tras una visita sin compromiso.</p>
           </div>
           <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-[0_8px_30px_rgba(23,25,29,0.06)] md:p-8">
-            <QuoteForm layout="full" source="proyecto" variant={variant} defaultServiceSlug={service?.slug ?? ""} defaultSectorSlug={sector?.slug ?? ""} />
+            <QuoteFormLazy layout="full" source="proyecto" variant={variant} defaultServiceSlug={service?.slug ?? ""} defaultSectorSlug={sector?.slug ?? ""} />
           </div>
         </div>
       </Section>
