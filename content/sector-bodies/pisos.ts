@@ -4,7 +4,7 @@ export const body = `Reformar un piso tiene una particularidad: hay vecinos arri
 
 Las peticiones en un piso son las de cualquier vivienda: abrir la cocina, cambiar bañera por ducha, instalaciones nuevas, suelos y carpinterías. Lo que cambia es el contexto. Los tabiques se pueden mover si no son estructurales; pilares, muros de carga y jácenas requieren cálculo de un técnico competente. Las ventanas, las persianas y los cerramientos de balcón forman parte de la fachada y suelen necesitar autorización de la comunidad y licencia municipal.
 
-En fincas antiguas de Barcelona, Igualada o cualquier casco histórico es frecuente encontrar vigas de madera, techos altos con molduras y suelos hidráulicos. Conservarlos y restaurarlos suele dar más valor al piso que sustituirlos. Una [reforma de piso](/servicios/reformas-pisos) empieza por decidir qué se mantiene y qué se renueva.
+En fincas antiguas de Barcelona, L'Hospitalet, Igualada o cualquier casco histórico es frecuente encontrar vigas de madera, techos altos con molduras y suelos hidráulicos. Conservarlos y restaurarlos suele dar más valor al piso que sustituirlos. Una [reforma de piso](/servicios/reformas-pisos) empieza por decidir qué se mantiene y qué se renueva.
 
 ## Instalaciones y normativa en un piso
 

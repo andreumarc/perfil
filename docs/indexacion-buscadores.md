@@ -27,6 +27,13 @@ Si en unos días aparecen avisos de «páginas no indexadas» por «descubierta,
 2. Si prefieres verificar a mano, elige «Etiqueta meta», copia el valor de `content` y pégalo en `/admin/ajustes` → Integraciones → «Verificación de Bing Webmaster Tools». Guarda y verifica.
 3. Envía el sitemap en «Sitemaps». IndexNow ya aparecerá en el informe «IndexNow» con los envíos automáticos.
 
+## Buscadores y asistentes con IA (ChatGPT, Claude, Perplexity, Google AI)
+
+- `/llms.txt` resume la empresa, el contacto, los precios orientativos y todas las páginas con una línea de contexto; se regenera con el contenido.
+- `robots.txt` permite explícitamente a GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended, Bingbot y Applebot.
+- Todo el contenido se sirve en el HTML (sin esperar al JavaScript), con FAQ, Service, Article y HomeAndConstructionBusiness en JSON-LD.
+- ChatGPT busca con el índice de Bing: verifica Bing Webmaster Tools. Perplexity y Claude usan sus propios rastreadores y también Bing y Google. Las citas mejoran con menciones coherentes del nombre, la dirección y el teléfono en directorios y en Google Business Profile.
+
 ## Otros buscadores
 
 - **DuckDuckGo** y la búsqueda de **Ecosia** usan el índice de Bing: quedan cubiertos con lo anterior.

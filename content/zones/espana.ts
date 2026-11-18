@@ -3,11 +3,11 @@ import type { LocalAreaContent } from "@/content/types";
 export const zone: LocalAreaContent = {
   slug: "espana",
   name: "Toda España",
-  province: "España",
+  province: "Toda España",
   headline: "Reformas e instalaciones en toda España: obras para negocios, cadenas y viviendas, valoradas caso a caso",
   summary:
     "Reformas de locales, gimnasios, restaurantes, clínicas, hoteles y viviendas en toda España. Cada proyecto se valora por su tamaño y se coordina con técnicos e instaladores locales.",
-  body: `Nuestra base está en Cataluña, en Barcelona e Igualada, y desde allí ejecutamos obras en el resto de España. No tenemos delegaciones en otras comunidades y preferimos decirlo claro. Lo que ofrecemos fuera de Cataluña es una forma de trabajar pensada para proyectos que, por su tamaño o por su repetición, justifican desplazar un equipo y coordinar recursos locales.
+  body: `Nuestra oficina está en L'Hospitalet de Llobregat, junto a Barcelona, y desde allí ejecutamos obras en el resto de España. No tenemos delegaciones en otras comunidades y preferimos decirlo claro. Lo que ofrecemos fuera de Cataluña es una forma de trabajar pensada para proyectos que, por su tamaño o por su repetición, justifican desplazar un equipo y coordinar recursos locales.
 
 ## Qué proyectos tienen sentido fuera de Cataluña
 
@@ -56,7 +56,7 @@ Explícanos el proyecto en el [formulario de presupuesto](/presupuesto): ciudad,
     {
       question: "¿Tenéis delegación fuera de Cataluña?",
       answer:
-        "No. Nuestra base está en Barcelona, Igualada y l'Anoia. En el resto de España trabajamos con equipo desplazado por fases, proveedores cercanos a la obra y técnicos e instaladores locales que coordinamos nosotros.",
+        "No. Nuestra oficina está en L'Hospitalet de Llobregat y la obra diaria se concentra en Cataluña. En el resto de España trabajamos con equipo desplazado por fases, proveedores cercanos a la obra y técnicos e instaladores locales que coordinamos nosotros.",
     },
     {
       question: "¿Quién gestiona la licencia en otra comunidad autónoma?",
@@ -74,7 +74,7 @@ Explícanos el proyecto en el [formulario de presupuesto](/presupuesto): ciudad,
         "Como un programa, no como obras sueltas: un mismo responsable, un estándar de acabados e instalaciones definido por escrito, proveedores recurrentes y un calendario de aperturas. Cada local pasa por su visita técnica y su trámite municipal, pero el método y el control son los mismos.",
     },
   ],
-  order: 5,
+  order: 91,
   status: "published",
   metaTitle: "Reformas en toda España | Negocios, cadenas y viviendas",
   metaDescription:

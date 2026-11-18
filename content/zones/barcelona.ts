@@ -3,11 +3,11 @@ import type { LocalAreaContent } from "@/content/types";
 export const zone: LocalAreaContent = {
   slug: "barcelona",
   name: "Barcelona",
-  province: "Barcelona",
+  province: "Barcelonès · Barcelona",
   headline: "Reformas e instalaciones en Barcelona: pisos, locales y oficinas en fincas de toda la ciudad",
   summary:
     "Reformas integrales de pisos, locales, oficinas y restaurantes en Barcelona. Conocemos las fincas del Eixample y los bloques de los años 60 y 70, y gestionamos permisos, vía pública y comunidad.",
-  body: `Barcelona es una de nuestras bases de operaciones. Trabajamos en todos los distritos, del Eixample a Nou Barris, en pisos, locales en planta baja, oficinas y edificios enteros. Reformar aquí tiene particularidades que no se dan en otros sitios: fincas antiguas con protección patrimonial, calles estrechas donde no cabe un contenedor, comunidades con horarios estrictos y una ordenanza municipal de obras con sus propios procedimientos.
+  body: `Barcelona está a un paso de nuestra oficina de L'Hospitalet de Llobregat y es una de nuestras zonas de trabajo diarias. Trabajamos en todos los distritos, del Eixample a Nou Barris, en pisos, locales en planta baja, oficinas y edificios enteros. Reformar aquí tiene particularidades que no se dan en otros sitios: fincas antiguas con protección patrimonial, calles estrechas donde no cabe un contenedor, comunidades con horarios estrictos y una ordenanza municipal de obras con sus propios procedimientos.
 
 ## Qué tipo de edificios reformamos en Barcelona
 
@@ -83,7 +83,7 @@ Si tienes un piso o un local en Barcelona, haz una primera estimación con la [c
         "La obra en sí suele durar de pocas semanas a varios meses según superficie, instalaciones y acabados. A eso hay que sumar la tramitación de la licencia o comunicación de actividad, que varía según el tipo de negocio y la carga del ayuntamiento. Planificamos ambas cosas en paralelo para acortar el plazo total.",
     },
   ],
-  order: 1,
+  order: 2,
   status: "published",
   metaTitle: "Empresa de reformas en Barcelona | Pisos, locales y oficinas",
   metaDescription:

@@ -3,7 +3,7 @@ export const body = `
 
 No es lo mismo adecuar una nave para logística, donde manda el pavimento, los muelles y la iluminación, que para producción, donde pesan la potencia eléctrica, la ventilación y la sectorización, o para un taller o un gimnasio, donde entran vestuarios, climatización y acústica. Antes de presupuestar, analizamos el uso previsto, la potencia disponible, el estado de la cubierta y la solera y los requisitos de la licencia de actividad.
 
-Trabajamos en polígonos de toda Cataluña y de toda España, con base en Barcelona, Igualada y la comarca de l'Anoia, donde el parque de naves es amplio y a menudo necesita actualización de instalaciones.
+Trabajamos en polígonos de toda Cataluña y de toda España, con oficina en L'Hospitalet de Llobregat y trabajo habitual en los polígonos del Baix Llobregat, Barcelona y l'Anoia, donde el parque de naves es amplio y a menudo necesita actualización de instalaciones.
 
 ## Qué incluye
 

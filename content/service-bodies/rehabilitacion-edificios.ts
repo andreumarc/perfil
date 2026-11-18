@@ -3,7 +3,7 @@ export const body = `
 
 Rehabilitar un edificio antiguo empieza por saber qué tiene. Coordinamos con un técnico competente un estudio del estado de la estructura, la cubierta, las fachadas y las instalaciones: catas en forjados, comprobación de vigas de madera o viguetas metálicas, humedad en muros, estado de bajantes y acometidas. De ese diagnóstico salen el proyecto, el presupuesto por partidas y el orden de intervención.
 
-En fincas de Barcelona, Igualada y otras ciudades catalanas es común encontrar forjados de vigas de madera con revoltón cerámico, bóvedas catalanas en escaleras y muros de carga de ladrillo macizo. Son sistemas que funcionan bien si se mantienen y que admiten refuerzo cuando una zona está dañada.
+En fincas de Barcelona, L'Hospitalet, Igualada y otras ciudades catalanas es común encontrar forjados de vigas de madera con revoltón cerámico, bóvedas catalanas en escaleras y muros de carga de ladrillo macizo. Son sistemas que funcionan bien si se mantienen y que admiten refuerzo cuando una zona está dañada.
 
 ## Intervenciones habituales
 

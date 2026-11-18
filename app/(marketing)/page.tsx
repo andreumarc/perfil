@@ -13,11 +13,14 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Faq } from "@/components/sections/faq";
 import { StatGrid } from "@/components/sections/stat-grid";
+import { CompanyFactsheet } from "@/components/sections/company-factsheet";
+import { ZonesSection } from "@/components/sections/zone-links";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getFaqs } from "@/lib/cms/faqs";
 import { getProjects } from "@/lib/cms/projects";
 import { getSectors, getServices, getServicesByGroup } from "@/lib/cms/services";
 import { getSettings } from "@/lib/cms/settings";
+import { getZones } from "@/lib/cms/zones";
 import { whatsappHref } from "@/lib/phone";
 import { faqJsonLd, pageMetadata } from "@/lib/seo";
 
@@ -43,13 +46,14 @@ function publicFileExists(p: string): boolean {
 }
 
 export default async function HomePage() {
-  const [settings, groups, services, sectors, projects, faqs] = await Promise.all([
+  const [settings, groups, services, sectors, projects, faqs, zones] = await Promise.all([
     getSettings(),
     getServicesByGroup(),
     getServices(),
     getSectors(),
     getProjects(),
     getFaqs("global"),
+    getZones(),
   ]);
   const serviceNames = Object.fromEntries(services.map((s) => [s.slug, s.shortName]));
   const heroHasImage = settings.hero.imagePath.startsWith("http") || publicFileExists(settings.hero.imagePath);
@@ -71,6 +75,8 @@ export default async function HomePage() {
 
       <ServicesOverview groups={groups} />
       <SectorsGrid sectors={sectors} />
+      <ZonesSection zones={zones} city={settings.company.city || "L'Hospitalet"} />
+      <CompanyFactsheet settings={settings} />
       <ProcessSteps steps={settings.process} />
       <ProjectsShowcase projects={projects} serviceNames={serviceNames} />
 

@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const s = await getSettings();
   return pageMetadata({
     title: "Empresa: quiénes somos y cómo trabajamos",
-    description: `${s.about.intro} Reformas e instalaciones con base en ${s.company.city || "Barcelona"}, Igualada y Anoia, en toda Cataluña y toda España.`,
+    description: `${s.about.intro} Reformas e instalaciones en toda España y, sobre todo, en toda Cataluña, con oficina en ${s.company.city || "L'Hospitalet de Llobregat"}.`,
     path: "/empresa",
     siteName: s.company.name,
   });
@@ -77,7 +77,7 @@ export default async function CompanyPage() {
 
       <Section tone="white">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
-          <SectionHeading eyebrow="Zonas de actuación" title="Base en Barcelona, Igualada y Anoia. Obras en toda Cataluña y toda España." description="Para proyectos fuera de nuestra área habitual valoramos cada caso según el tipo y el tamaño de la obra." />
+          <SectionHeading eyebrow="Zonas de actuación" title="Obras en toda España y, sobre todo, en toda Cataluña" description={`Oficina en ${company.city || "L'Hospitalet de Llobregat"} y obra diaria en Barcelona y el Baix Llobregat. Para el resto de Cataluña y de España valoramos cada proyecto según su tipo y tamaño.`} />
           <div>
             {zones.length ? (
               <ul className="grid gap-3 sm:grid-cols-2">

@@ -54,6 +54,17 @@ export function pageMetadata(input: PageMetaInput): Metadata {
   };
 }
 
+/**
+ * Sufijo geográfico para títulos de servicio: "en L'Hospitalet de Llobregat, Barcelona y Baix Llobregat".
+ * Toma las tres primeras zonas de ajustes que no empiecen por "Toda".
+ */
+export function localTitleSuffix(settings: SiteSettings): string {
+  const zones = settings.company.zones.filter((z) => !/^toda\s/i.test(z)).slice(0, 3);
+  if (!zones.length) return "";
+  if (zones.length === 1) return `en ${zones[0]}`;
+  return `en ${zones.slice(0, -1).join(", ")} y ${zones[zones.length - 1]}`;
+}
+
 /* ------------------------------------------------------------------ */
 /* JSON-LD helpers                                                     */
 /* ------------------------------------------------------------------ */
@@ -61,8 +72,20 @@ export function pageMetadata(input: PageMetaInput): Metadata {
 type JsonLd = Record<string, unknown>;
 
 /** Empresa de reformas: HomeAndConstructionBusiness (subtipo de LocalBusiness). Solo campos confirmados. */
-export function organizationJsonLd(settings: SiteSettings): JsonLd {
+/** "Lunes a viernes, de 9:00 a 19:00" → OpeningHoursSpecification (solo si el texto sigue ese patrón). */
+export function openingHoursJsonLd(hours: string): JsonLd | null {
+  const m = hours.match(/(\d{1,2}:\d{2}).*?(\d{1,2}:\d{2})/);
+  if (!m) return null;
+  const lower = hours.toLowerCase();
+  const days = lower.includes("lunes a viernes") ? ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] : lower.includes("lunes a sábado") ? ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] : null;
+  if (!days) return null;
+  return { "@type": "OpeningHoursSpecification", dayOfWeek: days, opens: m[1].padStart(5, "0"), closes: m[2].padStart(5, "0") };
+}
+
+export function organizationJsonLd(settings: SiteSettings, extraAreas: string[] = [], services: { name: string; slug: string; summary: string }[] = []): JsonLd {
   const c = settings.company;
+  const areas = [...new Set([...c.zones, ...extraAreas])];
+  const hours = c.hours ? openingHoursJsonLd(c.hours) : null;
   const sameAs = Object.values(c.socials).filter((v): v is string => Boolean(v));
   const hasAddress = Boolean(c.address && c.city);
   return {
@@ -88,7 +111,19 @@ export function organizationJsonLd(settings: SiteSettings): JsonLd {
           },
         }
       : { address: { "@type": "PostalAddress", addressLocality: c.city || "Barcelona", addressCountry: "ES" } }),
-    areaServed: areaServedJsonLd(c.zones),
+    areaServed: areaServedJsonLd(areas),
+    ...(c.tagline ? { slogan: c.tagline } : {}),
+    ...(c.legalName ? { legalName: c.legalName } : {}),
+    ...(hours ? { openingHoursSpecification: [hours] } : {}),
+    ...(services.length
+      ? {
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Servicios de reformas e instalaciones",
+            itemListElement: services.map((svc) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: svc.name, description: svc.summary, url: absoluteUrl(`/servicios/${svc.slug}`) } })),
+          },
+        }
+      : {}),
     ...(sameAs.length ? { sameAs } : {}),
     ...(settings.integrations.gbpUrl ? { hasMap: settings.integrations.gbpUrl } : {}),
   };
@@ -106,12 +141,15 @@ export function websiteJsonLd(settings: SiteSettings): JsonLd {
   };
 }
 
-/** "Toda Cataluña" → AdministrativeArea, "Toda España" → Country, resto → City. */
+const COMARCAS = ["baix llobregat", "barcelonès", "barcelones", "garraf", "alt penedès", "alt penedes", "anoia", "vallès", "valles", "maresme", "bages", "osona"];
+
+/** "Toda Cataluña" → AdministrativeArea, "Toda España" → Country, comarcas → AdministrativeArea, resto → City. */
 export function areaServedJsonLd(zones: string[]): JsonLd[] {
   return zones.map((z) => {
     const n = z.toLowerCase();
     if (n.includes("españa") || n.includes("espana")) return { "@type": "Country", name: "España" };
     if (n.includes("cataluña") || n.includes("catalunya")) return { "@type": "AdministrativeArea", name: "Cataluña" };
+    if (COMARCAS.some((c) => n === c || n === `comarca de l'${c}` || n.startsWith("comarca "))) return { "@type": "AdministrativeArea", name: z };
     return { "@type": "City", name: z.replace(/^toda\s+/i, "") };
   });
 }

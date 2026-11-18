@@ -62,3 +62,7 @@ Las páginas públicas son estáticas con regeneración cada 5 minutos (`revalid
 ## 5. CI
 
 `.github/workflows/ci.yml` ejecuta lint, typecheck, tests y build en cada push. El job e2e se activa con los secretos `E2E_DATABASE_URL` (una rama de Neon de pruebas) y `E2E_AUTH_SECRET`.
+
+## Sincronización de contenido en el build
+
+`npm run build` ejecuta antes `scripts/sync-on-build.mjs`: si existen `DATABASE_URL` y `VERCEL`, inserta en la base de datos las zonas, FAQs de zona y artículos definidos en `content/` que aún no existan (nunca actualiza filas ya cargadas, para respetar las ediciones del panel). En CI no hay base de datos y el paso se omite. Un fallo en la sincronización no detiene el despliegue: queda en el log del build.

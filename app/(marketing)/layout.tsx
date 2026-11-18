@@ -7,7 +7,9 @@ import { MobileActionBar } from "@/components/layout/mobile-action-bar";
 import { Ticker } from "@/components/layout/ticker";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { JsonLd } from "@/components/seo/json-ld";
+import { getServices } from "@/lib/cms/services";
 import { getSettings } from "@/lib/cms/settings";
+import { getZones } from "@/lib/cms/zones";
 import { formatPhone, telHref, whatsappHref } from "@/lib/phone";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
@@ -15,8 +17,10 @@ import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 export const revalidate = 300;
 
 export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
-  const settings = await getSettings();
+  const [settings, zones, services] = await Promise.all([getSettings(), getZones(), getServices()]);
   const wa = whatsappHref(settings.company.whatsapp, settings.company.whatsappMessage);
+  // Municipios con página propia (sin las zonas genéricas "toda Cataluña" / "toda España").
+  const localZones = zones.filter((z) => !["cataluna", "espana"].includes(z.slug));
   return (
     <>
       <a
@@ -30,14 +34,14 @@ export default async function MarketingLayout({ children }: { children: React.Re
       <main id="contenido" className="flex-1">
         {children}
       </main>
-      <Footer settings={settings} />
+      <Footer settings={settings} zones={localZones.slice(0, 14)} />
       <FloatingCta />
       <WhatsAppButton href={wa} />
       <MobileActionBar company={settings.company} />
       <QuotePopup whatsappHref={wa} phoneHref={telHref(settings.company.phone)} phoneLabel={formatPhone(settings.company.phone)} email={settings.company.email}>
         <QuoteFormLazy layout="compact" source="presupuesto" variant="general" submitLabel="Pedir presupuesto" />
       </QuotePopup>
-      <JsonLd data={[organizationJsonLd(settings), websiteJsonLd(settings)]} />
+      <JsonLd data={[organizationJsonLd(settings, localZones.map((z) => z.name), services.map((x) => ({ name: x.name, slug: x.slug, summary: x.summary }))), websiteJsonLd(settings)]} />
     </>
   );
 }

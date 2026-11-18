@@ -256,7 +256,7 @@ export function LeadForm({
         {!compact ? (
           <>
             <Field id="lf-locality" label="Localidad" error={errors.locality?.message}>
-              <Input id="lf-locality" autoComplete="address-level2" placeholder="Barcelona, Igualada…" {...register("locality")} />
+              <Input id="lf-locality" autoComplete="address-level2" placeholder="L'Hospitalet, Cornellà, Barcelona…" {...register("locality")} />
             </Field>
             <Field id="lf-postal" label="Código postal" optional error={errors.postalCode?.message}>
               <Input id="lf-postal" inputMode="numeric" autoComplete="postal-code" maxLength={5} aria-invalid={Boolean(errors.postalCode)} aria-describedby={describedBy("lf-postal", errors.postalCode?.message)} {...register("postalCode")} />

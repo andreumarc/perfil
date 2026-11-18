@@ -3,11 +3,11 @@ import type { LocalAreaContent } from "@/content/types";
 export const zone: LocalAreaContent = {
   slug: "igualada",
   name: "Igualada",
-  province: "Barcelona",
+  province: "Anoia · Barcelona",
   headline: "Reformas e instalaciones en Igualada: pisos, casas entre medianeras, locales y naves",
   summary:
     "Reformas integrales de pisos y casas, locales comerciales y naves en Igualada y la Conca d'Òdena. Calefacción y aislamiento pensados para su clima, y trámites con el ayuntamiento resueltos.",
-  body: `Igualada es la capital de l'Anoia y una de nuestras bases de operaciones. Desde aquí cubrimos la ciudad y la Conca d'Òdena: Vilanova del Camí, Santa Margarida de Montbui, Òdena y La Pobla de Claramunt. Es una ciudad de tamaño medio con un parque de viviendas variado, un comercio concentrado en el centro y un tejido industrial importante, y eso marca el tipo de obra que hacemos.
+  body: `Igualada es la capital de l'Anoia y una de nuestras zonas de trabajo habituales. Desde aquí cubrimos la ciudad y la Conca d'Òdena: Vilanova del Camí, Santa Margarida de Montbui, Òdena y La Pobla de Claramunt. Es una ciudad de tamaño medio con un parque de viviendas variado, un comercio concentrado en el centro y un tejido industrial importante, y eso marca el tipo de obra que hacemos.
 
 ## El parque de viviendas y locales de Igualada
 
@@ -78,7 +78,7 @@ Haz una primera estimación con la [calculadora de reforma integral](/calculador
         "Sí. Empezamos por un diagnóstico de estructura, humedades y cubierta, porque en estos edificios lo que no se ve condiciona el presupuesto. El proyecto lo firma un técnico competente cuando la obra afecta a elementos estructurales o a la fachada.",
     },
   ],
-  order: 2,
+  order: 70,
   status: "published",
   metaTitle: "Empresa de reformas en Igualada | Pisos, casas y naves",
   metaDescription:

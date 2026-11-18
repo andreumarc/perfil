@@ -48,7 +48,8 @@ export default async function ZonePage({ params }: { params: Params }) {
 
   const [services, zones, faqs] = await Promise.all([getServices(), getZones(), getFaqs("area", slug)]);
   const related = zone.serviceSlugs.map((s) => services.find((x) => x.slug === s)).filter((s): s is NonNullable<typeof s> => Boolean(s));
-  const others = zones.filter((z) => z.slug !== zone.slug);
+  // Zonas relacionadas: misma comarca primero, después el resto por orden, hasta 14 enlaces.
+  const others = [...zones.filter((z) => z.slug !== zone.slug && z.province === zone.province), ...zones.filter((z) => z.slug !== zone.slug && z.province !== zone.province)].slice(0, 14);
   const faqItems = faqs.length ? faqs : zone.faqs;
   const path = `/zonas/${zone.slug}`;
 

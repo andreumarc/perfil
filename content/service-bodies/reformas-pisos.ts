@@ -31,5 +31,5 @@ Una reforma parcial de baño o cocina se mueve entre 2 y 5 semanas de obra. Una 
 
 En la mayoría de municipios catalanes, una reforma interior sin afectación estructural se tramita como comunicación previa de obras; si hay muros de carga, fachada o cambio de uso, pasa a licencia con proyecto. Las instalaciones nuevas se ejecutan conforme al REBT y al CTE, y la eléctrica la certifica un instalador habilitado con el boletín correspondiente. Consulta siempre la ordenanza de tu municipio y nuestra página de [licencias y dirección técnica](/servicios/licencias-direccion-tecnica).
 
-Si tu piso está en [Barcelona](/zonas/barcelona) o en [Igualada y l'Anoia](/zonas/anoia), conocemos los trámites habituales de esos ayuntamientos. Pide un [presupuesto con visita](/presupuesto) y te diremos qué es viable y cuánto cuesta.
+Si tu piso está en [L'Hospitalet](/zonas/hospitalet-de-llobregat), [Barcelona](/zonas/barcelona), el [Baix Llobregat](/zonas/cornella-de-llobregat) o [Igualada y l'Anoia](/zonas/anoia), conocemos los trámites habituales de esos ayuntamientos; en el resto de Cataluña y de España los consultamos antes de empezar. Pide un [presupuesto con visita](/presupuesto) y te diremos qué es viable y cuánto cuesta.
 `;

@@ -3,11 +3,11 @@ import type { LocalAreaContent } from "@/content/types";
 export const zone: LocalAreaContent = {
   slug: "cataluna",
   name: "Cataluña",
-  province: "Cataluña",
+  province: "Toda Cataluña",
   headline: "Reformas e instalaciones en toda Cataluña: cómo organizamos la obra fuera de nuestra zona de base",
   summary:
-    "Reformas de viviendas, locales, gimnasios, restaurantes, hoteles y naves en toda Cataluña. Obra planificada desde Barcelona e Igualada, con desplazamientos previstos y técnicos locales.",
-  body: `Trabajamos en toda Cataluña. Nuestra base está en Barcelona, Igualada y l'Anoia, y desde allí cubrimos el área metropolitana con normalidad y el resto del territorio con una organización específica. No tenemos delegaciones en otras provincias y no vamos a decirte lo contrario. Lo que sí tenemos es un método para que una obra en Girona, Tarragona o Lleida se ejecute con el mismo control que una en Barcelona.
+    "Reformas de viviendas, locales, gimnasios, restaurantes, hoteles y naves en toda Cataluña. Obra planificada desde L'Hospitalet de Llobregat y Barcelona, con desplazamientos previstos y técnicos locales.",
+  body: `Trabajamos en toda Cataluña. Nuestra oficina está en L'Hospitalet de Llobregat y la obra diaria se concentra en Barcelona, el Baix Llobregat y l'Anoia; desde allí cubrimos el área metropolitana con normalidad y el resto del territorio con una organización específica. No tenemos delegaciones en otras provincias y no vamos a decirte lo contrario. Lo que sí tenemos es un método para que una obra en Girona, Tarragona o Lleida se ejecute con el mismo control que una en Barcelona.
 
 ## Dónde trabajamos con normalidad y dónde valoramos caso a caso
 
@@ -59,7 +59,7 @@ Cuéntanos dónde está el inmueble y qué quieres hacer en el [formulario de pr
     {
       question: "¿Tenéis oficina o delegación en esas provincias?",
       answer:
-        "No. Nuestra base está en Barcelona, Igualada y l'Anoia. Fuera de esa zona organizamos la obra con equipo desplazado por fases, proveedores de la zona y técnicos locales para el proyecto y la dirección de obra.",
+        "No. Nuestra oficina está en L'Hospitalet de Llobregat y la obra diaria se concentra en Barcelona, el Baix Llobregat y l'Anoia. Fuera de esa zona organizamos la obra con equipo desplazado por fases, proveedores de la zona y técnicos locales para el proyecto y la dirección de obra.",
     },
     {
       question: "¿Cómo afecta el desplazamiento al presupuesto?",
@@ -77,7 +77,7 @@ Cuéntanos dónde está el inmueble y qué quieres hacer en el [formulario de pr
         "Instaladores y empresas habilitados, los habituales o de la zona cuando es más eficiente. Electricidad, gas, climatización y protección contra incendios se entregan siempre con su certificado o boletín correspondiente.",
     },
   ],
-  order: 4,
+  order: 90,
   status: "published",
   metaTitle: "Reformas en toda Cataluña | Viviendas, locales y negocios",
   metaDescription:

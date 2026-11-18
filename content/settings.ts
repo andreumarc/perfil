@@ -26,7 +26,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
     whatsappMessage: "Hola, me gustaría pedir presupuesto para una reforma.",
     email: "reformasmardari@gmail.com",
     hours: "Lunes a viernes, de 9:00 a 19:00",
-    zones: ["L'Hospitalet de Llobregat", "Barcelona", "Igualada", "Anoia", "Toda Cataluña", "Toda España"],
+    zones: ["L'Hospitalet de Llobregat", "Barcelona", "Baix Llobregat", "Garraf", "Alt Penedès", "Anoia", "Toda Cataluña", "Toda España"],
     socials: { instagram: "https://www.instagram.com/reformasmardarisl/", facebook: "", linkedin: "", youtube: "", tiktok: "" },
   },
   ticker: {
@@ -92,7 +92,7 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
   seo: {
     defaultTitle: "Reformas integrales e instalaciones para viviendas y negocios",
     defaultDescription:
-      "Empresa de reformas integrales e instalaciones con oficina en L'Hospitalet de Llobregat (Barcelona) y actuación en Barcelona, Igualada, Anoia, toda Cataluña y toda España. Viviendas, locales, oficinas, gimnasios, restaurantes y clínicas. Presupuesto sin compromiso.",
+      "Empresa de reformas integrales e instalaciones con oficina en L'Hospitalet de Llobregat. Trabajamos en toda España y, sobre todo, en toda Cataluña: Barcelona, Baix Llobregat, Garraf, Penedès y Anoia. Viviendas, locales, oficinas, gimnasios, restaurantes y clínicas. Presupuesto sin compromiso.",
     keywords: [
       "reformas integrales",
       "empresa de reformas",
@@ -107,6 +107,8 @@ Durante la obra, un responsable coordina a todos los gremios (albañilería, ele
       "climatización",
       "aerotermia",
       "reformas Barcelona",
+      "reformas L'Hospitalet de Llobregat",
+      "reformas Baix Llobregat",
       "reformas Igualada",
       "reformas Anoia",
       "reformas Cataluña",

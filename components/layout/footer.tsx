@@ -3,13 +3,14 @@ import { MailIcon, MapPinIcon, MessageCircleIcon, PhoneIcon } from "lucide-react
 
 import { OpenCookieSettingsButton } from "@/components/analytics/cookie-banner";
 import { TrackedLink } from "@/components/analytics/tracked-link";
+import type { LocalAreaContent } from "@/content/types";
 import { formatPhone, telHref, whatsappHref } from "@/lib/phone";
 import type { SiteSettings } from "@/lib/validation/settings";
 
 import { Container } from "./container";
 import { Logo } from "./logo";
 
-export function Footer({ settings }: { settings: SiteSettings }) {
+export function Footer({ settings, zones = [] }: { settings: SiteSettings; zones?: Pick<LocalAreaContent, "slug" | "name">[] }) {
   const { company, menus } = settings;
   const year = new Date().getFullYear();
   const phoneHref = telHref(company.phone);
@@ -59,7 +60,24 @@ export function Footer({ settings }: { settings: SiteSettings }) {
               ) : null}
               {company.hours ? <li className="pl-6 text-gray-500">{company.hours}</li> : null}
             </ul>
-            {company.zones.length ? (
+            {zones.length ? (
+              <p className="mt-5 text-xs leading-relaxed text-gray-500">
+                Reformas en{" "}
+                {zones.map((z, i) => (
+                  <span key={z.slug}>
+                    <Link href={`/zonas/${z.slug}`} className="underline underline-offset-4 hover:text-ink-900">
+                      {z.name}
+                    </Link>
+                    {i < zones.length - 1 ? ", " : ""}
+                  </span>
+                ))}{" "}
+                y en{" "}
+                <Link href="/zonas" className="underline underline-offset-4 hover:text-ink-900">
+                  toda Cataluña y toda España
+                </Link>
+                .
+              </p>
+            ) : company.zones.length ? (
               <p className="mt-5 text-xs text-gray-500">
                 Zonas de actuación: {company.zones.join(", ")}.{" "}
                 <Link href="/zonas" className="underline underline-offset-4 hover:text-ink-900">

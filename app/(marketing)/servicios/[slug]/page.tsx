@@ -14,6 +14,7 @@ import { Container } from "@/components/layout/container";
 import { Section, SectionHeading } from "@/components/layout/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { Breadcrumbs } from "@/components/sections/breadcrumbs";
+import { ZoneChips } from "@/components/sections/zone-links";
 import { Faq } from "@/components/sections/faq";
 import { LicenseNotice } from "@/components/sections/license-notice";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -26,8 +27,9 @@ import { getFaqs } from "@/lib/cms/faqs";
 import { getProjects } from "@/lib/cms/projects";
 import { getService, getServices } from "@/lib/cms/services";
 import { getSettings } from "@/lib/cms/settings";
+import { getZones } from "@/lib/cms/zones";
 import { variantForService } from "@/lib/forms";
-import { faqJsonLd, pageMetadata, serviceJsonLd } from "@/lib/seo";
+import { faqJsonLd, localTitleSuffix, pageMetadata, serviceJsonLd } from "@/lib/seo";
 
 type Params = Promise<{ slug: string }>;
 
@@ -42,7 +44,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const [service, s] = await Promise.all([getService(slug), getSettings()]);
   if (!service) return {};
   return pageMetadata({
-    title: service.metaTitle ?? `${service.name} en ${s.company.city || "Barcelona"} y toda España`,
+    title: service.metaTitle ?? `${service.name} ${localTitleSuffix(s) || "en Barcelona"}`,
     description: service.metaDescription ?? service.summary,
     path: `/servicios/${service.slug}`,
     siteName: s.company.name,
@@ -56,14 +58,16 @@ export default async function ServicePage({ params }: { params: Params }) {
   const service = await getService(slug);
   if (!service) notFound();
 
-  const [settings, all, faqs, projects, articles, categories] = await Promise.all([
+  const [settings, all, faqs, projects, articles, categories, zones] = await Promise.all([
     getSettings(),
     getServices(),
     getFaqs("service", slug),
     getProjects(),
     getArticlesForService(slug, 3),
     getCategories(),
+    getZones(),
   ]);
+  const serviceZones = zones.filter((z) => z.serviceSlugs.includes(service.slug)).slice(0, 12);
   const group = getServiceGroup(service.groupSlug);
   const siblings = all.filter((s) => s.groupSlug === service.groupSlug && s.slug !== service.slug);
   const relatedProjects = projects.filter((p) => p.serviceSlug === service.slug).slice(0, 3);
@@ -213,6 +217,12 @@ export default async function ServicePage({ params }: { params: Params }) {
             <p className="mt-4 text-base text-gray-600 md:text-lg">
               Te llamamos para entender lo que necesitas, visitamos el espacio y te enviamos un presupuesto detallado por partidas, sin compromiso.
             </p>
+            {serviceZones.length ? (
+              <div className="mt-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Dónde ofrecemos {service.shortName.toLowerCase()}</p>
+                <ZoneChips zones={serviceZones} className="mt-3" />
+              </div>
+            ) : null}
             {siblings.length ? (
               <div className="mt-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">También en {group.shortName.toLowerCase()}</p>

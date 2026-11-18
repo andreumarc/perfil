@@ -5,6 +5,7 @@
   "description": "Plataforma web de reformas integrales e instalaciones: captación de leads, CRM, blog y panel de administración.",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/sync-on-build.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -19,6 +20,7 @@
     "db:seed": "tsx db/seed.ts",
     "db:seed:dev": "tsx db/seed-dev.ts --with-leads",
     "db:seed:sql": "tsx scripts/seed-sql.ts",
+    "db:sync-local": "tsx scripts/sync-local-content.ts",
     "db:check": "tsx db/check.ts",
     "check:links": "tsx scripts/check-links.ts"
   },

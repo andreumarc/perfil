@@ -31,10 +31,11 @@ function isKnownRoute(path: string): boolean {
 }
 
 describe("contenido editorial", () => {
-  it("hay 20 artículos, todos en borrador y válidos para el panel", () => {
-    expect(ARTICLES).toHaveLength(20);
+  it("hay 26 artículos válidos para el panel (los publicados llevan fecha de publicación)", () => {
+    expect(ARTICLES).toHaveLength(26);
     for (const a of ARTICLES) {
-      expect(a.status, a.slug).toBe("draft");
+      expect(["draft", "published"], a.slug).toContain(a.status);
+      if (a.status === "published") expect(a.publishedAt, `${a.slug}: publishedAt`).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(BLOG_CATEGORIES.some((c) => c.slug === a.categorySlug), `${a.slug}: categoría`).toBe(true);
       expect(a.excerpt.length, `${a.slug}: excerpt`).toBeGreaterThanOrEqual(120);
       expect(a.metaTitle.length, `${a.slug}: metaTitle`).toBeLessThanOrEqual(70);
@@ -74,9 +75,15 @@ describe("contenido editorial", () => {
   it("servicios, sectores, zonas y proyectos referencian slugs existentes y validan", () => {
     for (const s of SERVICES) expect(serviceFormSchema.safeParse({ ...s, licenseNote: s.licenseNote ?? "", imagePath: s.imagePath ?? "", metaTitle: s.metaTitle ?? "", metaDescription: s.metaDescription ?? "" }).success, s.slug).toBe(true);
     for (const s of SECTORS) for (const slug of s.serviceSlugs) expect(SERVICE_SLUGS, `${s.slug} → ${slug}`).toContain(slug);
+    expect(LOCAL_AREAS.length).toBeGreaterThanOrEqual(37);
+    expect(new Set(LOCAL_AREAS.map((z) => z.slug)).size).toBe(LOCAL_AREAS.length);
     for (const z of LOCAL_AREAS) {
       for (const slug of z.serviceSlugs) expect(SERVICE_SLUGS, `${z.slug} → ${slug}`).toContain(slug);
       expect(zoneFormSchema.safeParse({ ...z, metaTitle: z.metaTitle ?? "", metaDescription: z.metaDescription ?? "" }).success, z.slug).toBe(true);
+      expect(z.faqs.length, `${z.slug}: faqs`).toBeGreaterThanOrEqual(3);
+      expect((z.metaTitle ?? "").length, `${z.slug}: metaTitle`).toBeLessThanOrEqual(70);
+      expect(z.body.split(/\s+/).length, `${z.slug}: body corto`).toBeGreaterThanOrEqual(350);
+      expect(z.body).not.toMatch(/^# /m);
     }
     for (const p of PROJECTS) {
       expect(p.isIllustrative, `${p.slug} debe ser ilustrativo hasta tener fotos reales`).toBe(true);

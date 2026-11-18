@@ -3,11 +3,11 @@ import type { LocalAreaContent } from "@/content/types";
 export const zone: LocalAreaContent = {
   slug: "anoia",
   name: "Comarca de l'Anoia",
-  province: "Barcelona",
+  province: "Anoia · Barcelona",
   headline: "Reformas e instalaciones en la comarca de l'Anoia: casas, masías, urbanizaciones y naves",
   summary:
     "Reformas de casas, masías, pisos y naves en toda la comarca de l'Anoia: Conca d'Òdena, Anoia Sur y Alta Anoia. Obra organizada desde Igualada, con trayectos cortos y trámites en cada ayuntamiento.",
-  body: `La comarca de l'Anoia es nuestro territorio de base junto con Barcelona e Igualada. Nos movemos por sus municipios a diario, de Calaf a Masquefa y de El Bruc a La Llacuna, y conocemos el parque de edificios de cada zona y la forma de trabajar de cada ayuntamiento. Es una comarca muy distinta según la parte en la que estés, y la obra se organiza de forma diferente en cada una.
+  body: `La comarca de l'Anoia es una de nuestras zonas de trabajo habituales, junto con L'Hospitalet, Barcelona y el Baix Llobregat. Nos movemos por sus municipios a diario, de Calaf a Masquefa y de El Bruc a La Llacuna, y conocemos el parque de edificios de cada zona y la forma de trabajar de cada ayuntamiento. Es una comarca muy distinta según la parte en la que estés, y la obra se organiza de forma diferente en cada una.
 
 ## Tres realidades en una comarca
 
@@ -75,7 +75,7 @@ Tanto si tu casa está en una urbanización de Piera o Masquefa como en un puebl
         "Sí: adecuación de naves, oficinas anexas, vestuarios e instalaciones. Electricidad, climatización y protección contra incendios las ejecutan y certifican empresas habilitadas que coordinamos dentro de la obra.",
     },
   ],
-  order: 3,
+  order: 71,
   status: "published",
   metaTitle: "Reformas en la comarca de l'Anoia | Casas, masías y naves",
   metaDescription:
