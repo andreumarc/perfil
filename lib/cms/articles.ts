@@ -7,6 +7,7 @@ import { ARTICLES } from "@/content/articles";
 import { AUTHORS, BLOG_CATEGORIES } from "@/content/blog";
 import type { ArticleContent, AuthorContent, BlogCategoryContent, FaqItem, FormVariant } from "@/content/types";
 import { getDb } from "@/db/client";
+import { cmsCache } from "@/lib/cms/cached";
 import { articles, authors, blogCategories, mediaAssets, type ArticleRow } from "@/db/schema";
 
 /** En desarrollo sin base de datos, PREVIEW_DRAFTS=1 muestra los borradores (para revisar el contenido). */
@@ -72,8 +73,8 @@ function fallbackArticles(): ArticleContent[] {
   return ARTICLES.filter(isPublic).sort(byDate);
 }
 
-/** Artículos publicados (y con fecha de publicación alcanzada), más recientes primero. */
-export const getArticles = cache(async (): Promise<ArticleContent[]> => {
+/** Artículos publicados (y con fecha de publicación alcanzada), más recientes primero. Caché compartida de 1 h. */
+const fetchArticles = cmsCache("articles", async (): Promise<ArticleContent[]> => {
   const db = getDb();
   if (!db) return fallbackArticles();
   try {
@@ -91,7 +92,7 @@ export const getArticles = cache(async (): Promise<ArticleContent[]> => {
   }
 });
 
-export const getArticle = cache(async (slug: string): Promise<ArticleContent | null> => {
+const fetchArticle = cmsCache("article", async (slug: string): Promise<ArticleContent | null> => {
   const db = getDb();
   if (!db) return fallbackArticles().find((a) => a.slug === slug) ?? null;
   try {
@@ -112,7 +113,14 @@ export const getArticle = cache(async (slug: string): Promise<ArticleContent | n
   }
 });
 
-export const getCategories = cache(async (): Promise<BlogCategoryContent[]> => {
+export const getArticles = cache(async (): Promise<ArticleContent[]> => fetchArticles());
+
+export const getArticle = cache(async (slug: string): Promise<ArticleContent | null> => {
+  const fromList = (await getArticles()).find((a) => a.slug === slug);
+  return fromList ?? fetchArticle(slug);
+});
+
+const fetchCategories = cmsCache("categories", async (): Promise<BlogCategoryContent[]> => {
   const db = getDb();
   if (!db) return BLOG_CATEGORIES;
   try {
@@ -124,12 +132,14 @@ export const getCategories = cache(async (): Promise<BlogCategoryContent[]> => {
   }
 });
 
+export const getCategories = cache(async (): Promise<BlogCategoryContent[]> => fetchCategories());
+
 export async function getCategory(slug: string): Promise<BlogCategoryContent | null> {
   const all = await getCategories();
   return all.find((c) => c.slug === slug) ?? null;
 }
 
-export const getAuthor = cache(async (slug: string): Promise<AuthorContent | null> => {
+const fetchAuthor = cmsCache("author", async (slug: string): Promise<AuthorContent | null> => {
   const fallback = AUTHORS.find((a) => a.slug === slug) ?? AUTHORS[0] ?? null;
   const db = getDb();
   if (!db) return fallback;
@@ -141,6 +151,8 @@ export const getAuthor = cache(async (slug: string): Promise<AuthorContent | nul
     return fallback;
   }
 });
+
+export const getAuthor = cache(async (slug: string): Promise<AuthorContent | null> => fetchAuthor(slug));
 
 /** Artículos relacionados: misma categoría primero, luego servicios compartidos. */
 export async function getRelatedArticles(article: ArticleContent, limit = 3): Promise<ArticleContent[]> {

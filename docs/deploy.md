@@ -66,3 +66,15 @@ Las páginas públicas son estáticas con regeneración cada 5 minutos (`revalid
 ## Sincronización de contenido en el build
 
 `npm run build` ejecuta antes `scripts/sync-on-build.mjs`: si existen `DATABASE_URL` y `VERCEL`, inserta en la base de datos las zonas, FAQs de zona y artículos definidos en `content/` que aún no existan (nunca actualiza filas ya cargadas, para respetar las ediciones del panel). En CI no hay base de datos y el paso se omite. Un fallo en la sincronización no detiene el despliegue: queda en el log del build.
+
+## Cuota de Neon (plan gratuito) y caché de datos
+
+El 20-11-2026 el panel devolvió "server error": Neon respondía `402 Your account or project has exceeded the quota`. La cuota agotada era la de **transferencia de datos** (5 GB al mes en el plan gratuito; el cómputo iba por 10 de 100 horas). Causa: cada regeneración de página descargaba de la base de datos todos los servicios, zonas y artículos con sus textos completos, y con 150 páginas regenerándose cada 5 minutos bajo rastreo constante el tráfico superó los 5 GB.
+
+Medidas en el código:
+
+- `lib/cms/cached.ts`: todas las lecturas de contenido pasan por la caché de datos de Next (`unstable_cache`, etiqueta `cms`, 1 h). Una tabla se lee como máximo una vez por hora para todas las páginas; el panel invalida la caché al guardar (`revalidateSite()` → `invalidateCms()`).
+- Regeneración por tiempo de las páginas públicas, sitemap, RSS, robots y llms.txt: 1 hora (antes 5 minutos). Los cambios del panel siguen publicándose al instante.
+- Las FAQs se leen en una sola consulta y se filtran en memoria.
+
+Si la cuota vuelve a agotarse, el panel deja de funcionar hasta el día 1 del mes siguiente (la web pública sigue sirviéndose desde la caché y el contenido de código). Para un negocio en marcha conviene el plan de pago de Neon (Launch), que elimina ese tope; se activa en console.neon.tech → Billing y el panel vuelve a funcionar al instante. Consumo: console.neon.tech → proyecto `reformas` → Usage.

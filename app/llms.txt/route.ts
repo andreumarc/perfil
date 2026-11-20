@@ -8,7 +8,7 @@ import { getZones } from "@/lib/cms/zones";
 import { formatPhone } from "@/lib/phone";
 import { absoluteUrl } from "@/lib/seo";
 
-export const revalidate = 300;
+export const revalidate = 3600;
 
 /**
  * /llms.txt: índice en Markdown pensado para asistentes y buscadores con IA

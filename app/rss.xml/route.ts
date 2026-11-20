@@ -2,7 +2,7 @@ import { getArticles, getCategories } from "@/lib/cms/articles";
 import { getSettings } from "@/lib/cms/settings";
 import { absoluteUrl, siteUrl } from "@/lib/seo";
 
-export const revalidate = 300;
+export const revalidate = 3600;
 
 function escapeXml(value: string) {
   return value.replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" })[c] ?? c);

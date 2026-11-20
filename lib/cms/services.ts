@@ -7,6 +7,7 @@ import { SERVICES, SERVICE_GROUPS } from "@/content/services";
 import { SECTORS } from "@/content/sectors";
 import type { ProcessStep, SectorContent, ServiceContent, ServiceGroupSlug } from "@/content/types";
 import { getDb } from "@/db/client";
+import { cmsCache } from "@/lib/cms/cached";
 import { sectors, services, type SectorRow, type ServiceRow } from "@/db/schema";
 
 function asStringArray(value: unknown): string[] {
@@ -61,8 +62,8 @@ export function sectorFromRow(row: SectorRow, fallback?: SectorContent): SectorC
   };
 }
 
-/** Servicios: BD si existe (ordenados), si no los defaults de content/. Solo publicados. */
-export const getServices = cache(async (): Promise<ServiceContent[]> => {
+/** Servicios publicados, ordenados: BD (en caché compartida) o, sin BD, los de content/. */
+const fetchServices = cmsCache("services", async (): Promise<ServiceContent[]> => {
   const db = getDb();
   if (!db) return SERVICES.filter((s) => s.status === "published");
   try {
@@ -74,7 +75,8 @@ export const getServices = cache(async (): Promise<ServiceContent[]> => {
   }
 });
 
-export const getService = cache(async (slug: string): Promise<ServiceContent | null> => {
+/** Un servicio por slug leído directamente (para slugs que aún no están en la lista en caché). */
+const fetchService = cmsCache("service", async (slug: string): Promise<ServiceContent | null> => {
   const db = getDb();
   if (!db) return SERVICES.find((s) => s.slug === slug && s.status === "published") ?? null;
   try {
@@ -87,12 +89,19 @@ export const getService = cache(async (slug: string): Promise<ServiceContent | n
   }
 });
 
+export const getServices = cache(async (): Promise<ServiceContent[]> => fetchServices());
+
+export const getService = cache(async (slug: string): Promise<ServiceContent | null> => {
+  const fromList = (await getServices()).find((s) => s.slug === slug);
+  return fromList ?? fetchService(slug);
+});
+
 export async function getServicesByGroup() {
   const all = await getServices();
   return SERVICE_GROUPS.map((group) => ({ group, services: all.filter((s) => s.groupSlug === group.slug) }));
 }
 
-export const getSectors = cache(async (): Promise<SectorContent[]> => {
+const fetchSectors = cmsCache("sectors", async (): Promise<SectorContent[]> => {
   const db = getDb();
   if (!db) return SECTORS.filter((s) => s.status === "published");
   try {
@@ -104,7 +113,7 @@ export const getSectors = cache(async (): Promise<SectorContent[]> => {
   }
 });
 
-export const getSector = cache(async (slug: string): Promise<SectorContent | null> => {
+const fetchSector = cmsCache("sector", async (slug: string): Promise<SectorContent | null> => {
   const db = getDb();
   if (!db) return SECTORS.find((s) => s.slug === slug && s.status === "published") ?? null;
   try {
@@ -115,4 +124,11 @@ export const getSector = cache(async (slug: string): Promise<SectorContent | nul
     console.error("[cms] error leyendo sector:", error);
     return SECTORS.find((s) => s.slug === slug) ?? null;
   }
+});
+
+export const getSectors = cache(async (): Promise<SectorContent[]> => fetchSectors());
+
+export const getSector = cache(async (slug: string): Promise<SectorContent | null> => {
+  const fromList = (await getSectors()).find((s) => s.slug === slug);
+  return fromList ?? fetchSector(slug);
 });

@@ -6,6 +6,7 @@ import { cache } from "react";
 import { PROJECTS } from "@/content/projects";
 import type { ProjectContent } from "@/content/types";
 import { getDb } from "@/db/client";
+import { cmsCache } from "@/lib/cms/cached";
 import { mediaAssets, projectImages, projects, type ProjectRow } from "@/db/schema";
 
 export interface ProjectView extends ProjectContent {
@@ -30,7 +31,7 @@ function fromRow(row: ProjectRow, coverUrl?: string | null): ProjectContent {
   };
 }
 
-export const getProjects = cache(async (): Promise<ProjectContent[]> => {
+const fetchProjects = cmsCache("projects", async (): Promise<ProjectContent[]> => {
   const db = getDb();
   if (!db) return PROJECTS.filter((p) => p.status === "published");
   try {
@@ -47,7 +48,7 @@ export const getProjects = cache(async (): Promise<ProjectContent[]> => {
   }
 });
 
-export const getProject = cache(async (slug: string): Promise<ProjectView | null> => {
+const fetchProject = cmsCache("project", async (slug: string): Promise<ProjectView | null> => {
   const db = getDb();
   if (!db) {
     const p = PROJECTS.find((x) => x.slug === slug && x.status === "published");
@@ -77,3 +78,6 @@ export const getProject = cache(async (slug: string): Promise<ProjectView | null
     return null;
   }
 });
+
+export const getProjects = cache(async (): Promise<ProjectContent[]> => fetchProjects());
+export const getProject = cache(async (slug: string): Promise<ProjectView | null> => fetchProject(slug));

@@ -6,7 +6,7 @@ import { ImageResponse } from "next/og";
 import { getSettings } from "@/lib/cms/settings";
 import { siteUrl } from "@/lib/seo";
 
-export const revalidate = 300;
+export const revalidate = 3600;
 export const alt = "Reformas integrales e instalaciones";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

@@ -4,6 +4,7 @@ import { cache } from "react";
 
 import { DEFAULT_SETTINGS } from "@/content/settings";
 import { getDb } from "@/db/client";
+import { cmsCache } from "@/lib/cms/cached";
 import { siteSettings } from "@/db/schema";
 import { siteSettingsSchema, type SiteSettings } from "@/lib/validation/settings";
 
@@ -28,9 +29,9 @@ export function mergeSettings(stored: unknown): SiteSettings {
 /**
  * Configuración del sitio. Lee la fila única de `site_settings`; sin base de
  * datos devuelve los valores por defecto de `content/settings.ts`.
- * `cache()` deduplica la lectura dentro de un mismo render (layout + página).
+ * Caché de datos compartida (1 h, etiqueta `cms`) y `cache()` para deduplicar dentro del render.
  */
-export const getSettings = cache(async (): Promise<SiteSettings> => {
+const fetchSettings = cmsCache("settings", async (): Promise<SiteSettings> => {
   const db = getDb();
   if (!db) return DEFAULT_SETTINGS;
   try {
@@ -41,6 +42,8 @@ export const getSettings = cache(async (): Promise<SiteSettings> => {
     return DEFAULT_SETTINGS;
   }
 });
+
+export const getSettings = cache(async (): Promise<SiteSettings> => fetchSettings());
 
 export async function saveSettings(data: SiteSettings, updatedBy: string | null) {
   const db = getDb();

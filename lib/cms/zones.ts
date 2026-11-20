@@ -6,6 +6,7 @@ import { cache } from "react";
 import type { LocalAreaContent } from "@/content/types";
 import { LOCAL_AREAS } from "@/content/zones";
 import { getDb } from "@/db/client";
+import { cmsCache } from "@/lib/cms/cached";
 import { localAreas, type LocalAreaRow } from "@/db/schema";
 
 function asStringArray(value: unknown): string[] {
@@ -29,7 +30,7 @@ export function zoneFromRow(row: LocalAreaRow, fallback?: LocalAreaContent): Loc
   };
 }
 
-export const getZones = cache(async (): Promise<LocalAreaContent[]> => {
+const fetchZones = cmsCache("zones", async (): Promise<LocalAreaContent[]> => {
   const db = getDb();
   if (!db) return LOCAL_AREAS.filter((z) => z.status === "published");
   try {
@@ -41,7 +42,7 @@ export const getZones = cache(async (): Promise<LocalAreaContent[]> => {
   }
 });
 
-export const getZone = cache(async (slug: string): Promise<LocalAreaContent | null> => {
+const fetchZone = cmsCache("zone", async (slug: string): Promise<LocalAreaContent | null> => {
   const db = getDb();
   if (!db) return LOCAL_AREAS.find((z) => z.slug === slug && z.status === "published") ?? null;
   try {
@@ -52,4 +53,11 @@ export const getZone = cache(async (slug: string): Promise<LocalAreaContent | nu
     console.error("[cms] error leyendo local_area:", error);
     return LOCAL_AREAS.find((z) => z.slug === slug && z.status === "published") ?? null;
   }
+});
+
+export const getZones = cache(async (): Promise<LocalAreaContent[]> => fetchZones());
+
+export const getZone = cache(async (slug: string): Promise<LocalAreaContent | null> => {
+  const fromList = (await getZones()).find((z) => z.slug === slug);
+  return fromList ?? fetchZone(slug);
 });

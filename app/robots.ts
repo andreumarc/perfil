@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { siteUrl } from "@/lib/seo";
 
-export const revalidate = 300;
+export const revalidate = 3600;
 
 const DISALLOW = ["/admin", "/admin/", "/api/"];
 

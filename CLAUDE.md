@@ -16,8 +16,8 @@ Next.js 16 (App Router, `proxy.ts`, `params`/`searchParams`/`cookies()` async), 
 
 ## Arquitectura
 
-- `app/(marketing)` páginas públicas **estáticas** (`revalidate = 300`); nunca leen cookies/headers. Composición de secciones; lógica en `lib/`, datos en `content/`.
-- `lib/cms/*` lee la BD y solo sin `DATABASE_URL` usa `content/*`. Toda acción de contenido llama a `revalidateSite()`.
+- `app/(marketing)` páginas públicas **estáticas** (`revalidate = 3600` + invalidación desde el panel); nunca leen cookies/headers. Composición de secciones; lógica en `lib/`, datos en `content/`.
+- `lib/cms/*` lee la BD a través de la caché de datos compartida `cmsCache` (`lib/cms/cached.ts`, 1 h, etiqueta `cms`; cada lectura nueva de BD debe pasar por ella: la cuota de transferencia de Neon es limitada) y solo sin `DATABASE_URL` usa `content/*`. Toda acción de contenido llama a `revalidateSite()`, que invalida la caché.
 - Panel en `app/admin`: `force-dynamic`, `requireRole("editor" | "admin")` en cada acción, `audit()` en cada escritura. Recursos de contenido declarados en `lib/admin/resource-meta.ts` + `lib/admin/resources.ts` (ruta genérica `[resource]`).
 - Formularios: Zod en servidor (`lib/validation/*`), honeypot `website`, `startedAt`, rate limit (`lib/rate-limit.ts`), `isSameOrigin` en APIs, consentimiento RGPD obligatorio.
 - Calculadoras: `lib/calculators/definitions.ts` (sin dependencias de servidor); tarifas en `site_settings.calculators`.

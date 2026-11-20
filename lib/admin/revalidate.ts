@@ -3,6 +3,7 @@ import "server-only";
 import { revalidatePath } from "next/cache";
 import { after } from "next/server";
 
+import { invalidateCms } from "@/lib/cms/cached";
 import { submitToIndexNow } from "@/lib/indexnow";
 import { getSiteUrls } from "@/lib/sitemap";
 
@@ -13,6 +14,7 @@ import { getSiteUrls } from "@/lib/sitemap";
  * la regeneración ocurre en la siguiente petición.
  */
 export function revalidateSite() {
+  invalidateCms();
   revalidatePath("/", "layout");
   revalidatePath("/sitemap.xml");
   revalidatePath("/rss.xml");

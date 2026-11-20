@@ -13,8 +13,8 @@ import { getZones } from "@/lib/cms/zones";
 import { formatPhone, telHref, whatsappHref } from "@/lib/phone";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 
-/** Las páginas públicas son estáticas con regeneración incremental cada 5 minutos. */
-export const revalidate = 300;
+/** Páginas públicas estáticas: regeneración cada hora y al instante desde el panel (revalidateSite). Las lecturas de BD van en caché compartida (lib/cms/cached.ts). */
+export const revalidate = 3600;
 
 export default async function MarketingLayout({ children }: { children: React.ReactNode }) {
   const [settings, zones, services] = await Promise.all([getSettings(), getZones(), getServices()]);
